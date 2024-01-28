@@ -1,15 +1,11 @@
 import os
 import pickle
 import streamlit as st
-import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from openai import OpenAI
 from datetime import datetime
 
-# Set your OpenAI API key here
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
-
-# Instantiate OpenAI client
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Function to load data from a .pkl file
