@@ -1,0 +1,11 @@
+# Ignore secrets file
+secrets.toml
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore directories for virtual environments
+.venv/
+env/
+venv/
