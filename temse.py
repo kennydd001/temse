@@ -1,9 +1,13 @@
 import os
 import pickle
 import streamlit as st
+import logging
 from sklearn.metrics.pairwise import cosine_similarity
 from openai import OpenAI
 from datetime import datetime
+
+# Set up basic configuration for logging
+logging.basicConfig(level=logging.INFO)
 
 # Set your OpenAI API key
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
@@ -76,8 +80,8 @@ def main():
     user_input = st.text_input("Jouw vraag:", key="user_input")
 
     if st.button("Vraag"):
-        # Print user input to console
-        print(f"User input: {user_input}")
+        # Log user input to console
+        logging.info(f"User input: {user_input}")
 
         with st.spinner('Zoeken in mijn kennis en genereren van een antwoord...'):
             query_embedding = get_text_embedding(user_input)
