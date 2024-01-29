@@ -5,6 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from openai import OpenAI
 from datetime import datetime
 
+# Set your OpenAI API key
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 client = OpenAI(api_key=OPENAI_API_KEY)
 
@@ -75,6 +76,9 @@ def main():
     user_input = st.text_input("Jouw vraag:", key="user_input")
 
     if st.button("Vraag"):
+        # Print user input to console
+        print(f"User input: {user_input}")
+
         with st.spinner('Zoeken in mijn kennis en genereren van een antwoord...'):
             query_embedding = get_text_embedding(user_input)
 
@@ -95,12 +99,13 @@ def main():
             st.session_state.history.append(("Jij", user_input, unique_key))
             st.session_state.history.append(("AI", response, unique_key))
 
-            # Display chat history
+            # Display chat history with labels
             for role, message, key in st.session_state.history:
+                label = f"Bericht van {role}"
                 if role == "Jij":
-                    st.text_area("", message, key=f"{key}_Jij", height=75)
+                    st.text_area(label, message, key=f"{key}_Jij", height=75, label_visibility="collapsed")
                 else:
-                    st.text_area("", message, key=f"{key}_AI", height=150)
+                    st.text_area(label, message, key=f"{key}_AI", height=150, label_visibility="collapsed")
 
 if __name__ == "__main__":
     main()
