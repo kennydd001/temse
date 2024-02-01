@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
-    <option name="sdkName" value="vector" />
+    <option name="sdkName" value="vectortest" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="vector" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="vectortest" project-jdk-type="Python SDK" />
 </project>

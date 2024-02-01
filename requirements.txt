@@ -57,4 +57,5 @@ watchdog==3.0.0
 yarl==1.9.4
 zipp==3.17.0
 openai==1.10.0
-scikit-learn==0.24.2
+scikit-learn~=1.4.0
+beautifulsoup4~=4.12.3
