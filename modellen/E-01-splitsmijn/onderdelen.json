@@ -1,0 +1,83 @@
+{
+  "pasproef/achterplaat.stl": {
+    "volume_cm3": 167.02,
+    "maat_mm": [
+      218.0,
+      230.0,
+      10.0
+    ],
+    "aantal": 1
+  },
+  "pasproef/voorplaat.stl": {
+    "volume_cm3": 112.08,
+    "maat_mm": [
+      218.0,
+      230.0,
+      13.5
+    ],
+    "aantal": 1
+  },
+  "pasproef/voet.stl": {
+    "volume_cm3": 70.38,
+    "maat_mm": [
+      226.0,
+      48.0,
+      51.6
+    ],
+    "aantal": 1
+  },
+  "pasproef/beugel.stl": {
+    "volume_cm3": 5.43,
+    "maat_mm": [
+      44.0,
+      13.8,
+      13.2
+    ],
+    "aantal": 1
+  },
+  "pasproef/slinger.stl": {
+    "volume_cm3": 33.54,
+    "maat_mm": [
+      44.0,
+      184.0,
+      17.0
+    ],
+    "aantal": 1
+  },
+  "pasproef/mesblok.stl": {
+    "volume_cm3": 1.04,
+    "maat_mm": [
+      20.0,
+      16.0,
+      6.5
+    ],
+    "aantal": 1
+  },
+  "pasproef/plank.stl": {
+    "volume_cm3": 2.22,
+    "maat_mm": [
+      36.0,
+      10.0,
+      13.2
+    ],
+    "aantal": 1
+  },
+  "pasproef/munt.stl": {
+    "volume_cm3": 2.16,
+    "maat_mm": [
+      25.0,
+      25.0,
+      4.5
+    ],
+    "aantal": 10
+  },
+  "pasproef/voorplaat_glad.stl": {
+    "volume_cm3": 123.42,
+    "maat_mm": [
+      218.0,
+      230.0,
+      13.5
+    ],
+    "aantal": 1
+  }
+}
