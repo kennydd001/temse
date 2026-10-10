@@ -79,15 +79,23 @@ def text(s, cap_h, cx=0.0, cy=0.0, max_w=None, font=_FP):
 
 
 def cs_to_shapely(cs):
-    """manifold3d CrossSection -> shapely (positieve lussen zijn vulling, negatieve gaten)."""
-    fills, holes = [], []
+    """manifold3d CrossSection -> shapely.
+
+    De lussen van een doorsnede liggen genest (vulling, gat, eiland in dat gat, ...). Van groot naar klein
+    om en om optellen en aftrekken houdt ook eilanden in een gat (een los schotje in een holle romp) heel.
+    """
+    lussen = []
     for loop in cs.to_polygons():
         if len(loop) < 3:
             continue
-        p = Polygon(loop)
-        (fills if p.exterior.is_ccw else holes).append(p.buffer(0))
-    out = unary_union(fills)
-    return out.difference(unary_union(holes)) if holes else out
+        p = Polygon(loop).buffer(0)
+        if not p.is_empty:
+            lussen.append(p)
+    lussen.sort(key=lambda p: -p.area)
+    out = Polygon()
+    for p in lussen:
+        out = out.symmetric_difference(p)
+    return out
 
 
 def polys(g):

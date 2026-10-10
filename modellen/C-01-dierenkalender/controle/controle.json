@@ -1345,6 +1345,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         178.0,
         60.0,
@@ -1382,6 +1383,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         236.0,
         60.0,
@@ -1419,6 +1421,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         236.0,
         124.0,
@@ -1456,6 +1459,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         236.0,
         60.0,
@@ -1493,6 +1497,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         236.0,
         124.0,
@@ -1530,6 +1535,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         134.0,
         28.0,
@@ -1560,6 +1566,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 365.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         85.0,
         60.0,
@@ -1593,6 +1600,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         134.0,
         28.0,
@@ -1623,6 +1631,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         110.8,
         24.0,
@@ -1649,6 +1658,7 @@
       "overhang": [],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         206.0,
         72.0,
