@@ -1,0 +1,72 @@
+{
+  "1 voet en dak": {
+    "tijd": "3h 43m 20s",
+    "gram": 180.3,
+    "gram_per_extruder": [
+      180.34
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "11101"
+    ],
+    "volume_cm3": 529.01,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "2 bakjes": {
+    "tijd": "1h 12m 3s",
+    "gram": 59.2,
+    "gram_per_extruder": [
+      59.16
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "11100"
+    ],
+    "volume_cm3": 51.35,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "3 armen, schuif en pennen": {
+    "tijd": "1h 15m 6s",
+    "gram": 28.9,
+    "gram_per_extruder": [
+      28.87
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "10301"
+    ],
+    "volume_cm3": 30.97,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "pasproef 1 scharnierstrip, bitblok en pennen": {
+    "tijd": "40m 2s",
+    "gram": 15.9,
+    "gram_per_extruder": [
+      15.89
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "10301"
+    ],
+    "volume_cm3": 18.41,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "pasproef 2 zijmechanisme": {
+    "tijd": "3h 4m 33s",
+    "gram": 139.9,
+    "gram_per_extruder": [
+      139.93
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "10301"
+    ],
+    "volume_cm3": 327.62,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  }
+}

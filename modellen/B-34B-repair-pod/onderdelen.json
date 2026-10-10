@@ -1,0 +1,97 @@
+{
+  "print/voet.stl": {
+    "volume_cm3": 462.96,
+    "maat_mm": [
+      114.0,
+      96.6,
+      86.1
+    ],
+    "aantal": 1
+  },
+  "print/dak.stl": {
+    "volume_cm3": 66.05,
+    "maat_mm": [
+      108.0,
+      102.0,
+      14.0
+    ],
+    "aantal": 1
+  },
+  "print/bak.stl": {
+    "volume_cm3": 25.67,
+    "maat_mm": [
+      46.4,
+      86.0,
+      27.5
+    ],
+    "aantal": 2
+  },
+  "print/tandarm.stl": {
+    "volume_cm3": 2.87,
+    "maat_mm": [
+      16.4,
+      74.4,
+      4.5
+    ],
+    "aantal": 2
+  },
+  "print/arm.stl": {
+    "volume_cm3": 2.56,
+    "maat_mm": [
+      12.4,
+      68.4,
+      4.5
+    ],
+    "aantal": 6
+  },
+  "print/schuif.stl": {
+    "volume_cm3": 5.44,
+    "maat_mm": [
+      24.0,
+      94.6,
+      8.0
+    ],
+    "aantal": 1
+  },
+  "print/pen.stl": {
+    "volume_cm3": 0.25,
+    "maat_mm": [
+      9.0,
+      9.0,
+      12.0
+    ],
+    "aantal": 18
+  },
+  "pasproef/scharnierstrip_wand.stl": {
+    "volume_cm3": 3.89,
+    "maat_mm": [
+      54.0,
+      17.0,
+      16.0
+    ]
+  },
+  "pasproef/scharnierstrip_arm.stl": {
+    "volume_cm3": 4.03,
+    "maat_mm": [
+      54.0,
+      18.0,
+      4.5
+    ]
+  },
+  "pasproef/bitblok.stl": {
+    "volume_cm3": 9.5,
+    "maat_mm": [
+      44.0,
+      18.0,
+      14.0
+    ]
+  },
+  "pasproef/proefvoet.stl": {
+    "volume_cm3": 283.49,
+    "maat_mm": [
+      65.5,
+      96.6,
+      86.1
+    ]
+  }
+}

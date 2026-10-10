@@ -3,7 +3,8 @@
 plaat({kleur: Manifold}) meet, op de onderdelen zoals ze op het bed liggen (z = 0 is het bed):
   - de maat en of hij op de A1 past (256 x 256, 3 mm rand)
   - overhang: vlakken die steiler dan ~48° naar beneden kijken en niet op het bed liggen
-    (een kleur die op een andere kleur ligt, telt als ondersteund); korte bruggen < 3 mm apart
+    (een kleur die op een andere kleur ligt, telt als ondersteund); korte bruggen < 3 mm en de
+    plafonds van kleine liggende gaten (tot ~6 mm) apart, want die printen zonder support
   - details smaller dan de nozzle: per laag de doorsnede openen met een halve nozzle
   - lagen met meer dan één kleur (AMS-wissels)
 """
@@ -56,7 +57,7 @@ def plaat(delen, nozzle=NOZZLE, laag=LAYER):
     info["korte_bruggen_mm2"] = 0.0
     if mask.any():
         sub = tm.submesh([np.where(mask)[0]], append=True)
-        bridges = 0.0
+        bridges = small_holes = 0.0
         for comp in sub.split(only_watertight=False):
             if comp.area < 1.0:
                 continue
@@ -69,10 +70,16 @@ def plaat(delen, nozzle=NOZZLE, laag=LAYER):
             if ang < 15 and span <= 3.0:
                 bridges += float(comp.area)
                 continue
+            # kleine liggende gaten (b.v. Ø5 voor een pen): het plafond print als een korte boog
+            if b[1][2] - b[0][2] <= 3.5 and min(b[1][0] - b[0][0], b[1][1] - b[0][1]) <= 6.5 and comp.area < 40:
+                small_holes += float(comp.area)
+                continue
             info["overhang"].append({"oppervlak_mm2": round(float(comp.area), 1),
                                      "hoek_tov_horizontaal_graden": round(ang, 1),
                                      "plek_mm": [round(float(v), 1) for v in (b[0] + b[1]) / 2]})
         info["korte_bruggen_mm2"] = round(bridges, 0)
+        if small_holes:
+            info["kleine_liggende_gaten_mm2"] = round(small_holes, 0)
     size = hi - lo
     info["maat_mm"] = [round(float(v), 1) for v in size]
     info["past_op_A1"] = bool(size[0] <= BED[0] - 6 and size[1] <= BED[1] - 6)

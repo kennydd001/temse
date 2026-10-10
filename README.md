@@ -6,13 +6,22 @@ Eigen ontwerpen voor de Bambu Lab A1 met AMS Lite, gemaakt als code (parametrisc
 | Model | Varianten · variants | Talen · languages |
 |---|---|---|
 | [C-01 Dierenkalender · animal calendar](modellen/C-01-dierenkalender/) | vos, koe, uil, draak, eenhoorn, leeuw, hert · fox, cow, owl, dragon, unicorn, lion, deer | NL, EN |
+| [B-34B Repair Pod](modellen/B-34B-repair-pod/) | werkplek die openklapt met twee horizontale schroevenbakjes · workspace that unfolds with two level screw trays | NL, EN |
 
 ![C-01 familie](modellen/C-01-dierenkalender/renders/familie.png)
+
+![B-34B dicht, half open, open](modellen/B-34B-repair-pod/renders/reeks.png)
 
 ## Structuur · layout
 
 ```
+gereedschap/                    gedeelde code · shared code: geometrie, tandwielen, Bambu-3MF, slicer, printcontrole, Blender
 modellen/
+  B-34B-repair-pod/
+    README.md, README.en.md     uitleg · documentation
+    print/                      Bambu Studio-project (.3mf) en STL's · project and STLs
+    pasproef/                   eerst printen · print this first
+    cad/, controle/, renders/   bron, controle, foto's · source, checks, renders
   C-01-dierenkalender/
     README.md, README.en.md     uitleg · documentation
     varianten/NN-dier/nl|en/    Bambu Studio-project (.3mf), front-STL's per kleur, productfoto

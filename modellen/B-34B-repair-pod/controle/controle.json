@@ -1,0 +1,307 @@
+{
+  "botsingen": {
+    "standen": 33,
+    "paren_met_overlap": []
+  },
+  "spelingen": {
+    "bak - dak": {
+      "kleinste_mm": 0.56,
+      "bij_hoek": 90.0
+    },
+    "bak - voet (rug en flank)": {
+      "kleinste_mm": 0.58,
+      "bij_hoek": 92.0
+    },
+    "bak - bak": {
+      "kleinste_mm": 10.0,
+      "bij_hoek": 28.0
+    },
+    "binnenarm - voet": {
+      "kleinste_mm": 0.5,
+      "bij_hoek": 30.0
+    },
+    "buitenarm - bak": {
+      "kleinste_mm": 0.5,
+      "bij_hoek": 28.0
+    },
+    "binnenarm - buitenarm": {
+      "kleinste_mm": 2.51,
+      "bij_hoek": 28.0
+    },
+    "schuif - voet (zwaluwstaart)": {
+      "kleinste_mm": 0.3,
+      "bij_hoek": 28.0
+    }
+  },
+  "tandwielen": {
+    "rechts": {
+      "kleinste_mm": 0.093,
+      "grootste_mm": 0.094
+    },
+    "links": {
+      "kleinste_mm": 0.093,
+      "grootste_mm": 0.094
+    },
+    "slag_mm": 11.17
+  },
+  "aanslagen": {
+    "open_binnenarm_tegen_nok_mm": 0.001,
+    "open_plus_2_graden_mm": 0.5,
+    "dicht_knop_op_dak_mm": 0.0,
+    "dicht_min_2_graden_knop_mm": 0.349
+  },
+  "horizontaal": {
+    "parallellogram": "bak verschuift alleen, draait niet (exact)",
+    "speling_per_scharnier_mm": 0.15,
+    "grootste_scheefstand_graden": 1.32
+  },
+  "massa_g": {
+    "voet": 200.9,
+    "dak": 45.0,
+    "bak rechts": 28.7,
+    "bak links": 28.7,
+    "schuif": 6.1,
+    "binnenarm voor rechts": 3.2,
+    "binnenarm achter rechts": 2.9,
+    "buitenarm voor rechts": 2.9,
+    "buitenarm achter rechts": 2.9,
+    "binnenarm voor links": 3.2,
+    "binnenarm achter links": 2.9,
+    "buitenarm voor links": 2.9,
+    "buitenarm achter links": 2.9,
+    "pennen": 4.9
+  },
+  "knopkracht": [
+    {
+      "lading_per_bak_g": 0.0,
+      "hoek": 92.0,
+      "kracht_N": -0.1
+    },
+    {
+      "lading_per_bak_g": 0.0,
+      "hoek": 80.0,
+      "kracht_N": 0.6
+    },
+    {
+      "lading_per_bak_g": 0.0,
+      "hoek": 60.0,
+      "kracht_N": 1.6
+    },
+    {
+      "lading_per_bak_g": 0.0,
+      "hoek": 45.0,
+      "kracht_N": 2.3
+    },
+    {
+      "lading_per_bak_g": 0.0,
+      "hoek": 28.0,
+      "kracht_N": 2.9
+    },
+    {
+      "lading_per_bak_g": 150.0,
+      "hoek": 92.0,
+      "kracht_N": -0.7
+    },
+    {
+      "lading_per_bak_g": 150.0,
+      "hoek": 80.0,
+      "kracht_N": 3.5
+    },
+    {
+      "lading_per_bak_g": 150.0,
+      "hoek": 60.0,
+      "kracht_N": 10.2
+    },
+    {
+      "lading_per_bak_g": 150.0,
+      "hoek": 45.0,
+      "kracht_N": 14.4
+    },
+    {
+      "lading_per_bak_g": 150.0,
+      "hoek": 28.0,
+      "kracht_N": 18.0
+    }
+  ],
+  "kantelen": [
+    {
+      "hoek": 92.0,
+      "zwaartepunt_x_mm": 9.1,
+      "rand_voet_mm": 57.0,
+      "marge_mm": 47.9,
+      "totaal_g": 488
+    },
+    {
+      "hoek": 75.0,
+      "zwaartepunt_x_mm": 14.3,
+      "rand_voet_mm": 57.0,
+      "marge_mm": 42.7,
+      "totaal_g": 488
+    },
+    {
+      "hoek": 60.0,
+      "zwaartepunt_x_mm": 18.6,
+      "rand_voet_mm": 57.0,
+      "marge_mm": 38.4,
+      "totaal_g": 488
+    },
+    {
+      "hoek": 45.0,
+      "zwaartepunt_x_mm": 22.3,
+      "rand_voet_mm": 57.0,
+      "marge_mm": 34.7,
+      "totaal_g": 488
+    },
+    {
+      "hoek": 28.0,
+      "zwaartepunt_x_mm": 25.4,
+      "rand_voet_mm": 57.0,
+      "marge_mm": 31.6,
+      "totaal_g": 488
+    }
+  ],
+  "print": {
+    "1 voet en dak": {
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 527.0,
+      "korte_bruggen_mm2": 163.0,
+      "kleine_liggende_gaten_mm2": 62.0,
+      "maat_mm": [
+        235.0,
+        102.0,
+        86.1
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        21.0,
+        154.0
+      ],
+      "lagen_met_kleurwissel": 70,
+      "geschatte_wissels": 70,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        13.9
+      ],
+      "kleur": "11101"
+    },
+    "2 bakjes": {
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 3380.0,
+      "korte_bruggen_mm2": 0.0,
+      "maat_mm": [
+        106.4,
+        86.0,
+        27.5
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        149.6,
+        170.0
+      ],
+      "lagen_met_kleurwissel": 137,
+      "geschatte_wissels": 137,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        27.3
+      ],
+      "kleur": "11100"
+    },
+    "3 armen, schuif en pennen": {
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 107.0,
+      "korte_bruggen_mm2": 0.0,
+      "maat_mm": [
+        218.7,
+        181.4,
+        12.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        37.3,
+        74.6
+      ],
+      "lagen_met_kleurwissel": 60,
+      "geschatte_wissels": 1236,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        11.9
+      ],
+      "kleur": "10301"
+    }
+  },
+  "slicer": {
+    "1 voet en dak": {
+      "tijd": "3h 43m 20s",
+      "gram": 180.3,
+      "gram_per_extruder": [
+        180.34
+      ],
+      "wissels": 0,
+      "kleuren": [
+        "11101"
+      ],
+      "volume_cm3": 529.01,
+      "support_extrusie_mm": 0.0,
+      "support": false
+    },
+    "2 bakjes": {
+      "tijd": "1h 12m 3s",
+      "gram": 59.2,
+      "gram_per_extruder": [
+        59.16
+      ],
+      "wissels": 0,
+      "kleuren": [
+        "11100"
+      ],
+      "volume_cm3": 51.35,
+      "support_extrusie_mm": 0.0,
+      "support": false
+    },
+    "3 armen, schuif en pennen": {
+      "tijd": "1h 15m 6s",
+      "gram": 28.9,
+      "gram_per_extruder": [
+        28.87
+      ],
+      "wissels": 0,
+      "kleuren": [
+        "10301"
+      ],
+      "volume_cm3": 30.97,
+      "support_extrusie_mm": 0.0,
+      "support": false
+    },
+    "pasproef 1 scharnierstrip, bitblok en pennen": {
+      "tijd": "40m 2s",
+      "gram": 15.9,
+      "gram_per_extruder": [
+        15.89
+      ],
+      "wissels": 0,
+      "kleuren": [
+        "10301"
+      ],
+      "volume_cm3": 18.41,
+      "support_extrusie_mm": 0.0,
+      "support": false
+    },
+    "pasproef 2 zijmechanisme": {
+      "tijd": "3h 4m 33s",
+      "gram": 139.9,
+      "gram_per_extruder": [
+        139.93
+      ],
+      "wissels": 0,
+      "kleuren": [
+        "10301"
+      ],
+      "volume_cm3": 327.62,
+      "support_extrusie_mm": 0.0,
+      "support": false
+    }
+  }
+}

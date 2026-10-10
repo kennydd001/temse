@@ -122,6 +122,30 @@ def extrude(g, z0, z1):
     return union(parts)
 
 
+def vlak_xz(g, y0, y1):
+    """2D-vorm in het x-z-vlak (vooraanzicht: eerste coördinaat x, tweede z) extruderen van y0 tot y1."""
+    m = extrude(g, -y1, -y0)
+    return m.transform(np.array([[1, 0, 0, 0], [0, 0, -1, 0], [0, 1, 0, 0]], dtype=float))
+
+
+def vlak_yz(g, x0, x1):
+    """2D-vorm in het y-z-vlak (zijaanzicht: eerste coördinaat y, tweede z) extruderen van x0 tot x1."""
+    m = extrude(g, x0, x1)
+    return m.transform(np.array([[0, 0, 1, 0], [1, 0, 0, 0], [0, 1, 0, 0]], dtype=float))
+
+
+def druppel(c, r, omhoog=False, n=24):
+    """Cirkel met een 45°-punt, voor liggende gaten en pennen die zonder support moeten printen.
+
+    Een uitsteeksel krijgt de punt onder (omhoog=False); een gat de punt boven (dan is het plafond schuin).
+    """
+    cx, cz = c
+    s = 1 if omhoog else -1
+    q = r / math.sqrt(2)
+    return unary_union([Point(c).buffer(r, quad_segs=n),
+                        Polygon([(cx - q, cz + s * q), (cx, cz + s * r * math.sqrt(2)), (cx + q, cz + s * q), (cx, cz)])])
+
+
 def extrude_profile(profile, length, matrix):
     """Profiel (2D in het lokale XY-vlak) over `length` in lokale Z, daarna 4x4-transformatie."""
     m = extrude(profile, 0.0, length)
@@ -133,6 +157,23 @@ def union(items):
     if not items:
         return Manifold()
     return Manifold.batch_boolean(items, OpType.Add) if len(items) > 1 else items[0]
+
+
+def afgeronde_plaat(x0, y0, x1, y1, z0, z1, r_hoek, r_rand, n=48):
+    """Plaat met afgeronde hoeken (r_hoek, in het grondvlak) en een afgeronde bovenrand (r_rand); onderkant vlak.
+
+    Gebouwd als bolle omhullende van vier gedraaide 'puckjes' op de hoekmiddelpunten: geen splinters
+    waar de afrondingen elkaar treffen (zoals bij het doorsnijden van twee afgeronde extrusies).
+    """
+    from manifold3d import CrossSection
+    r_rand = min(r_rand, z1 - z0, r_hoek)
+    prof = [(0.0, z0), (r_hoek, z0), (r_hoek, z1 - r_rand)]
+    for a in np.linspace(0, math.pi / 2, 12)[1:]:
+        prof.append((r_hoek - r_rand + r_rand * math.cos(a), z1 - r_rand + r_rand * math.sin(a)))
+    prof.append((0.0, z1))
+    puck = Manifold.revolve(CrossSection([prof]), n)
+    hoeken = [(x0 + r_hoek, y0 + r_hoek), (x1 - r_hoek, y0 + r_hoek), (x1 - r_hoek, y1 - r_hoek), (x0 + r_hoek, y1 - r_hoek)]
+    return Manifold.batch_hull([puck.translate([x, y, 0]) for x, y in hoeken])
 
 
 def box3(x0, y0, z0, x1, y1, z1):
