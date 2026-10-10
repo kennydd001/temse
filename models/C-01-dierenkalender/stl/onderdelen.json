@@ -1,0 +1,168 @@
+{
+  "proef_kanalen": {
+    "oranje": {
+      "bestand": "stl/1-pasproef/proef_kanalen__oranje.stl",
+      "filament": "Pumpkin Orange 10301",
+      "volume_cm3": 14.85,
+      "maat_mm": [
+        84.4,
+        60.0,
+        8.2
+      ]
+    }
+  },
+  "proef_sleuven": {
+    "oranje": {
+      "bestand": "stl/1-pasproef/proef_sleuven__oranje.stl",
+      "filament": "Pumpkin Orange 10301",
+      "volume_cm3": 52.82,
+      "maat_mm": [
+        108.4,
+        24.0,
+        22.5
+      ]
+    }
+  },
+  "proef_kaartjes": {
+    "wit": {
+      "bestand": "stl/1-pasproef/proef_kaartjes__wit.stl",
+      "filament": "Ivory White 11100",
+      "volume_cm3": 5.2,
+      "maat_mm": [
+        134.0,
+        28.0,
+        1.6
+      ]
+    },
+    "zwart": {
+      "bestand": "stl/1-pasproef/proef_kaartjes__zwart.stl",
+      "filament": "Charcoal 11101",
+      "volume_cm3": 0.25,
+      "maat_mm": [
+        127.0,
+        18.5,
+        0.4
+      ]
+    }
+  },
+  "front_vos": {
+    "zwart": {
+      "bestand": "stl/2-vos/front_vos__zwart.stl",
+      "filament": "Charcoal 11101",
+      "volume_cm3": 0.38,
+      "maat_mm": [
+        143.2,
+        66.4,
+        2.2
+      ]
+    },
+    "wit": {
+      "bestand": "stl/2-vos/front_vos__wit.stl",
+      "filament": "Ivory White 11100",
+      "volume_cm3": 2.55,
+      "maat_mm": [
+        137.8,
+        91.1,
+        0.6
+      ]
+    },
+    "groen": {
+      "bestand": "stl/2-vos/front_vos__groen.stl",
+      "filament": "Mistletoe Green 10502",
+      "volume_cm3": 0.42,
+      "maat_mm": [
+        143.9,
+        12.2,
+        0.8
+      ]
+    },
+    "oranje": {
+      "bestand": "stl/2-vos/front_vos__oranje.stl",
+      "filament": "Pumpkin Orange 10301",
+      "volume_cm3": 111.2,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.0
+      ]
+    }
+  },
+  "voet": {
+    "oranje": {
+      "bestand": "stl/3-voet/voet__oranje.stl",
+      "filament": "Pumpkin Orange 10301",
+      "volume_cm3": 179.16,
+      "maat_mm": [
+        206.0,
+        72.0,
+        36.0
+      ]
+    }
+  },
+  "kaartjes_maanden": {
+    "wit": {
+      "bestand": "stl/4-kaartjes/kaartjes_maanden__wit.stl",
+      "filament": "Ivory White 11100",
+      "volume_cm3": 40.04,
+      "maat_mm": [
+        236.0,
+        124.0,
+        1.6
+      ]
+    },
+    "zwart": {
+      "bestand": "stl/4-kaartjes/kaartjes_maanden__zwart.stl",
+      "filament": "Charcoal 11101",
+      "volume_cm3": 0.78,
+      "maat_mm": [
+        206.0,
+        104.1,
+        0.4
+      ]
+    }
+  },
+  "kaartjes_dagen": {
+    "wit": {
+      "bestand": "stl/4-kaartjes/kaartjes_dagen__wit.stl",
+      "filament": "Ivory White 11100",
+      "volume_cm3": 16.97,
+      "maat_mm": [
+        236.0,
+        60.0,
+        1.6
+      ]
+    },
+    "zwart": {
+      "bestand": "stl/4-kaartjes/kaartjes_dagen__zwart.stl",
+      "filament": "Charcoal 11101",
+      "volume_cm3": 0.57,
+      "maat_mm": [
+        227.4,
+        40.2,
+        0.4
+      ]
+    }
+  },
+  "kaartjes_cijfers": {
+    "wit": {
+      "bestand": "stl/4-kaartjes/kaartjes_cijfers__wit.stl",
+      "filament": "Ivory White 11100",
+      "volume_cm3": 12.99,
+      "maat_mm": [
+        178.0,
+        60.0,
+        1.6
+      ]
+    },
+    "zwart": {
+      "bestand": "stl/4-kaartjes/kaartjes_cijfers__zwart.stl",
+      "filament": "Charcoal 11101",
+      "volume_cm3": 0.77,
+      "maat_mm": [
+        169.6,
+        50.5,
+        0.4
+      ]
+    }
+  }
+}

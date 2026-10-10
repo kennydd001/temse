@@ -1,0 +1,8 @@
+numpy==2.5.3
+shapely==2.2.0
+trimesh==5.1.1
+manifold3d==3.5.4
+mapbox_earcut==2.1.0
+matplotlib==3.11.2
+# alleen voor render.py (Blender als Python-module, Python 3.13):
+bpy==5.2.2
