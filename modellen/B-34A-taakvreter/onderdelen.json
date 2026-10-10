@@ -1,0 +1,170 @@
+{
+  "print/romp_voor.stl": {
+    "volume_cm3": 105.82,
+    "maat_mm": [
+      124.0,
+      136.0,
+      44.0
+    ],
+    "aantal": 1
+  },
+  "print/kruk.stl": {
+    "volume_cm3": 3.0,
+    "maat_mm": [
+      45.5,
+      15.0,
+      31.9
+    ],
+    "aantal": 1
+  },
+  "print/paspen.stl": {
+    "volume_cm3": 0.31,
+    "maat_mm": [
+      5.0,
+      5.0,
+      16.0
+    ],
+    "aantal": 10
+  },
+  "print/romp_achter.stl": {
+    "volume_cm3": 267.54,
+    "maat_mm": [
+      124.0,
+      136.0,
+      62.0
+    ],
+    "aantal": 1
+  },
+  "print/lade.stl": {
+    "volume_cm3": 45.46,
+    "maat_mm": [
+      111.2,
+      93.0,
+      30.7
+    ],
+    "aantal": 1
+  },
+  "print/ogen.stl": {
+    "volume_cm3": 26.67,
+    "maat_mm": [
+      26.0,
+      26.0,
+      93.1
+    ],
+    "aantal": 1
+  },
+  "print/tanden.stl": {
+    "volume_cm3": 0.4,
+    "maat_mm": [
+      80.0,
+      5.2,
+      4.7
+    ],
+    "aantal": 1
+  },
+  "print/knop.stl": {
+    "volume_cm3": 2.17,
+    "maat_mm": [
+      13.0,
+      13.0,
+      21.9
+    ],
+    "aantal": 1
+  },
+  "print/hoorn.stl": {
+    "volume_cm3": 1.67,
+    "maat_mm": [
+      16.0,
+      16.0,
+      19.8
+    ],
+    "aantal": 2
+  },
+  "print/rol_onder.stl": {
+    "volume_cm3": 19.32,
+    "maat_mm": [
+      18.9,
+      19.0,
+      107.0
+    ],
+    "aantal": 1
+  },
+  "print/rol_boven.stl": {
+    "volume_cm3": 19.85,
+    "maat_mm": [
+      19.0,
+      19.0,
+      105.4
+    ],
+    "aantal": 1
+  },
+  "print/nokas.stl": {
+    "volume_cm3": 0.93,
+    "maat_mm": [
+      17.0,
+      17.0,
+      16.5
+    ],
+    "aantal": 1
+  },
+  "print/drijfstang.stl": {
+    "volume_cm3": 0.8,
+    "maat_mm": [
+      7.2,
+      41.2,
+      5.9
+    ],
+    "aantal": 1
+  },
+  "print/tuimelaar.stl": {
+    "volume_cm3": 0.33,
+    "maat_mm": [
+      10.8,
+      18.6,
+      5.5
+    ],
+    "aantal": 1
+  },
+  "print/mondstuk.stl": {
+    "volume_cm3": 30.73,
+    "maat_mm": [
+      105.0,
+      24.0,
+      24.7
+    ],
+    "aantal": 1
+  },
+  "print/pupil.stl": {
+    "volume_cm3": 0.07,
+    "maat_mm": [
+      9.0,
+      9.0,
+      2.7
+    ],
+    "aantal": 2
+  },
+  "pasproef/proefframe_voor.stl": {
+    "volume_cm3": 58.53,
+    "maat_mm": [
+      124.0,
+      54.2,
+      44.0
+    ]
+  },
+  "pasproef/proefframe_achter.stl": {
+    "volume_cm3": 32.01,
+    "maat_mm": [
+      124.0,
+      54.2,
+      16.0
+    ]
+  },
+  "pasproef/paspenstrip.stl": {
+    "volume_cm3": 8.84,
+    "maat_mm": [
+      62.0,
+      16.0,
+      10.0
+    ]
+  }
+}

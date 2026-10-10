@@ -1,0 +1,86 @@
+{
+  "1 voorhelft, kruk en paspennen": {
+    "tijd": "3h 12m 3s",
+    "gram": 114.9,
+    "gram_per_extruder": [
+      114.88
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "10301"
+    ],
+    "volume_cm3": 111.92,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "2 achterhelft": {
+    "tijd": "4h 28m 20s",
+    "gram": 198.6,
+    "gram_per_extruder": [
+      198.55
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "10301"
+    ],
+    "volume_cm3": 267.54,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "3 lade, ogen en witte delen": {
+    "tijd": "1h 58m 42s",
+    "gram": 72.0,
+    "gram_per_extruder": [
+      72.05
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "11100"
+    ],
+    "volume_cm3": 78.05,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "4 rollen en zwarte delen": {
+    "tijd": "1h 33m 32s",
+    "gram": 46.5,
+    "gram_per_extruder": [
+      46.47
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "11101"
+    ],
+    "volume_cm3": 72.09,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "pasproef 1 proefframe": {
+    "tijd": "2h 14m 15s",
+    "gram": 86.7,
+    "gram_per_extruder": [
+      86.65
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "10301"
+    ],
+    "volume_cm3": 90.54,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "pasproef 2 rollen, kruk en paspennen": {
+    "tijd": "2h 12m 32s",
+    "gram": 58.9,
+    "gram_per_extruder": [
+      58.89
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "10301"
+    ],
+    "volume_cm3": 86.7,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  }
+}

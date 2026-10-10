@@ -7,16 +7,20 @@ Eigen ontwerpen voor de Bambu Lab A1 met AMS Lite, gemaakt als code (parametrisc
 |---|---|---|
 | [C-01 Dierenkalender · animal calendar](modellen/C-01-dierenkalender/) | vos, koe, uil, draak, eenhoorn, leeuw, hert · fox, cow, owl, dragon, unicorn, lion, deer | NL, EN |
 | [B-34B Repair Pod](modellen/B-34B-repair-pod/) | werkplek die openklapt met twee horizontale schroevenbakjes · workspace that unfolds with two level screw trays | NL, EN |
+| [B-34A Taakvreter · Task Eater](modellen/B-34A-taakvreter/) | bureaumonster dat je afgewerkte taakbriefjes opeet · desk monster that eats your finished task notes | NL, EN |
 
 ![C-01 familie](modellen/C-01-dierenkalender/renders/familie.png)
 
 ![B-34B dicht, half open, open](modellen/B-34B-repair-pod/renders/reeks.png)
+
+<img src="modellen/B-34A-taakvreter/renders/voor.png" width="420" alt="B-34A Taakvreter">
 
 ## Structuur · layout
 
 ```
 gereedschap/                    gedeelde code · shared code: geometrie, tandwielen, Bambu-3MF, slicer, printcontrole, Blender
 modellen/
+  B-34A-taakvreter/             zelfde opbouw als B-34B · same layout as B-34B
   B-34B-repair-pod/
     README.md, README.en.md     uitleg · documentation
     print/                      Bambu Studio-project (.3mf) en STL's · project and STLs
