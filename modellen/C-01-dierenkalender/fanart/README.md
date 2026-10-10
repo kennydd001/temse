@@ -9,15 +9,17 @@
 > them on MakerWorld or anywhere else, and do not sell them.** Mario, Sonic and Spider-Man are traced directly
 > from existing artwork, which makes this even stricter.
 
+![Fan-art familie](familie.png)
+
 ![Fan-art fronten](fronten.png)
 
-| Nr | Variant | Kleuren · colours (Bambu PLA) | Hoe · how |
-|---|---|---|---|
-| 08 | Mario | Maroon Red 10205 (bord), Latte Brown 11800, Ivory White 11100, Charcoal 11101 | overgetrokken · traced |
-| 09 | Sonic | Marine Blue 11600 (bord), Latte Brown 11800, Ivory White 11100, Charcoal 11101 | overgetrokken · traced |
-| 10 | Spider-Man | Marine Blue 11600 (bord), Maroon Red 10205, Ivory White 11100, Charcoal 11101 | overgetrokken · traced |
-| 11 | Steve | Marine Blue 11600 (bord), Latte Brown 11800, Terracotta 11203, Ivory White 11100 (+ Charcoal voor de kaartjes) | pixelraster · pixel grid |
-| 12 | Creeper | Charcoal 11101 (bord), Mistletoe Green 10502, Maroon Red 10205 (TNT), Ivory White 11100 | pixelraster · pixel grid |
+| Nr | Variant | Kleuren · colours (Bambu PLA) | Hoe · how | Foto · photo |
+|---|---|---|---|---|
+| 08 | Mario | Maroon Red 10205 (bord), Latte Brown 11800, Ivory White 11100, Charcoal 11101 | overgetrokken · traced | <img src="08-mario/nl/mario_nl.png" width="140"> |
+| 09 | Sonic | Marine Blue 11600 (bord), Latte Brown 11800, Ivory White 11100, Charcoal 11101 | overgetrokken · traced | <img src="09-sonic/nl/sonic_nl.png" width="140"> |
+| 10 | Spider-Man | Marine Blue 11600 (bord), Maroon Red 10205, Ivory White 11100, Charcoal 11101 | overgetrokken · traced | <img src="10-spiderman/nl/spiderman_nl.png" width="140"> |
+| 11 | Steve | Marine Blue 11600 (bord), Latte Brown 11800, Terracotta 11203, Ivory White 11100 (+ Charcoal voor de kaartjes) | pixelraster · pixel grid | <img src="11-steve/nl/steve_nl.png" width="140"> |
+| 12 | Creeper | Charcoal 11101 (bord), Mistletoe Green 10502, Maroon Red 10205 (TNT), Ivory White 11100 | pixelraster · pixel grid | <img src="12-creeper/nl/creeper_nl.png" width="140"> |
 
 Elke map `NN-naam/nl|en/` bevat hetzelfde als een gewone variant: het Bambu Studio-project
 (`dierenkalender_<naam>_nl.3mf` / `animal-calendar_<name>_en.3mf`, vijf platen), de front-STL's per kleur en een
