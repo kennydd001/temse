@@ -21,9 +21,10 @@ from matplotlib.path import Path as MPath  # noqa: E402
 from shapely.geometry.polygon import orient  # noqa: E402
 
 import kalender as K  # noqa: E402
-from bambu import project as B  # noqa: E402
+import _pad  # noqa: F401,E402  (maakt gereedschap/ importeerbaar)
+from gereedschap.bambu import project as B  # noqa: E402
 from dieren import ALLE, bouwbaar  # noqa: E402
-from geom import cs_to_shapely, to_trimesh  # noqa: E402
+from gereedschap.geom import cs_to_shapely, to_trimesh  # noqa: E402
 from params import FILAMENTEN, KAART_WIT, KAART_ZWART, ORANJE, kort  # noqa: E402
 from talen import TALEN  # noqa: E402
 

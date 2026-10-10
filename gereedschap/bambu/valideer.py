@@ -1,6 +1,6 @@
 """Controleert een Bambu Studio-project (.3mf) op de regels die de lezer van Bambu Studio hanteert.
 
-Gebruik:  python -m bambu.valideer pad/naar/project.3mf [...]
+Gebruik (vanuit de root van de repo):  python -m gereedschap.bambu.valideer pad/naar/project.3mf [...]
 
 Gecontroleerd (zie bbs_3mf.cpp / PresetBundle.cpp):
   - verplichte bestanden, geldige XML/JSON, Application = BambuStudio-<versie>

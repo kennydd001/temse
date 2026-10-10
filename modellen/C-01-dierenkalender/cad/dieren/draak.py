@@ -3,7 +3,8 @@ import numpy as np
 from shapely.geometry import Polygon
 from shapely.ops import unary_union
 
-from geom import arc_points, ellipse, smooth, stroke, sym
+import _pad  # noqa: F401,E402  (maakt gereedschap/ importeerbaar)
+from gereedschap.geom import arc_points, ellipse, smooth, stroke, sym
 from params import GEEL, GROEN, WIT, ZWART
 
 from .kit import Dier, Tekening, detail, lach_ogen, op_poot, poot, poot_ovaal, relief, vlak, vol

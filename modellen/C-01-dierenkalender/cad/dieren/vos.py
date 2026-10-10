@@ -2,7 +2,8 @@
 from shapely.geometry import Polygon
 from shapely.ops import unary_union
 
-from geom import ellipse, smooth, sym
+import _pad  # noqa: F401,E402  (maakt gereedschap/ importeerbaar)
+from gereedschap.geom import ellipse, smooth, sym
 from params import GROEN, ORANJE, WIT, ZWART
 
 from .kit import (Dier, Tekening, detail, driehoek, lach_mond, lach_ogen, op_poot, poot, poot_ovaal, relief,

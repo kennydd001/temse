@@ -15,7 +15,7 @@ into the slot in the base with a tongue and leans back 8°.
 > printed yet.** Print the test fit first (`gedeeld/pasproef`).
 >
 > The 3MF projects are checked against the rules of Bambu's format, using the Bambu Studio source and a real A1
-> project as reference (`cad/bambu/valideer.py`). They have not been opened in Bambu Studio itself, because it
+> project as reference (`gereedschap/bambu/valideer.py` at the repo root). They have not been opened in Bambu Studio itself, because it
 > does not run in this environment.
 
 ## Variants
@@ -166,7 +166,7 @@ python schets.py koe uil    # quick 2D sketch of fronts, to refine drawings
 | `cad/dieren/` | one file per animal; `kit.py` holds the shared shapes (paws, hooves, leaves) |
 | `cad/kalender.py` | guides, front, base, cards, test fit, assembly |
 | `cad/bouw.py`, `cad/projecten.py` | write the folders, STLs and 3MF projects |
-| `cad/bambu/` | Bambu Studio's 3MF format, the A1 profiles and the checker (`valideer.py`) |
+| [`gereedschap/`](../../gereedschap/) | shared by all models: geometry, Bambu 3MF (writing and checking), A1 profiles, slicer, print check, fonts |
 | `cad/controle.py`, `cad/slice.py`, `cad/render.py` | checks, slicer, Blender |
 
 ### A new animal
@@ -189,7 +189,7 @@ The base, cards and project settings come along automatically. Add new filaments
 
 ## Licences
 
-- **Fredoka** is licensed under the SIL Open Font License (`fonts/OFL.txt`). The condensed variant is a static
+- **Fredoka** is licensed under the SIL Open Font License (`gereedschap/fonts/OFL.txt`). The condensed variant is a static
   instance (wdth 75, wght 600) of the variable Fredoka from Google Fonts.
-- **The Bambu profiles and the flush calculation** in `cad/bambu/` are derived from Bambu Studio (AGPL-3.0), see
-  `cad/bambu/LEESMIJ.md`.
+- **The Bambu profiles and the flush calculation** in `gereedschap/bambu/` are derived from Bambu Studio (AGPL-3.0), see
+  `gereedschap/bambu/LEESMIJ.md`.

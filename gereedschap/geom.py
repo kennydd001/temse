@@ -11,7 +11,7 @@ from shapely import affinity
 from shapely.geometry import LineString, Point, Polygon, box
 from shapely.ops import unary_union
 
-FONTS = Path(__file__).resolve().parent.parent / "fonts"
+FONTS = Path(__file__).resolve().parent / "fonts"
 _FP = FontProperties(fname=str(FONTS / "Fredoka-SemiBold.ttf"))
 FONT_SMAL = FontProperties(fname=str(FONTS / "Fredoka-SemiBold-Condensed.ttf"))  # wdth 75
 

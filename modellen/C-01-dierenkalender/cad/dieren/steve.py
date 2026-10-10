@@ -4,7 +4,8 @@ Steve is een personage uit Minecraft (Mojang/Microsoft). Niet publiceren of verk
 """
 from shapely.ops import unary_union
 
-from geom import rounded_rect
+import _pad  # noqa: F401,E402  (maakt gereedschap/ importeerbaar)
+from gereedschap.geom import rounded_rect
 from params import BLAUW, LATTE, TERRA, WIT
 
 from .kit import Dier, Tekening, pixels, poot, relief, vlak

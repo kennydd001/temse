@@ -4,7 +4,8 @@ De Creeper komt uit Minecraft (Mojang/Microsoft). Niet publiceren of verkopen.
 """
 from shapely.ops import unary_union
 
-from geom import rounded_rect
+import _pad  # noqa: F401,E402  (maakt gereedschap/ importeerbaar)
+from gereedschap.geom import rounded_rect
 from params import GROEN, WIT, ZWART
 
 from .kit import Z_KLEUR, Z_KOP, Dier, Laag, Tekening, detail, pixels, poot, relief

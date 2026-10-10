@@ -15,7 +15,8 @@ from shapely import affinity
 from shapely.geometry import Polygon
 from shapely.ops import unary_union
 
-from geom import arc_points, ellipse, rounded_rect, smooth, stroke, sym
+import _pad  # noqa: F401,E402  (maakt gereedschap/ importeerbaar)
+from gereedschap.geom import arc_points, ellipse, rounded_rect, smooth, stroke, sym
 
 E = 0.01
 Z_PLAAT = 3.0

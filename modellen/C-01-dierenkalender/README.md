@@ -15,7 +15,7 @@ front zakt met een tong 8° achterover in de sleuf van de voet.
 > echt geprint**. Druk eerst de pasproef af (`gedeeld/pasproef`).
 >
 > De 3MF-projecten zijn gecontroleerd tegen de regels van het Bambu-formaat, met de bron van Bambu Studio en
-> een echt A1-project als referentie (`cad/bambu/valideer.py`). Ze zijn hier niet in Bambu Studio zelf
+> een echt A1-project als referentie (`gereedschap/bambu/valideer.py` in de root van de repo). Ze zijn hier niet in Bambu Studio zelf
 > geopend: dat programma draait niet in deze omgeving.
 
 ## Varianten
@@ -165,7 +165,7 @@ python schets.py koe uil    # snelle 2D-schets van fronten, om tekeningen bij te
 | `cad/dieren/` | één bestand per dier; `kit.py` heeft de gedeelde vormen (pootjes, hoefjes, blaadjes) |
 | `cad/kalender.py` | geleiders, front, voet, kaartjes, pasproef, montage |
 | `cad/bouw.py`, `cad/projecten.py` | schrijven de mappen, STL's en 3MF-projecten |
-| `cad/bambu/` | het 3MF-formaat van Bambu Studio, de A1-profielen en de controle (`valideer.py`) |
+| [`gereedschap/`](../../gereedschap/) | gedeeld door alle modellen: geometrie, Bambu-3MF (schrijven en controleren), A1-profielen, slicer, printcontrole, lettertypen |
 | `cad/controle.py`, `cad/slice.py`, `cad/render.py` | controles, slicer, Blender |
 
 ### Een nieuw dier
@@ -203,7 +203,7 @@ Voet, kaartjes en projectinstellingen komen er vanzelf bij. Nieuwe filamenten vo
 
 ## Licenties
 
-- **Fredoka** valt onder de SIL Open Font License (`fonts/OFL.txt`). De smalle variant is een statische
+- **Fredoka** valt onder de SIL Open Font License (`gereedschap/fonts/OFL.txt`). De smalle variant is een statische
   instantie (wdth 75, wght 600) van de variabele Fredoka uit Google Fonts.
-- **Bambu-profielen en het spoeldeel** in `cad/bambu/` zijn afgeleid van Bambu Studio (AGPL-3.0), zie
-  `cad/bambu/LEESMIJ.md`.
+- **Bambu-profielen en het spoeldeel** in `gereedschap/bambu/` zijn afgeleid van Bambu Studio (AGPL-3.0), zie
+  `gereedschap/bambu/LEESMIJ.md`.

@@ -19,7 +19,8 @@ import trimesh
 
 import kalender as K
 from dieren import ALLE, PER_SLEUTEL, bouwbaar
-from geom import save_stl
+import _pad  # noqa: F401,E402  (maakt gereedschap/ importeerbaar)
+from gereedschap.geom import save_stl
 from params import kort
 from talen import TALEN
 

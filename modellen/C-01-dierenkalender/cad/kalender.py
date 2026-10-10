@@ -12,7 +12,8 @@ from shapely.ops import unary_union
 
 from dieren import PER_SLEUTEL
 from dieren.kit import Laag, blad, ster
-from geom import (FONT_SMAL, box3, ellipse, extrude, extrude_profile, rot_x, rounded_rect, smooth, stroke, text,
+import _pad  # noqa: F401,E402  (maakt gereedschap/ importeerbaar)
+from gereedschap.geom import (FONT_SMAL, box3, ellipse, extrude, extrude_profile, rot_x, rounded_rect, smooth, stroke, text,
                   translate, union)
 from params import *  # noqa: F403
 from talen import TALEN
