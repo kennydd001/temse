@@ -12,8 +12,7 @@ import numpy as np
 from mathutils import Matrix
 
 import kalender as K
-from params import (BIN_INNER_W, CARD_T, CARD_W, DAGEN, FILAMENT, FLOOR, FOOT_H, MAANDEN, PLATE_T, RIM_H,
-                    SLOT_FRONT_Y, SLOT_W, TILT_DEG, WALL, WINDOW_Y0)
+from params import CARD_W, FILAMENT, PLATE_T, RIM_H, SLOT_DEPTH, TILT_DEG, WINDOW_Y0
 
 MM = 0.001
 
@@ -89,12 +88,8 @@ def wood():
     return m
 
 
-def mounted(slot_front_y, z_top):
-    """Matrix die een liggend gemodelleerd front in een sleuf zet (8° achterover)."""
-    lean = Rx(90 - TILT_DEG)
-    gap = (SLOT_W - PLATE_T) / 2
-    p = (lean @ T(0, 0, PLATE_T)).to_translation()
-    return T(0, slot_front_y + gap / math.cos(math.radians(TILT_DEG)) - p.y, z_top) @ lean
+def M(np_matrix):
+    return Matrix(np.asarray(np_matrix).tolist())
 
 
 def put_card(label, kind, mats, matrix, name):
@@ -102,38 +97,21 @@ def put_card(label, kind, mats, matrix, name):
         add(f"{name}_{c}", m, mats[c], matrix)
 
 
-def scene_geheel(mats, date):
-    for c, m in K.foot().items():
-        add("voet", m, mats[c], bevel=0.6)
-    front_m = mounted(SLOT_FRONT_Y, FOOT_H)
-    front, channels = K.front_fox()
-    for c, m in front.items():
-        add(f"front_{c}", m, mats[c], front_m, bevel=0.35 if c == K.ORANJE else 0.0)
-
-    # ingestelde datum in de vier kanalen
-    kinds = ["dag", "cijfer", "cijfer", "maand"]
-    card_y0 = WINDOW_Y0 + RIM_H
-    for (ca, cb), label, kind in zip(channels, date, kinds):
-        put_card(label, kind, mats, front_m @ T((ca + cb) / 2, card_y0, PLATE_T + 0.05), f"kaart_{label}")
-
-    # overige kaartjes rechtop in de bakken, tekst naar voren
-    stacks = [[d for d in DAGEN if d != date[0]], [d for d in "0123" if d != date[1]],
-              [d for d in "0123456789" if d != date[2]], [m for m in MAANDEN if m != date[3]]]
-    x = -(sum(BIN_INNER_W) + WALL * 3) / 2
-    for w, kind, labels in zip(BIN_INNER_W, kinds, stacks):
-        for i, label in enumerate(labels):
-            y = WALL + 1.0 + i * (CARD_T + 0.15)
-            place = T(x + w / 2, y + CARD_T, FLOOR + 0.05) @ Rx(90 + min(10, 2 + 0.6 * i))
-            put_card(label, kind, mats, place, f"bak_{label}")
-        x += w + WALL
+def scene_montage(mats, explode=0.0, lift=0.0):
+    """Gemonteerde kalender uit kalender.assembly(); lift schuift het dagkaartje omhoog (mm)."""
+    parts, _ = K.assembly(explode=explode)
+    a = math.radians(TILT_DEG)
+    up = Matrix.Translation((0, math.sin(a) * lift, math.cos(a) * lift))
+    for n, c, m in parts:
+        bevel = 0.6 if n == "voet" else 0.35 if (n == "front" and c == K.ORANJE) else 0.0
+        mat = up if n == f"kanaal {K.VANDAAG[0]}" else Matrix.Identity(4)
+        add(n, m, mats[c], mat, bevel=bevel)
 
 
 def scene_proef(mats):
     """Sleuvenblok met de kanaalstrook in de middelste sleuf en drie cijferkaartjes erin."""
-    sl = K.proef_sleuven()[K.ORANJE]
-    add("proef_sleuven", sl, mats[K.ORANJE], T(0, 0, 0), bevel=0.4)
-    z_top = K.SLOT_DEPTH + 6
-    strip_m = mounted(10.0, z_top)
+    add("proef_sleuven", K.proef_sleuven()[K.ORANJE], mats[K.ORANJE], bevel=0.4)
+    strip_m = M(K.mounted(10.0, SLOT_DEPTH + 6))
     add("proef_kanalen", K.proef_kanalen()[K.ORANJE], mats[K.ORANJE], strip_m, bevel=0.3)
     channels, _ = K.layout([CARD_W["cijfer"]] * 3)
     for (ca, cb), label in zip(channels, "012"):
@@ -141,15 +119,31 @@ def scene_proef(mats):
     put_card("WOENSDAG", "dag", mats, T(0, -42, 0) @ Matrix.Rotation(math.radians(4), 4, "Z"), "proef_dag")
 
 
+def detail_camera():
+    """Camera vlak voor de overgang dagkanaal / cijferkanalen, iets van rechtsboven."""
+    channels, _ = K.layout([CARD_W[k] for k in K.KINDS])
+    cb = channels[0][1]
+    p = K.mounted() @ np.array([cb + 2, WINDOW_Y0 + RIM_H + 10, PLATE_T + 2, 1])
+    a = math.radians(TILT_DEG)
+    out = np.array([0, -math.cos(a), math.sin(a)])
+    target = p[:3] * MM
+    cam = target + out * 0.20 + np.array([0.06, 0, 0.06])
+    return tuple(cam), tuple(target)
+
+
 VIEWS = {
-    # naam: (camera, doel, brandpuntsafstand, resolutie)
-    "geheel": ((-0.20, -0.60, 0.25), (0.0, 0.03, 0.115), 70, (1100, 1300)),
-    "vos": ((-0.08, -0.52, 0.25), (0.0, 0.04, 0.145), 75, (1100, 1100)),
-    "proef": ((-0.13, -0.30, 0.17), (0.0, -0.005, 0.025), 70, (1300, 1000)),
+    # naam: (scène, opties, camera, doel, brandpuntsafstand, resolutie, diafragma)
+    "geheel": ("montage", {}, (-0.20, -0.60, 0.25), (0.0, 0.03, 0.115), 70, (1100, 1300), 5.6),
+    "vos": ("montage", {}, (-0.08, -0.52, 0.25), (0.0, 0.04, 0.145), 75, (1100, 1100), 5.6),
+    "explosie": ("montage", {"explode": 1.0}, (-0.33, -0.56, 0.34), (0.0, 0.0, 0.15), 50, (1200, 1400), 8.0),
+    "zijkant": ("montage", {}, (1.10, 0.035, 0.11), (0.0, 0.035, 0.11), 110, (1100, 1000), 11.0),
+    "achterkant": ("montage", {}, (0.34, 0.60, 0.33), (0.0, 0.04, 0.085), 60, (1200, 1000), 8.0),
+    "detail": ("montage", {"lift": 12.0}, None, None, 100, (1200, 900), 6.3),
+    "proef": ("proef", {}, (-0.13, -0.30, 0.17), (0.0, -0.005, 0.025), 70, (1300, 1000), 5.6),
 }
 
 
-def main(out, view="geheel", fast=False, date=("ZATERDAG", "1", "0", "OKTOBER")):
+def main(out, view="geheel", fast=False):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     sc = bpy.context.scene
 
@@ -159,16 +153,20 @@ def main(out, view="geheel", fast=False, date=("ZATERDAG", "1", "0", "OKTOBER"))
         K.ZWART: pla("zwart", FILAMENT[K.ZWART], 0.6, floor=0.012),
         K.GROEN: pla("groen", FILAMENT[K.GROEN], 0.42),
     }
-    if view == "proef":
+    kind, opts, cam_loc, aim, lens, (rx, ry), fstop = VIEWS[view]
+    if kind == "proef":
         scene_proef(mats)
     else:
-        scene_geheel(mats, date)
+        scene_montage(mats, **opts)
+    if cam_loc is None:
+        cam_loc, aim = detail_camera()
 
     # tafel en achtergrond
     bpy.ops.mesh.primitive_plane_add(size=3, location=(0, 0.3, 0))
     bpy.context.object.data.materials.append(wood())
-    bpy.ops.mesh.primitive_plane_add(size=3, location=(0, 0.75, 0.6), rotation=(math.radians(90), 0, 0))
-    bpy.context.object.data.materials.append(pla("muur", "#BFA88F", 0.9))
+    if view not in ("achterkant",):
+        bpy.ops.mesh.primitive_plane_add(size=3, location=(0, 0.75, 0.6), rotation=(math.radians(90), 0, 0))
+        bpy.context.object.data.materials.append(pla("muur", "#BFA88F", 0.9))
 
     world = bpy.data.worlds.new("wereld")
     world.use_nodes = True
@@ -189,12 +187,13 @@ def main(out, view="geheel", fast=False, date=("ZATERDAG", "1", "0", "OKTOBER"))
     light("hoofdlicht", (-0.45, -0.55, 0.65), (55, 0, -38), 18, 0.5)
     light("vullicht", (0.6, -0.35, 0.3), (70, 0, 55), 4, 0.8, (0.92, 0.96, 1))
     light("tegenlicht", (0.1, 0.5, 0.6), (-50, 0, 180), 8, 0.4)
+    if view in ("achterkant", "zijkant"):
+        light("achterlicht", (0.45, 0.7, 0.5), (-60, 0, 150), 14, 0.6)
 
-    cam_loc, aim, lens, (rx, ry) = VIEWS[view]
     cam_d = bpy.data.cameras.new("camera")
     cam_d.lens = lens
     cam_d.dof.use_dof = True
-    cam_d.dof.aperture_fstop = 5.6
+    cam_d.dof.aperture_fstop = fstop
     cam = bpy.data.objects.new("camera", cam_d)
     sc.collection.objects.link(cam)
     cam.location = cam_loc
@@ -212,7 +211,7 @@ def main(out, view="geheel", fast=False, date=("ZATERDAG", "1", "0", "OKTOBER"))
     sc.view_settings.exposure = -0.55
     sc.render.engine = "CYCLES"
     sc.cycles.device = "CPU"
-    sc.cycles.samples = 24 if fast else 160
+    sc.cycles.samples = 24 if fast else 128
     sc.cycles.use_denoising = True
     sc.render.resolution_x = rx
     sc.render.resolution_y = ry
@@ -225,6 +224,8 @@ def main(out, view="geheel", fast=False, date=("ZATERDAG", "1", "0", "OKTOBER"))
 
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    view = args[0] if args else "geheel"
-    out = Path(args[1]) if len(args) > 1 else Path(__file__).resolve().parent.parent / "renders" / f"{view}.png"
-    main(out.resolve(), view, fast="--snel" in sys.argv)
+    views = list(VIEWS) if "--alle" in sys.argv else [args[0] if args else "geheel"]
+    for view in views:
+        out = Path(args[1]) if len(args) > 1 and len(views) == 1 else \
+            Path(__file__).resolve().parent.parent / "renders" / f"{view}.png"
+        main(out.resolve(), view, fast="--snel" in sys.argv)

@@ -1,0 +1,741 @@
+{
+  "montage": {
+    "botsingen": [
+      {
+        "paar": "front ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal ZATERDAG ↔ front",
+        "overlap_mm3": -0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal ZATERDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal 1 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal 1 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal 0 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal 0 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal OKTOBER ↔ front",
+        "overlap_mm3": -0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal OKTOBER ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag ZONDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag ZONDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag VRIJDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag VRIJDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag DONDERDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag DONDERDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag WOENSDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag WOENSDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag DINSDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag DINSDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag MAANDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag MAANDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 3 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 3 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 2 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 2 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 0 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 0 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 9 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 9 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 8 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 8 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 7 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 7 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 6 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 6 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 5 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 5 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 4 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 4 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 3 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 3 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 2 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 2 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 1 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 1 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand DECEMBER ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand DECEMBER ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand NOVEMBER ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand NOVEMBER ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand SEPTEMBER ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand SEPTEMBER ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand AUGUSTUS ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand AUGUSTUS ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JULI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JULI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JUNI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JUNI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand MEI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand MEI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand APRIL ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand APRIL ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand MAART ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand MAART ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand FEBRUARI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand FEBRUARI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JANUARI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JANUARI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "alle 33 kaartjes in de bakken ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kaartjes onderling in de bakken",
+        "overlap_mm3": 0.0,
+        "ok": true
+      }
+    ],
+    "spelingen": {
+      "kanalen": {
+        "kanaal dag (ZATERDAG)": {
+          "zijspeling_mm": 0.5,
+          "ruimte_kaart_tot_lip_mm": 1.308,
+          "lipoverlap_links_mm": 1.49,
+          "lipoverlap_rechts_mm": 1.49,
+          "lipoverlap_slechtst_mm": 0.99
+        },
+        "kanaal cijfer (1)": {
+          "zijspeling_mm": 0.5,
+          "ruimte_kaart_tot_lip_mm": 1.308,
+          "lipoverlap_links_mm": 1.49,
+          "lipoverlap_rechts_mm": 1.49,
+          "lipoverlap_slechtst_mm": 0.99
+        },
+        "kanaal cijfer (0)": {
+          "zijspeling_mm": 0.5,
+          "ruimte_kaart_tot_lip_mm": 1.308,
+          "lipoverlap_links_mm": 1.49,
+          "lipoverlap_rechts_mm": 1.49,
+          "lipoverlap_slechtst_mm": 0.99
+        },
+        "kanaal maand (OKTOBER)": {
+          "zijspeling_mm": 0.5,
+          "ruimte_kaart_tot_lip_mm": 1.308,
+          "lipoverlap_links_mm": 1.49,
+          "lipoverlap_rechts_mm": 1.49,
+          "lipoverlap_slechtst_mm": 0.99
+        }
+      },
+      "tong_in_sleuf": {
+        "voorzijde_mm": 0.4,
+        "achterzijde_mm": 0.4,
+        "onderkant_tong_tot_sleufbodem_mm": 0.978,
+        "uiteinden_links_rechts_mm": [
+          0.404,
+          0.404
+        ],
+        "schouder_boven_voet_mm": 0.0
+      },
+      "bakken_vol": {
+        "bak dag (7 st.)": {
+          "zijspeling_mm": 1.0,
+          "kleinste_afstand_achterhoek_mm": 0.3,
+          "ruimte_voor_stapel_mm": 14.2
+        },
+        "bak tiental (4 st.)": {
+          "zijspeling_mm": 1.0,
+          "kleinste_afstand_achterhoek_mm": 0.3,
+          "ruimte_voor_stapel_mm": 19.15
+        },
+        "bak eenheid (10 st.)": {
+          "zijspeling_mm": 1.0,
+          "kleinste_afstand_achterhoek_mm": 0.3,
+          "ruimte_voor_stapel_mm": 9.25
+        },
+        "bak maand (12 st.)": {
+          "zijspeling_mm": 1.0,
+          "kleinste_afstand_achterhoek_mm": 0.3,
+          "ruimte_voor_stapel_mm": 5.95
+        }
+      }
+    },
+    "uitnemen": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.22
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.8
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 8.86
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.73
+      }
+    ]
+  },
+  "print": {
+    "proef_kaartjes": {
+      "kleuren": {
+        "wit": {
+          "volume_cm3": 5.2,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.25,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        134.0,
+        28.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        122.0,
+        228.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "proef_kanalen": {
+      "kleuren": {
+        "oranje": {
+          "volume_cm3": 14.76,
+          "z_mm": [
+            0.0,
+            8.4
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 365.0,
+      "maat_mm": [
+        85.0,
+        60.0,
+        8.4
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        171.0,
+        196.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    },
+    "proef_sleuven": {
+      "kleuren": {
+        "oranje": {
+          "volume_cm3": 53.83,
+          "z_mm": [
+            0.0,
+            22.5
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        110.8,
+        24.0,
+        22.5
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        145.2,
+        232.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    },
+    "front_vos": {
+      "kleuren": {
+        "groen": {
+          "volume_cm3": 0.42,
+          "z_mm": [
+            2.99,
+            3.8
+          ]
+        },
+        "oranje": {
+          "volume_cm3": 110.85,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "wit": {
+          "volume_cm3": 2.53,
+          "z_mm": [
+            3.99,
+            5.0
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.46,
+          "z_mm": [
+            2.6,
+            5.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 69.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 12,
+      "geschatte_wissels": 17,
+      "kleurwissel_tussen_z_mm": [
+        2.7,
+        5.1
+      ]
+    },
+    "voet": {
+      "kleuren": {
+        "oranje": {
+          "volume_cm3": 176.94,
+          "z_mm": [
+            0.0,
+            36.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        206.0,
+        72.0,
+        36.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        50.0,
+        184.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    },
+    "kaartjes_cijfers": {
+      "kleuren": {
+        "wit": {
+          "volume_cm3": 12.99,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.77,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        178.0,
+        60.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        78.0,
+        196.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "kaartjes_dagen": {
+      "kleuren": {
+        "wit": {
+          "volume_cm3": 16.97,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.57,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        236.0,
+        60.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        20.0,
+        196.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "kaartjes_maanden": {
+      "kleuren": {
+        "wit": {
+          "volume_cm3": 40.04,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.78,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        236.0,
+        124.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        20.0,
+        132.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    }
+  },
+  "stabiliteit": {
+    "massa_g": 290.0,
+    "zwaartepunt_mm": [
+      4.7,
+      36.6,
+      48.0
+    ],
+    "kantelhoek_voorover_graden": 37.4,
+    "kantelhoek_achterover_graden": 36.4,
+    "vulgraad_gebruikt": {
+      "voet": 0.49,
+      "front": 0.64,
+      "kaart": 1.03
+    },
+    "bron": "slicer"
+  }
+}

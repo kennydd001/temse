@@ -4,10 +4,13 @@ Gebruik:  python kalender.py            (alles)
           python kalender.py proef      (alleen de pasproefstroken)
 """
 import json
+import math
 import sys
 from pathlib import Path
 
+import numpy as np
 import trimesh
+from manifold3d import Manifold
 from shapely import affinity
 from shapely.geometry import Polygon, box
 from shapely.ops import unary_union
@@ -53,9 +56,10 @@ def lip(x_face, z_low, z_top, direction):
 
 
 def guides(channels, rails, rim_y0, depths, gap=RIM_GAP):
-    """Ribben met lippen en een draagrand per kanaal. Geeft (geleiders, nagelkuiltjes).
+    """Ribben met lippen en een draagrand per kanaal. Geeft (geleiders, uitsparingen).
 
-    depths: vrije kanaaldiepte per kanaal (2,2 mm op het front, 2,0/2,2/2,4 op de proef).
+    De uitsparingen (invoerschuintes en nagelkuiltjes) gaan van plaat + geleiders af.
+    depths: vrije kanaaldiepte per kanaal (2,4 mm op het front, 2,2/2,4/2,6 op de proef).
     """
     E = 0.01  # kleine overlap, zodat delen elkaar echt raken
     card_y0 = rim_y0 + RIM_H
@@ -73,7 +77,7 @@ def guides(channels, rails, rim_y0, depths, gap=RIM_GAP):
         # lokaal (X, Y=z, Z=lengte)  ->  wereld (x, y = top_y - Z, z = Y)
         m = [[1, 0, 0, 0], [0, 0, -1, top_y], [0, 1, 0, 0], [0, 0, 0, 1]]
         parts.append(extrude_profile(prof, top_y - rim_y0, m))
-    scoops = []
+    cuts = []
     for (ca, cb), z_low, z_top in zip(channels, zl, zt):
         rim = box(rim_y0, PLATE_T - E, card_y0, z_top).union(
             Polygon([(card_y0 - E, z_low), (card_y0 + LIP, z_low + LIP), (card_y0 + LIP, z_top),
@@ -85,8 +89,30 @@ def guides(channels, rails, rim_y0, depths, gap=RIM_GAP):
             parts.append(extrude_profile(rim, xb - xa, m))
         # nagelkuiltje achter de onderrand van het kaartje, in de opening van de draagrand
         cup = ellipse(cc, card_y0, gap / 2 - 0.5, 4.0).intersection(box(cc - 9, rim_y0 + 0.6, cc + 9, card_y0 + 4))
-        scoops.append(extrude(cup, PLATE_T - 1.0, PLATE_T + 0.01))
-    return union(parts), union(scoops)
+        cuts.append(extrude(cup, PLATE_T - 1.0, PLATE_T + 0.01))
+    # 45°-afloop aan het boveneind van alle geleiders, van de plaat tot boven de ribben
+    top = max(zt) + 2
+    ramp = Polygon([(top_y, PLATE_T + E), (top_y + 1, PLATE_T + E), (top_y + 1, top), (top_y - (top - PLATE_T - E), top)])
+    x0, x1 = rails[0][0] - 1, rails[-1][1] + 1
+    m = [[0, 0, 1, x0], [1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1]]
+    cuts.append(extrude_profile(ramp, x1 - x0, m))
+    return union(parts), union(cuts)
+
+
+def tongue(width, y_top=0.5):
+    """2D-tong met afgeronde onderhoeken (gaat 0,5 mm het bord in)."""
+    r = TONGUE_R
+    return unary_union([rounded_rect(-width / 2, -TONGUE_L, width / 2, -TONGUE_L + 3 * r, r),
+                        box(-width / 2, -TONGUE_L + r, width / 2, y_top)])
+
+
+def tongue_chamfers(width):
+    """45°-afschuining langs de onderrand van de tong, aan voor- en achterzijde."""
+    c, y, E = TONGUE_CHAMFER, -TONGUE_L, 0.01
+    m = [[0, 0, 1, -width / 2 - 1], [1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1]]
+    tris = [Polygon([(y - E, -E), (y + c, -E), (y - E, c)]),
+            Polygon([(y - E, PLATE_T + E), (y + c, PLATE_T + E), (y - E, PLATE_T - c)])]
+    return union([extrude_profile(t, width + 2, m) for t in tris])
 
 
 def layered(colors):
@@ -121,12 +147,11 @@ def front_fox(channel=CHANNEL):
     P = fox.fox_parts(top=TOTAL_H - TONGUE_L)
     hw = BOARD_W / 2
     board = unary_union([rounded_rect(-hw, 0, hw, BOARD_TOP, BOARD_R), box(-hw, 0, hw, BOARD_R)])
-    tongue = box(-TONGUE_W / 2, -TONGUE_L, TONGUE_W / 2, 0.5)
     # kleine sluiting: voorkomt punten waar twee vormen elkaar maar net raken (niet-manifold in STL)
-    plate2d = smooth(unary_union([board, tongue, P["outline"], P["paws"]]), close=0.4)
+    plate2d = smooth(unary_union([board, tongue(TONGUE_W), P["outline"], P["paws"]]), close=0.4)
 
     channels, rails = layout([CARD_W["dag"], CARD_W["cijfer"], CARD_W["cijfer"], CARD_W["maand"]])
-    g, scoops = guides(channels, rails, WINDOW_Y0, [channel] * len(channels))
+    g, cuts = guides(channels, rails, WINDOW_Y0, [channel] * len(channels))
 
     head_top = PLATE_T + HEAD_RELIEF
     relief = smooth(unary_union([P["outline"].buffer(-0.01), P["paws"]]), close=0.4)
@@ -135,14 +160,18 @@ def front_fox(channel=CHANNEL):
         extrude(relief, PLATE_T - 0.01, head_top),
         extrude(P["paws"], head_top - 0.01, PAW_TOP),
         g,
-    ]) - scoops
+    ]) - cuts - tongue_chamfers(TONGUE_W)
 
     # kleurvlakken houden 0,05 mm afstand van de pootjes, zodat er geen raakpunten ontstaan
     paws_free = P["paws"].buffer(0.05)
-    white = extrude(unary_union([P["mask"], P["inner_ears"]]).difference(paws_free),
-                    head_top - 0.01, head_top + COLOR_LAYER)
+    white = union([
+        extrude(unary_union([P["mask"], P["inner_ears"]]).difference(paws_free), head_top - 0.01,
+                head_top + COLOR_LAYER),
+        extrude(P["highlight"], head_top - 0.01, DETAIL_TOP),  # glimlichtje, gelijk met de neus
+    ])
     black = union([
         extrude(P["details"].difference(paws_free), head_top - 0.01, DETAIL_TOP),
+        extrude(P["ear_tips"], head_top - 0.01, head_top + COLOR_LAYER),
         extrude(P["toes"], PAW_TOP - 0.4, PAW_TOP + 0.2),
     ])
 
@@ -151,12 +180,15 @@ def front_fox(channel=CHANNEL):
     c = [(a + b) / 2 for a, b in channels]
     labels = unary_union([text("Dag", 6.5, c[0], label_y), text("Datum", 6.5, (c[1] + c[2]) / 2, label_y),
                           text("Maand", 6.5, c[3], label_y)])
-    black = union([black, extrude(labels, PLATE_T - 0.01, PLATE_T + 0.6)])
+    black = union([black, extrude(labels, PLATE_T - LABEL_INLAY, PLATE_T)])
 
     # drie blaadjes onder de vensters
     leaves, veins = zip(*[leaf(c[0], 21, rot=20), leaf((c[1] + c[2]) / 2, 21, rot=-20), leaf(c[3], 21, rot=20)])
     green = extrude(unary_union(leaves), PLATE_T - 0.01, PLATE_T + 0.8) - extrude(
         unary_union(veins), PLATE_T + 0.4, PLATE_T + 0.9)
+
+    tag = affinity.scale(text(f"C-01 vos {VERSIE}", 4.5, 0, 12), -1, 1, origin=(0, 0))
+    orange = orange - extrude(tag, -0.01, 0.4)
 
     return layered({ORANJE: orange, WIT: white, ZWART: black, GROEN: green}), channels
 
@@ -165,9 +197,16 @@ def front_fox(channel=CHANNEL):
 # Voet met vier opbergbakken, sleuf en achtervak
 # ---------------------------------------------------------------------------
 
-def slot_cut(x_len, y_front, z_top, width=SLOT_W, depth=SLOT_DEPTH, tilt=TILT_DEG):
-    """Sleuf die `tilt` graden achterover leunt; voorkant op (y_front, z_top)."""
+def slot_cut(x_len, y_front, z_top, width=SLOT_W, depth=SLOT_DEPTH, tilt=TILT_DEG, chamfer=SLOT_CHAMFER):
+    """Sleuf die `tilt` graden achterover leunt; voorkant op (y_front, z_top), mond 45° afgeschuind."""
     s = box3(-x_len / 2, 0, -depth, x_len / 2, width, 6)
+    # trechter: afgeknotte piramide met 45°-wanden; onderkant iets kleiner dan de sleuf,
+    # zodat de schuine vlakken de sleufwanden snijden in plaats van erop te vallen
+    c, t, hx = chamfer, 6.0, x_len / 2
+    lo, hi = -c - 0.5, t
+    pts = [(sx * (hx - 0.5), y, lo) for sx in (-1, 1) for y in (0.5, width - 0.5)]
+    pts += [(sx * (hx + c + t), y, hi) for sx in (-1, 1) for y in (-c - t, width + c + t)]
+    s = union([s, Manifold.hull_points(pts)])
     return s.transform((translate(0, y_front, z_top) @ rot_x(-tilt))[:3, :])
 
 
@@ -180,11 +219,13 @@ def foot():
     x = -total / 2
     bin_back = WALL + BIN_INNER_D
     for w in BIN_INNER_W:
-        bins.append(extrude(rounded_rect(x, WALL, x + w, bin_back, 1.5), FLOOR, FOOT_H + 1))
+        # binnenhoek R0,8: een kaartje kan helemaal tegen de achterwand (56 mm in 58 mm)
+        bins.append(extrude(rounded_rect(x, WALL, x + w, bin_back, 0.8), FLOOR, FOOT_H + 1))
         x += w + WALL
 
-    # schuine bovenkant: lage voorkant, oplopend naar de achterwand van de bakken
-    wedge = Polygon([(-1, BIN_FRONT_H), (bin_back, FOOT_H), (bin_back, FOOT_H + 2), (-1, FOOT_H + 2)])
+    # lage voorwand met vlakke bovenkant, daarachter lopen de wanden schuin op naar de achterwand
+    wedge = Polygon([(-1, BIN_FRONT_H), (WALL, BIN_FRONT_H), (bin_back, FOOT_H), (bin_back, FOOT_H + 2),
+                     (-1, FOOT_H + 2)])
     m = [[0, 0, 1, -hw - 1], [1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1]]
     slope = extrude_profile(wedge, FOOT_W + 2, m)
 
@@ -231,33 +272,106 @@ def card_plate(items, cols, gap=4.0):
 
 
 # ---------------------------------------------------------------------------
+# Montage: alle delen in gebruiksstand (gedeeld door controle.py en render.py)
+# ---------------------------------------------------------------------------
+
+KINDS = ["dag", "cijfer", "cijfer", "maand"]
+POSITIES = ["dag", "tiental", "eenheid", "maand"]
+VANDAAG = ("ZATERDAG", "1", "0", "OKTOBER")
+
+
+def mounted(slot_front_y=SLOT_FRONT_Y, z_top=FOOT_H, slot_w=SLOT_W, tilt=TILT_DEG):
+    """4x4-matrix: liggend gemodelleerd front -> in de sleuf, `tilt`° achterover.
+
+    De achterste onderrand van de schouders rust op de voet en de tong hangt midden in de sleuf.
+    """
+    lean = rot_x(90 - tilt)
+    gap = (slot_w - PLATE_T) / 2
+    p = (lean @ [0, 0, PLATE_T, 1])[:3]  # voorvlak, onderrand
+    a = math.radians(tilt)
+    ty = slot_front_y - p[1] + (gap + math.sin(a) * p[2]) / math.cos(a)
+    return translate(0, ty, z_top) @ lean
+
+
+def stand_card(x, y_back, z=FLOOR):
+    """Kaartje rechtop, tekst naar voren (-y), achterkant op y_back, onderkant op z."""
+    return translate(x, y_back, z) @ rot_x(90)
+
+
+def bin_stacks(date=VANDAAG):
+    rest = [[d for d in DAGEN if d != date[0]], [d for d in TIENTALLEN if d != date[1]],
+            [d for d in EENHEDEN if d != date[2]], [m for m in MAANDEN if m != date[3]]]
+    return rest
+
+
+def bin_centers():
+    x = -(sum(BIN_INNER_W) + WALL * (len(BIN_INNER_W) - 1)) / 2
+    out = []
+    for w in BIN_INNER_W:
+        out.append(x + w / 2)
+        x += w + WALL
+    return out
+
+
+def assembly(date=VANDAAG, explode=0.0, full_bins=False):
+    """Alle onderdelen in gemonteerde stand (mm): lijst (naam, kleur, Manifold).
+
+    explode > 0 schuift de delen uit elkaar voor een explosietekening.
+    full_bins=True zet alle 33 kaartjes in de bakken (vulproef).
+    """
+    def T(m, M):
+        return m.transform(np.asarray(M)[:3, :])
+
+    parts = [("voet", c, m) for c, m in foot().items()]
+    front, channels = front_fox()
+    a = math.radians(TILT_DEG)
+    up = np.array([0, math.sin(a), math.cos(a)])          # langs het schuine front omhoog
+    out = np.array([0, -math.cos(a), math.sin(a)])        # loodrecht uit het front
+    M = translate(*(up * 70 * explode)) @ mounted()
+    parts += [("front", c, T(m, M)) for c, m in front.items()]
+    if not full_bins:
+        for (ca, cb), label, kind in zip(channels, date, KINDS):
+            place = translate(*((up * 25 + out * 45) * explode)) @ M @ translate(
+                (ca + cb) / 2, WINDOW_Y0 + RIM_H, PLATE_T + 0.002)
+            parts += [(f"kanaal {label}", c, T(m, place)) for c, m in card(label, kind).items()]
+    stacks = [[*DAGEN], [*TIENTALLEN], [*EENHEDEN], [*MAANDEN]] if full_bins else bin_stacks(date)
+    for cx, kind, pos, labels in zip(bin_centers(), KINDS, POSITIES, stacks):
+        y = WALL + BIN_INNER_D - 0.3                       # achterste kaartje 0,3 mm van de achterwand
+        for i, label in enumerate(reversed(labels)):       # eerste van de lijst staat vooraan
+            place = translate(0, -20 * explode, 40 * explode * (1 + 0.04 * i)) @ stand_card(cx, y, FLOOR + 0.002)
+            parts += [(f"bak {pos} {label}", c, T(m, place)) for c, m in card(label, kind).items()]
+            y -= CARD_T + 0.05
+    return parts, channels
+
+
+# ---------------------------------------------------------------------------
 # Pasproefstroken
 # ---------------------------------------------------------------------------
 
-PROEF_KANALEN = [2.0, 2.2, 2.4]
+PROEF_KANALEN = [2.2, 2.4, 2.6]
 PROEF_SLEUVEN = [3.6, 3.8, 4.0]
 PROEF_TONG_W = 28.0
 
 
 def proef_kanalen():
-    """Drie cijferkanalen naast elkaar (2,0 / 2,2 / 2,4 mm) met onderaan een tong van 3 mm."""
+    """Drie cijferkanalen naast elkaar (2,2 / 2,4 / 2,6 mm) met onderaan een tong van 3 mm."""
     channels, rails = layout([CARD_W["cijfer"]] * len(PROEF_KANALEN))
     rim_y0 = 4.0
-    g, scoops = guides(channels, rails, rim_y0, PROEF_KANALEN)
+    g, cuts = guides(channels, rails, rim_y0, PROEF_KANALEN)
     w = rails[-1][1] - rails[0][0] + 4
     h = rim_y0 + RIM_H + CARD_H + 9
-    plate = unary_union([rounded_rect(-w / 2, 0, w / 2, h, 3), box(-w / 2, 0, w / 2, 3),
-                         box(-PROEF_TONG_W / 2, -TONGUE_L, PROEF_TONG_W / 2, 0.5)])
+    plate = unary_union([rounded_rect(-w / 2, 0, w / 2, h, 3), box(-w / 2, 0, w / 2, 3), tongue(PROEF_TONG_W)])
     labels = unary_union([text(f"{d:.1f}".replace(".", ","), 4.5, (a + b) / 2, h - 4.5)
                           for (a, b), d in zip(channels, PROEF_KANALEN)])
-    m = union([extrude(plate, 0, PLATE_T), g]) - scoops - extrude(labels, PLATE_T - 0.6, PLATE_T + 1)
+    m = (union([extrude(plate, 0, PLATE_T), g]) - cuts - tongue_chamfers(PROEF_TONG_W)
+         - extrude(labels, PLATE_T - 0.6, PLATE_T + 1))
     return {ORANJE: m}
 
 
 def proef_sleuven():
     """Blokje met drie schuine sleuven (3,6 / 3,8 / 4,0 mm) op dezelfde 8° als de voet."""
     n = len(PROEF_SLEUVEN)
-    slot_len = PROEF_TONG_W + 0.8
+    slot_len = PROEF_TONG_W + (SLOT_L - TONGUE_W)
     pitch = slot_len + 6
     w, d, h = n * pitch + 4, 24.0, SLOT_DEPTH + 6
     body = extrude(rounded_rect(-w / 2, 0, w / 2, d, 3), 0, h)

@@ -3,11 +3,11 @@
     "oranje": {
       "bestand": "stl/1-pasproef/proef_kanalen__oranje.stl",
       "filament": "Pumpkin Orange 10301",
-      "volume_cm3": 14.85,
+      "volume_cm3": 14.76,
       "maat_mm": [
-        84.4,
+        85.0,
         60.0,
-        8.2
+        8.4
       ]
     }
   },
@@ -15,9 +15,9 @@
     "oranje": {
       "bestand": "stl/1-pasproef/proef_sleuven__oranje.stl",
       "filament": "Pumpkin Orange 10301",
-      "volume_cm3": 52.82,
+      "volume_cm3": 53.83,
       "maat_mm": [
-        108.4,
+        110.8,
         24.0,
         22.5
       ]
@@ -49,21 +49,21 @@
     "zwart": {
       "bestand": "stl/2-vos/front_vos__zwart.stl",
       "filament": "Charcoal 11101",
-      "volume_cm3": 0.38,
+      "volume_cm3": 0.46,
       "maat_mm": [
-        143.2,
-        66.4,
-        2.2
+        143.8,
+        125.3,
+        2.6
       ]
     },
     "wit": {
       "bestand": "stl/2-vos/front_vos__wit.stl",
       "filament": "Ivory White 11100",
-      "volume_cm3": 2.55,
+      "volume_cm3": 2.53,
       "maat_mm": [
         137.8,
-        91.1,
-        0.6
+        90.6,
+        1.0
       ]
     },
     "groen": {
@@ -71,7 +71,7 @@
       "filament": "Mistletoe Green 10502",
       "volume_cm3": 0.42,
       "maat_mm": [
-        143.9,
+        144.5,
         12.2,
         0.8
       ]
@@ -79,11 +79,11 @@
     "oranje": {
       "bestand": "stl/2-vos/front_vos__oranje.stl",
       "filament": "Pumpkin Orange 10301",
-      "volume_cm3": 111.2,
+      "volume_cm3": 110.85,
       "maat_mm": [
         200.0,
         210.0,
-        8.0
+        8.2
       ]
     }
   },
@@ -91,7 +91,7 @@
     "oranje": {
       "bestand": "stl/3-voet/voet__oranje.stl",
       "filament": "Pumpkin Orange 10301",
-      "volume_cm3": 179.16,
+      "volume_cm3": 176.94,
       "maat_mm": [
         206.0,
         72.0,
@@ -137,7 +137,7 @@
       "filament": "Charcoal 11101",
       "volume_cm3": 0.57,
       "maat_mm": [
-        227.4,
+        227.5,
         40.2,
         0.4
       ]

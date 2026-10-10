@@ -31,6 +31,12 @@ def inner_ears():
     return sym(inner).intersection(ears().buffer(-3.2))
 
 
+def ear_tips():
+    """Donkere oorpuntjes, met een gebogen rand (cirkel rond de oorspronkelijke scherpe punt)."""
+    tip = ellipse(-66, 206, 19.0, 19.0)
+    return sym(tip).intersection(ears())
+
+
 def outline():
     return smooth(unary_union([head(), ears()]), close=6)
 
@@ -55,7 +61,17 @@ def eyes():
 
 def nose():
     tri = Polygon([(-7.5, 124.5), (7.5, 124.5), (0, 116.5)])
-    return smooth(tri, open_=2.8)
+    return smooth(tri, open_=2.8).difference(highlight().buffer(0.05))
+
+
+def highlight():
+    """Wit glimlichtje op de neus (Ø 2,6 mm)."""
+    return ellipse(-2.6, 122.2, 1.4, 1.2)
+
+
+def whisker_dots():
+    """Drie snorharenstipjes per kant (Ø 1,8 mm)."""
+    return sym(unary_union([ellipse(x, y, 0.9, 0.9) for x, y in ((-11.5, 115.5), (-14.5, 112.0), (-11.0, 109.0))]))
 
 
 def mouth():
@@ -65,7 +81,7 @@ def mouth():
 
 
 def details():
-    return unary_union([eyes(), nose(), mouth()])
+    return unary_union([eyes(), nose(), mouth(), whisker_dots()])
 
 
 PAW_C = 37.0
@@ -89,6 +105,8 @@ def fox_parts(top=194.0):
         "inner_ears": inner_ears(),
         "mask": mask(),
         "details": details(),
+        "highlight": highlight(),
+        "ear_tips": ear_tips(),
         "paws": paws(),
         "toes": toes(),
     }
