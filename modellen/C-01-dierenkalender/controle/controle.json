@@ -1,0 +1,2642 @@
+{
+  "montage": {
+    "botsingen": [
+      {
+        "paar": "front ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal ZATERDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal ZATERDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal 1 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal 1 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal 0 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal 0 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal OKTOBER ↔ front",
+        "overlap_mm3": -0.0,
+        "ok": true
+      },
+      {
+        "paar": "kanaal OKTOBER ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag ZONDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag ZONDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag VRIJDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag VRIJDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag DONDERDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag DONDERDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag WOENSDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag WOENSDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag DINSDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag DINSDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag MAANDAG ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak dag MAANDAG ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 3 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 3 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 2 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 2 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 0 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak tiental 0 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 9 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 9 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 8 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 8 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 7 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 7 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 6 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 6 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 5 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 5 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 4 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 4 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 3 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 3 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 2 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 2 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 1 ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak eenheid 1 ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand DECEMBER ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand DECEMBER ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand NOVEMBER ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand NOVEMBER ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand SEPTEMBER ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand SEPTEMBER ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand AUGUSTUS ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand AUGUSTUS ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JULI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JULI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JUNI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JUNI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand MEI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand MEI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand APRIL ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand APRIL ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand MAART ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand MAART ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand FEBRUARI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand FEBRUARI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JANUARI ↔ front",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "bak maand JANUARI ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "alle 33 kaartjes in de bakken ↔ voet",
+        "overlap_mm3": 0.0,
+        "ok": true
+      },
+      {
+        "paar": "kaartjes onderling in de bakken",
+        "overlap_mm3": 0.0,
+        "ok": true
+      }
+    ],
+    "spelingen": {
+      "kanalen": {
+        "kanaal dag (ZATERDAG)": {
+          "zijspeling_mm": 0.5,
+          "ruimte_kaart_tot_lip_mm": 1.308,
+          "lipoverlap_links_mm": 1.49,
+          "lipoverlap_rechts_mm": 1.49,
+          "lipoverlap_slechtst_mm": 0.99
+        },
+        "kanaal cijfer (1)": {
+          "zijspeling_mm": 0.5,
+          "ruimte_kaart_tot_lip_mm": 1.308,
+          "lipoverlap_links_mm": 1.49,
+          "lipoverlap_rechts_mm": 1.49,
+          "lipoverlap_slechtst_mm": 0.99
+        },
+        "kanaal cijfer (0)": {
+          "zijspeling_mm": 0.5,
+          "ruimte_kaart_tot_lip_mm": 1.308,
+          "lipoverlap_links_mm": 1.49,
+          "lipoverlap_rechts_mm": 1.49,
+          "lipoverlap_slechtst_mm": 0.99
+        },
+        "kanaal maand (OKTOBER)": {
+          "zijspeling_mm": 0.5,
+          "ruimte_kaart_tot_lip_mm": 1.308,
+          "lipoverlap_links_mm": 1.49,
+          "lipoverlap_rechts_mm": 1.49,
+          "lipoverlap_slechtst_mm": 0.99
+        }
+      },
+      "tong_in_sleuf": {
+        "voorzijde_mm": 0.4,
+        "achterzijde_mm": 0.4,
+        "onderkant_tong_tot_sleufbodem_mm": 0.978,
+        "uiteinden_links_rechts_mm": [
+          0.404,
+          0.404
+        ],
+        "schouder_boven_voet_mm": 0.0
+      },
+      "bakken_vol": {
+        "bak dag (7 st.)": {
+          "zijspeling_mm": 1.0,
+          "kleinste_afstand_achterhoek_mm": 0.3,
+          "ruimte_voor_stapel_mm": 14.2
+        },
+        "bak tiental (4 st.)": {
+          "zijspeling_mm": 1.0,
+          "kleinste_afstand_achterhoek_mm": 0.3,
+          "ruimte_voor_stapel_mm": 19.15
+        },
+        "bak eenheid (10 st.)": {
+          "zijspeling_mm": 1.0,
+          "kleinste_afstand_achterhoek_mm": 0.3,
+          "ruimte_voor_stapel_mm": 9.25
+        },
+        "bak maand (12 st.)": {
+          "zijspeling_mm": 1.0,
+          "kleinste_afstand_achterhoek_mm": 0.3,
+          "ruimte_voor_stapel_mm": 5.95
+        }
+      }
+    },
+    "uitnemen": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.22
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.8
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 8.85
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.73
+      }
+    ]
+  },
+  "uitnemen": {
+    "01 vos": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.22
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.8
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 8.85
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.73
+      }
+    ],
+    "02 koe": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.0
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.0
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.5
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.0
+      }
+    ],
+    "03 uil": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.72
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.5
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 8.84
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.5
+      }
+    ],
+    "04 draak": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.05
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.55
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.5
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.0
+      }
+    ],
+    "05 eenhoorn": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.29
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.17
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 5.63
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.17
+      }
+    ],
+    "06 leeuw": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.62
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.83
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 7.05
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.82
+      }
+    ],
+    "07 hert": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.27
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.0
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 11.5
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 3.0
+      }
+    ],
+    "08 mario": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.0
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 6.91
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.48
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.0
+      }
+    ],
+    "09 sonic": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.0
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 6.72
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 5.18
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.0
+      }
+    ],
+    "10 spiderman": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.01
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 6.71
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.48
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 4.01
+      }
+    ],
+    "11 steve": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 5.0
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 5.0
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 13.5
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 5.0
+      }
+    ],
+    "12 creeper": [
+      {
+        "kaart": "dag (ZATERDAG)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 5.0
+      },
+      {
+        "kaart": "cijfer (1)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 5.0
+      },
+      {
+        "kaart": "cijfer (0)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 12.08
+      },
+      {
+        "kaart": "maand (OKTOBER)",
+        "slag_mm": 19.5,
+        "kleinste_afstand_onderweg_mm": 0.5,
+        "bij_slag_mm": 1.0,
+        "afstand_tot_dier_bovenaan_mm": 5.0
+      }
+    ]
+  },
+  "print": {
+    "fanart/08-mario/en/front_mario": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 28.99,
+          "z_mm": [
+            0.0,
+            5.2
+          ]
+        },
+        "latte": {
+          "volume_cm3": 3.51,
+          "z_mm": [
+            2.99,
+            5.4
+          ]
+        },
+        "red": {
+          "volume_cm3": 75.4,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "white": {
+          "volume_cm3": 2.64,
+          "z_mm": [
+            2.99,
+            5.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 122.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 27,
+      "geschatte_wissels": 48,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.3
+      ]
+    },
+    "fanart/08-mario/nl/front_mario": {
+      "kleuren": {
+        "latte": {
+          "volume_cm3": 3.51,
+          "z_mm": [
+            2.99,
+            5.4
+          ]
+        },
+        "rood": {
+          "volume_cm3": 75.38,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "wit": {
+          "volume_cm3": 2.64,
+          "z_mm": [
+            2.99,
+            5.0
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 29.0,
+          "z_mm": [
+            0.0,
+            5.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 122.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 27,
+      "geschatte_wissels": 48,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.3
+      ]
+    },
+    "fanart/09-sonic/en/front_sonic": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 30.92,
+          "z_mm": [
+            0.0,
+            5.2
+          ]
+        },
+        "blue": {
+          "volume_cm3": 80.03,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "latte": {
+          "volume_cm3": 1.33,
+          "z_mm": [
+            2.99,
+            4.6
+          ]
+        },
+        "white": {
+          "volume_cm3": 3.88,
+          "z_mm": [
+            2.99,
+            5.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 801.0,
+      "korte_bruggen_mm2": 118.0,
+      "maat_mm": [
+        200.0,
+        209.9,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.1
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 44,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "fanart/09-sonic/nl/front_sonic": {
+      "kleuren": {
+        "blauw": {
+          "volume_cm3": 80.01,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "latte": {
+          "volume_cm3": 1.33,
+          "z_mm": [
+            2.99,
+            4.6
+          ]
+        },
+        "wit": {
+          "volume_cm3": 3.88,
+          "z_mm": [
+            2.99,
+            5.0
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 30.93,
+          "z_mm": [
+            0.0,
+            5.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 801.0,
+      "korte_bruggen_mm2": 118.0,
+      "maat_mm": [
+        200.0,
+        209.9,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.1
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 44,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "fanart/10-spiderman/en/front_spiderman": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 22.45,
+          "z_mm": [
+            0.0,
+            5.2
+          ]
+        },
+        "blue": {
+          "volume_cm3": 73.31,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "red": {
+          "volume_cm3": 6.43,
+          "z_mm": [
+            2.99,
+            5.0
+          ]
+        },
+        "white": {
+          "volume_cm3": 0.49,
+          "z_mm": [
+            2.99,
+            4.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 153.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 42,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "fanart/10-spiderman/nl/front_spiderman": {
+      "kleuren": {
+        "blauw": {
+          "volume_cm3": 73.3,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "rood": {
+          "volume_cm3": 6.43,
+          "z_mm": [
+            2.99,
+            5.0
+          ]
+        },
+        "wit": {
+          "volume_cm3": 0.49,
+          "z_mm": [
+            2.99,
+            4.2
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 22.46,
+          "z_mm": [
+            0.0,
+            5.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 153.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 42,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "fanart/11-steve/en/front_steve": {
+      "kleuren": {
+        "blue": {
+          "volume_cm3": 73.49,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "latte": {
+          "volume_cm3": 34.86,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "terracotta": {
+          "volume_cm3": 1.9,
+          "z_mm": [
+            4.0,
+            4.6
+          ]
+        },
+        "white": {
+          "volume_cm3": 0.24,
+          "z_mm": [
+            2.6,
+            4.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 121.0,
+      "maat_mm": [
+        200.0,
+        208.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        48.0
+      ],
+      "lagen_met_kleurwissel": 25,
+      "geschatte_wissels": 33,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        4.9
+      ]
+    },
+    "fanart/11-steve/nl/front_steve": {
+      "kleuren": {
+        "blauw": {
+          "volume_cm3": 73.48,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "latte": {
+          "volume_cm3": 34.86,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "terracotta": {
+          "volume_cm3": 1.9,
+          "z_mm": [
+            4.0,
+            4.6
+          ]
+        },
+        "wit": {
+          "volume_cm3": 0.25,
+          "z_mm": [
+            2.6,
+            4.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 121.0,
+      "maat_mm": [
+        200.0,
+        208.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        48.0
+      ],
+      "lagen_met_kleurwissel": 25,
+      "geschatte_wissels": 33,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        4.9
+      ]
+    },
+    "fanart/12-creeper/en/front_creeper": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 76.1,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "green": {
+          "volume_cm3": 35.31,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "red": {
+          "volume_cm3": 0.71,
+          "z_mm": [
+            2.99,
+            3.8
+          ]
+        },
+        "white": {
+          "volume_cm3": 0.31,
+          "z_mm": [
+            2.6,
+            3.8
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 134.0,
+      "maat_mm": [
+        200.0,
+        208.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        48.0
+      ],
+      "lagen_met_kleurwissel": 25,
+      "geschatte_wissels": 34,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        4.9
+      ]
+    },
+    "fanart/12-creeper/nl/front_creeper": {
+      "kleuren": {
+        "groen": {
+          "volume_cm3": 35.31,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "rood": {
+          "volume_cm3": 0.71,
+          "z_mm": [
+            2.99,
+            3.8
+          ]
+        },
+        "wit": {
+          "volume_cm3": 0.32,
+          "z_mm": [
+            2.6,
+            3.8
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 76.08,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 134.0,
+      "maat_mm": [
+        200.0,
+        208.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        48.0
+      ],
+      "lagen_met_kleurwissel": 25,
+      "geschatte_wissels": 34,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        4.9
+      ]
+    },
+    "gedeeld/kaartjes/cijfers": {
+      "kleuren": {
+        "wit": {
+          "volume_cm3": 12.99,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.77,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        178.0,
+        60.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        78.0,
+        196.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "gedeeld/kaartjes/en/days": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.51,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        },
+        "white": {
+          "volume_cm3": 17.03,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        236.0,
+        60.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        20.0,
+        196.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "gedeeld/kaartjes/en/months": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.77,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        },
+        "white": {
+          "volume_cm3": 40.05,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        236.0,
+        124.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        20.0,
+        132.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "gedeeld/kaartjes/nl/dagen": {
+      "kleuren": {
+        "wit": {
+          "volume_cm3": 16.97,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.57,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        236.0,
+        60.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        20.0,
+        196.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "gedeeld/kaartjes/nl/maanden": {
+      "kleuren": {
+        "wit": {
+          "volume_cm3": 40.04,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.78,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        236.0,
+        124.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        20.0,
+        132.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "gedeeld/pasproef/en/test-cards": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.25,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        },
+        "white": {
+          "volume_cm3": 5.2,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        134.0,
+        28.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        122.0,
+        228.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "gedeeld/pasproef/kanalen": {
+      "kleuren": {
+        "enkel": {
+          "volume_cm3": 14.76,
+          "z_mm": [
+            0.0,
+            8.4
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 365.0,
+      "maat_mm": [
+        85.0,
+        60.0,
+        8.4
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        171.0,
+        196.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    },
+    "gedeeld/pasproef/nl/proefkaartjes": {
+      "kleuren": {
+        "wit": {
+          "volume_cm3": 5.2,
+          "z_mm": [
+            0.0,
+            1.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.25,
+          "z_mm": [
+            1.2,
+            1.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        134.0,
+        28.0,
+        1.6
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        122.0,
+        228.0
+      ],
+      "lagen_met_kleurwissel": 2,
+      "geschatte_wissels": 2,
+      "kleurwissel_tussen_z_mm": [
+        1.3,
+        1.5
+      ]
+    },
+    "gedeeld/pasproef/sleuven": {
+      "kleuren": {
+        "enkel": {
+          "volume_cm3": 53.83,
+          "z_mm": [
+            0.0,
+            22.5
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        110.8,
+        24.0,
+        22.5
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        145.2,
+        232.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    },
+    "gedeeld/voet/voet": {
+      "kleuren": {
+        "enkel": {
+          "volume_cm3": 176.94,
+          "z_mm": [
+            0.0,
+            36.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "maat_mm": [
+        206.0,
+        72.0,
+        36.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        50.0,
+        184.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    },
+    "varianten/01-vos/en/front_fox": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.44,
+          "z_mm": [
+            2.6,
+            5.2
+          ]
+        },
+        "green": {
+          "volume_cm3": 0.42,
+          "z_mm": [
+            2.99,
+            3.8
+          ]
+        },
+        "orange": {
+          "volume_cm3": 110.93,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "white": {
+          "volume_cm3": 2.49,
+          "z_mm": [
+            4.0,
+            5.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 69.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 12,
+      "geschatte_wissels": 17,
+      "kleurwissel_tussen_z_mm": [
+        2.7,
+        5.1
+      ]
+    },
+    "varianten/01-vos/nl/front_vos": {
+      "kleuren": {
+        "groen": {
+          "volume_cm3": 0.42,
+          "z_mm": [
+            2.99,
+            3.8
+          ]
+        },
+        "oranje": {
+          "volume_cm3": 110.92,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "wit": {
+          "volume_cm3": 2.49,
+          "z_mm": [
+            4.0,
+            5.0
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.46,
+          "z_mm": [
+            2.6,
+            5.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 68.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 12,
+      "geschatte_wissels": 17,
+      "kleurwissel_tussen_z_mm": [
+        2.7,
+        5.1
+      ]
+    },
+    "varianten/02-koe/en/front_cow": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.89,
+          "z_mm": [
+            2.6,
+            5.2
+          ]
+        },
+        "green": {
+          "volume_cm3": 0.42,
+          "z_mm": [
+            2.99,
+            3.8
+          ]
+        },
+        "pink": {
+          "volume_cm3": 74.6,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "white": {
+          "volume_cm3": 34.82,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 72.0,
+      "maat_mm": [
+        200.0,
+        209.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        47.0
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 37,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "varianten/02-koe/nl/front_koe": {
+      "kleuren": {
+        "groen": {
+          "volume_cm3": 0.42,
+          "z_mm": [
+            2.99,
+            3.8
+          ]
+        },
+        "roze": {
+          "volume_cm3": 74.59,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "wit": {
+          "volume_cm3": 34.82,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.9,
+          "z_mm": [
+            2.6,
+            5.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 72.0,
+      "maat_mm": [
+        200.0,
+        209.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        47.0
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 37,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "varianten/03-uil/en/front_owl": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.21,
+          "z_mm": [
+            2.6,
+            5.0
+          ]
+        },
+        "latte": {
+          "volume_cm3": 74.92,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "terracotta": {
+          "volume_cm3": 34.59,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "white": {
+          "volume_cm3": 0.83,
+          "z_mm": [
+            4.0,
+            4.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 71.0,
+      "maat_mm": [
+        200.0,
+        206.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        50.0
+      ],
+      "lagen_met_kleurwissel": 25,
+      "geschatte_wissels": 35,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        4.9
+      ]
+    },
+    "varianten/03-uil/nl/front_uil": {
+      "kleuren": {
+        "latte": {
+          "volume_cm3": 74.91,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "terracotta": {
+          "volume_cm3": 34.59,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "wit": {
+          "volume_cm3": 0.83,
+          "z_mm": [
+            4.0,
+            4.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.22,
+          "z_mm": [
+            2.6,
+            5.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 64.0,
+      "maat_mm": [
+        200.0,
+        206.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        50.0
+      ],
+      "lagen_met_kleurwissel": 25,
+      "geschatte_wissels": 35,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        4.9
+      ]
+    },
+    "varianten/04-draak/en/front_dragon": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.31,
+          "z_mm": [
+            2.6,
+            5.0
+          ]
+        },
+        "green": {
+          "volume_cm3": 104.65,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "white": {
+          "volume_cm3": 1.0,
+          "z_mm": [
+            4.0,
+            5.2
+          ]
+        },
+        "yellow": {
+          "volume_cm3": 2.8,
+          "z_mm": [
+            0.0,
+            4.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 94.0,
+      "maat_mm": [
+        200.0,
+        209.3,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.7
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 36,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "varianten/04-draak/nl/front_draak": {
+      "kleuren": {
+        "geel": {
+          "volume_cm3": 2.8,
+          "z_mm": [
+            0.0,
+            4.6
+          ]
+        },
+        "groen": {
+          "volume_cm3": 104.63,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "wit": {
+          "volume_cm3": 1.0,
+          "z_mm": [
+            4.0,
+            5.2
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.32,
+          "z_mm": [
+            2.6,
+            5.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 86.0,
+      "maat_mm": [
+        200.0,
+        209.3,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.7
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 36,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "varianten/05-eenhoorn/en/front_unicorn": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.28,
+          "z_mm": [
+            2.6,
+            5.0
+          ]
+        },
+        "pink": {
+          "volume_cm3": 81.22,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "white": {
+          "volume_cm3": 24.27,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "yellow": {
+          "volume_cm3": 1.08,
+          "z_mm": [
+            0.0,
+            5.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 90.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 55,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "varianten/05-eenhoorn/nl/front_eenhoorn": {
+      "kleuren": {
+        "geel": {
+          "volume_cm3": 1.08,
+          "z_mm": [
+            0.0,
+            5.2
+          ]
+        },
+        "roze": {
+          "volume_cm3": 81.2,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "wit": {
+          "volume_cm3": 24.27,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.29,
+          "z_mm": [
+            2.6,
+            5.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 104.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 55,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "varianten/06-leeuw/en/front_lion": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.29,
+          "z_mm": [
+            2.6,
+            5.2
+          ]
+        },
+        "latte": {
+          "volume_cm3": 73.75,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "terracotta": {
+          "volume_cm3": 31.41,
+          "z_mm": [
+            0.0,
+            4.0
+          ]
+        },
+        "yellow": {
+          "volume_cm3": 5.57,
+          "z_mm": [
+            2.99,
+            5.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 71.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 38,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "varianten/06-leeuw/nl/front_leeuw": {
+      "kleuren": {
+        "geel": {
+          "volume_cm3": 5.57,
+          "z_mm": [
+            2.99,
+            5.0
+          ]
+        },
+        "latte": {
+          "volume_cm3": 73.74,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "terracotta": {
+          "volume_cm3": 31.41,
+          "z_mm": [
+            0.0,
+            4.0
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.3,
+          "z_mm": [
+            2.6,
+            5.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 85.0,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        46.0
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 38,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "varianten/07-hert/en/front_deer": {
+      "kleuren": {
+        "black": {
+          "volume_cm3": 0.52,
+          "z_mm": [
+            2.6,
+            5.2
+          ]
+        },
+        "latte": {
+          "volume_cm3": 28.92,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "terracotta": {
+          "volume_cm3": 73.45,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "white": {
+          "volume_cm3": 1.18,
+          "z_mm": [
+            2.99,
+            4.6
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 77.0,
+      "maat_mm": [
+        200.0,
+        197.4,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        58.6
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 40,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    },
+    "varianten/07-hert/nl/front_hert": {
+      "kleuren": {
+        "latte": {
+          "volume_cm3": 28.92,
+          "z_mm": [
+            0.0,
+            5.0
+          ]
+        },
+        "terracotta": {
+          "volume_cm3": 73.43,
+          "z_mm": [
+            0.0,
+            8.2
+          ]
+        },
+        "wit": {
+          "volume_cm3": 1.18,
+          "z_mm": [
+            2.99,
+            4.6
+          ]
+        },
+        "zwart": {
+          "volume_cm3": 0.53,
+          "z_mm": [
+            2.6,
+            5.2
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 821.0,
+      "korte_bruggen_mm2": 75.0,
+      "maat_mm": [
+        200.0,
+        197.4,
+        8.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        56.0,
+        58.6
+      ],
+      "lagen_met_kleurwissel": 26,
+      "geschatte_wissels": 40,
+      "kleurwissel_tussen_z_mm": [
+        0.1,
+        5.1
+      ]
+    }
+  },
+  "stabiliteit": {
+    "per_dier": {
+      "01 vos": {
+        "massa_g": 290.0,
+        "zwaartepunt_mm": [
+          4.7,
+          36.6,
+          48.0
+        ],
+        "kantelhoek_voorover_graden": 37.4,
+        "kantelhoek_achterover_graden": 36.4
+      },
+      "02 koe": {
+        "massa_g": 288.0,
+        "zwaartepunt_mm": [
+          4.7,
+          36.4,
+          46.9
+        ],
+        "kantelhoek_voorover_graden": 37.9,
+        "kantelhoek_achterover_graden": 37.2
+      },
+      "03 uil": {
+        "massa_g": 287.0,
+        "zwaartepunt_mm": [
+          4.7,
+          36.4,
+          46.9
+        ],
+        "kantelhoek_voorover_graden": 37.8,
+        "kantelhoek_achterover_graden": 37.1
+      },
+      "04 draak": {
+        "massa_g": 286.0,
+        "zwaartepunt_mm": [
+          4.7,
+          36.3,
+          45.8
+        ],
+        "kantelhoek_voorover_graden": 38.4,
+        "kantelhoek_achterover_graden": 37.9
+      },
+      "05 eenhoorn": {
+        "massa_g": 284.0,
+        "zwaartepunt_mm": [
+          4.0,
+          36.2,
+          45.4
+        ],
+        "kantelhoek_voorover_graden": 38.6,
+        "kantelhoek_achterover_graden": 38.3
+      },
+      "06 leeuw": {
+        "massa_g": 288.0,
+        "zwaartepunt_mm": [
+          4.7,
+          36.5,
+          47.0
+        ],
+        "kantelhoek_voorover_graden": 37.8,
+        "kantelhoek_achterover_graden": 37.1
+      },
+      "07 hert": {
+        "massa_g": 282.0,
+        "zwaartepunt_mm": [
+          4.8,
+          36.1,
+          44.7
+        ],
+        "kantelhoek_voorover_graden": 38.9,
+        "kantelhoek_achterover_graden": 38.8
+      },
+      "08 mario": {
+        "massa_g": 287.0,
+        "zwaartepunt_mm": [
+          4.7,
+          36.4,
+          46.8
+        ],
+        "kantelhoek_voorover_graden": 37.9,
+        "kantelhoek_achterover_graden": 37.3
+      },
+      "09 sonic": {
+        "massa_g": 292.0,
+        "zwaartepunt_mm": [
+          4.0,
+          36.8,
+          49.3
+        ],
+        "kantelhoek_voorover_graden": 36.7,
+        "kantelhoek_achterover_graden": 35.5
+      },
+      "10 spiderman": {
+        "massa_g": 281.0,
+        "zwaartepunt_mm": [
+          4.8,
+          36.0,
+          44.1
+        ],
+        "kantelhoek_voorover_graden": 39.2,
+        "kantelhoek_achterover_graden": 39.2
+      },
+      "11 steve": {
+        "massa_g": 287.0,
+        "zwaartepunt_mm": [
+          4.7,
+          36.5,
+          47.5
+        ],
+        "kantelhoek_voorover_graden": 37.6,
+        "kantelhoek_achterover_graden": 36.8
+      },
+      "12 creeper": {
+        "massa_g": 289.0,
+        "zwaartepunt_mm": [
+          4.7,
+          36.6,
+          47.7
+        ],
+        "kantelhoek_voorover_graden": 37.4,
+        "kantelhoek_achterover_graden": 36.6
+      }
+    },
+    "vulgraad_gebruikt": {
+      "voet": 0.49,
+      "front": 0.64,
+      "kaart": 1.03
+    },
+    "bron": "slicer"
+  },
+  "projecten": [
+    [
+      "fanart/08-mario/en/animal-calendar_mario_en.3mf",
+      []
+    ],
+    [
+      "fanart/08-mario/nl/dierenkalender_mario_nl.3mf",
+      []
+    ],
+    [
+      "fanart/09-sonic/en/animal-calendar_sonic_en.3mf",
+      []
+    ],
+    [
+      "fanart/09-sonic/nl/dierenkalender_sonic_nl.3mf",
+      []
+    ],
+    [
+      "fanart/10-spiderman/en/animal-calendar_spiderman_en.3mf",
+      []
+    ],
+    [
+      "fanart/10-spiderman/nl/dierenkalender_spiderman_nl.3mf",
+      []
+    ],
+    [
+      "fanart/11-steve/en/animal-calendar_steve_en.3mf",
+      []
+    ],
+    [
+      "fanart/11-steve/nl/dierenkalender_steve_nl.3mf",
+      []
+    ],
+    [
+      "fanart/12-creeper/en/animal-calendar_creeper_en.3mf",
+      []
+    ],
+    [
+      "fanart/12-creeper/nl/dierenkalender_creeper_nl.3mf",
+      []
+    ],
+    [
+      "gedeeld/kaartjes/en/cards_en.3mf",
+      []
+    ],
+    [
+      "gedeeld/kaartjes/nl/kaartjes_nl.3mf",
+      []
+    ],
+    [
+      "gedeeld/pasproef/en/test-fit_en.3mf",
+      []
+    ],
+    [
+      "gedeeld/pasproef/nl/pasproef_nl.3mf",
+      []
+    ],
+    [
+      "gedeeld/voet/voet.3mf",
+      []
+    ],
+    [
+      "varianten/01-vos/en/animal-calendar_fox_en.3mf",
+      []
+    ],
+    [
+      "varianten/01-vos/nl/dierenkalender_vos_nl.3mf",
+      []
+    ],
+    [
+      "varianten/02-koe/en/animal-calendar_cow_en.3mf",
+      []
+    ],
+    [
+      "varianten/02-koe/nl/dierenkalender_koe_nl.3mf",
+      []
+    ],
+    [
+      "varianten/03-uil/en/animal-calendar_owl_en.3mf",
+      []
+    ],
+    [
+      "varianten/03-uil/nl/dierenkalender_uil_nl.3mf",
+      []
+    ],
+    [
+      "varianten/04-draak/en/animal-calendar_dragon_en.3mf",
+      []
+    ],
+    [
+      "varianten/04-draak/nl/dierenkalender_draak_nl.3mf",
+      []
+    ],
+    [
+      "varianten/05-eenhoorn/en/animal-calendar_unicorn_en.3mf",
+      []
+    ],
+    [
+      "varianten/05-eenhoorn/nl/dierenkalender_eenhoorn_nl.3mf",
+      []
+    ],
+    [
+      "varianten/06-leeuw/en/animal-calendar_lion_en.3mf",
+      []
+    ],
+    [
+      "varianten/06-leeuw/nl/dierenkalender_leeuw_nl.3mf",
+      []
+    ],
+    [
+      "varianten/07-hert/en/animal-calendar_deer_en.3mf",
+      []
+    ],
+    [
+      "varianten/07-hert/nl/dierenkalender_hert_nl.3mf",
+      []
+    ]
+  ]
+}

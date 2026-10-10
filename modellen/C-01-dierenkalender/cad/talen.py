@@ -1,0 +1,40 @@
+"""Taalafhankelijke teksten. Een nieuwe taal = één extra blok hieronder."""
+
+TALEN = {
+    "nl": {
+        "labels": ("Dag", "Datum", "Maand"),
+        "dagen": ["MAANDAG", "DINSDAG", "WOENSDAG", "DONDERDAG", "VRIJDAG", "ZATERDAG", "ZONDAG"],
+        "maanden": ["JANUARI", "FEBRUARI", "MAART", "APRIL", "MEI", "JUNI", "JULI",
+                    "AUGUSTUS", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DECEMBER"],
+        "proefdag": "WOENSDAG",
+        "vandaag": ("ZATERDAG", "1", "0", "OKTOBER"),   # 10 oktober 2026, voor de renders
+        "project": "Dierenkalender",
+        "front": "front",
+        "voet": "voet",
+        "kaartjes": "kaartjes",
+        "maanden_bestand": "maanden",
+        "dagen_bestand": "dagen",
+        "cijfers_bestand": "cijfers",
+        "pasproef": "pasproef",
+        "plaat": {"front": "Front {dier}", "voet": "Voet", "maanden": "Kaartjes maanden",
+                  "dagen": "Kaartjes dagen", "cijfers": "Kaartjes cijfers", "pasproef": "Pasproef"},
+    },
+    "en": {
+        "labels": ("Day", "Date", "Month"),
+        "dagen": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"],
+        "maanden": ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY",
+                    "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"],
+        "proefdag": "WEDNESDAY",
+        "vandaag": ("SATURDAY", "1", "0", "OCTOBER"),
+        "project": "Animal calendar",
+        "front": "front",
+        "voet": "base",
+        "kaartjes": "cards",
+        "maanden_bestand": "months",
+        "dagen_bestand": "days",
+        "cijfers_bestand": "digits",
+        "pasproef": "test-fit",
+        "plaat": {"front": "Front {dier}", "voet": "Base", "maanden": "Cards months",
+                  "dagen": "Cards days", "cijfers": "Cards digits", "pasproef": "Test fit"},
+    },
+}

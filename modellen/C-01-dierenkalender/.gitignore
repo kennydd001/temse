@@ -1,0 +1,4 @@
+__pycache__/
+# bronafbeeldingen van de fan-art: auteursrecht van anderen, niet in deze publieke repo
+fanart/bronnen/*
+!fanart/bronnen/LEESMIJ.md

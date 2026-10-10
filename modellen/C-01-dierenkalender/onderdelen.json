@@ -1,0 +1,1087 @@
+{
+  "gedeeld/voet/voet": {
+    "voet": {
+      "bestand": "gedeeld/voet/voet.stl",
+      "volume_cm3": 176.94,
+      "maat_mm": [
+        206.0,
+        72.0,
+        36.0
+      ]
+    }
+  },
+  "gedeeld/kaartjes/cijfers": {
+    "11100": {
+      "bestand": "gedeeld/kaartjes/cijfers__wit.stl",
+      "volume_cm3": 12.99,
+      "maat_mm": [
+        178.0,
+        60.0,
+        1.6
+      ]
+    },
+    "11101": {
+      "bestand": "gedeeld/kaartjes/cijfers__zwart.stl",
+      "volume_cm3": 0.77,
+      "maat_mm": [
+        169.6,
+        50.5,
+        0.4
+      ]
+    }
+  },
+  "gedeeld/kaartjes/nl/maanden": {
+    "11100": {
+      "bestand": "gedeeld/kaartjes/nl/maanden__wit.stl",
+      "volume_cm3": 40.04,
+      "maat_mm": [
+        236.0,
+        124.0,
+        1.6
+      ]
+    },
+    "11101": {
+      "bestand": "gedeeld/kaartjes/nl/maanden__zwart.stl",
+      "volume_cm3": 0.78,
+      "maat_mm": [
+        206.0,
+        104.1,
+        0.4
+      ]
+    }
+  },
+  "gedeeld/kaartjes/nl/dagen": {
+    "11100": {
+      "bestand": "gedeeld/kaartjes/nl/dagen__wit.stl",
+      "volume_cm3": 16.97,
+      "maat_mm": [
+        236.0,
+        60.0,
+        1.6
+      ]
+    },
+    "11101": {
+      "bestand": "gedeeld/kaartjes/nl/dagen__zwart.stl",
+      "volume_cm3": 0.57,
+      "maat_mm": [
+        227.5,
+        40.2,
+        0.4
+      ]
+    }
+  },
+  "gedeeld/pasproef/nl/proefkaartjes": {
+    "11100": {
+      "bestand": "gedeeld/pasproef/nl/proefkaartjes__wit.stl",
+      "volume_cm3": 5.2,
+      "maat_mm": [
+        134.0,
+        28.0,
+        1.6
+      ]
+    },
+    "11101": {
+      "bestand": "gedeeld/pasproef/nl/proefkaartjes__zwart.stl",
+      "volume_cm3": 0.25,
+      "maat_mm": [
+        127.0,
+        18.5,
+        0.4
+      ]
+    }
+  },
+  "gedeeld/kaartjes/en/months": {
+    "11100": {
+      "bestand": "gedeeld/kaartjes/en/months__white.stl",
+      "volume_cm3": 40.05,
+      "maat_mm": [
+        236.0,
+        124.0,
+        1.6
+      ]
+    },
+    "11101": {
+      "bestand": "gedeeld/kaartjes/en/months__black.stl",
+      "volume_cm3": 0.77,
+      "maat_mm": [
+        206.6,
+        104.2,
+        0.4
+      ]
+    }
+  },
+  "gedeeld/kaartjes/en/days": {
+    "11100": {
+      "bestand": "gedeeld/kaartjes/en/days__white.stl",
+      "volume_cm3": 17.03,
+      "maat_mm": [
+        236.0,
+        60.0,
+        1.6
+      ]
+    },
+    "11101": {
+      "bestand": "gedeeld/kaartjes/en/days__black.stl",
+      "volume_cm3": 0.51,
+      "maat_mm": [
+        223.2,
+        40.2,
+        0.4
+      ]
+    }
+  },
+  "gedeeld/pasproef/en/test-cards": {
+    "11100": {
+      "bestand": "gedeeld/pasproef/en/test-cards__white.stl",
+      "volume_cm3": 5.2,
+      "maat_mm": [
+        134.0,
+        28.0,
+        1.6
+      ]
+    },
+    "11101": {
+      "bestand": "gedeeld/pasproef/en/test-cards__black.stl",
+      "volume_cm3": 0.25,
+      "maat_mm": [
+        127.2,
+        18.5,
+        0.4
+      ]
+    }
+  },
+  "gedeeld/pasproef/kanalen": {
+    "proef": {
+      "bestand": "gedeeld/pasproef/kanalen.stl",
+      "volume_cm3": 14.76,
+      "maat_mm": [
+        85.0,
+        60.0,
+        8.4
+      ]
+    }
+  },
+  "gedeeld/pasproef/sleuven": {
+    "proef": {
+      "bestand": "gedeeld/pasproef/sleuven.stl",
+      "volume_cm3": 53.83,
+      "maat_mm": [
+        110.8,
+        24.0,
+        22.5
+      ]
+    }
+  },
+  "varianten/01-vos/nl/front_vos": {
+    "11101": {
+      "bestand": "varianten/01-vos/nl/front_vos__zwart.stl",
+      "volume_cm3": 0.46,
+      "maat_mm": [
+        143.8,
+        125.2,
+        2.6
+      ]
+    },
+    "10301": {
+      "bestand": "varianten/01-vos/nl/front_vos__oranje.stl",
+      "volume_cm3": 110.92,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/01-vos/nl/front_vos__wit.stl",
+      "volume_cm3": 2.49,
+      "maat_mm": [
+        137.7,
+        90.6,
+        1.0
+      ]
+    },
+    "10502": {
+      "bestand": "varianten/01-vos/nl/front_vos__groen.stl",
+      "volume_cm3": 0.42,
+      "maat_mm": [
+        144.5,
+        12.2,
+        0.8
+      ]
+    }
+  },
+  "varianten/01-vos/en/front_fox": {
+    "11101": {
+      "bestand": "varianten/01-vos/en/front_fox__black.stl",
+      "volume_cm3": 0.44,
+      "maat_mm": [
+        143.1,
+        125.3,
+        2.6
+      ]
+    },
+    "10301": {
+      "bestand": "varianten/01-vos/en/front_fox__orange.stl",
+      "volume_cm3": 110.93,
+      "maat_mm": [
+        200.0,
+        210.0,
+        8.2
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/01-vos/en/front_fox__white.stl",
+      "volume_cm3": 2.49,
+      "maat_mm": [
+        137.7,
+        90.6,
+        1.0
+      ]
+    },
+    "10502": {
+      "bestand": "varianten/01-vos/en/front_fox__green.stl",
+      "volume_cm3": 0.42,
+      "maat_mm": [
+        144.5,
+        12.2,
+        0.8
+      ]
+    }
+  },
+  "varianten/02-koe/nl/front_koe": {
+    "11101": {
+      "bestand": "varianten/02-koe/nl/front_koe__zwart.stl",
+      "volume_cm3": 0.9,
+      "maat_mm": [
+        143.8,
+        105.5,
+        2.6
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/02-koe/nl/front_koe__wit.stl",
+      "volume_cm3": 34.82,
+      "maat_mm": [
+        160.5,
+        103.5,
+        5.0
+      ]
+    },
+    "10204": {
+      "bestand": "varianten/02-koe/nl/front_koe__roze.stl",
+      "volume_cm3": 74.59,
+      "maat_mm": [
+        200.0,
+        180.1,
+        8.2
+      ]
+    },
+    "10502": {
+      "bestand": "varianten/02-koe/nl/front_koe__groen.stl",
+      "volume_cm3": 0.42,
+      "maat_mm": [
+        144.5,
+        12.2,
+        0.8
+      ]
+    }
+  },
+  "varianten/02-koe/en/front_cow": {
+    "11101": {
+      "bestand": "varianten/02-koe/en/front_cow__black.stl",
+      "volume_cm3": 0.89,
+      "maat_mm": [
+        143.1,
+        105.6,
+        2.6
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/02-koe/en/front_cow__white.stl",
+      "volume_cm3": 34.82,
+      "maat_mm": [
+        160.5,
+        103.5,
+        5.0
+      ]
+    },
+    "10204": {
+      "bestand": "varianten/02-koe/en/front_cow__pink.stl",
+      "volume_cm3": 74.6,
+      "maat_mm": [
+        200.0,
+        180.1,
+        8.2
+      ]
+    },
+    "10502": {
+      "bestand": "varianten/02-koe/en/front_cow__green.stl",
+      "volume_cm3": 0.42,
+      "maat_mm": [
+        144.5,
+        12.2,
+        0.8
+      ]
+    }
+  },
+  "varianten/03-uil/nl/front_uil": {
+    "11203": {
+      "bestand": "varianten/03-uil/nl/front_uil__terracotta.stl",
+      "volume_cm3": 34.59,
+      "maat_mm": [
+        144.5,
+        175.1,
+        5.0
+      ]
+    },
+    "11101": {
+      "bestand": "varianten/03-uil/nl/front_uil__zwart.stl",
+      "volume_cm3": 0.22,
+      "maat_mm": [
+        143.8,
+        76.8,
+        2.4
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/03-uil/nl/front_uil__wit.stl",
+      "volume_cm3": 0.83,
+      "maat_mm": [
+        73.0,
+        31.0,
+        0.6
+      ]
+    },
+    "11800": {
+      "bestand": "varianten/03-uil/nl/front_uil__latte.stl",
+      "volume_cm3": 74.91,
+      "maat_mm": [
+        200.0,
+        189.1,
+        8.2
+      ]
+    }
+  },
+  "varianten/03-uil/en/front_owl": {
+    "11203": {
+      "bestand": "varianten/03-uil/en/front_owl__terracotta.stl",
+      "volume_cm3": 34.59,
+      "maat_mm": [
+        144.5,
+        175.1,
+        5.0
+      ]
+    },
+    "11101": {
+      "bestand": "varianten/03-uil/en/front_owl__black.stl",
+      "volume_cm3": 0.21,
+      "maat_mm": [
+        143.1,
+        76.9,
+        2.4
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/03-uil/en/front_owl__white.stl",
+      "volume_cm3": 0.83,
+      "maat_mm": [
+        73.0,
+        31.0,
+        0.6
+      ]
+    },
+    "11800": {
+      "bestand": "varianten/03-uil/en/front_owl__latte.stl",
+      "volume_cm3": 74.92,
+      "maat_mm": [
+        200.0,
+        189.1,
+        8.2
+      ]
+    }
+  },
+  "varianten/04-draak/nl/front_draak": {
+    "11100": {
+      "bestand": "varianten/04-draak/nl/front_draak__wit.stl",
+      "volume_cm3": 1.0,
+      "maat_mm": [
+        92.3,
+        37.4,
+        1.2
+      ]
+    },
+    "10502": {
+      "bestand": "varianten/04-draak/nl/front_draak__groen.stl",
+      "volume_cm3": 104.63,
+      "maat_mm": [
+        200.0,
+        196.4,
+        8.2
+      ]
+    },
+    "11101": {
+      "bestand": "varianten/04-draak/nl/front_draak__zwart.stl",
+      "volume_cm3": 0.32,
+      "maat_mm": [
+        143.8,
+        77.3,
+        2.4
+      ]
+    },
+    "10402": {
+      "bestand": "varianten/04-draak/nl/front_draak__geel.stl",
+      "volume_cm3": 2.8,
+      "maat_mm": [
+        144.5,
+        178.4,
+        4.6
+      ]
+    }
+  },
+  "varianten/04-draak/en/front_dragon": {
+    "11100": {
+      "bestand": "varianten/04-draak/en/front_dragon__white.stl",
+      "volume_cm3": 1.0,
+      "maat_mm": [
+        92.3,
+        37.4,
+        1.2
+      ]
+    },
+    "10502": {
+      "bestand": "varianten/04-draak/en/front_dragon__green.stl",
+      "volume_cm3": 104.65,
+      "maat_mm": [
+        200.0,
+        196.4,
+        8.2
+      ]
+    },
+    "11101": {
+      "bestand": "varianten/04-draak/en/front_dragon__black.stl",
+      "volume_cm3": 0.31,
+      "maat_mm": [
+        143.1,
+        77.4,
+        2.4
+      ]
+    },
+    "10402": {
+      "bestand": "varianten/04-draak/en/front_dragon__yellow.stl",
+      "volume_cm3": 2.8,
+      "maat_mm": [
+        144.5,
+        178.4,
+        4.6
+      ]
+    }
+  },
+  "varianten/06-leeuw/nl/front_leeuw": {
+    "11101": {
+      "bestand": "varianten/06-leeuw/nl/front_leeuw__zwart.stl",
+      "volume_cm3": 0.3,
+      "maat_mm": [
+        143.8,
+        75.5,
+        2.6
+      ]
+    },
+    "10402": {
+      "bestand": "varianten/06-leeuw/nl/front_leeuw__geel.stl",
+      "volume_cm3": 5.57,
+      "maat_mm": [
+        94.0,
+        83.9,
+        2.0
+      ]
+    },
+    "11800": {
+      "bestand": "varianten/06-leeuw/nl/front_leeuw__latte.stl",
+      "volume_cm3": 73.74,
+      "maat_mm": [
+        200.0,
+        185.6,
+        8.2
+      ]
+    },
+    "11203": {
+      "bestand": "varianten/06-leeuw/nl/front_leeuw__terracotta.stl",
+      "volume_cm3": 31.41,
+      "maat_mm": [
+        144.5,
+        179.1,
+        4.0
+      ]
+    }
+  },
+  "varianten/06-leeuw/en/front_lion": {
+    "11101": {
+      "bestand": "varianten/06-leeuw/en/front_lion__black.stl",
+      "volume_cm3": 0.29,
+      "maat_mm": [
+        143.1,
+        75.6,
+        2.6
+      ]
+    },
+    "10402": {
+      "bestand": "varianten/06-leeuw/en/front_lion__yellow.stl",
+      "volume_cm3": 5.57,
+      "maat_mm": [
+        94.0,
+        83.9,
+        2.0
+      ]
+    },
+    "11800": {
+      "bestand": "varianten/06-leeuw/en/front_lion__latte.stl",
+      "volume_cm3": 73.75,
+      "maat_mm": [
+        200.0,
+        185.6,
+        8.2
+      ]
+    },
+    "11203": {
+      "bestand": "varianten/06-leeuw/en/front_lion__terracotta.stl",
+      "volume_cm3": 31.41,
+      "maat_mm": [
+        144.5,
+        179.1,
+        4.0
+      ]
+    }
+  },
+  "varianten/07-hert/nl/front_hert": {
+    "11101": {
+      "bestand": "varianten/07-hert/nl/front_hert__zwart.stl",
+      "volume_cm3": 0.53,
+      "maat_mm": [
+        143.8,
+        78.7,
+        2.6
+      ]
+    },
+    "11800": {
+      "bestand": "varianten/07-hert/nl/front_hert__latte.stl",
+      "volume_cm3": 28.92,
+      "maat_mm": [
+        144.1,
+        91.9,
+        5.0
+      ]
+    },
+    "11203": {
+      "bestand": "varianten/07-hert/nl/front_hert__terracotta.stl",
+      "volume_cm3": 73.43,
+      "maat_mm": [
+        200.0,
+        147.6,
+        8.2
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/07-hert/nl/front_hert__wit.stl",
+      "volume_cm3": 1.18,
+      "maat_mm": [
+        144.5,
+        163.1,
+        1.6
+      ]
+    }
+  },
+  "varianten/07-hert/en/front_deer": {
+    "11101": {
+      "bestand": "varianten/07-hert/en/front_deer__black.stl",
+      "volume_cm3": 0.52,
+      "maat_mm": [
+        143.1,
+        78.8,
+        2.6
+      ]
+    },
+    "11800": {
+      "bestand": "varianten/07-hert/en/front_deer__latte.stl",
+      "volume_cm3": 28.92,
+      "maat_mm": [
+        144.1,
+        91.9,
+        5.0
+      ]
+    },
+    "11203": {
+      "bestand": "varianten/07-hert/en/front_deer__terracotta.stl",
+      "volume_cm3": 73.45,
+      "maat_mm": [
+        200.0,
+        147.6,
+        8.2
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/07-hert/en/front_deer__white.stl",
+      "volume_cm3": 1.18,
+      "maat_mm": [
+        144.5,
+        163.1,
+        1.6
+      ]
+    }
+  },
+  "varianten/05-eenhoorn/nl/front_eenhoorn": {
+    "10402": {
+      "bestand": "varianten/05-eenhoorn/nl/front_eenhoorn__geel.stl",
+      "volume_cm3": 1.08,
+      "maat_mm": [
+        137.7,
+        181.8,
+        5.2
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/05-eenhoorn/nl/front_eenhoorn__wit.stl",
+      "volume_cm3": 24.27,
+      "maat_mm": [
+        93.2,
+        95.6,
+        5.0
+      ]
+    },
+    "11101": {
+      "bestand": "varianten/05-eenhoorn/nl/front_eenhoorn__zwart.stl",
+      "volume_cm3": 0.29,
+      "maat_mm": [
+        143.8,
+        76.6,
+        2.4
+      ]
+    },
+    "10204": {
+      "bestand": "varianten/05-eenhoorn/nl/front_eenhoorn__roze.stl",
+      "volume_cm3": 81.2,
+      "maat_mm": [
+        200.0,
+        198.2,
+        8.2
+      ]
+    }
+  },
+  "varianten/05-eenhoorn/en/front_unicorn": {
+    "10402": {
+      "bestand": "varianten/05-eenhoorn/en/front_unicorn__yellow.stl",
+      "volume_cm3": 1.08,
+      "maat_mm": [
+        137.7,
+        181.8,
+        5.2
+      ]
+    },
+    "11100": {
+      "bestand": "varianten/05-eenhoorn/en/front_unicorn__white.stl",
+      "volume_cm3": 24.27,
+      "maat_mm": [
+        93.2,
+        95.6,
+        5.0
+      ]
+    },
+    "11101": {
+      "bestand": "varianten/05-eenhoorn/en/front_unicorn__black.stl",
+      "volume_cm3": 0.28,
+      "maat_mm": [
+        143.1,
+        76.7,
+        2.4
+      ]
+    },
+    "10204": {
+      "bestand": "varianten/05-eenhoorn/en/front_unicorn__pink.stl",
+      "volume_cm3": 81.22,
+      "maat_mm": [
+        200.0,
+        198.2,
+        8.2
+      ]
+    }
+  },
+  "fanart/08-mario/nl/front_mario": {
+    "11101": {
+      "bestand": "fanart/08-mario/nl/front_mario__zwart.stl",
+      "volume_cm3": 29.0,
+      "maat_mm": [
+        143.8,
+        125.2,
+        5.2
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/08-mario/nl/front_mario__wit.stl",
+      "volume_cm3": 2.64,
+      "maat_mm": [
+        137.7,
+        174.2,
+        2.0
+      ]
+    },
+    "11800": {
+      "bestand": "fanart/08-mario/nl/front_mario__latte.stl",
+      "volume_cm3": 3.51,
+      "maat_mm": [
+        90.4,
+        66.9,
+        2.4
+      ]
+    },
+    "10205": {
+      "bestand": "fanart/08-mario/nl/front_mario__rood.stl",
+      "volume_cm3": 75.38,
+      "maat_mm": [
+        200.0,
+        206.7,
+        8.2
+      ]
+    }
+  },
+  "fanart/08-mario/en/front_mario": {
+    "11101": {
+      "bestand": "fanart/08-mario/en/front_mario__black.stl",
+      "volume_cm3": 28.99,
+      "maat_mm": [
+        143.1,
+        125.3,
+        5.2
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/08-mario/en/front_mario__white.stl",
+      "volume_cm3": 2.64,
+      "maat_mm": [
+        137.7,
+        174.2,
+        2.0
+      ]
+    },
+    "11800": {
+      "bestand": "fanart/08-mario/en/front_mario__latte.stl",
+      "volume_cm3": 3.51,
+      "maat_mm": [
+        90.4,
+        66.9,
+        2.4
+      ]
+    },
+    "10205": {
+      "bestand": "fanart/08-mario/en/front_mario__red.stl",
+      "volume_cm3": 75.4,
+      "maat_mm": [
+        200.0,
+        206.7,
+        8.2
+      ]
+    }
+  },
+  "fanart/09-sonic/nl/front_sonic": {
+    "11101": {
+      "bestand": "fanart/09-sonic/nl/front_sonic__zwart.stl",
+      "volume_cm3": 30.93,
+      "maat_mm": [
+        143.8,
+        125.2,
+        5.2
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/09-sonic/nl/front_sonic__wit.stl",
+      "volume_cm3": 3.88,
+      "maat_mm": [
+        140.0,
+        150.0,
+        2.0
+      ]
+    },
+    "11800": {
+      "bestand": "fanart/09-sonic/nl/front_sonic__latte.stl",
+      "volume_cm3": 1.33,
+      "maat_mm": [
+        68.0,
+        78.3,
+        1.6
+      ]
+    },
+    "11600": {
+      "bestand": "fanart/09-sonic/nl/front_sonic__blauw.stl",
+      "volume_cm3": 80.01,
+      "maat_mm": [
+        200.0,
+        208.1,
+        8.2
+      ]
+    }
+  },
+  "fanart/09-sonic/en/front_sonic": {
+    "11101": {
+      "bestand": "fanart/09-sonic/en/front_sonic__black.stl",
+      "volume_cm3": 30.92,
+      "maat_mm": [
+        143.1,
+        125.2,
+        5.2
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/09-sonic/en/front_sonic__white.stl",
+      "volume_cm3": 3.88,
+      "maat_mm": [
+        140.0,
+        150.0,
+        2.0
+      ]
+    },
+    "11800": {
+      "bestand": "fanart/09-sonic/en/front_sonic__latte.stl",
+      "volume_cm3": 1.33,
+      "maat_mm": [
+        68.0,
+        78.3,
+        1.6
+      ]
+    },
+    "11600": {
+      "bestand": "fanart/09-sonic/en/front_sonic__blue.stl",
+      "volume_cm3": 80.03,
+      "maat_mm": [
+        200.0,
+        208.1,
+        8.2
+      ]
+    }
+  },
+  "fanart/10-spiderman/nl/front_spiderman": {
+    "11101": {
+      "bestand": "fanart/10-spiderman/nl/front_spiderman__zwart.stl",
+      "volume_cm3": 22.46,
+      "maat_mm": [
+        147.5,
+        184.6,
+        5.2
+      ]
+    },
+    "10205": {
+      "bestand": "fanart/10-spiderman/nl/front_spiderman__rood.stl",
+      "volume_cm3": 6.43,
+      "maat_mm": [
+        114.8,
+        102.4,
+        2.0
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/10-spiderman/nl/front_spiderman__wit.stl",
+      "volume_cm3": 0.49,
+      "maat_mm": [
+        59.4,
+        24.4,
+        1.2
+      ]
+    },
+    "11600": {
+      "bestand": "fanart/10-spiderman/nl/front_spiderman__blauw.stl",
+      "volume_cm3": 73.3,
+      "maat_mm": [
+        200.0,
+        116.1,
+        8.2
+      ]
+    }
+  },
+  "fanart/10-spiderman/en/front_spiderman": {
+    "11101": {
+      "bestand": "fanart/10-spiderman/en/front_spiderman__black.stl",
+      "volume_cm3": 22.45,
+      "maat_mm": [
+        146.7,
+        184.6,
+        5.2
+      ]
+    },
+    "10205": {
+      "bestand": "fanart/10-spiderman/en/front_spiderman__red.stl",
+      "volume_cm3": 6.43,
+      "maat_mm": [
+        114.8,
+        102.4,
+        2.0
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/10-spiderman/en/front_spiderman__white.stl",
+      "volume_cm3": 0.49,
+      "maat_mm": [
+        59.4,
+        24.4,
+        1.2
+      ]
+    },
+    "11600": {
+      "bestand": "fanart/10-spiderman/en/front_spiderman__blue.stl",
+      "volume_cm3": 73.31,
+      "maat_mm": [
+        200.0,
+        116.1,
+        8.2
+      ]
+    }
+  },
+  "fanart/11-steve/nl/front_steve": {
+    "11800": {
+      "bestand": "fanart/11-steve/nl/front_steve__latte.stl",
+      "volume_cm3": 34.86,
+      "maat_mm": [
+        94.4,
+        100.5,
+        5.0
+      ]
+    },
+    "11600": {
+      "bestand": "fanart/11-steve/nl/front_steve__blauw.stl",
+      "volume_cm3": 73.48,
+      "maat_mm": [
+        200.0,
+        162.0,
+        8.2
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/11-steve/nl/front_steve__wit.stl",
+      "volume_cm3": 0.25,
+      "maat_mm": [
+        143.8,
+        77.2,
+        2.0
+      ]
+    },
+    "11203": {
+      "bestand": "fanart/11-steve/nl/front_steve__terracotta.stl",
+      "volume_cm3": 1.9,
+      "maat_mm": [
+        91.9,
+        80.4,
+        0.6
+      ]
+    }
+  },
+  "fanart/11-steve/en/front_steve": {
+    "11800": {
+      "bestand": "fanart/11-steve/en/front_steve__latte.stl",
+      "volume_cm3": 34.86,
+      "maat_mm": [
+        94.4,
+        100.5,
+        5.0
+      ]
+    },
+    "11600": {
+      "bestand": "fanart/11-steve/en/front_steve__blue.stl",
+      "volume_cm3": 73.49,
+      "maat_mm": [
+        200.0,
+        162.0,
+        8.2
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/11-steve/en/front_steve__white.stl",
+      "volume_cm3": 0.24,
+      "maat_mm": [
+        143.1,
+        77.3,
+        2.0
+      ]
+    },
+    "11203": {
+      "bestand": "fanart/11-steve/en/front_steve__terracotta.stl",
+      "volume_cm3": 1.9,
+      "maat_mm": [
+        91.9,
+        80.4,
+        0.6
+      ]
+    }
+  },
+  "fanart/12-creeper/nl/front_creeper": {
+    "11101": {
+      "bestand": "fanart/12-creeper/nl/front_creeper__zwart.stl",
+      "volume_cm3": 76.08,
+      "maat_mm": [
+        200.0,
+        185.0,
+        8.2
+      ]
+    },
+    "10502": {
+      "bestand": "fanart/12-creeper/nl/front_creeper__groen.stl",
+      "volume_cm3": 35.31,
+      "maat_mm": [
+        92.4,
+        100.5,
+        5.0
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/12-creeper/nl/front_creeper__wit.stl",
+      "volume_cm3": 0.32,
+      "maat_mm": [
+        145.9,
+        60.0,
+        1.2
+      ]
+    },
+    "10205": {
+      "bestand": "fanart/12-creeper/nl/front_creeper__rood.stl",
+      "volume_cm3": 0.71,
+      "maat_mm": [
+        142.0,
+        20.0,
+        0.8
+      ]
+    }
+  },
+  "fanart/12-creeper/en/front_creeper": {
+    "11101": {
+      "bestand": "fanart/12-creeper/en/front_creeper__black.stl",
+      "volume_cm3": 76.1,
+      "maat_mm": [
+        200.0,
+        185.0,
+        8.2
+      ]
+    },
+    "10502": {
+      "bestand": "fanart/12-creeper/en/front_creeper__green.stl",
+      "volume_cm3": 35.31,
+      "maat_mm": [
+        92.4,
+        100.5,
+        5.0
+      ]
+    },
+    "11100": {
+      "bestand": "fanart/12-creeper/en/front_creeper__white.stl",
+      "volume_cm3": 0.31,
+      "maat_mm": [
+        145.1,
+        60.0,
+        1.2
+      ]
+    },
+    "10205": {
+      "bestand": "fanart/12-creeper/en/front_creeper__red.stl",
+      "volume_cm3": 0.71,
+      "maat_mm": [
+        142.0,
+        20.0,
+        0.8
+      ]
+    }
+  }
+}

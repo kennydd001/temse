@@ -1,0 +1,396 @@
+{
+  "fanart/08-mario/nl/front_mario": {
+    "tijd": "2h 53m 58s",
+    "gram": 95.1,
+    "gram_per_extruder": [
+      6.03,
+      65.27,
+      3.73,
+      20.11
+    ],
+    "wissels": 53,
+    "kleuren": [
+      "latte",
+      "rood",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 110.53,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "fanart/09-sonic/nl/front_sonic": {
+    "tijd": "2h 55m 25s",
+    "gram": 97.9,
+    "gram_per_extruder": [
+      70.09,
+      3.07,
+      4.95,
+      19.75
+    ],
+    "wissels": 48,
+    "kleuren": [
+      "blauw",
+      "latte",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 116.15,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "fanart/10-spiderman/nl/front_spiderman": {
+    "tijd": "2h 51m 5s",
+    "gram": 89.5,
+    "gram_per_extruder": [
+      62.97,
+      8.76,
+      1.19,
+      16.62
+    ],
+    "wissels": 46,
+    "kleuren": [
+      "blauw",
+      "rood",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 102.68,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "fanart/11-steve/nl/front_steve": {
+    "tijd": "2h 28m 3s",
+    "gram": 91.3,
+    "gram_per_extruder": [
+      62.78,
+      24.66,
+      2.84,
+      0.98
+    ],
+    "wissels": 38,
+    "kleuren": [
+      "blauw",
+      "latte",
+      "terracotta",
+      "wit"
+    ],
+    "volume_cm3": 110.49,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "fanart/12-creeper/nl/front_creeper": {
+    "tijd": "2h 35m 37s",
+    "gram": 92.3,
+    "gram_per_extruder": [
+      24.17,
+      1.55,
+      1.08,
+      65.54
+    ],
+    "wissels": 38,
+    "kleuren": [
+      "groen",
+      "rood",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 112.43,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/kaartjes/cijfers": {
+    "tijd": "36m 41s",
+    "gram": 18.4,
+    "gram_per_extruder": [
+      17.15,
+      1.25
+    ],
+    "wissels": 4,
+    "kleuren": [
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 13.75,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/kaartjes/en/days": {
+    "tijd": "41m 39s",
+    "gram": 23.0,
+    "gram_per_extruder": [
+      0.88,
+      22.15
+    ],
+    "wissels": 4,
+    "kleuren": [
+      "black",
+      "white"
+    ],
+    "volume_cm3": 17.54,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/kaartjes/en/months": {
+    "tijd": "1h 24m 50s",
+    "gram": 52.1,
+    "gram_per_extruder": [
+      1.2,
+      50.85
+    ],
+    "wissels": 4,
+    "kleuren": [
+      "black",
+      "white"
+    ],
+    "volume_cm3": 40.82,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/kaartjes/nl/dagen": {
+    "tijd": "42m 9s",
+    "gram": 23.0,
+    "gram_per_extruder": [
+      22.08,
+      0.96
+    ],
+    "wissels": 4,
+    "kleuren": [
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 17.54,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/kaartjes/nl/maanden": {
+    "tijd": "1h 24m 46s",
+    "gram": 52.1,
+    "gram_per_extruder": [
+      50.85,
+      1.21
+    ],
+    "wissels": 4,
+    "kleuren": [
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 40.82,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/pasproef/en/test-cards": {
+    "tijd": "16m 22s",
+    "gram": 8.0,
+    "gram_per_extruder": [
+      0.57,
+      7.38
+    ],
+    "wissels": 4,
+    "kleuren": [
+      "black",
+      "white"
+    ],
+    "volume_cm3": 5.45,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/pasproef/kanalen": {
+    "tijd": "23m 34s",
+    "gram": 13.2,
+    "gram_per_extruder": [
+      13.24
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "enkel"
+    ],
+    "volume_cm3": 14.76,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/pasproef/nl/proefkaartjes": {
+    "tijd": "16m 17s",
+    "gram": 8.0,
+    "gram_per_extruder": [
+      7.38,
+      0.58
+    ],
+    "wissels": 4,
+    "kleuren": [
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 5.45,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/pasproef/sleuven": {
+    "tijd": "33m 42s",
+    "gram": 23.5,
+    "gram_per_extruder": [
+      23.51
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "enkel"
+    ],
+    "volume_cm3": 53.83,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "gedeeld/voet/voet": {
+    "tijd": "2h 17m 44s",
+    "gram": 107.8,
+    "gram_per_extruder": [
+      107.78
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "enkel"
+    ],
+    "volume_cm3": 176.94,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "varianten/01-vos/nl/front_vos": {
+    "tijd": "2h 22m 20s",
+    "gram": 90.5,
+    "gram_per_extruder": [
+      0.98,
+      84.26,
+      3.79,
+      1.44
+    ],
+    "wissels": 21,
+    "kleuren": [
+      "groen",
+      "oranje",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 114.28,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "varianten/02-koe/nl/front_koe": {
+    "tijd": "2h 34m 34s",
+    "gram": 92.1,
+    "gram_per_extruder": [
+      1.39,
+      63.6,
+      25.13,
+      2.01
+    ],
+    "wissels": 41,
+    "kleuren": [
+      "groen",
+      "roze",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 110.73,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "varianten/03-uil/nl/front_uil": {
+    "tijd": "2h 32m 34s",
+    "gram": 91.7,
+    "gram_per_extruder": [
+      64.39,
+      24.63,
+      1.51,
+      1.15
+    ],
+    "wissels": 40,
+    "kleuren": [
+      "latte",
+      "terracotta",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 110.55,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "varianten/04-draak/nl/front_draak": {
+    "tijd": "2h 34m 46s",
+    "gram": 91.3,
+    "gram_per_extruder": [
+      5.76,
+      82.17,
+      2.13,
+      1.27
+    ],
+    "wissels": 42,
+    "kleuren": [
+      "geel",
+      "groen",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 108.75,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "varianten/05-eenhoorn/nl/front_eenhoorn": {
+    "tijd": "2h 46m 50s",
+    "gram": 94.3,
+    "gram_per_extruder": [
+      5.86,
+      67.97,
+      19.25,
+      1.25
+    ],
+    "wissels": 60,
+    "kleuren": [
+      "geel",
+      "roze",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 106.84,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "varianten/06-leeuw/nl/front_leeuw": {
+    "tijd": "2h 34m 41s",
+    "gram": 92.6,
+    "gram_per_extruder": [
+      8.43,
+      62.3,
+      20.58,
+      1.25
+    ],
+    "wissels": 42,
+    "kleuren": [
+      "geel",
+      "latte",
+      "terracotta",
+      "zwart"
+    ],
+    "volume_cm3": 111.02,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "varianten/07-hert/nl/front_hert": {
+    "tijd": "2h 31m 18s",
+    "gram": 89.2,
+    "gram_per_extruder": [
+      22.55,
+      62.71,
+      2.36,
+      1.55
+    ],
+    "wissels": 44,
+    "kleuren": [
+      "latte",
+      "terracotta",
+      "wit",
+      "zwart"
+    ],
+    "volume_cm3": 104.06,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  }
+}
