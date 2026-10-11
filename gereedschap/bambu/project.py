@@ -8,6 +8,8 @@ Het formaat volgt de lees-/schrijfcode van Bambu Studio (src/libslic3r/Format/bb
   - plaat k (0-based) ligt op (col * 307.2, -row * 307.2) met cols = compute_colum_count(N);
     Bambu Studio kiest de plaat van een object op basis van zijn positie
   - project_settings.config: alle waarden als JSON-strings; lijsten per filament hebben lengte N
+  - wipe_tower_x/y per plaat: de spoeltoren van Bambu Studio 2.x is groter dan prime_tower_width;
+    zonder vaste plek zoekt plaats_torens() er een die Bambu zelf ook goedkeurt (zie toren.py)
 """
 import io
 import json
@@ -19,7 +21,7 @@ from pathlib import Path
 
 import numpy as np
 
-from . import flushvol
+from . import flushvol, toren as T
 
 HIER = Path(__file__).resolve().parent
 PROFIELEN = HIER / "profielen"
@@ -53,8 +55,9 @@ class Object:
 class Plaat:
     naam: str
     objecten: list
-    toren: tuple = (15.0, 220.0)                        # spoeltoren linksonder (x, y) op de plaat
+    toren: tuple = None                                 # spoeltoren linksonder (x, y); None: plaats_torens() kiest
     miniatuur: bytes = b""                              # PNG
+    toren_maat: tuple = None                            # (breedte, diepte) met ribben, ingevuld door plaats_torens()
 
 
 @dataclass
@@ -88,8 +91,10 @@ def _s(v):
     return str(v)
 
 
-def project_instellingen(filamenten, platen):
-    """Volledige project_settings.config op basis van het A1-sjabloon en de systeemprofielen."""
+def project_instellingen(filamenten, torens=()):
+    """Volledige project_settings.config op basis van het A1-sjabloon en de systeemprofielen.
+
+    torens: linkeronderhoek (x, y) van de spoeltoren per plaat."""
     n = len(filamenten)
     sjabloon = _laad("project_sjabloon_A1.json")
     n_sjabloon = len(sjabloon["filament_colour"])
@@ -142,8 +147,8 @@ def project_instellingen(filamenten, platen):
         "printer_model": "Bambu Lab A1",
         "printer_variant": "0.4",
         "enable_prime_tower": "1",
-        "wipe_tower_x": [_s(round(p.toren[0], 2)) for p in platen],
-        "wipe_tower_y": [_s(round(p.toren[1], 2)) for p in platen],
+        "wipe_tower_x": [_s(round(x, 2)) for x, _ in torens],
+        "wipe_tower_y": [_s(round(y, 2)) for _, y in torens],
     })
     for k in ("inherits_group", "compatible_machine_expression_group", "compatible_process_expression_group"):
         cfg.pop(k, None)
@@ -154,10 +159,49 @@ def _uuid(n, suffix):
     return f"{n:08x}{suffix}"
 
 
+def _midden(obj):
+    """Midden van de voetafdruk en onderkant van een object: dat punt komt op obj.positie, z = 0."""
+    alle = np.vstack([d.vertices for d in obj.delen])
+    lo, hi = alle.min(axis=0), alle.max(axis=0)
+    return np.array([(lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2, lo[2]])
+
+
+def plaats_torens(filamenten, platen):
+    """Vult plaat.toren (waar die None is) en plaat.toren_maat in; een vaste plek wordt gecontroleerd.
+
+    Ook een plaat met één filament krijgt een veilige plek: daar komt geen toren, maar wie objecten
+    tussen platen verschuift (b.v. met Rangschikken), krijgt de toren van die plaat. Is zo'n plaat te vol
+    voor een vrije plek, dan ligt de toren alleen binnen de plaat en het gebied van Bambu.
+    """
+    p = T.parameters(project_instellingen(filamenten))
+    for k, plaat in enumerate(platen):
+        delen = [(d.slot, d.vertices - m + (obj.positie[0], obj.positie[1], 0), d.faces)
+                 for obj in plaat.objecten for m in [_midden(obj)] for d in obj.delen]
+        slots = {s for s, _, _ in delen}
+        hoogte = max((float(v[:, 2].max()) for _, v, _ in delen), default=0.0)
+        obst = T.obstakels(delen) if delen else None
+        if len(slots) > 1:
+            n, per_laag = len(slots), T.filamenten_per_laag(delen)
+        else:
+            n = per_laag = min(max(len(filamenten), 2), 4)
+        if plaat.toren is None:
+            plaat.toren = T.plaats(p, n, per_laag, hoogte, obst)
+            if plaat.toren is None and len(slots) <= 1:   # plaat vol en één kleur: hier komt geen toren
+                plaat.toren = T.plaats(p, n, per_laag, hoogte)
+            if plaat.toren is None:
+                raise ValueError(f"plaat {k + 1} ({plaat.naam}): geen plek voor de spoeltoren")
+        fouten = T.controleer(p, *plaat.toren, n, per_laag, hoogte, obst if len(slots) > 1 else None)
+        if fouten:
+            raise ValueError(f"plaat {k + 1} ({plaat.naam}): " + "; ".join(fouten))
+        plaat.toren_maat = T.wand(p, per_laag, hoogte)
+    return platen
+
+
 def schrijf(pad, titel, filamenten, platen, ontwerper="", beschrijving=""):
     """Schrijft het project naar `pad`. Geeft een samenvatting terug (aantal objecten, delen)."""
     pad = Path(pad)
     pad.parent.mkdir(parents=True, exist_ok=True)
+    plaats_torens(filamenten, platen)
     teller = 0
     objecten = []          # (root_id, Object, [(part_id, Deel, vertices_lokaal)], wereldpositie, plaatindex)
     for k, plaat in enumerate(platen):
@@ -165,7 +209,7 @@ def schrijf(pad, titel, filamenten, platen, ontwerper="", beschrijving=""):
         for obj in plaat.objecten:
             alle = np.vstack([d.vertices for d in obj.delen])
             lo, hi = alle.min(axis=0), alle.max(axis=0)
-            midden = np.array([(lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2, lo[2]])
+            midden = _midden(obj)
             delen = []
             for d in sorted(obj.delen, key=lambda d: d.slot):
                 teller += 1
@@ -295,8 +339,8 @@ def schrijf(pad, titel, filamenten, platen, ontwerper="", beschrijving=""):
         cfg.append("</config>")
         z.writestr("Metadata/model_settings.config", "\n".join(cfg) + "\n")
 
-        z.writestr("Metadata/project_settings.config",
-                   json.dumps(project_instellingen(filamenten, platen), indent=4, ensure_ascii=False))
+        instellingen = project_instellingen(filamenten, [p.toren for p in platen])
+        z.writestr("Metadata/project_settings.config", json.dumps(instellingen, indent=4, ensure_ascii=False))
         z.writestr("Metadata/slice_info.config",
                    '<?xml version="1.0" encoding="UTF-8"?>\n<config>\n  <header>\n'
                    '    <header_item key="X-BBL-Client-Type" value="slicer"/>\n'

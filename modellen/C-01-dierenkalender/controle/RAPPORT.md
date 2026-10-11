@@ -130,7 +130,7 @@ Support is gecontroleerd met automatische support bij een drempel van 30° (Bamb
 
 ## 5. Bambu Studio-projecten
 
-Elk .3mf-bestand is gecontroleerd op de regels van de Bambu Studio-lezer (bbs_3mf.cpp): verplichte bestanden, id's van objecten en delen, filamentslots, lijsten per filament, spoelmatrix, en of elk object volledig op zijn eigen plaat ligt zonder de spoeltoren te raken. Niet getest in Bambu Studio zelf.
+Elk .3mf-bestand is gecontroleerd op de regels van de Bambu Studio-lezer (bbs_3mf.cpp): verplichte bestanden, id's van objecten en delen, filamentslots, lijsten per filament, spoelmatrix, en of elk object volledig op zijn eigen plaat ligt. De spoeltoren is nagerekend zoals Bambu Studio 2.x hem bouwt (vierkant met ribben, 3 mm brim; gereedschap/bambu/toren.py): op elke plaat ligt hij waar Bambu hem houdt (15 mm van de randen), komt hij niet buiten de plaat en raakt hij geen deel. Niet getest in Bambu Studio zelf.
 
 - ✅ `fanart/08-mario/en/animal-calendar_mario_en.3mf`
 - ✅ `fanart/08-mario/nl/dierenkalender_mario_nl.3mf`

@@ -1,6 +1,9 @@
 """Montage- en printcontrole voor C-01, op de echte geometrie.
 
-Gebruik:  python controle.py
+Gebruik:  python controle.py               alles
+          python controle.py --projecten   alleen de Bambu-projecten (en printplaten.png, fronten.png)
+                                           opnieuw; de rest komt uit controle.json. Zo kan het ook als
+                                           de fan-art-bronnen ontbreken.
 Schrijft  controle/RAPPORT.md, controle/controle.json en renders/doorsneden.png.
 
 Wat wordt gecontroleerd
@@ -13,6 +16,7 @@ Wat wordt gecontroleerd
 """
 import json
 import math
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -539,7 +543,10 @@ def rapport(mont, uitnemen, prnt, stab, slicer, projecten):
     L += ["", "## 5. Bambu Studio-projecten", "",
           "Elk .3mf-bestand is gecontroleerd op de regels van de Bambu Studio-lezer (bbs_3mf.cpp): verplichte "
           "bestanden, id's van objecten en delen, filamentslots, lijsten per filament, spoelmatrix, en of elk "
-          "object volledig op zijn eigen plaat ligt zonder de spoeltoren te raken. Niet getest in Bambu Studio zelf.", ""]
+          "object volledig op zijn eigen plaat ligt. De spoeltoren is nagerekend zoals Bambu Studio 2.x hem bouwt "
+          "(vierkant met ribben, 3 mm brim; gereedschap/bambu/toren.py): op elke plaat ligt hij waar Bambu hem "
+          "houdt (15 mm van de randen), komt hij niet buiten de plaat en raakt hij geen deel. "
+          "Niet getest in Bambu Studio zelf.", ""]
     for pad, fouten in projecten:
         L.append(f"- {'✅' if not fouten else '⚠️'} `{pad}`" + ("" if not fouten else ": " + "; ".join(fouten)))
     L += ["", "## 6. Stabiliteit", "", f"Vulgraad: {stab['bron']} {stab['vulgraad_gebruikt']}.", "",
@@ -551,11 +558,21 @@ def rapport(mont, uitnemen, prnt, stab, slicer, projecten):
     (OUT / "RAPPORT.md").write_text("\n".join(L) + "\n")
 
 
-def main():
+def main(argv=()):
     from gereedschap.bambu.valideer import valideer
     OUT.mkdir(exist_ok=True)
     slicer_file = ROOT / "controle" / "slicer.json"
     slicer = json.loads(slicer_file.read_text()) if slicer_file.exists() else {}
+    if "--projecten" in argv:
+        vorige = json.loads((OUT / "controle.json").read_text())
+        vorige["projecten"] = [(str(p.relative_to(ROOT)), valideer(p)[0]) for p in sorted(ROOT.rglob("*.3mf"))]
+        (OUT / "controle.json").write_text(json.dumps(vorige, indent=2, ensure_ascii=False) + "\n")
+        printplaten(slicer)
+        fronten(slicer, EIGEN, ROOT / "renders" / "fronten.png")
+        fronten(slicer, FANART, ROOT / "fanart" / "fronten.png")
+        rapport(vorige["montage"], vorige["uitnemen"], vorige["print"], vorige["stabiliteit"], slicer,
+                vorige["projecten"])
+        return
     mont = check_montage()
     uitnemen = {f"{d.nr:02d} {d.naam['nl']}": check_uitnemen(d.sleutel, "nl") for d in bouwbaar(ALLE)}
     prnt = check_print()
@@ -573,4 +590,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])

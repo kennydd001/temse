@@ -44,8 +44,8 @@ def miniatuur(plaat, filamenten):
                 pad = MPath.make_compound_path(*[MPath(np.asarray(r.coords), closed=True)
                                                  for r in [poly.exterior, *poly.interiors]])
                 ax.add_patch(PathPatch(pad, facecolor=kl, edgecolor="none"))
-    if len({d.slot for o in plaat.objecten for d in o.delen}) > 1:
-        ax.add_patch(plt.Rectangle(plaat.toren, 35, 35, fill=False, ec="#BBBBBB", ls="--", lw=1.2))
+    if len({d.slot for o in plaat.objecten for d in o.delen}) > 1 and plaat.toren_maat:   # na plaats_torens()
+        ax.add_patch(plt.Rectangle(plaat.toren, *plaat.toren_maat, fill=False, ec="#BBBBBB", ls="--", lw=1.2))
     ax.set_xlim(0, 256)
     ax.set_ylim(0, 256)
     ax.axis("off")

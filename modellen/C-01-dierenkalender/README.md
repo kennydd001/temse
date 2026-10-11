@@ -74,6 +74,10 @@ Een complete kalender is ongeveer 290 g filament en 7,5 uur printen.
 
   Omdat deze instellingen per object zijn opgeslagen, zet Bambu Studio ze bij het openen niet terug naar het
   systeemprofiel.
+- **Spoeltoren**: Bambu Studio 2.x bouwt een vierkante toren met ribben en 3 mm brim, bij vier kleuren zo'n
+  50 mm breed (niet 35 mm). Elke plaat heeft er een vaste plek voor, minstens 15 mm van de rand en vrij van de
+  onderdelen; op het front is dat een vrije bovenhoek naast het dier. Ook platen met één kleur hebben zo'n plek,
+  zodat het goed blijft gaan als je objecten tussen platen verschuift of *Rangschikken* gebruikt.
 - **Kleuren**: de filamenten zijn Bambu PLA Basic en PLA Matte, met hun echte kleurcodes, en staan op volgorde
   in het project: eerst de bordkleur, dan de andere frontkleuren, dan wit en Charcoal voor de kaartjes. Bij het
   printen koppel je ze aan de AMS-sleuven. Een plaat gebruikt er nooit meer dan vier. Leeuw en Steve hebben in
@@ -140,7 +144,8 @@ Pas daarna de winnende maten aan in `cad/params.py` (`CHANNEL`, `SLOT_W`) en gen
   - geen overhang steiler dan 45°;
   - geen details smaller dan 0,4 mm;
   - nergens support nodig.
-- **3MF:** alle 29 projecten voldoen aan de regels van de Bambu Studio-lezer.
+- **3MF:** alle 29 projecten voldoen aan de regels van de Bambu Studio-lezer, en op elke plaat blijft de
+  spoeltoren (met ribben en brim) binnen de plaat.
 - **Stabiliteit:** een complete kalender weegt 281 tot 292 g, met het zwaartepunt op 44 tot 49 mm hoogte. Hij
   kantelt pas bij 36° of meer scheefstand.
 
