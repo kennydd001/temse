@@ -75,6 +75,10 @@ A complete calendar takes about 290 g of filament and 7.5 hours of printing.
   - cards: fully solid, 1.6 mm.
 
   Because they are stored per object, Bambu Studio does not reset them to the system profile on opening.
+- **Prime tower**: Bambu Studio 2.x builds a square tower with ribs and a 3 mm brim, about 50 mm wide with four
+  colours (not 35 mm). Every plate has a fixed spot for it, at least 15 mm from the edge and clear of the parts;
+  on the front that is a free top corner next to the animal. Single-colour plates have such a spot too, so it
+  keeps working if you move objects between plates or use *Arrange*.
 - **Colours**: the filaments are Bambu PLA Basic and PLA Matte with their real colour codes, ordered in the
   project as follows: board colour first, then the other front colours, then white and Charcoal for the cards.
   Map them to your AMS slots when printing. A plate never uses more than four. The lion and Steve use five
@@ -141,7 +145,8 @@ Then set the winning sizes in `cad/params.py` (`CHANNEL`, `SLOT_W`) and regenera
   - no overhang steeper than 45°;
   - no details narrower than 0.4 mm;
   - no supports needed anywhere.
-- **3MF:** all 29 projects pass the rules of the Bambu Studio reader.
+- **3MF:** all 29 projects pass the rules of the Bambu Studio reader, and on every plate the prime tower
+  (with ribs and brim) stays on the plate.
 - **Stability:** a complete calendar weighs 281 to 292 g, with its centre of gravity 44 to 49 mm high. It only
   tips over at a tilt of 36° or more.
 

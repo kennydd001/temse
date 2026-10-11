@@ -5,7 +5,9 @@ Elke variant (b.v. varianten/01-vos/nl/dierenkalender_vos_nl.3mf) heeft vijf pri
 Gedeeld: voet, kaartjes per taal (3 platen) en de pasproef per taal (1 plaat).
 
 Instellingen (bovenop "0.20mm Standard @BBL A1", Textured PEI Plate) staan per object, zodat Bambu Studio
-ze bij het openen niet terugzet naar het systeemprofiel.
+ze bij het openen niet terugzet naar het systeemprofiel. De spoeltoren krijgt op elke plaat automatisch
+een plek die Bambu Studio 2.x goedkeurt (gereedschap/bambu/toren.py); bij het front is dat een vrije
+bovenhoek naast het dier.
 """
 import kalender as K  # noqa: E402
 import _pad  # noqa: F401,E402  (maakt gereedschap/ importeerbaar)
@@ -48,15 +50,16 @@ def kaartplaten(taal, slots):
     p = t["plaat"]
     return [
         B.Plaat(p["maanden"], [object_(f"{t['kaartjes']}_{t['maanden_bestand']}", K.kaartjes(taal, "maanden"),
-                                       slots, taal, KAART, (128, 70))], toren=(110, 150)),
+                                       slots, taal, KAART, (128, 70))]),
         B.Plaat(p["dagen"], [object_(f"{t['kaartjes']}_{t['dagen_bestand']}", K.kaartjes(taal, "dagen"),
-                                     slots, taal, KAART, (128, 40))], toren=(110, 110)),
+                                     slots, taal, KAART, (128, 40))]),
         B.Plaat(p["cijfers"], [object_(f"{t['kaartjes']}_{t['cijfers_bestand']}", K.kaartjes(taal, "cijfers"),
-                                       slots, taal, KAART, (95, 40))], toren=(205, 25)),
+                                       slots, taal, KAART, (95, 40))]),
     ]
 
 
 def met_miniaturen(platen, filamenten):
+    B.plaats_torens(filamenten, platen)   # eerst de spoeltorens: de miniatuur tekent ze mee
     for p in platen:
         p.miniatuur = miniatuur(p, filamenten)
     return platen
@@ -73,7 +76,7 @@ def variant(dier, taal):
     naam = dier.naam[taal]
     platen = [
         B.Plaat(t["plaat"]["front"].format(dier=naam),
-                [object_(f"{t['front']}_{naam}", fr, slots, taal, FRONT, (103, 110))], toren=(215, 30)),
+                [object_(f"{t['front']}_{naam}", fr, slots, taal, FRONT, (103, 110))]),
         B.Plaat(t["plaat"]["voet"], [object_(t["voet"], {dier.bord: K.foot()["voet"]}, slots, taal, VOET, (128, 60))]),
     ] + kaartplaten(taal, slots)
     met_miniaturen(platen, filamenten)
@@ -109,7 +112,7 @@ def gedeeld():
         objs = [object_("kanalen", {ORANJE: K.proef_kanalen()["proef"]}, slots, taal, PROEF, (50, 40)),
                 object_("sleuven", {ORANJE: K.proef_sleuven()["proef"]}, slots, taal, PROEF, (180, 25)),
                 object_(t["pasproef"] + "_kaartjes", K.proef_kaartjes(taal), slots, taal, KAART, (80, 100))]
-        platen = met_miniaturen([B.Plaat(t["plaat"]["pasproef"], objs, toren=(190, 150))], fil)
+        platen = met_miniaturen([B.Plaat(t["plaat"]["pasproef"], objs)], fil)
         pad = GEDEELD / "pasproef" / taal / f"{t['pasproef']}_{taal}.3mf"
         out.append((pad, B.schrijf(pad, f"C-01 {t['plaat']['pasproef']} {taal.upper()}", fil, platen)))
     return out
