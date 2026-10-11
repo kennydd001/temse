@@ -170,7 +170,8 @@ def plaats_torens(filamenten, platen):
     """Vult plaat.toren (waar die None is) en plaat.toren_maat in; een vaste plek wordt gecontroleerd.
 
     Ook een plaat met één filament krijgt een veilige plek: daar komt geen toren, maar wie objecten
-    tussen platen verschuift (b.v. met Rangschikken), krijgt de toren van die plaat.
+    tussen platen verschuift (b.v. met Rangschikken), krijgt de toren van die plaat. Is zo'n plaat te vol
+    voor een vrije plek, dan ligt de toren alleen binnen de plaat en het gebied van Bambu.
     """
     p = T.parameters(project_instellingen(filamenten))
     for k, plaat in enumerate(platen):
@@ -185,6 +186,8 @@ def plaats_torens(filamenten, platen):
             n = per_laag = min(max(len(filamenten), 2), 4)
         if plaat.toren is None:
             plaat.toren = T.plaats(p, n, per_laag, hoogte, obst)
+            if plaat.toren is None and len(slots) <= 1:   # plaat vol en één kleur: hier komt geen toren
+                plaat.toren = T.plaats(p, n, per_laag, hoogte)
             if plaat.toren is None:
                 raise ValueError(f"plaat {k + 1} ({plaat.naam}): geen plek voor de spoeltoren")
         fouten = T.controleer(p, *plaat.toren, n, per_laag, hoogte, obst if len(slots) > 1 else None)
