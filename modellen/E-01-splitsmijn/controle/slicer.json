@@ -1,0 +1,72 @@
+{
+  "1 achterplaat": {
+    "tijd": "3h 16m 2s",
+    "gram": 137.7,
+    "gram_per_extruder": [
+      137.68
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "11101"
+    ],
+    "volume_cm3": 167.02,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "2 voorplaat": {
+    "tijd": "3h 1m 48s",
+    "gram": 108.6,
+    "gram_per_extruder": [
+      108.56
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "11101"
+    ],
+    "volume_cm3": 112.08,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "3 voet en beugel": {
+    "tijd": "1h 36m 21s",
+    "gram": 74.2,
+    "gram_per_extruder": [
+      74.23
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "11800"
+    ],
+    "volume_cm3": 75.8,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "4 slinger, mesblok en plank": {
+    "tijd": "54m 15s",
+    "gram": 46.1,
+    "gram_per_extruder": [
+      46.08
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "10205"
+    ],
+    "volume_cm3": 36.79,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "5 munten": {
+    "tijd": "32m 26s",
+    "gram": 16.5,
+    "gram_per_extruder": [
+      16.51
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "11600"
+    ],
+    "volume_cm3": 21.56,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  }
+}
