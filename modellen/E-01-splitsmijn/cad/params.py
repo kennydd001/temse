@@ -43,9 +43,9 @@ STEEK = 44.0              # pinnen in een rij: tussenruimte 36 voor een muntje v
 RIJ = STEEK * math.sqrt(3) / 2   # driehoeksraster
 RIJEN = 4                 # rij 0 (boven) .. 3; de onderste rij heeft een pin in het midden
 Z_ONDERSTE_RIJ = 30.0
-NOK_D = 3.0               # nokje op elke pin, klemt in de voorplaat
+NOK_D = 3.0               # nokje op elke pin en rand: houdt de voorplaat op zijn plaats
 NOK_H = 1.6
-NOK_GAT = 3.1
+NOK_GAT = 3.2             # 26 nokjes tegelijk: licht klemmen, niet forceren (kies met de passtrip)
 
 BINNEN_HALF = 1.5 * STEEK + PIN_D / 2 + MUNT_D + 4.0   # 99: de buitenste pinnen houden een muntje + 4 vrij
 RAND = 10.0               # zijranden x = +-99 .. +-109
@@ -107,6 +107,8 @@ BEUGEL_HALF = 22.0
 BEUGEL_Y = MES[0] + 0.5   # achterkant van de voorwand van de beugel (de arm zwaait erachter)
 POOT = (14.5, 12.0)       # poten van de beugel achter de voorwand: vanaf |x| = 14,5 (de arm zwaait ertussen), tot 12 mm onder de as
 BEUGEL_PEN = (17.5, 6.0, 4.0)   # x, z onder de as en Ø van de pennen op de voorplaat waar de beugel op klikt
+MES_GAT = 3.1             # gaten in het mesblok voor de pennetjes van de arm: klemmen (kies met de passtrip)
+BEUGEL_GAT = 4.1          # liggende druppelgaten in de beugel voor de pennen Ø 4 van de voorplaat: klemmen
 MAX_HOEK = 35.0           # zo ver mag de slinger uitslaan zonder iets te raken
 
 # --- verdeler (midden in de voet, steekt met een vin omhoog in de spleet) -----------------------
@@ -124,3 +126,9 @@ SPEL = 0.3
 
 def rad(g):
     return math.radians(g)
+
+
+# --- passtrip: eerst printen, dan NOK_GAT, MES_GAT, BEUGEL_GAT en ZESKANT_SPEL kiezen ------------
+PROEF_GAT = (3.0, 3.1, 3.2, 3.3, 3.4)        # ronde gaten voor de nokjes en het mesblok
+PROEF_ZESKANT = (0.1, 0.2, 0.3, 0.4)          # speling van het zeskantgat in de arm
+PROEF_BEUGEL = (4.0, 4.1, 4.2, 4.3)           # liggende druppelgaten zoals in de beugel

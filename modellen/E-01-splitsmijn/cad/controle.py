@@ -171,7 +171,48 @@ def spelingen():
     return {"paren": uit, "botsingen": botsing, "mes_op_groef": round(mes_raakt, 2)}
 
 
-# --- 5. printbaarheid ---------------------------------------------------------------------------
+# --- 5. verbindingen ----------------------------------------------------------------------------
+
+def passingen():
+    """Speling per kant in elke verbinding, gemeten tussen de meshes in de montagestand (alleen rond die
+    verbinding, en zonder de vlakken waar de delen bewust op elkaar rusten)."""
+    st = {k: m for k, (_, m) in V.stand(0.0).items()}
+    zp, W = P.Z_PLANK, P.BINNEN_HALF
+
+    def doos(x0, y0, z0, x1, y1, z1):
+        return V.Manifold.cube([x1 - x0, y1 - y0, z1 - z0]).translate([x0, y0, z0])
+
+    def speling(a, b, d):
+        return round(float((st[a] ^ d).min_gap(st[b] ^ d, 3.0)), 3)
+
+    x, z = V.nokken()[0]
+    px, pz, _ = P.BEUGEL_PEN
+    mx, mz, _ = P.MES_PEN
+    return [
+        {"wat": f"nokje Ø {P.NOK_D:.1f} in de voorplaat ({len(V.nokken())} stuks tegelijk)", "param": "NOK_GAT",
+         "speling": speling("achterplaat", "voorplaat", doos(x - 3, P.Y_VOOR + 0.05, z - 3, x + 3, P.Y_VOOR + 3, z + 3)),
+         "soort": "licht klemmen"},
+        {"wat": "pennetjes Ø 3 van de arm in het mesblok", "param": "MES_GAT",
+         "speling": speling("slinger", "mesblok", doos(mx - 3, P.MES[0] + 0.01, zp + mz - 3, mx + 3, P.MES[1], zp + mz + 3)),
+         "soort": "klemmen"},
+        {"wat": "pennen Ø 4 van de voorplaat in de beugel (liggend druppelgat)", "param": "BEUGEL_GAT",
+         "speling": speling("voorplaat", "beugel", doos(px - 4, P.BORD_T + 0.5, zp - pz - 4, px + 4, 25, zp - pz + 4)),
+         "soort": "klemmen"},
+        {"wat": "zeskant van de plank in de arm", "param": "ZESKANT_SPEL",
+         "speling": speling("plank", "slinger", doos(-7, P.ARM_Y[0] + 0.2, zp - 7, 7, P.ARM_Y[1], zp + 7)),
+         "soort": "schuiven zonder wiebelen"},
+        {"wat": "zijranden in de kokers van de voet", "param": "SPEL",
+         "speling": min(speling(a, "voet", doos(W - 1, -5, 0.5, W + P.RAND + 5, 20, 15)) for a in ("achterplaat", "voorplaat")),
+         "soort": "schuiven"},
+        {"wat": "naaf van de plank in het gat van de voorplaat", "param": "NAAF_R",
+         "speling": speling("plank", "voorplaat", doos(-8, P.Y_VOOR, zp - 8, 8, P.BORD_T, zp + 8)), "soort": "vrij"},
+        {"wat": "vin van de verdeler in de spleet", "param": "",
+         "speling": min(speling("voet", a, doos(-3, 0, 0.5, 3, 14, P.VERDELER_TOP)) for a in ("achterplaat", "voorplaat")),
+         "soort": "vrij"},
+    ]
+
+
+# --- 6. printbaarheid ---------------------------------------------------------------------------
 
 def printbaar():
     out = {}
@@ -334,7 +375,15 @@ def rapport(r):
           "| Paar | Kleinste speling | Bij hoek |", "|---|---|---|"]
     for p in sp["paren"]:
         L.append(f"| {p['paar']} | {ok(p['speling'] >= 0.3)} {p['speling']:.2f} | {p['hoek']:.0f}° |")
-    L += ["", "## 5. Printbaarheid (Bambu Lab A1, 0,4 mm nozzle, 0,2 mm laag)", "",
+    L += ["", "## 5. Verbindingen", "",
+          "Er zijn geen klikhaakjes: alles klemt of schuift. Speling per kant in het CAD, gemeten tussen de onderdelen "
+          "in de montagestand. Hoe strak het geprint wordt, hangt af van de printer: een staand gat komt meestal "
+          "0,1 tot 0,2 mm kleiner in diameter uit. Print daarom eerst plaat 1 (de passtrip) en zet de gekozen maten in "
+          "`cad/params.py`.", "",
+          "| Verbinding | Speling per kant | Bedoeld | Kies met |", "|---|---|---|---|"]
+    for v in r["passingen"]:
+        L.append(f"| {v['wat']} | {v['speling']:.2f} mm | {v['soort']} | {('`' + v['param'] + '`') if v['param'] else ''} |")
+    L += ["", "## 6. Printbaarheid (Bambu Lab A1, 0,4 mm nozzle, 0,2 mm laag)", "",
           "| Plaat | Kleur | Maat | Past | Overhang > 48° (mm²) | Te smal (< 0,4 mm) |", "|---|---|---|---|---|---|"]
     for naam, i in r["print"].items():
         f = P.FILAMENTEN[i["kleur"]][0]
@@ -355,7 +404,8 @@ def main(argv):
     rondes = 4 if "--snel" in argv else 8
     tabel, vast, uitslagen = S.mikproef(rondes=rondes)
     telling = S.splitsingen(rondes=60 if "--snel" in argv else 300)
-    r = {"doorgang": ligplekken(), "slinger": slinger(), "spelingen": spelingen(), "print": printbaar(),
+    r = {"doorgang": ligplekken(), "slinger": slinger(), "spelingen": spelingen(), "passingen": passingen(),
+         "print": printbaar(),
          "simulatie": {"tabel": [(m, p, [round(x, 3) for x in rij]) for m, p, rij in tabel], "vast": vast,
                        "totaal": len(tabel) * 3 * rondes * 8, "muntjes_per_cel": rondes * 8,
                        "kleinste_uitslag": min(uitslagen), "mediaan_uitslag": statistics.median(uitslagen),

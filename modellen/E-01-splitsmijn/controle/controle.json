@@ -68,8 +68,80 @@
     "botsingen": [],
     "mes_op_groef": 0.0
   },
+  "passingen": [
+    {
+      "wat": "nokje Ø 3.0 in de voorplaat (26 stuks tegelijk)",
+      "param": "NOK_GAT",
+      "speling": 0.1,
+      "soort": "licht klemmen"
+    },
+    {
+      "wat": "pennetjes Ø 3 van de arm in het mesblok",
+      "param": "MES_GAT",
+      "speling": 0.05,
+      "soort": "klemmen"
+    },
+    {
+      "wat": "pennen Ø 4 van de voorplaat in de beugel (liggend druppelgat)",
+      "param": "BEUGEL_GAT",
+      "speling": 0.05,
+      "soort": "klemmen"
+    },
+    {
+      "wat": "zeskant van de plank in de arm",
+      "param": "ZESKANT_SPEL",
+      "speling": 0.1,
+      "soort": "schuiven zonder wiebelen"
+    },
+    {
+      "wat": "zijranden in de kokers van de voet",
+      "param": "SPEL",
+      "speling": 0.3,
+      "soort": "schuiven"
+    },
+    {
+      "wat": "naaf van de plank in het gat van de voorplaat",
+      "param": "NAAF_R",
+      "speling": 0.999,
+      "soort": "vrij"
+    },
+    {
+      "wat": "vin van de verdeler in de spleet",
+      "param": "",
+      "speling": 0.6,
+      "soort": "vrij"
+    }
+  ],
   "print": {
-    "1 achterplaat": {
+    "1 passtrip": {
+      "kleuren": {
+        "11101": {
+          "volume_cm3": 10.94,
+          "z_mm": [
+            0.0,
+            11.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 212.0,
+      "korte_bruggen_mm2": 0.0,
+      "maat_mm": [
+        119.0,
+        40.0,
+        11.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        137.0,
+        216.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0,
+      "kleur": "11101"
+    },
+    "2 achterplaat": {
       "kleuren": {
         "11101": {
           "volume_cm3": 167.02,
@@ -97,10 +169,10 @@
       "geschatte_wissels": 0,
       "kleur": "11101"
     },
-    "2 voorplaat": {
+    "3 voorplaat": {
       "kleuren": {
         "11101": {
-          "volume_cm3": 112.08,
+          "volume_cm3": 112.04,
           "z_mm": [
             0.0,
             13.5
@@ -125,7 +197,7 @@
       "geschatte_wissels": 0,
       "kleur": "11101"
     },
-    "3 voet en beugel": {
+    "4 voet en beugel": {
       "kleuren": {
         "11800": {
           "volume_cm3": 75.8,
@@ -153,7 +225,7 @@
       "geschatte_wissels": 0,
       "kleur": "11800"
     },
-    "4 slinger, mesblok en plank": {
+    "5 slinger, mesblok en plank": {
       "kleuren": {
         "10205": {
           "volume_cm3": 36.79,
@@ -181,7 +253,7 @@
       "geschatte_wissels": 0,
       "kleur": "10205"
     },
-    "5 munten": {
+    "6 munten": {
       "kleuren": {
         "11600": {
           "volume_cm3": 21.56,
@@ -553,7 +625,21 @@
     ]
   },
   "slicer": {
-    "1 achterplaat": {
+    "1 passtrip": {
+      "tijd": "31m 42s",
+      "gram": 11.7,
+      "gram_per_extruder": [
+        11.73
+      ],
+      "wissels": 0,
+      "kleuren": [
+        "11101"
+      ],
+      "volume_cm3": 10.94,
+      "support_extrusie_mm": 0.0,
+      "support": false
+    },
+    "2 achterplaat": {
       "tijd": "3h 16m 2s",
       "gram": 137.7,
       "gram_per_extruder": [
@@ -567,21 +653,21 @@
       "support_extrusie_mm": 0.0,
       "support": false
     },
-    "2 voorplaat": {
-      "tijd": "3h 1m 48s",
-      "gram": 108.6,
+    "3 voorplaat": {
+      "tijd": "3h 1m 52s",
+      "gram": 108.5,
       "gram_per_extruder": [
-        108.56
+        108.55
       ],
       "wissels": 0,
       "kleuren": [
         "11101"
       ],
-      "volume_cm3": 112.08,
+      "volume_cm3": 112.04,
       "support_extrusie_mm": 0.0,
       "support": false
     },
-    "3 voet en beugel": {
+    "4 voet en beugel": {
       "tijd": "1h 36m 21s",
       "gram": 74.2,
       "gram_per_extruder": [
@@ -595,8 +681,8 @@
       "support_extrusie_mm": 0.0,
       "support": false
     },
-    "4 slinger, mesblok en plank": {
-      "tijd": "54m 15s",
+    "5 slinger, mesblok en plank": {
+      "tijd": "54m 13s",
       "gram": 46.1,
       "gram_per_extruder": [
         46.08
@@ -609,8 +695,8 @@
       "support_extrusie_mm": 0.0,
       "support": false
     },
-    "5 munten": {
-      "tijd": "32m 26s",
+    "6 munten": {
+      "tijd": "32m 29s",
       "gram": 16.5,
       "gram_per_extruder": [
         16.51

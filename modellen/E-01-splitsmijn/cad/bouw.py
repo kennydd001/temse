@@ -2,7 +2,8 @@
 
 Gebruik:  python bouw.py
 
-  pasproef/   elk onderdeel als STL in printligging, en pasproef.3mf (Bambu Studio, 5 platen, 1 kleur per plaat).
+  pasproef/   elk onderdeel als STL in printligging, en pasproef.3mf (Bambu Studio, 6 platen, 1 kleur per plaat;
+              plaat 1 is de passtrip om de gaten te kiezen).
               voorplaat_glad.stl is dezelfde voorplaat zonder kijkspleten, voor doorzichtig filament.
 """
 import json
@@ -29,6 +30,9 @@ INST = {
     "slinger": {"wall_loops": "3", "sparse_infill_density": "100%"},   # zwaar gewicht: slingert langer en egaler
     "plank": {"wall_loops": "4"},
     "munt": {"wall_loops": "3", "brim_type": "no_brim"},
+    "gatenstrip": {"wall_loops": "2"},          # zoals de voorplaat
+    "pennenblok": {"wall_loops": "3"},          # zoals de achterplaat
+    "beugelproef": {"wall_loops": "2"},          # zoals de beugel (standaard)
 }
 
 
@@ -90,7 +94,8 @@ def main():
     r = project(PROEF / "pasproef.3mf", f"E-01 Splitsmijn pasproef {P.VERSIE}", platen.platen(),
                 [P.ZWART, P.BRUIN, P.ROOD, P.BLAUW],
                 "Pasproef van de Splitsmijn: het valbord op ware grootte met de slinger, een voet met twee bakjes en "
-                "10 muntjes. Test of de muntjes nergens blijven hangen en of de splitsingen echt willekeurig zijn.")
+                "10 muntjes. Print eerst plaat 1 (passtrip) en kies de gaten. Test of de muntjes nergens blijven "
+                "hangen en of de splitsingen echt willekeurig zijn.")
     print("  pasproef/pasproef.3mf", r)
     (ROOT / "onderdelen.json").write_text(json.dumps(info, indent=2, ensure_ascii=False) + "\n")
 

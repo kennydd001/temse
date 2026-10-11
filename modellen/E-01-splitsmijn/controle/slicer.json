@@ -1,5 +1,19 @@
 {
-  "1 achterplaat": {
+  "1 passtrip": {
+    "tijd": "31m 42s",
+    "gram": 11.7,
+    "gram_per_extruder": [
+      11.73
+    ],
+    "wissels": 0,
+    "kleuren": [
+      "11101"
+    ],
+    "volume_cm3": 10.94,
+    "support_extrusie_mm": 0.0,
+    "support": false
+  },
+  "2 achterplaat": {
     "tijd": "3h 16m 2s",
     "gram": 137.7,
     "gram_per_extruder": [
@@ -13,21 +27,21 @@
     "support_extrusie_mm": 0.0,
     "support": false
   },
-  "2 voorplaat": {
-    "tijd": "3h 1m 48s",
-    "gram": 108.6,
+  "3 voorplaat": {
+    "tijd": "3h 1m 52s",
+    "gram": 108.5,
     "gram_per_extruder": [
-      108.56
+      108.55
     ],
     "wissels": 0,
     "kleuren": [
       "11101"
     ],
-    "volume_cm3": 112.08,
+    "volume_cm3": 112.04,
     "support_extrusie_mm": 0.0,
     "support": false
   },
-  "3 voet en beugel": {
+  "4 voet en beugel": {
     "tijd": "1h 36m 21s",
     "gram": 74.2,
     "gram_per_extruder": [
@@ -41,8 +55,8 @@
     "support_extrusie_mm": 0.0,
     "support": false
   },
-  "4 slinger, mesblok en plank": {
-    "tijd": "54m 15s",
+  "5 slinger, mesblok en plank": {
+    "tijd": "54m 13s",
     "gram": 46.1,
     "gram_per_extruder": [
       46.08
@@ -55,8 +69,8 @@
     "support_extrusie_mm": 0.0,
     "support": false
   },
-  "5 munten": {
-    "tijd": "32m 26s",
+  "6 munten": {
+    "tijd": "32m 29s",
     "gram": 16.5,
     "gram_per_extruder": [
       16.51

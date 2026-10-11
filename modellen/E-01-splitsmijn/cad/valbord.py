@@ -120,9 +120,9 @@ def beugel():
     groef = Polygon([(-g, zb1 + E), (g, zb1 + E), (0, zb1 - P.GROEF_DIEP)])
     m = m - vlak_xz(groef, P.BEUGEL_Y - 1, P.MES[1] + 0.5)
     # gaten voor de pennen van de voorplaat: liggend in de print, dus druppelvormig (punt naar +z)
-    px, pz, pd = P.BEUGEL_PEN
+    px, pz, _ = P.BEUGEL_PEN
     for k in (-1, 1):
-        m = m - vlak_xz(druppel((k * px, zp - pz), pd / 2 + 0.05, omhoog=True), y0 - 1, y1 - 2.0)
+        m = m - vlak_xz(druppel((k * px, zp - pz), P.BEUGEL_GAT / 2, omhoog=True), y0 - 1, y1 - 2.0)
     return m
 
 
@@ -136,8 +136,8 @@ def mesblok():
     zf = zp + h / math.tan(math.radians(P.MES_HOEK / 2))
     vorm = Polygon([(0, zp), (h, zf), (bh, zf), (bh, zp + bt), (-bh, zp + bt), (-bh, zf), (-h, zf)])
     m = vlak_xz(vorm, *P.MES)
-    px, pz, pd = P.MES_PEN
-    gaten = unary_union([Point(s * px, zp + pz).buffer(pd / 2 + 0.05, quad_segs=12) for s in (-1, 1)])
+    px, pz, _ = P.MES_PEN
+    gaten = unary_union([Point(s * px, zp + pz).buffer(P.MES_GAT / 2, quad_segs=12) for s in (-1, 1)])
     return m - vlak_xz(gaten, P.MES[0] - 1, P.MES[1] + 1)
 
 
@@ -243,6 +243,48 @@ def munt():
 # --- montage ------------------------------------------------------------------------------------
 
 @lru_cache(maxsize=None)
+# --- passtrip (printligging, z omhoog) -----------------------------------------------------------
+
+def _label(t, x, y, z_top, h=3.0):
+    return extrude(text(t, h, x, y), z_top - 0.6, z_top + 1)
+
+
+def gatenstrip():
+    """Strip zo dik als de voorplaat en plat geprint zoals de voorplaat en de arm: ronde gaten voor de nokjes
+    en het mesblok (PROEF_GAT), zeskantgaten zoals in de arm (8 + PROEF_ZESKANT)."""
+    t = P.VOOR_T
+    m = box3(-7.0, -24.0, 0.0, 51.0, 10.0, t)
+    for i, d in enumerate(P.PROEF_GAT):
+        m = m - extrude(Point(10.0 * i, 0.0).buffer(d / 2, quad_segs=8), -1, t + 1) - _label(f"{d:.1f}", 10.0 * i, 5.5, t)
+    for i, sp in enumerate(P.PROEF_ZESKANT):
+        x = 3.0 + 14.0 * i
+        m = m - extrude(zeskant((x, -16.0), P.ZESKANT + sp), -1, t + 1) - _label(f"{P.ZESKANT + sp:.1f}", x, -7.5, t)
+    return m
+
+
+def pennenblok():
+    """Twee pinstompjes met precies het nokje van de achterplaat, een pen Ø 4 zoals op de voorplaat en een
+    zeskant zoals op de plank: alles staand geprint, net als in het echt."""
+    b = 2.0
+    m = box3(-6.0, -6.0, 0.0, 44.0, 6.0, b)
+    for x in (0.0, 11.0):
+        m = m + extrude(Point(x, 0).buffer(P.PIN_D / 2, quad_segs=16), b - E, b + 3.0)
+        m = m + extrude(Point(x, 0).buffer(P.NOK_D / 2, quad_segs=8), b + 3.0 - E, b + 3.0 + P.NOK_H - 0.4)
+        m = m + extrude(Point(x, 0).buffer(P.NOK_D / 2 - 0.4, quad_segs=8), b + 3.0 + P.NOK_H - 0.4 - E, b + 3.0 + P.NOK_H)
+    m = m + extrude(Point(22.0, 0).buffer(P.BEUGEL_PEN[2] / 2, quad_segs=12), b - E, b + 8.5)
+    return m + extrude(zeskant((35.0, 0.0), P.ZESKANT), b - E, b + 5.0)
+
+
+def beugelproef():
+    """Blokje dat staand geprint wordt zoals de beugel, met liggende druppelgaten PROEF_BEUGEL."""
+    h, zc = 11.0, 6.0          # gaten even hoog boven het bed als in de beugel
+    m = box3(-6.0, 0.0, 0.0, 36.0, 12.0, h)
+    for i, d in enumerate(P.PROEF_BEUGEL):
+        gat = vlak_xz(druppel((10.0 * i, zc), d / 2, omhoog=True), -1, 13)
+        m = m - gat - extrude(text(f"{d:.1f}", 2.5, 10.0 * i, 6.0), h - 0.6, h + 1)
+    return m
+
+
 def delen():
     """{naam: (kleur, Manifold, beweegt)} in de ruststand."""
     return {

@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # PrusaSlicer-tegenhanger van de Bambu-instellingen per object (zie bouw.INST)
 INSTELLINGEN = {"perimeters": 3}
-EXTRA = {"4 slinger, mesblok en plank": {"fill_density": "100%", "fill_pattern": "rectilinear"}}
+EXTRA = {"5 slinger, mesblok en plank": {"fill_density": "100%", "fill_pattern": "rectilinear"}}
 
 
 def main():

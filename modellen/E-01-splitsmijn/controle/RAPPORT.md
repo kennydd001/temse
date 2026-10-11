@@ -53,22 +53,38 @@ Het muntje rolt groot naast de pinnen in een vaste baan over de pinnen: zonder s
 | gewicht - voet | ✅ 3.60 | -5° |
 | mesblok - voorplaat | ✅ 5.50 | -35° |
 
-## 5. Printbaarheid (Bambu Lab A1, 0,4 mm nozzle, 0,2 mm laag)
+## 5. Verbindingen
+
+Er zijn geen klikhaakjes: alles klemt of schuift. Speling per kant in het CAD, gemeten tussen de onderdelen in de montagestand. Hoe strak het geprint wordt, hangt af van de printer: een staand gat komt meestal 0,05 tot 0,1 mm kleiner uit. Print daarom eerst plaat 1 (de passtrip) en zet de gekozen maten in `cad/params.py`.
+
+| Verbinding | Speling per kant | Bedoeld | Kies met |
+|---|---|---|---|
+| nokje Ø 3.0 in de voorplaat (26 stuks tegelijk) | 0.10 mm | licht klemmen | `NOK_GAT` |
+| pennetjes Ø 3 van de arm in het mesblok | 0.05 mm | klemmen | `MES_GAT` |
+| pennen Ø 4 van de voorplaat in de beugel (liggend druppelgat) | 0.05 mm | klemmen | `BEUGEL_GAT` |
+| zeskant van de plank in de arm | 0.10 mm | schuiven zonder wiebelen | `ZESKANT_SPEL` |
+| zijranden in de kokers van de voet | 0.30 mm | schuiven | `SPEL` |
+| naaf van de plank in het gat van de voorplaat | 1.00 mm | vrij | `NAAF_R` |
+| vin van de verdeler in de spleet | 0.60 mm | vrij |  |
+
+## 6. Printbaarheid (Bambu Lab A1, 0,4 mm nozzle, 0,2 mm laag)
 
 | Plaat | Kleur | Maat | Past | Overhang > 48° (mm²) | Te smal (< 0,4 mm) |
 |---|---|---|---|---|---|
-| 1 achterplaat | Charcoal | 218 × 230 × 10 | ✅ | ✅ 0 | ✅ geen |
-| 2 voorplaat | Charcoal | 218 × 230 × 14 | ✅ | ✅ 0 | ✅ geen |
-| 3 voet en beugel | Latte Brown | 226 × 106 × 52 | ✅ | ✅ 0 | ✅ geen |
-| 4 slinger, mesblok en plank | Maroon Red | 110 × 184 × 17 | ✅ | ✅ 0 | ✅ geen |
-| 5 munten | Marine Blue | 145 × 55 × 4 | ✅ | ✅ 0 | ✅ geen |
+| 1 passtrip | Charcoal | 119 × 40 × 11 | ✅ | ✅ 0 | ✅ geen |
+| 2 achterplaat | Charcoal | 218 × 230 × 10 | ✅ | ✅ 0 | ✅ geen |
+| 3 voorplaat | Charcoal | 218 × 230 × 14 | ✅ | ✅ 0 | ✅ geen |
+| 4 voet en beugel | Latte Brown | 226 × 106 × 52 | ✅ | ✅ 0 | ✅ geen |
+| 5 slinger, mesblok en plank | Maroon Red | 110 × 184 × 17 | ✅ | ✅ 0 | ✅ geen |
+| 6 munten | Marine Blue | 145 × 55 × 4 | ✅ | ✅ 0 | ✅ geen |
 
 ### Slicer (PrusaSlicer, A1-achtig profiel)
 
 | Plaat | Filament | Tijd (indicatie) | Support nodig |
 |---|---|---|---|
-| 1 achterplaat | 137.7 g | 3h 16m 2s | ✅ nee |
-| 2 voorplaat | 108.6 g | 3h 1m 48s | ✅ nee |
-| 3 voet en beugel | 74.2 g | 1h 36m 21s | ✅ nee |
-| 4 slinger, mesblok en plank | 46.1 g | 54m 15s | ✅ nee |
-| 5 munten | 16.5 g | 32m 26s | ✅ nee |
+| 1 passtrip | 11.7 g | 31m 42s | ✅ nee |
+| 2 achterplaat | 137.7 g | 3h 16m 2s | ✅ nee |
+| 3 voorplaat | 108.5 g | 3h 1m 52s | ✅ nee |
+| 4 voet en beugel | 74.2 g | 1h 36m 21s | ✅ nee |
+| 5 slinger, mesblok en plank | 46.1 g | 54m 13s | ✅ nee |
+| 6 munten | 16.5 g | 32m 29s | ✅ nee |

@@ -16,7 +16,7 @@ and 10 coins. It tests the two things that could break the concept:
 ![Split Mine test print](renders/voor.png)
 
 > **Status:** the CAD, the STLs, the Bambu Studio project and the checks are done. **Nothing has been
-> printed yet.** That is exactly what the test print is for, see *Testing* below.
+> printed yet.** Start with the fit strip (plate 1), then the rest, and follow *Testing* below.
 >
 > The 3MF project has been checked against the rules of the Bambu format (`gereedschap/bambu/valideer.py` in
 > the root of the repo). It has not been opened in Bambu Studio itself: that program does not run in this
@@ -83,17 +83,18 @@ PLA on PLA is not known exactly. Everything is in [controle/RAPPORT.md](controle
 
 ## Parts and printing
 
-Open `pasproef/pasproef.3mf` in Bambu Studio. The project has five plates, one colour each:
+Open `pasproef/pasproef.3mf` in Bambu Studio. The project has six plates, one colour each:
 
 | Plate | What | Colour | Filament* | Time* |
 |---|---|---|---|---|
-| 1 | back plate with the pins | Charcoal 11101 | 138 g | 3 h 16 |
-| 2 | front plate with viewing slots | Charcoal 11101 | 109 g | 3 h 02 |
-| 3 | base with the trays, bracket | Latte Brown 11800 | 74 g | 1 h 36 |
-| 4 | pendulum, knife block, tilting plank | Maroon Red 10205 | 46 g | 0 h 54 |
-| 5 | 10 coins | Marine Blue 11600 | 17 g | 0 h 32 |
+| 1 | **fit strip: print this first**, see below | Charcoal 11101 | 12 g | 0 h 32 |
+| 2 | back plate with the pins | Charcoal 11101 | 138 g | 3 h 16 |
+| 3 | front plate with viewing slots | Charcoal 11101 | 109 g | 3 h 02 |
+| 4 | base with the trays, bracket | Latte Brown 11800 | 74 g | 1 h 36 |
+| 5 | pendulum, knife block, tilting plank | Maroon Red 10205 | 46 g | 0 h 54 |
+| 6 | 10 coins | Marine Blue 11600 | 17 g | 0 h 32 |
 
-That comes to about **383 g of filament and 9 hours 20 of printing**. It is not a one-evening test piece,
+That comes to about **395 g of filament and almost 10 hours of printing**. It is not a one-evening test piece,
 but the drop board can only be tested at full size: the coins, the pins and the pendulum have to be real.
 
 \* Weight and time come from PrusaSlicer with a profile that approximates the A1, see
@@ -123,6 +124,30 @@ but the drop board can only be tested at full size: the coins, the pins and the 
 | knife block | 1 | 20 × 16 × 6.5 | `pasproef/mesblok.stl` |
 | tilting plank with hub and hexagon | 1 | 36 × 10 × 13 | `pasproef/plank.stl` |
 | diamond coin | 10 | Ø 25 × 4.5 | `pasproef/munt.stl` |
+| fit strip: hole strip, peg block, bracket sample | 3 | 58 × 34 × 2.5; 50 × 12 × 10.5; 42 × 12 × 11 | `pasproef/gatenstrip.stl` etc. |
+
+## First the fit strip
+
+![Fit strip](renders/passtrip.png)
+
+There are no snap hooks: everything **clamps** or **slides** together. How tight that turns out depends on your
+printer. A hole usually comes out 0.1 to 0.2 mm smaller than in the CAD, and with the 26 studs of the front
+plate that matters a lot: too tight, and you cannot get the front plate on (or off again).
+
+So print plate 1 first (half an hour) and try the pieces together:
+
+| Try | In | Pick the hole where it | Set in `cad/params.py` | Now |
+|---|---|---|---|---|
+| stud of the peg block | round holes 3.0 to 3.4 | goes in with light thumb pressure and stays, without forcing | `NOK_GAT` | 3.2 |
+| the same stud | round holes 3.0 to 3.4 | clamps firmly (one size tighter is fine) | `MES_GAT` | 3.1 |
+| hexagon of the peg block | hex holes 8.1 to 8.4 | slides easily without wobbling | `ZESKANT_SPEL` = size − 8 | 0.2 |
+| Ø 4 peg of the peg block | holes 4.0 to 4.3 of the bracket sample | clamps firmly | `BEUGEL_GAT` | 4.1 |
+
+If everything matches the current values, there is nothing to do. Otherwise change the values and run
+`python bouw.py` in `cad/` again. Only then print plates 2 to 6.
+
+What clamps where, and how much play each joint has in the CAD, is in
+[controle/RAPPORT.md](controle/RAPPORT.md), under *Verbindingen*.
 
 ## Assembly
 
@@ -132,12 +157,12 @@ but the drop board can only be tested at full size: the coins, the pins and the 
 2. **Tilting plank**: lay the plank in the middle under the slot, hub up. It sits between the top pins and
    the ceiling.
 3. **Front plate**: lay it on top, viewing slots facing you. Put the hub through the round hole.
-   - Press the front plate down all around: the studs on the pins and rims clamp into the holes.
+   - Press the front plate down all around: the 26 studs on the pins and rims clamp lightly into the holes.
    - The plank must now tilt freely; the hub does not touch the hole anywhere.
-4. **Pendulum**: push the knife block onto the two pegs at the top of the arm, knife pointing down. Then
-   slide the arm with its hexagonal hole onto the hexagon of the plank.
-5. **Bracket**: slide the bracket with its two holes onto the pegs under the hub, legs towards the front
-   plate.
+4. **Pendulum**: press the knife block onto the two pegs at the top of the arm (it clamps), knife pointing
+   down. Then slide the arm with its hexagonal hole onto the hexagon of the plank.
+5. **Bracket**: slide the bracket with its two holes onto the pegs under the hub (it clamps), legs towards
+   the front plate.
    - Lift the weight a tiny bit while you slide. The hub has 1 mm of play in its hole, and this way the knife
      slides into the groove from behind.
    - The rim at the front of the groove now holds the knife back.
@@ -183,9 +208,9 @@ Because the split is different every time, the child eventually practises all th
 ## Folders
 
 ```
-pasproef/     pasproef.3mf (5 plates) and every part as an STL in print orientation
+pasproef/     pasproef.3mf (6 plates, plate 1 is the fit strip) and every part as an STL in print orientation
 cad/          the source: Python scripts that make everything above (params.py has all dimensions)
-controle/     RAPPORT.md: coin passage, drop simulation, pendulum, clearances, printability, slicer
+controle/     RAPPORT.md: coin passage, drop simulation, pendulum, clearances, joints, printability, slicer
 renders/      Blender renders
 onderdelen.json   volume and size per STL
 ```

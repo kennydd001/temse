@@ -1,4 +1,31 @@
 {
+  "pasproef/gatenstrip.stl": {
+    "volume_cm3": 4.2,
+    "maat_mm": [
+      58.0,
+      34.0,
+      2.5
+    ],
+    "aantal": 1
+  },
+  "pasproef/pennenblok.stl": {
+    "volume_cm3": 1.9,
+    "maat_mm": [
+      50.0,
+      12.0,
+      10.5
+    ],
+    "aantal": 1
+  },
+  "pasproef/beugelproef.stl": {
+    "volume_cm3": 4.84,
+    "maat_mm": [
+      42.0,
+      12.0,
+      11.0
+    ],
+    "aantal": 1
+  },
   "pasproef/achterplaat.stl": {
     "volume_cm3": 167.02,
     "maat_mm": [
@@ -9,7 +36,7 @@
     "aantal": 1
   },
   "pasproef/voorplaat.stl": {
-    "volume_cm3": 112.08,
+    "volume_cm3": 112.04,
     "maat_mm": [
       218.0,
       230.0,
@@ -72,7 +99,7 @@
     "aantal": 10
   },
   "pasproef/voorplaat_glad.stl": {
-    "volume_cm3": 123.42,
+    "volume_cm3": 123.39,
     "maat_mm": [
       218.0,
       230.0,

@@ -1,6 +1,6 @@
 """Productfoto's van de pasproef van E-01 Splitsmijn (Blender/Cycles, zonder scherm).
 
-Gebruik:  python render.py [voor|binnen|mes|explosie|alle] [--snel]
+Gebruik:  python render.py [voor|binnen|mes|explosie|passtrip|alle] [--snel]
 Schrijft naar renders/. 'voor' toont een ronde halfweg: 8 = 3 + 5, met nog een muntje onderweg; 'binnen' is
 dezelfde ronde zonder voorplaat en beugel.
 """
@@ -24,6 +24,7 @@ VIEWS = {
     "binnen": (22.0, (0.20, -0.80, 0.30), (0.0, 0.0, 0.125), 62, (1100, 1250)),
     "mes": (-12.0, (0.12, -0.17, 0.34), (0.0, -0.014, 0.214), 85, (1200, 900)),
     "explosie": (0.0, (0.92, -0.58, 0.46), (0.0, -0.07, 0.14), 56, (1400, 1100)),
+    "passtrip": (0.0, (0.06, -0.20, 0.20), (0.0, -0.005, 0.0), 70, (1200, 800)),
 }
 
 
@@ -49,6 +50,11 @@ def scene(view, snel):
     mats = BL.materialen(P.FILAMENTEN)
     st = V.stand(hoek)
     delen = [(naam, kleur, m) for naam, (kleur, m) in st.items()]
+    if view == "passtrip":
+        # de drie stukjes zoals ze van het bed komen
+        delen = [("gatenstrip", P.ZWART, V.gatenstrip().translate([-55, -10, 0])),
+                 ("pennenblok", P.ZWART, V.pennenblok().translate([8, 14, 0])),
+                 ("beugelproef", P.ZWART, V.beugelproef().translate([12, -24, 0]))]
     if view == "binnen":
         delen = [d for d in delen if d[0] not in ("voorplaat", "beugel")]
     if view in ("voor", "binnen"):
@@ -64,7 +70,8 @@ def scene(view, snel):
     for naam, kleur, m in delen:
         if view == "explosie":
             m = m.translate(explosie(naam))
-        m = m.rotate([0, 0, 180]).translate([0, 0, OP_TAFEL + (60 if view == "explosie" else 0)])
+        if view != "passtrip":
+            m = m.rotate([0, 0, 180]).translate([0, 0, OP_TAFEL + (60 if view == "explosie" else 0)])
         BL.voeg_toe(naam, m, mats[kleur])
     BL.studio(muur_y=0.30)
     BL.camera(cam, doel, lens=lens, diafragma=8.0 if view == "explosie" else 5.6)

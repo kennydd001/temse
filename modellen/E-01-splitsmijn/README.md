@@ -16,7 +16,7 @@ en 10 muntjes. Ze test de twee dingen die het concept kunnen breken:
 ![Splitsmijn pasproef](renders/voor.png)
 
 > **Status:** CAD, STL's, het Bambu Studio-project en de controle zijn klaar. Er is **nog niets echt
-> geprint**. De pasproef is precies bedoeld om dat te doen, zie *Testen* hieronder.
+> geprint**. Begin met de passtrip (plaat 1), dan de rest, en volg *Testen* hieronder.
 >
 > Het 3MF-project is gecontroleerd tegen de regels van het Bambu-formaat (`gereedschap/bambu/valideer.py` in
 > de root van de repo). Het is hier niet in Bambu Studio zelf geopend: dat programma draait niet in deze
@@ -84,17 +84,18 @@ demping, want PLA op PLA is niet precies bekend. Alles staat in [controle/RAPPOR
 
 ## Onderdelen en printen
 
-Open `pasproef/pasproef.3mf` in Bambu Studio. Het project heeft vijf platen, elk in één kleur:
+Open `pasproef/pasproef.3mf` in Bambu Studio. Het project heeft zes platen, elk in één kleur:
 
 | Plaat | Wat | Kleur | Filament* | Tijd* |
 |---|---|---|---|---|
-| 1 | achterplaat met de pinnen | Charcoal 11101 | 138 g | 3 u 16 |
-| 2 | voorplaat met kijkspleten | Charcoal 11101 | 109 g | 3 u 02 |
-| 3 | voet met de bakjes, beugel | Latte Brown 11800 | 74 g | 1 u 36 |
-| 4 | slinger, mesblok, kantelplank | Maroon Red 10205 | 46 g | 0 u 54 |
-| 5 | 10 muntjes | Marine Blue 11600 | 17 g | 0 u 32 |
+| 1 | **passtrip: eerst printen**, zie hieronder | Charcoal 11101 | 12 g | 0 u 32 |
+| 2 | achterplaat met de pinnen | Charcoal 11101 | 138 g | 3 u 16 |
+| 3 | voorplaat met kijkspleten | Charcoal 11101 | 109 g | 3 u 02 |
+| 4 | voet met de bakjes, beugel | Latte Brown 11800 | 74 g | 1 u 36 |
+| 5 | slinger, mesblok, kantelplank | Maroon Red 10205 | 46 g | 0 u 54 |
+| 6 | 10 muntjes | Marine Blue 11600 | 17 g | 0 u 32 |
 
-Samen is dat ongeveer **383 g filament en 9 uur 20 printen**. Dat is geen proefstukje voor één avond, maar
+Samen is dat ongeveer **395 g filament en bijna 10 uur printen**. Dat is geen proefstukje voor één avond, maar
 het valbord kan alleen op ware grootte getest worden: de muntjes, de pinnen en de slinger moeten echt zijn.
 
 \* Gewicht en tijd komen uit PrusaSlicer met een profiel dat de A1 benadert, zie
@@ -124,6 +125,30 @@ het valbord kan alleen op ware grootte getest worden: de muntjes, de pinnen en d
 | mesblok | 1 | 20 × 16 × 6,5 | `pasproef/mesblok.stl` |
 | kantelplank met naaf en zeskant | 1 | 36 × 10 × 13 | `pasproef/plank.stl` |
 | diamantmuntje | 10 | Ø 25 × 4,5 | `pasproef/munt.stl` |
+| passtrip: gatenstrip, pennenblok, beugelproef | 3 | 58 × 34 × 2,5; 50 × 12 × 10,5; 42 × 12 × 11 | `pasproef/gatenstrip.stl` enz. |
+
+## Eerst de passtrip
+
+![Passtrip](renders/passtrip.png)
+
+Er zitten geen klikhaakjes in: alles **klemt** of **schuift** in elkaar. Hoe strak dat wordt, hangt af van je
+printer. Een gaatje komt meestal 0,1 tot 0,2 mm kleiner uit dan in het CAD, en bij de 26 nokjes van de
+voorplaat maakt dat veel uit: te strak, en je krijgt de voorplaat er niet op (of weer af).
+
+Print daarom eerst plaat 1 (een halfuurtje) en probeer de stukjes in elkaar:
+
+| Probeer | In | Kies het gat waar het | Zet in `cad/params.py` | Nu |
+|---|---|---|---|---|
+| nokje van het pennenblok | ronde gaten 3,0 tot 3,4 | met lichte duimdruk in gaat en blijft zitten, zonder forceren | `NOK_GAT` | 3,2 |
+| hetzelfde nokje | ronde gaten 3,0 tot 3,4 | stevig klemt (een maat strakker mag) | `MES_GAT` | 3,1 |
+| zeskant van het pennenblok | zeskantgaten 8,1 tot 8,4 | vlot schuift zonder te wiebelen | `ZESKANT_SPEL` = maat − 8 | 0,2 |
+| pen Ø 4 van het pennenblok | gaten 4,0 tot 4,3 van de beugelproef | stevig klemt | `BEUGEL_GAT` | 4,1 |
+
+Klopt alles met wat er nu staat, dan hoef je niets te doen. Anders: pas de waarden aan en draai
+`python bouw.py` in `cad/` opnieuw. Dan pas print je platen 2 tot 6.
+
+Wat waar klemt en hoeveel speling elke verbinding in het CAD heeft, staat in
+[controle/RAPPORT.md](controle/RAPPORT.md), onder *Verbindingen*.
 
 ## In elkaar zetten
 
@@ -133,11 +158,12 @@ het valbord kan alleen op ware grootte getest worden: de muntjes, de pinnen en d
 2. **Kantelplank**: leg de plank in het midden onder de inworp, met de naaf omhoog. Ze ligt tussen de
    bovenste pinnen en het plafond.
 3. **Voorplaat**: leg ze erop, met de kijkspleten naar je toe. Steek de naaf door het ronde gat.
-   - Druk de voorplaat rondom aan: de nokjes op de pinnen en de randen klemmen in de gaatjes.
+   - Druk de voorplaat rondom aan: de 26 nokjes op de pinnen en de randen klemmen licht in de gaatjes.
    - De plank moet nu vrij kunnen kantelen, de naaf raakt het gat nergens.
-4. **Slinger**: steek het mesblok op de twee pennetjes bovenaan de arm, met het mes naar beneden. Schuif dan de
-   arm met zijn zeskantgat op de zeskant van de plank.
-5. **Beugel**: schuif de beugel met zijn twee gaten op de pennen onder de naaf, met de poten naar de voorplaat.
+4. **Slinger**: druk het mesblok op de twee pennetjes bovenaan de arm (dat klemt), met het mes naar beneden.
+   Schuif dan de arm met zijn zeskantgat op de zeskant van de plank.
+5. **Beugel**: schuif de beugel met zijn twee gaten op de pennen onder de naaf (dat klemt), met de poten naar
+   de voorplaat.
    - Til het gewicht een klein beetje op terwijl je schuift. De naaf heeft 1 mm speling in het gat, en zo
      glijdt het mes van achteren in de groef.
    - Het randje vooraan de groef houdt het mes nu tegen.
@@ -182,9 +208,9 @@ Omdat de splitsing elke keer anders is, oefent het kind op den duur alle splitsi
 ## Mappen
 
 ```
-pasproef/     pasproef.3mf (5 platen) en elk onderdeel als STL in printligging
+pasproef/     pasproef.3mf (6 platen, plaat 1 is de passtrip) en elk onderdeel als STL in printligging
 cad/          de bron: Python-scripts die alles hierboven maken (params.py heeft alle maten)
-controle/     RAPPORT.md: muntdoorgang, valsimulatie, slinger, spelingen, printbaarheid, slicer
+controle/     RAPPORT.md: muntdoorgang, valsimulatie, slinger, spelingen, verbindingen, printbaarheid, slicer
 renders/      Blender-renders
 onderdelen.json   volume en maat per STL
 ```
