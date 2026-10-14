@@ -100,10 +100,10 @@ but the drop board can only be tested at full size: the coins, the pins and the 
 \* Weight and time come from PrusaSlicer with a profile that approximates the A1, see
 [controle/RAPPORT.md](controle/RAPPORT.md). The weight is reliable; Bambu Studio calculates its own time.
 
-- **Settings**: *0.20mm Standard @BBL A1* on the *Textured PEI Plate*, 0.4 mm nozzle, **no supports**.
-  The project already sets this per object:
+- **Settings**: *0.20mm Standard @BBL A1* on the *Textured PEI Plate*, 0.4 mm nozzle, **no supports**,
+  gyroid infill. The project already sets this per object:
   - back plate and base: 3 walls; front plate: 2 walls;
-  - pendulum: 3 walls and **100 % infill**: a heavy weight swings longer;
+  - pendulum: 3 walls and **100 % infill**, rectilinear (gyroid can't do 100 %): a heavy weight swings longer;
   - tilting plank: 4 walls; coins: 3 walls, no brim.
 - **Print orientation**:
   - The back and front plates lie flat. The back plate lies on its back with the pins up. The front plate

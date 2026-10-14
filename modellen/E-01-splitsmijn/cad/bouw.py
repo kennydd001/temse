@@ -22,7 +22,7 @@ from gereedschap.geom import save_stl, to_trimesh
 ROOT = Path(__file__).resolve().parent.parent
 PROEF = ROOT / "pasproef"
 
-# instellingen per object (bovenop "0.20mm Standard @BBL A1": 2 wanden, 15 % grid)
+# instellingen per object (bovenop "0.20mm Standard @BBL A1": 2 wanden, 15 % infill; gyroid zet project.py)
 INST = {
     "achterplaat": {"wall_loops": "3"},
     "voorplaat": {"wall_loops": "2"},

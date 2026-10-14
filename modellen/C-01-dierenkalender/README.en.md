@@ -69,7 +69,7 @@ Open `varianten/NN-animal/en/animal-calendar_<animal>_en.3mf` in Bambu Studio. Y
 A complete calendar takes about 290 g of filament and 7.5 hours of printing.
 
 - **Settings** start from *0.20mm Standard @BBL A1* on the *Textured PEI Plate*: 0.4 mm nozzle, no supports, no
-  brim. The project already carries these per-part settings:
+  brim. Infill is gyroid everywhere. The project already carries these per-part settings:
   - front: 3 walls, 20 % infill, flush into infill;
   - base: 3 walls;
   - cards: fully solid, 1.6 mm.

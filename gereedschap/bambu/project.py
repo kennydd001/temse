@@ -31,6 +31,10 @@ STRIDE = BED * 1.2             # LOGICAL_PART_PLATE_GAP = 1/5
 
 PRINTER = "Bambu Lab A1 0.4 nozzle"
 PROCES = "0.20mm Standard @BBL A1"
+# Elk object krijgt gyroid-infill (het A1-profiel heeft grid): geen kruisende lijnen waar de nozzle
+# overheen tikt, en even stevig in alle richtingen. Een object kan het zelf anders zetten.
+INFILL = "gyroid"
+INFILL_VOL = "zig-zag"          # bij 100 % staat Bambu geen gyroid of grid toe (ConfigManipulation.cpp): rechtlijnig
 FILAMENT_PRESET = {"PLA Basic": ("Bambu PLA Basic @BBL A1", "pla_basic_A1.json"),
                    "PLA Matte": ("Bambu PLA Matte @BBL A1", "pla_matte_A1.json")}
 
@@ -157,6 +161,12 @@ def project_instellingen(filamenten, torens=()):
 
 def _uuid(n, suffix):
     return f"{n:08x}{suffix}"
+
+
+def object_instellingen(obj):
+    """De instellingen van een object zoals ze in het project komen: infillpatroon plus obj.instellingen."""
+    vol = obj.instellingen.get("sparse_infill_density") == "100%"
+    return {"sparse_infill_pattern": INFILL_VOL if vol else INFILL, **obj.instellingen}
 
 
 def _midden(obj):
@@ -309,7 +319,7 @@ def schrijf(pad, titel, filamenten, platen, ontwerper="", beschrijving=""):
             cfg.append(f'  <object id="{root}">')
             cfg.append(f'    <metadata key="name" value="{esc(obj.naam)}"/>')
             cfg.append(f'    <metadata key="extruder" value="{min(d.slot for _, d, _ in delen)}"/>')
-            for k, v in obj.instellingen.items():
+            for k, v in object_instellingen(obj).items():
                 cfg.append(f'    <metadata key="{k}" value="{esc(v)}"/>')
             for pid, d, v in delen:
                 cfg += [f'    <part id="{pid}" subtype="normal_part">',

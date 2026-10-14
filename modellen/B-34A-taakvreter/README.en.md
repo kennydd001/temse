@@ -95,8 +95,8 @@ In total about **430 g of filament and 11 h 11 of printing**.
 \* Weight and time come from PrusaSlicer with a profile that approximates the A1, see
 [controle/RAPPORT.md](controle/RAPPORT.md). The weight is reliable. Bambu Studio works out the time itself.
 
-- **Settings**: *0.20mm Standard @BBL A1* on the *Textured PEI Plate*, 0.4 mm nozzle, **no supports**. The
-  project already stores these per object:
+- **Settings**: *0.20mm Standard @BBL A1* on the *Textured PEI Plate*, 0.4 mm nozzle, **no supports**, gyroid
+  infill. The project already stores these per object:
   - body, drawer, mouthpiece, knob: 3 walls;
   - rollers: 4 walls and a 5 mm brim, because they stand upright and are 105 mm tall;
   - eyes: 3 walls and a brim;

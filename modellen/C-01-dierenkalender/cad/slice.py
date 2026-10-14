@@ -4,7 +4,7 @@ Gebruik:  python slice.py        (vereist `prusa-slicer` op het pad)
 Schrijft  controle/slicer.json   (gewicht, tijd, wissels, support) en controle/a1_benadering.ini.
 
 Bambu Studio zelf draait hier niet. Het profiel neemt de A1-standaard over (0,2 mm laag, 2 wanden,
-15 % grid-infill, A1-snelheden), dus het filamentgewicht is betrouwbaar; de printtijd en de
+15 % gyroid-infill zoals de Bambu-projecten, A1-snelheden), dus het filamentgewicht is betrouwbaar; de printtijd en de
 spoelhoeveelheid van de AMS Lite wijken af en zijn alleen een indicatie.
 """
 import json

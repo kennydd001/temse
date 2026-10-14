@@ -101,10 +101,11 @@ het valbord kan alleen op ware grootte getest worden: de muntjes, de pinnen en d
 \* Gewicht en tijd komen uit PrusaSlicer met een profiel dat de A1 benadert, zie
 [controle/RAPPORT.md](controle/RAPPORT.md). Het gewicht is betrouwbaar; de tijd rekent Bambu Studio zelf uit.
 
-- **Instellingen**: *0.20mm Standard @BBL A1* op de *Textured PEI Plate*, 0,4 mm nozzle, **geen support**.
-  Per object staat dit al in het project:
+- **Instellingen**: *0.20mm Standard @BBL A1* op de *Textured PEI Plate*, 0,4 mm nozzle, **geen support**,
+  gyroid-infill. Per object staat dit al in het project:
   - achterplaat en voet: 3 wanden; voorplaat: 2 wanden;
-  - slinger: 3 wanden en **100 % infill**: een zwaar gewicht slingert langer;
+  - slinger: 3 wanden en **100 % infill**, rechtlijnig (gyroid kan niet op 100 %): een zwaar gewicht slingert
+    langer;
   - kantelplank: 4 wanden; muntjes: 3 wanden, zonder brim.
 - **Printligging**:
   - Achter- en voorplaat liggen plat. De achterplaat ligt met de achterkant op het bed, de pinnen omhoog. De
