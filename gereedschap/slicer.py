@@ -1,7 +1,7 @@
 """PrusaSlicer met een profiel dat de Bambu Lab A1 benadert (gedeeld door alle modellen).
 
 Bambu Studio zelf draait hier niet. Het profiel neemt de A1-standaard over (0,2 mm laag, 2 wanden,
-15 % grid-infill, A1-snelheden), dus het filamentgewicht is betrouwbaar; de printtijd en de
+15 % gyroid-infill zoals de Bambu-projecten, A1-snelheden), dus het filamentgewicht is betrouwbaar; de printtijd en de
 spoelhoeveelheid van de AMS Lite wijken af en zijn alleen een indicatie.
 
 Vereist `prusa-slicer` op het pad.
@@ -20,7 +20,7 @@ A1 = {
     "filament_density": "1.24", "filament_type": "PLA", "temperature": 220, "first_layer_temperature": 220,
     "bed_temperature": 60, "first_layer_bed_temperature": 60,
     "layer_height": 0.2, "first_layer_height": 0.2, "perimeters": 2, "top_solid_layers": 5,
-    "bottom_solid_layers": 3, "fill_density": "15%", "fill_pattern": "grid", "infill_every_layers": 1,
+    "bottom_solid_layers": 3, "fill_density": "15%", "fill_pattern": "gyroid", "infill_every_layers": 1,
     "external_perimeter_speed": 200, "perimeter_speed": 300, "infill_speed": 270, "solid_infill_speed": 250,
     "top_solid_infill_speed": 200, "gap_fill_speed": 250, "bridge_speed": 50, "travel_speed": 700,
     "first_layer_speed": 50, "small_perimeter_speed": 50,

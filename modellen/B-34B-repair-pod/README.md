@@ -72,8 +72,8 @@ Samen is dat ongeveer **270 g filament en 6 uur 10 printen**.
 \* Gewicht en tijd komen uit PrusaSlicer met een profiel dat de A1 benadert, zie
 [controle/RAPPORT.md](controle/RAPPORT.md). Het gewicht is betrouwbaar; de tijd rekent Bambu Studio zelf uit.
 
-- **Instellingen**: *0.20mm Standard @BBL A1* op de *Textured PEI Plate*, 0,4 mm nozzle, **geen support**.
-  Per object staat dit al in het project:
+- **Instellingen**: *0.20mm Standard @BBL A1* op de *Textured PEI Plate*, 0,4 mm nozzle, **geen support**,
+  gyroid-infill. Per object staat dit al in het project:
   - voet, dak, bakjes: 3 wanden;
   - armen en schuif: 3 wanden, 40 % infill;
   - pennen: 4 wanden (dan zijn ze helemaal massief), geen brim.

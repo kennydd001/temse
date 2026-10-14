@@ -18,7 +18,8 @@ from gereedschap.geom import to_trimesh  # noqa: E402
 from params import FILAMENTEN, KAART_WIT, KAART_ZWART, ORANJE, kort  # noqa: E402
 from talen import TALEN  # noqa: E402
 
-# Instellingen per object. Uitgangspunt: Bambu "0.20mm Standard @BBL A1" (2 wanden, 15 % grid, 5 top/3 bodem).
+# Instellingen per object. Uitgangspunt: Bambu "0.20mm Standard @BBL A1" (2 wanden, 15 % infill, 5 top/3 bodem);
+# het infillpatroon (gyroid) zet gereedschap/bambu/project.py voor elk object.
 FRONT = {"wall_loops": "3",                 # stevige randen langs het silhouet en de geleiders
          "sparse_infill_density": "20%",    # de 3 mm plaat blijft vlak en stijf
          "brim_type": "no_brim",            # groot vlak onderdeel op Textured PEI: hecht goed, strakke rand

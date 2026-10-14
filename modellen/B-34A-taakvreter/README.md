@@ -95,8 +95,8 @@ Samen is dat ongeveer **430 g filament en 11 uur 11 printen**.
 \* Gewicht en tijd komen uit PrusaSlicer met een profiel dat de A1 benadert, zie
 [controle/RAPPORT.md](controle/RAPPORT.md). Het gewicht is betrouwbaar; de tijd rekent Bambu Studio zelf uit.
 
-- **Instellingen**: *0.20mm Standard @BBL A1* op de *Textured PEI Plate*, 0,4 mm nozzle, **geen support**.
-  Per object staat dit al in het project:
+- **Instellingen**: *0.20mm Standard @BBL A1* op de *Textured PEI Plate*, 0,4 mm nozzle, **geen support**,
+  gyroid-infill. Per object staat dit al in het project:
   - romp, lade, mondstuk, knop: 3 wanden;
   - rollen: 4 wanden en een brim van 5 mm, want ze staan rechtop en zijn 105 mm hoog;
   - ogen: 3 wanden en een brim;

@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PRINT = ROOT / "print"
 PROEF = ROOT / "pasproef"
 
-# instellingen per object (bovenop "0.20mm Standard @BBL A1": 2 wanden, 15 % grid)
+# instellingen per object (bovenop "0.20mm Standard @BBL A1": 2 wanden, 15 % infill; gyroid zet project.py)
 BRIM = {"brim_type": "outer_only", "brim_width": "5"}
 INST = {
     "romp": {"wall_loops": "3"},

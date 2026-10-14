@@ -9,6 +9,7 @@ Gecontroleerd (zie bbs_3mf.cpp / PresetBundle.cpp):
   - project_settings: alleen strings, lijsten per filament hebben lengte N, spoelmatrix N x N,
     spoeltoren-posities per plaat
   - elk object ligt volledig op de plaat waar het hoort (Bambu kiest de plaat op positie) en staat op z = 0
+  - infill op 100 % heeft een patroon dat Bambu daarbij toestaat (anders zet de editor het om)
   - de spoeltoren (zie toren.py) ligt op elke plaat waar Bambu hem houdt (15 mm van de randen), komt met
     ribben en brim niet buiten de plaat en raakt geen deel; ook op platen met één filament, want wie
     objecten tussen platen verschuift, krijgt de toren van die plaat
@@ -28,6 +29,8 @@ NS = {"m": "http://schemas.microsoft.com/3dmanufacturing/core/2015/02",
       "p": "http://schemas.microsoft.com/3dmanufacturing/production/2015/06"}
 P_PATH = "{%s}path" % NS["p"]
 SJABLOON = Path(__file__).resolve().parent / "profielen" / "project_sjabloon_A1.json"
+VOL_PATRONEN = {"concentric", "zig-zag", "monotonic", "monotonicline", "globalmonotonicline", "alignedrectilinear",
+                "hilbertcurve", "archimedeanchords", "octagramspiral"}   # top_surface_pattern: mag bij 100 % infill
 
 
 def _matrix(t):
@@ -109,6 +112,11 @@ def valideer(pad):
         comp_ids = [c[0] for c in objecten[oid]]
         if part_ids != comp_ids:
             fouten.append(f"object {oid}: parts {part_ids} komen niet overeen met componenten {comp_ids}")
+        md = {m.get("key"): m.get("value") for m in o.findall("metadata")}
+        dichtheid = md.get("sparse_infill_density", proj.get("sparse_infill_density"))
+        patroon = md.get("sparse_infill_pattern", proj.get("sparse_infill_pattern"))
+        if dichtheid == "100%" and patroon not in VOL_PATRONEN:
+            fouten.append(f"object {oid}: infillpatroon {patroon} kan niet op 100 %; Bambu zet het om naar rechtlijnig")
         for p in o.findall("part"):
             ext = [m.get("value") for m in p.findall("metadata") if m.get("key") == "extruder"]
             if ext and not 1 <= int(ext[0]) <= n:

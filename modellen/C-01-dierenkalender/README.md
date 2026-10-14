@@ -67,7 +67,7 @@ Open `varianten/NN-dier/nl/dierenkalender_<dier>_nl.3mf` in Bambu Studio. Je kri
 Een complete kalender is ongeveer 290 g filament en 7,5 uur printen.
 
 - **Instellingen** gaan uit van *0.20mm Standard @BBL A1* op de *Textured PEI Plate*: 0,4 mm nozzle, geen support,
-  geen brim. Per onderdeel zit er al het volgende in het project:
+  geen brim. Infill is overal gyroid. Per onderdeel zit er al het volgende in het project:
   - front: 3 wanden, 20 % infill, spoelen in de infill;
   - voet: 3 wanden;
   - kaartjes: volledig massief, 1,6 mm.
