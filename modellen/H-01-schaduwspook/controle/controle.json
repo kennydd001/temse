@@ -1,0 +1,184 @@
+{
+  "vier-schaduwen": {
+    "naam": "vier schaduwen",
+    "schaduw": [
+      {
+        "hoek": 0.0,
+        "doel_mm2": 1946.8,
+        "ontbreekt_mm2": 2.8,
+        "te_veel_mm2": 0.0,
+        "vorm": "pompoen",
+        "aanpassing_mm2": 46.2
+      },
+      {
+        "hoek": 45.0,
+        "doel_mm2": 2154.8,
+        "ontbreekt_mm2": 32.5,
+        "te_veel_mm2": 0.0,
+        "vorm": "spook",
+        "aanpassing_mm2": 26.1
+      },
+      {
+        "hoek": 90.0,
+        "doel_mm2": 1897.9,
+        "ontbreekt_mm2": 5.2,
+        "te_veel_mm2": 0.0,
+        "vorm": "schedel",
+        "aanpassing_mm2": 75.2
+      },
+      {
+        "hoek": 135.0,
+        "doel_mm2": 1901.8,
+        "ontbreekt_mm2": 40.8,
+        "te_veel_mm2": 0.0,
+        "vorm": "grafsteen",
+        "aanpassing_mm2": 42.3
+      }
+    ],
+    "stukken": 1,
+    "waterdicht": true,
+    "gram_geschat": 20.0,
+    "past_op_A1_mini": true,
+    "printcheck": {
+      "kleuren": {
+        "10301": {
+          "volume_cm3": 38.01,
+          "z_mm": [
+            0.0,
+            59.77
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [
+        {
+          "kleur": "10301",
+          "grootste_te_smalle_stuk_mm2": 0.2,
+          "plek_mm": [
+            -17.1,
+            -13.9,
+            32.5
+          ]
+        }
+      ],
+      "vlakken_rond_45_graden_mm2": 3976.0,
+      "korte_bruggen_mm2": 44.0,
+      "maat_mm": [
+        56.0,
+        51.6,
+        59.8
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        200.0,
+        204.4
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    }
+  },
+  "boo-schedel": {
+    "naam": "BOO en schedel",
+    "schaduw": [
+      {
+        "hoek": 0.0,
+        "doel_mm2": 4179.9,
+        "ontbreekt_mm2": 0.0,
+        "te_veel_mm2": 0.0,
+        "vorm": "BOO",
+        "aanpassing_mm2": 98.9
+      },
+      {
+        "hoek": 90.0,
+        "doel_mm2": 1589.9,
+        "ontbreekt_mm2": 0.0,
+        "te_veel_mm2": 0.0,
+        "vorm": "schedel",
+        "aanpassing_mm2": 61.4
+      }
+    ],
+    "stukken": 1,
+    "waterdicht": true,
+    "gram_geschat": 53.0,
+    "past_op_A1_mini": true,
+    "printcheck": {
+      "kleuren": {
+        "11101": {
+          "volume_cm3": 124.78,
+          "z_mm": [
+            0.0,
+            55.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 7434.0,
+      "korte_bruggen_mm2": 116.0,
+      "maat_mm": [
+        120.4,
+        47.6,
+        55.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        135.6,
+        208.4
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    }
+  },
+  "trick-treat": {
+    "naam": "TRICK en TREAT",
+    "schaduw": [
+      {
+        "hoek": 0.0,
+        "doel_mm2": 2283.2,
+        "ontbreekt_mm2": 0.0,
+        "te_veel_mm2": 0.0,
+        "vorm": "TRICK",
+        "aanpassing_mm2": 92.0
+      },
+      {
+        "hoek": 90.0,
+        "doel_mm2": 2582.3,
+        "ontbreekt_mm2": 0.0,
+        "te_veel_mm2": 0.0,
+        "vorm": "TREAT",
+        "aanpassing_mm2": 190.8
+      }
+    ],
+    "stukken": 1,
+    "waterdicht": true,
+    "gram_geschat": 82.0,
+    "past_op_A1_mini": true,
+    "printcheck": {
+      "kleuren": {
+        "10301": {
+          "volume_cm3": 173.11,
+          "z_mm": [
+            0.0,
+            36.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 10843.0,
+      "korte_bruggen_mm2": 69.0,
+      "maat_mm": [
+        111.6,
+        124.2,
+        36.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        144.4,
+        131.8
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    }
+  }
+}

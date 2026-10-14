@@ -11,6 +11,7 @@ plaat({kleur: Manifold}) meet, op de onderdelen zoals ze op het bed liggen (z = 
 import math
 
 import numpy as np
+import trimesh
 from shapely.geometry import Polygon
 from shapely.ops import unary_union
 
@@ -90,3 +91,24 @@ def plaat(delen, nozzle=NOZZLE, laag=LAYER):
     if multi:
         info["kleurwissel_tussen_z_mm"] = [multi[0], multi[-1]]
     return info
+
+
+def gram(m, laag=LAYER, wand=0.84, infill=0.15, dichtheid=1.24):
+    """Gewicht (g) geschat uit de doorsneden: per laag `wand` mm wanden rondom, de rest `infill`. Geen slicer."""
+    tm = to_trimesh(m)
+    v = 0.0
+    for z in np.arange(laag / 2, tm.bounds[1][2], laag):
+        s = cs_to_shapely(m.slice(float(z)))
+        if s.is_empty:
+            continue
+        w = min(s.area, s.length * wand)
+        v += (w + (s.area - w) * infill) * laag
+    return round(v / 1000 * dichtheid, 0)
+
+
+def stukken(m):
+    """(aantal losse stukken, waterdicht) zoals het in een STL (float32) terechtkomt."""
+    tm = to_trimesh(m.simplify(1e-3))
+    t32 = trimesh.Trimesh(tm.vertices.astype(np.float32).astype(float), tm.faces)
+    delen = [p for p in t32.split(only_watertight=False) if abs(p.volume) > 1e-3]
+    return len(delen), bool(t32.is_watertight)

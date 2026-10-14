@@ -4,7 +4,7 @@ from pathlib import Path
 
 import numpy as np
 import trimesh
-from manifold3d import Manifold, Mesh, OpType
+from manifold3d import CrossSection, FillRule, Manifold, Mesh, OpType
 from matplotlib.font_manager import FontProperties
 from matplotlib.textpath import TextPath
 from shapely import affinity
@@ -128,6 +128,19 @@ def extrude(g, z0, z1):
         tm.apply_translation([0, 0, z0])
         parts.append(to_manifold(tm))
     return union(parts)
+
+
+def uittrekken(g, lengte):
+    """2D-vorm (x, y) over `lengte` uittrekken langs z, met manifold's eigen triangulatie.
+
+    trimesh's extrude_polygon maakt nuldikke driehoekjes als gaten en buitenrand punten op één lijn hebben (een
+    gat waarvan de bodem op de voetbalk ligt); daar komen dan dubbele vlakken binnen in het object van.
+    """
+    delen = []
+    for p in polys(g):
+        ringen = [list(p.exterior.coords)[:-1]] + [list(r.coords)[:-1] for r in p.interiors]
+        delen.append(Manifold.extrude(CrossSection(ringen, FillRule.EvenOdd), lengte))
+    return Manifold.batch_boolean(delen, OpType.Add) if len(delen) > 1 else delen[0]
 
 
 def vlak_xz(g, y0, y1):
