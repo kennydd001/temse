@@ -1,0 +1,42 @@
+{
+  "print/moodkin_schil.stl": {
+    "onderdeel": "schil",
+    "filament": "Pumpkin Orange",
+    "volume_cm3": 105.07,
+    "maat_mm": [
+      116.5,
+      116.5,
+      72.8
+    ]
+  },
+  "print/moodkin_trommel.stl": {
+    "onderdeel": "trommel met de vier gezichten",
+    "filament": "Sunflower Yellow",
+    "volume_cm3": 30.16,
+    "maat_mm": [
+      100.0,
+      100.0,
+      46.0
+    ]
+  },
+  "print/moodkin_deksel.stl": {
+    "onderdeel": "deksel",
+    "filament": "Pumpkin Orange",
+    "volume_cm3": 144.5,
+    "maat_mm": [
+      120.6,
+      120.6,
+      18.0
+    ]
+  },
+  "print/moodkin_steel.stl": {
+    "onderdeel": "steeltje",
+    "filament": "Mistletoe Green",
+    "volume_cm3": 2.81,
+    "maat_mm": [
+      17.8,
+      12.6,
+      31.0
+    ]
+  }
+}
