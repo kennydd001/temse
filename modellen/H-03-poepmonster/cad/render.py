@@ -13,7 +13,6 @@ import random
 import sys
 from pathlib import Path
 
-import bpy
 from manifold3d import Manifold
 
 import _pad  # noqa: F401
@@ -36,8 +35,8 @@ def klodder(rng):
     return k.rotate([rng.uniform(-35, 35), rng.uniform(-35, 35), rng.uniform(0, 360)])
 
 
-def poep(sleutel, vulling, seed=7, buiten=0):
-    """Klodders in de bak tot `vulling` (0-1) van de achterrand, en `buiten` op tafel."""
+def poep(sleutel, vulling, seed=7, buiten=0, dx=0.0):
+    """Klodders in de bak tot `vulling` (0-1) van de achterrand, en `buiten` op tafel. dx: bak opzij geschoven."""
     rng = random.Random(seed)
     mats = [BL.pla(f"poep{i}", c, 0.35) for i, c in enumerate(POEPKLEUREN)]
     top = P.VLOER + vulling * (P.VARIANTEN[sleutel][2] - P.VLOER)
@@ -46,13 +45,15 @@ def poep(sleutel, vulling, seed=7, buiten=0):
         r = M.r_romp(z) * (1 - P.RIB) - P.WAND - 7.0
         for _ in range(int(r * r / 55)):
             a, d = rng.uniform(0, 2 * math.pi), r * math.sqrt(rng.random())
-            BL.voeg_toe(f"poep{n}", klodder(rng).translate([d * math.cos(a), d * math.sin(a), z]), rng.choice(mats))
+            BL.voeg_toe(f"poep{seed}_{n}", klodder(rng).translate([dx + d * math.cos(a), d * math.sin(a), z]),
+                        rng.choice(mats))
             n += 1
         z += 3.2
     for i in range(buiten):
         a = rng.uniform(-0.3, 0.9) * math.pi
         d = rng.uniform(70, 95)
-        BL.voeg_toe(f"los{i}", klodder(rng).translate([d * math.cos(a), d * math.sin(a), 2.5]), rng.choice(mats))
+        BL.voeg_toe(f"los{seed}_{i}", klodder(rng).translate([dx + d * math.cos(a), d * math.sin(a), 2.5]),
+                    rng.choice(mats))
 
 
 def scene(sleutels, vulling=0.55, buiten=0):
@@ -61,11 +62,7 @@ def scene(sleutels, vulling=0.55, buiten=0):
     for i, k in enumerate(sleutels):
         dx = (i - (len(sleutels) - 1) / 2) * 135.0
         BL.voeg_toe(k, M.monster(k).translate([dx, 0, 0]), mats[P.ORANJE])
-        rng_seed = 7 + i
-        poep_start = len(bpy.data.objects)
-        poep(k, vulling, rng_seed, buiten if i == len(sleutels) - 1 else 0)
-        for ob in list(bpy.data.objects)[poep_start:]:
-            ob.location.x += dx * BL.MM
+        poep(k, vulling, 7 + i, buiten if i == len(sleutels) - 1 else 0, dx)
     BL.studio(muur_y=0.55)
 
 
