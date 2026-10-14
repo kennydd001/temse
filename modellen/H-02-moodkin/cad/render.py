@@ -28,12 +28,26 @@ KLEUR = {"schil": P.ORANJE, "trommel": P.GEEL, "deksel": P.ORANJE, "steel": P.GR
 VLAM_Z = P.VLOER + 16.0 + 9.0          # mm: potje van 16 mm, vlammetje erboven
 
 
-def doorschijnend(mat, diepte=0.0015):
-    """PLA laat een beetje licht door: subsurface over een paar mm."""
+def doorschijnend(mat, diepte):
+    """De dunne trommel laat een beetje licht door: subsurface over een fractie van een mm (Burley: ruist niet)."""
     b = mat.node_tree.nodes["Principled BSDF"]
     b.inputs["Subsurface Weight"].default_value = 1.0
     b.inputs["Subsurface Scale"].default_value = diepte
     b.inputs["Subsurface Radius"].default_value = (1.0, 0.45, 0.2)
+    b.subsurface_method = "BURLEY"
+
+
+def gloeiend(mat, mate=0.22, kleur=(1.0, 0.32, 0.04)):
+    """De dikke schil gloeit zacht: een deel van het licht gaat diffuus door de wand (translucent). Subsurface
+    over enkele mm geeft hetzelfde, maar ruist zichtbaar bij een lamp binnenin."""
+    nt = mat.node_tree
+    tr = nt.nodes.new("ShaderNodeBsdfTranslucent")
+    tr.inputs["Color"].default_value = (*kleur, 1)
+    mix = nt.nodes.new("ShaderNodeMixShader")
+    mix.inputs["Fac"].default_value = mate
+    nt.links.new(nt.nodes["Principled BSDF"].outputs[0], mix.inputs[1])
+    nt.links.new(tr.outputs[0], mix.inputs[2])
+    nt.links.new(mix.outputs[0], nt.nodes["Material Output"].inputs["Surface"])
 
 
 def lichtje(nacht):
@@ -62,8 +76,8 @@ def lichtje(nacht):
 def lantaarn(stand=0, open_=0.0, nacht=True):
     mats = BL.materialen(P.FILAMENTEN)
     if nacht:
-        doorschijnend(mats[P.ORANJE], 0.0008)
-        doorschijnend(mats[P.GEEL], 0.00025)      # de trommel is dunner: minder diep, anders gloeit hij even fel als de gaten
+        gloeiend(mats[P.ORANJE])
+        doorschijnend(mats[P.GEEL], 0.00025)      # niet dieper, anders gloeit de trommel even fel als de gaten
     for naam, m in L.samen(stand, open_).items():
         BL.voeg_toe(naam, m, mats[KLEUR[naam]])
     lichtje(nacht)
@@ -88,7 +102,8 @@ def nacht(stand, snel):
     donker()
     BL.camera((0.03, -0.30, 0.12), (0.0, 0.0, 0.058), lens=50, diafragma=8.0)
     pad = UIT / f"nacht_{P.GEZICHTEN[stand]}.png"
-    BL.render(pad, (1000, 1000), samples=320, snel=snel)     # veel samples: subsurface ruist
+    bpy.context.scene.cycles.sample_clamp_indirect = 3.0     # geen vuurvliegjes van het lichtje binnenin
+    BL.render(pad, (1000, 1000), samples=128, snel=snel)
     return pad
 
 
