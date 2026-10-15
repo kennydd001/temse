@@ -1,0 +1,366 @@
+{
+  "gezichten": {
+    "kassen": {
+      "oppervlak_mm2": 871.0,
+      "printaanpassing_mm2": 0.55,
+      "dunste_tand_mm": 1.51
+    },
+    "gezichten": [
+      {
+        "naam": "blij",
+        "oppervlak_mm2": 484.0,
+        "buiten_kassen_mm2": 0.0,
+        "dichtgemaakt_mm2": 3.7,
+        "bijgemaakt_mm2": 0.0,
+        "dunste_stuk_mm": 3.26,
+        "breedte_u_mm": 26.0
+      },
+      {
+        "naam": "boos",
+        "oppervlak_mm2": 283.0,
+        "buiten_kassen_mm2": 0.0,
+        "dichtgemaakt_mm2": 2.8,
+        "bijgemaakt_mm2": 0.0,
+        "dunste_stuk_mm": 3.3,
+        "breedte_u_mm": 26.0
+      },
+      {
+        "naam": "bang",
+        "oppervlak_mm2": 244.0,
+        "buiten_kassen_mm2": 0.0,
+        "dichtgemaakt_mm2": 1.7,
+        "bijgemaakt_mm2": 0.0,
+        "dunste_stuk_mm": 3.5,
+        "breedte_u_mm": 22.5
+      },
+      {
+        "naam": "knipoog",
+        "oppervlak_mm2": 279.0,
+        "buiten_kassen_mm2": 0.0,
+        "dichtgemaakt_mm2": 4.3,
+        "bijgemaakt_mm2": 0.0,
+        "dunste_stuk_mm": 3.6,
+        "breedte_u_mm": 26.0
+      }
+    ]
+  },
+  "licht": {
+    "kas_tot_x_mm": 28.0,
+    "zichtbaar_tot_graden": 41.0,
+    "dichtste_burengat_graden": 58.7,
+    "marge_graden": 17.7
+  },
+  "passen": {
+    "speling_trommel_schil_min_mm": 0.99,
+    "trommel_eruit_mm": 1.2,
+    "pen_speling_per_kant_mm": 0.1,
+    "steel_speling_per_kant_mm": 0.15,
+    "nok_in_gleuf": {
+      "nok_h": 0.8,
+      "gleuf_diep": 1.2,
+      "nok_b": 1.6,
+      "gleuf_b": 3.0
+    },
+    "led": {
+      "ring_d": 39.6,
+      "led_d": 38.0,
+      "speling_per_kant_mm": 0.8,
+      "vrije_hoogte_mm": 70.0,
+      "led_h_max_mm": 45.0,
+      "trommel_binnen_r_mm": 48.4
+    },
+    "standen": [
+      {
+        "stand": 0,
+        "opgetild_mm": 0.0,
+        "trommel_schil_mm3": 0.0,
+        "deksel_schil_mm3": 0.0,
+        "trommel_deksel_mm3": 0.0,
+        "steel_deksel_mm3": 0.0
+      },
+      {
+        "stand": 0.5,
+        "opgetild_mm": 0.8,
+        "trommel_schil_mm3": 0.0,
+        "deksel_schil_mm3": 0.0,
+        "trommel_deksel_mm3": 0.0,
+        "steel_deksel_mm3": 0.0
+      },
+      {
+        "stand": 1,
+        "opgetild_mm": 0.0,
+        "trommel_schil_mm3": 0.0,
+        "deksel_schil_mm3": 0.0,
+        "trommel_deksel_mm3": 0.0,
+        "steel_deksel_mm3": 0.0
+      },
+      {
+        "stand": 1.5,
+        "opgetild_mm": 0.8,
+        "trommel_schil_mm3": 0.0,
+        "deksel_schil_mm3": 0.0,
+        "trommel_deksel_mm3": 0.0,
+        "steel_deksel_mm3": 0.0
+      },
+      {
+        "stand": 2,
+        "opgetild_mm": 0.0,
+        "trommel_schil_mm3": 0.0,
+        "deksel_schil_mm3": 0.0,
+        "trommel_deksel_mm3": 0.0,
+        "steel_deksel_mm3": 0.0
+      },
+      {
+        "stand": 3,
+        "opgetild_mm": 0.0,
+        "trommel_schil_mm3": 0.0,
+        "deksel_schil_mm3": 0.0,
+        "trommel_deksel_mm3": 0.0,
+        "steel_deksel_mm3": 0.0
+      }
+    ]
+  },
+  "printbaarheid": {
+    "schil": {
+      "naam": "schil",
+      "stukken": 1,
+      "waterdicht": true,
+      "maat_mm": [
+        116.5,
+        116.5,
+        72.8
+      ],
+      "past_op_A1": true,
+      "past_op_A1_mini": true,
+      "overhang_mm2": 0,
+      "vlakke_plafonds_mm2": 138.2,
+      "dunne_details": [
+        {
+          "kleur": "10301",
+          "grootste_te_smalle_stuk_mm2": 0.36,
+          "plek_mm": [
+            37.2,
+            37.2,
+            72.7
+          ]
+        }
+      ],
+      "gram_geschat": 79.0,
+      "printcheck": {
+        "kleuren": {
+          "10301": {
+            "volume_cm3": 105.07,
+            "z_mm": [
+              0.0,
+              72.79
+            ]
+          }
+        },
+        "overhang": [
+          {
+            "oppervlak_mm2": 41.4,
+            "hoek_tov_horizontaal_graden": 0.4,
+            "plek_mm": [
+              10.0,
+              -53.2,
+              40.6
+            ]
+          },
+          {
+            "oppervlak_mm2": 55.4,
+            "hoek_tov_horizontaal_graden": 0.6,
+            "plek_mm": [
+              0.0,
+              -54.6,
+              40.0
+            ]
+          },
+          {
+            "oppervlak_mm2": 41.4,
+            "hoek_tov_horizontaal_graden": 0.4,
+            "plek_mm": [
+              -10.0,
+              -53.2,
+              40.6
+            ]
+          }
+        ],
+        "dunne_details": [
+          {
+            "kleur": "10301",
+            "grootste_te_smalle_stuk_mm2": 0.36,
+            "plek_mm": [
+              37.2,
+              37.2,
+              72.7
+            ]
+          }
+        ],
+        "vlakken_rond_45_graden_mm2": 857.0,
+        "korte_bruggen_mm2": 47.0,
+        "maat_mm": [
+          116.5,
+          116.5,
+          72.8
+        ],
+        "past_op_A1": true,
+        "vrije_strook_mm": [
+          139.5,
+          139.5
+        ],
+        "lagen_met_kleurwissel": 0,
+        "geschatte_wissels": 0
+      }
+    },
+    "trommel": {
+      "naam": "trommel met de vier gezichten",
+      "stukken": 1,
+      "waterdicht": true,
+      "maat_mm": [
+        100.0,
+        100.0,
+        46.0
+      ],
+      "past_op_A1": true,
+      "past_op_A1_mini": true,
+      "overhang_mm2": 0,
+      "vlakke_plafonds_mm2": 0,
+      "dunne_details": [
+        {
+          "kleur": "10402",
+          "grootste_te_smalle_stuk_mm2": 0.27,
+          "plek_mm": [
+            -46.2,
+            -17.0,
+            21.1
+          ]
+        }
+      ],
+      "gram_geschat": 30.0,
+      "printcheck": {
+        "kleuren": {
+          "10402": {
+            "volume_cm3": 30.16,
+            "z_mm": [
+              0.0,
+              45.99
+            ]
+          }
+        },
+        "overhang": [],
+        "dunne_details": [
+          {
+            "kleur": "10402",
+            "grootste_te_smalle_stuk_mm2": 0.27,
+            "plek_mm": [
+              -46.2,
+              -17.0,
+              21.1
+            ]
+          }
+        ],
+        "vlakken_rond_45_graden_mm2": 2662.0,
+        "korte_bruggen_mm2": 154.0,
+        "maat_mm": [
+          100.0,
+          100.0,
+          46.0
+        ],
+        "past_op_A1": true,
+        "vrije_strook_mm": [
+          156.0,
+          156.0
+        ],
+        "lagen_met_kleurwissel": 0,
+        "geschatte_wissels": 0
+      }
+    },
+    "deksel": {
+      "naam": "deksel",
+      "stukken": 1,
+      "waterdicht": true,
+      "maat_mm": [
+        120.6,
+        120.6,
+        18.0
+      ],
+      "past_op_A1": true,
+      "past_op_A1_mini": true,
+      "overhang_mm2": 0,
+      "vlakke_plafonds_mm2": 0,
+      "dunne_details": [],
+      "gram_geschat": 35.0,
+      "printcheck": {
+        "kleuren": {
+          "10301": {
+            "volume_cm3": 144.5,
+            "z_mm": [
+              0.0,
+              18.0
+            ]
+          }
+        },
+        "overhang": [],
+        "dunne_details": [],
+        "vlakken_rond_45_graden_mm2": 0.0,
+        "korte_bruggen_mm2": 55.0,
+        "kleine_liggende_gaten_mm2": 46.0,
+        "maat_mm": [
+          120.6,
+          120.6,
+          18.0
+        ],
+        "past_op_A1": true,
+        "vrije_strook_mm": [
+          135.4,
+          135.4
+        ],
+        "lagen_met_kleurwissel": 0,
+        "geschatte_wissels": 0
+      }
+    },
+    "steel": {
+      "naam": "steeltje",
+      "stukken": 1,
+      "waterdicht": true,
+      "maat_mm": [
+        17.8,
+        12.6,
+        31.0
+      ],
+      "past_op_A1": true,
+      "past_op_A1_mini": true,
+      "overhang_mm2": 0,
+      "vlakke_plafonds_mm2": 0,
+      "dunne_details": [],
+      "gram_geschat": 2.0,
+      "printcheck": {
+        "kleuren": {
+          "10502": {
+            "volume_cm3": 2.81,
+            "z_mm": [
+              0.0,
+              31.0
+            ]
+          }
+        },
+        "overhang": [],
+        "dunne_details": [],
+        "vlakken_rond_45_graden_mm2": 0.0,
+        "korte_bruggen_mm2": 0.0,
+        "maat_mm": [
+          17.8,
+          12.6,
+          31.0
+        ],
+        "past_op_A1": true,
+        "vrije_strook_mm": [
+          238.2,
+          243.4
+        ],
+        "lagen_met_kleurwissel": 0,
+        "geschatte_wissels": 0
+      }
+    }
+  }
+}

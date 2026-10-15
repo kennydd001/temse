@@ -1,0 +1,26 @@
+{
+  "print/poepmonster_laag.stl": {
+    "volume_cm3": 48.93,
+    "maat_mm": [
+      116.4,
+      116.4,
+      83.2
+    ],
+    "rand_achter_mm": 40.0,
+    "rand_voor_mm": 75.0,
+    "tanden_mm": 8.0,
+    "inhoud_cm3": 301.0
+  },
+  "print/poepmonster_hoog.stl": {
+    "volume_cm3": 64.67,
+    "maat_mm": [
+      116.4,
+      116.4,
+      107.5
+    ],
+    "rand_achter_mm": 65.0,
+    "rand_voor_mm": 100.0,
+    "tanden_mm": 8.0,
+    "inhoud_cm3": 528.0
+  }
+}

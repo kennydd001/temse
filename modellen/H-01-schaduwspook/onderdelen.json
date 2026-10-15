@@ -1,0 +1,121 @@
+{
+  "print/schaduwspook_vier-schaduwen.stl": {
+    "volume_cm3": 38.01,
+    "maat_mm": [
+      56.0,
+      51.6,
+      59.8
+    ],
+    "schaduwen": [
+      {
+        "vorm": "pompoen*0.85",
+        "hoek": 0.0
+      },
+      {
+        "vorm": "spook",
+        "hoek": 45.0
+      },
+      {
+        "vorm": "schedel",
+        "hoek": 90.0
+      },
+      {
+        "vorm": "grafsteen",
+        "hoek": 135.0
+      }
+    ],
+    "hoogte_mm": 60.0,
+    "schaduwcontrole": [
+      {
+        "hoek": 0.0,
+        "doel_mm2": 1946.8,
+        "ontbreekt_mm2": 2.8,
+        "te_veel_mm2": 0.0
+      },
+      {
+        "hoek": 45.0,
+        "doel_mm2": 2154.8,
+        "ontbreekt_mm2": 32.5,
+        "te_veel_mm2": 0.0
+      },
+      {
+        "hoek": 90.0,
+        "doel_mm2": 1897.9,
+        "ontbreekt_mm2": 5.2,
+        "te_veel_mm2": 0.0
+      },
+      {
+        "hoek": 135.0,
+        "doel_mm2": 1901.8,
+        "ontbreekt_mm2": 40.8,
+        "te_veel_mm2": 0.0
+      }
+    ]
+  },
+  "print/schaduwspook_boo-schedel.stl": {
+    "volume_cm3": 124.78,
+    "maat_mm": [
+      120.4,
+      47.6,
+      55.0
+    ],
+    "schaduwen": [
+      {
+        "vorm": "smal:BOO",
+        "hoek": 0.0
+      },
+      {
+        "vorm": "schedel",
+        "hoek": 90.0
+      }
+    ],
+    "hoogte_mm": 55.0,
+    "schaduwcontrole": [
+      {
+        "hoek": 0.0,
+        "doel_mm2": 4179.9,
+        "ontbreekt_mm2": 0.0,
+        "te_veel_mm2": 0.0
+      },
+      {
+        "hoek": 90.0,
+        "doel_mm2": 1589.9,
+        "ontbreekt_mm2": 0.0,
+        "te_veel_mm2": 0.0
+      }
+    ]
+  },
+  "print/schaduwspook_trick-treat.stl": {
+    "volume_cm3": 173.11,
+    "maat_mm": [
+      111.6,
+      124.2,
+      36.0
+    ],
+    "schaduwen": [
+      {
+        "vorm": "smal:TRICK",
+        "hoek": 0.0
+      },
+      {
+        "vorm": "smal:TREAT",
+        "hoek": 90.0
+      }
+    ],
+    "hoogte_mm": 36.0,
+    "schaduwcontrole": [
+      {
+        "hoek": 0.0,
+        "doel_mm2": 2283.2,
+        "ontbreekt_mm2": 0.0,
+        "te_veel_mm2": 0.0
+      },
+      {
+        "hoek": 90.0,
+        "doel_mm2": 2582.3,
+        "ontbreekt_mm2": 0.0,
+        "te_veel_mm2": 0.0
+      }
+    ]
+  }
+}

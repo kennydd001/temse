@@ -1,0 +1,14 @@
+# Python 3.11 of nieuwer · Python 3.11 or newer.  pip install -r requirements.txt
+# Getest met de versies achter # · tested with the versions after #
+numpy>=2.0          # 2.5.3
+shapely>=2.0        # 2.2.0
+trimesh>=4.0        # 5.1.1
+manifold3d>=3.0     # 3.5.4
+networkx>=3.0       # 3.7    (trimesh: stukken tellen · counting pieces)
+scipy>=1.11         # 1.18.1
+matplotlib>=3.8     # 3.11.2
+pillow>=10.0        # 12.2.0
+
+# Optioneel · optional
+# bpy               # 5.2.2  render.py (Blender als Python-module · Blender as a Python module)
+# pymunk            #        valsimulatie van E-01 · drop simulation of E-01

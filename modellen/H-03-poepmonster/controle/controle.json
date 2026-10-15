@@ -1,0 +1,116 @@
+{
+  "laag": {
+    "naam": "laag",
+    "rand_achter_mm": 40.0,
+    "rand_voor_mm": 75.0,
+    "tand_mm": 8.0,
+    "inhoud_cm3": 301.0,
+    "gezicht": {
+      "dichtgemaakt_mm2": 30.7,
+      "bijgemaakt_mm2": 0.0,
+      "spleetjes": 6,
+      "breedste_spleet_mm": 6.6,
+      "dunste_stuk_mm": 2.4
+    },
+    "stukken": 1,
+    "waterdicht": true,
+    "past_op_A1_mini": true,
+    "overhang_mm2": 0,
+    "vlakke_plafonds_mm2": 0,
+    "gram_geschat": 48.0,
+    "printcheck": {
+      "kleuren": {
+        "10301": {
+          "volume_cm3": 48.93,
+          "z_mm": [
+            0.0,
+            83.18
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [
+        {
+          "kleur": "10301",
+          "grootste_te_smalle_stuk_mm2": 0.73,
+          "plek_mm": [
+            56.5,
+            -0.0,
+            65.3
+          ]
+        }
+      ],
+      "vlakken_rond_45_graden_mm2": 122.0,
+      "korte_bruggen_mm2": 83.0,
+      "maat_mm": [
+        116.4,
+        116.4,
+        83.2
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        139.6,
+        139.6
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    }
+  },
+  "hoog": {
+    "naam": "hoog",
+    "rand_achter_mm": 65.0,
+    "rand_voor_mm": 100.0,
+    "tand_mm": 8.0,
+    "inhoud_cm3": 528.0,
+    "gezicht": {
+      "dichtgemaakt_mm2": 31.5,
+      "bijgemaakt_mm2": 0.0,
+      "spleetjes": 6,
+      "breedste_spleet_mm": 6.6,
+      "dunste_stuk_mm": 2.4
+    },
+    "stukken": 1,
+    "waterdicht": true,
+    "past_op_A1_mini": true,
+    "overhang_mm2": 0,
+    "vlakke_plafonds_mm2": 0,
+    "gram_geschat": 68.0,
+    "printcheck": {
+      "kleuren": {
+        "10301": {
+          "volume_cm3": 64.67,
+          "z_mm": [
+            0.0,
+            107.51
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [
+        {
+          "kleur": "10301",
+          "grootste_te_smalle_stuk_mm2": 0.73,
+          "plek_mm": [
+            55.0,
+            -0.0,
+            90.3
+          ]
+        }
+      ],
+      "vlakken_rond_45_graden_mm2": 122.0,
+      "korte_bruggen_mm2": 83.0,
+      "maat_mm": [
+        116.4,
+        116.4,
+        107.5
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        139.6,
+        139.6
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0
+    }
+  }
+}
