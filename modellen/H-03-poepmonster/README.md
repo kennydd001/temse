@@ -20,7 +20,7 @@ zijn buik zie je hoeveel regenboog hij al binnen heeft.
 | Varianten | **laag**: rand achteraan 40 mm (punten 48), vooraan 75 mm · **hoog**: achteraan 65 mm (punten 73), vooraan 100 mm · of een **eigen hoogte** |
 | Maat | Ø 116 mm, 83 of 108 mm hoog. Past op de A1 mini |
 | Inhoud | ~300 cm³ (laag) of ~530 cm³ (hoog), tot de achterrand |
-| Filament | ongeveer 48 g (laag) of 68 g (hoog), geschat. Eén kleur, geen AMS nodig |
+| Filament | ongeveer 58 g (laag) of 78 g (hoog), geschat. Eén kleur, geen AMS nodig |
 | Nodig | niets: één stuk, geen support, schroeven of lijm |
 
 ## Hoe het werkt
@@ -53,8 +53,8 @@ Open `print/poepmonster.3mf` in Bambu Studio. Er is één plaat per variant:
 
 | Plaat | Variant | Kleur in het project | Filament (geschat) |
 |---|---|---|---|
-| 1 | laag | Pumpkin Orange 10301 | ~48 g |
-| 2 | hoog | Pumpkin Orange 10301 | ~68 g |
+| 1 | laag | Pumpkin Orange 10301 | ~58 g |
+| 2 | hoog | Pumpkin Orange 10301 | ~78 g |
 
 - **Instellingen**: *0.20mm Standard @BBL A1* op de *Textured PEI Plate*, 0,4 mm nozzle. **Geen support.** Het
   project zet 3 wanden en gyroid-infill.

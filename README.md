@@ -8,7 +8,7 @@ Eigen ontwerpen voor de Bambu Lab A1 met AMS Lite, gemaakt als code (parametrisc
 | [C-01 Dierenkalender · animal calendar](modellen/C-01-dierenkalender/) | vos, koe, uil, draak, eenhoorn, leeuw, hert · fox, cow, owl, dragon, unicorn, lion, deer | NL, EN |
 | [B-34B Repair Pod](modellen/B-34B-repair-pod/) | werkplek die openklapt met twee horizontale schroevenbakjes · workspace that unfolds with two level screw trays | NL, EN |
 | [B-34A Taakvreter · Task Eater](modellen/B-34A-taakvreter/) | bureaumonster dat je afgewerkte taakbriefjes opeet · desk monster that eats your finished task notes | NL, EN |
-| [E-01 Splitsmijn · Split Mine](modellen/E-01-splitsmijn/) | pasproef: valbord om te leren splitsen tot 10 (1ste leerjaar) · test print: drop board for number bonds up to 10 (first grade) | NL, EN |
+| [E-01 De Splitsmijn · The Split Mine](modellen/E-01-splitsmijn/) | valbord om te leren splitsen tot 10 (1ste leerjaar): de muntjes verdwijnen in twee mijnkarretjes, met pasproef · drop board for number bonds up to 10 (first grade): the coins disappear into two mine carts, with a test print | NL, EN |
 | [H-01 Schaduwspook · Shadow Spook](modellen/H-01-schaduwspook/) | één beeldje, vier schaduwen: pompoen, spook, schedel, grafsteen (plus BOO en TRICK/TREAT) · one figure, four shadows: pumpkin, ghost, skull, tombstone (plus BOO and TRICK/TREAT) | NL, EN |
 | [H-02 Moodkin](modellen/H-02-moodkin/) | pompoenlantaarn: draai het steeltje en het gezicht klikt naar blij, boos, bang of knipoog · pumpkin lantern: turn the stem and the face clicks to happy, angry, scared or wink | NL, EN |
 | [H-03 Poepmonster · Poop Monster](modellen/H-03-poepmonster/) | pompoenmonster dat het purge-afval van de A1 opeet, laag of hoog · pumpkin monster that eats the A1's purge waste, low or high | NL, EN |
@@ -17,7 +17,7 @@ Eigen ontwerpen voor de Bambu Lab A1 met AMS Lite, gemaakt als code (parametrisc
 
 ![B-34B dicht, half open, open](modellen/B-34B-repair-pod/renders/reeks.png)
 
-<img src="modellen/B-34A-taakvreter/renders/voor.png" width="420" alt="B-34A Taakvreter"> <img src="modellen/E-01-splitsmijn/renders/voor.png" width="340" alt="E-01 Splitsmijn">
+<img src="modellen/B-34A-taakvreter/renders/voor.png" width="420" alt="B-34A Taakvreter"> <img src="modellen/E-01-splitsmijn/renders/splitsmijn.png" width="340" alt="E-01 De Splitsmijn">
 
 ![H-01 vier schaduwen](modellen/H-01-schaduwspook/renders/schaduwen.png)
 
@@ -42,7 +42,7 @@ modellen/
     cad/                        de bron: Python-scripts die alles genereren · the source
     controle/                   montage- en printcontrole · assembly and print check
     renders/                    Blender-renders
-  E-01-splitsmijn/              voorlopig alleen pasproef/ (valbord), met valsimulatie · for now only pasproef/ (drop board), with drop simulation
+  E-01-splitsmijn/              print/ (eindmodel) en pasproef/, met valsimulatie · print/ (final model) and pasproef/ (test print), with drop simulation
   H-01-schaduwspook/            zelfde opbouw als B-34B, zonder pasproef · same layout as B-34B, without a test print
   H-02-moodkin/
   H-03-poepmonster/

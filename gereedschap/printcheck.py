@@ -93,17 +93,24 @@ def plaat(delen, nozzle=NOZZLE, laag=LAYER):
     return info
 
 
-def gram(m, laag=LAYER, wand=0.84, infill=0.15, dichtheid=1.24):
-    """Gewicht (g) geschat uit de doorsneden: per laag `wand` mm wanden rondom, de rest `infill`. Geen slicer."""
+def gram(m, laag=LAYER, wand=0.84, infill=0.15, dichtheid=1.24, boven=5, onder=3):
+    """Gewicht (g) geschat uit de doorsneden, zoals een slicer het vult: per laag `wand` mm wanden langs de rand,
+    massief waar het onderdeel binnen `boven` lagen ophoudt of binnen `onder` lagen begint (de boven- en
+    onderlagen, zoals in 0.20mm Standard @BBL A1: 5 en 3), de rest `infill`. Een schatting, geen slicer."""
     tm = to_trimesh(m)
+    zs = np.arange(laag / 2, tm.bounds[1][2], laag)
+    sneden = [cs_to_shapely(m.slice(float(z))) for z in zs]
+    leeg = Polygon()
     v = 0.0
-    for z in np.arange(laag / 2, tm.bounds[1][2], laag):
-        s = cs_to_shapely(m.slice(float(z)))
+    for i, s in enumerate(sneden):
         if s.is_empty:
             continue
-        w = min(s.area, s.length * wand)
-        v += (w + (s.area - w) * infill) * laag
-    return round(v / 1000 * dichtheid, 0)
+        binnen = s.buffer(-wand, join_style="mitre")
+        boven_s = sneden[i + boven] if i + boven < len(sneden) else leeg
+        onder_s = sneden[i - onder] if i - onder >= 0 else leeg
+        massief = 0.0 if binnen.is_empty else binnen.difference(boven_s).union(binnen.difference(onder_s)).area
+        v += ((s.area - binnen.area) + massief + (binnen.area - massief) * infill) * laag
+    return round(v / 1000 * dichtheid, 1)
 
 
 def stukken(m):

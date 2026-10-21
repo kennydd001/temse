@@ -132,3 +132,76 @@ def rad(g):
 PROEF_GAT = (3.0, 3.1, 3.2, 3.3, 3.4)        # ronde gaten voor de nokjes en het mesblok
 PROEF_ZESKANT = (0.1, 0.2, 0.3, 0.4)          # speling van het zeskantgat in de arm
 PROEF_BEUGEL = (4.0, 4.1, 4.2, 4.3)           # liggende druppelgaten zoals in de beugel
+
+
+# === eindmodel: De Splitsmijn ======================================================================
+# Hetzelfde valbord (de achterplaat van de pasproef past ongewijzigd), met een mijnthema en een voet waarin
+# de muntjes verdwijnen: twee mijnkarretjes in twee tunnels. Pas als je een karretje uittrekt, zie je hoeveel
+# er in zitten. Zie mijn.py.
+VERSIE_EIND = "v1.0"
+TERRA = "11203"     # mijnberg
+GEEL = "10402"      # houweelkop, kantelplank, verdelervin, letters, de andere kant van de muntjes
+WIT = "11100"
+FILAMENTEN_EIND = {
+    ZWART: FILAMENTEN[ZWART], BRUIN: FILAMENTEN[BRUIN], BLAUW: FILAMENTEN[BLAUW], ROOD: FILAMENTEN[ROOD],
+    TERRA: ("Terracotta", "PLA Matte", "#B15533", "terracotta", "terracotta"),
+    GEEL: ("Sunflower Yellow", "PLA Basic", "#FEC600", "geel", "yellow"),
+}
+
+# --- voorplaat: houten balken (bruin), alleen in de bovenste lagen van de print ------------------
+RELIEF_T = 1.6            # balken op de voorplaat
+VOOR_DY = 3.0             # slinger, beugel en mesblok schuiven zoveel naar voren: de arm zwaait 1,9 mm voor de balken
+BALK_H = 8.0              # dwarsbalken op de pinrijen (daar zijn de kijkspleten toch onderbroken)
+STIJL = (91.0, BINNEN_HALF + RAND)   # staanders links en rechts, over de zijranden
+
+# --- mijningang: een portaal met de naam, op twee kokerkappen bovenop het bord ---------------------
+PORTAAL_X = 112.0         # halve breedte van de dwarsbalk
+PORTAAL_Z = (BORD_H + 12.0, BORD_H + 33.0)   # dwarsbalk: ruim boven de trechter, de hand kan eronder
+PORTAAL_Y = (-2.6, 8.0)   # het hele portaal is een plaat van die dikte (achterkant op het bed)
+KAP_ONDER = 12.0          # zo diep zakt een kokerkap over de bovenhoek van het bord (met het mijnhout)
+KAP_LAT = 2.4             # tussenschot in de kokerkap: daarop rust de tong van het portaal
+LETTER_H = 12.0
+LETTER_IN = 0.6           # de letters liggen zo diep in de balk (3 lagen geel)
+
+# --- houweel: de slinger is een houweel, de steel bruin, de kop geel -----------------------------
+KOP_B = 100.0             # breedte van punt tot punt (de punten worden stomp afgerond)
+KOP_DIK = 16.0            # dikte van de kop in het midden
+KOP_PUNT = 12.0           # de punten liggen zoveel hoger dan het midden van de kop
+KOP_OOG = (10.0, 12.5)    # halve breedte en halve hoogte van het blok waar de steel in zit
+KOP_D = 20.0              # diepte (y): het zwaartepunt van wat draait ligt dan ruim boven het mes
+KOP_PEN = (2.0, -5.0)     # z van de twee pennetjes van de steel in de kop (t.o.v. het midden van de kop)
+STEEL_ONDER = 8.0         # de steel steekt zoveel onder het midden van de kop
+
+# --- mijnberg (voet): ondersteboven geprint, de tunnels zijn dan open naar boven ------------------
+BERG_X = 116.0            # halve breedte
+BERG_Y = (-40.0, 66.0)    # achter het bord 40 (staat stevig als het kind de houweel naar achteren duwt), ervoor 55
+BERG_H = 40.0             # bovenkant op z = 0, de tafel op z = -BERG_H
+DEK = 8.0                 # dikte van het dek, met de trechters naar de karretjes
+BERG_WAND = 2.4
+SLEUF_Y = (1.2, 9.6)      # muntsleuf in het dek onder de spleet (die is 2,4 .. 8,4); de platen rusten op 1,2 mm
+TUNNEL_X = (3.0, 97.0)    # per kant; de middenwand is 6 dik
+KOKER_D = 15.0            # uitsparing in het dek voor de prop van een kokervoet
+KOKER_H = 30.0            # kokervoet: zo hoog staat de U-koker boven het dek (de pasproef: 15, het bord kantelt dan 2x zo ver)
+KOKER_WAND = 2.4
+KOKER_SPEL = 0.1          # prop van de kokervoet in de uitsparing: klemt licht
+KOKER_AFSCHUINING = 0.8   # staande hoeken van de kokervoet
+KOKER_INLOOP = 0.6        # schuine onderrand van de prop
+WIG = (2.5, 6.2)          # middenwig in het dek: halve breedte boven en onder (de munt glijdt eraf)
+TRECHTER_BOVEN = BINNEN_HALF - 1.5   # buitenkant van de trechter bovenaan: 1,2 mm wand naar de koker (een munt die
+                                     # met haar rand op dat randje komt, rolt naar binnen: haar gewicht ligt verder)
+VIN_SLEUF = (1.1, 6.0)    # sleuf voor de verdelervin in de wig: halve breedte, diepte
+VIN_TONG = 1.0            # halve dikte van de tong van de vin: 0,1 speling per kant, klemt geprint licht
+
+# --- mijnkarretjes: laatjes in de tunnels ------------------------------------------------------
+KAR_SPEL = 0.8            # rondom in de tunnel
+KAR_WAND = 1.6
+KAR_RAND_ONDER_DEK = 1.0  # bovenrand van het karretje zoveel onder het dek: daar past geen muntje tussen
+KAR_FRONT = 2.0           # dikte van de voorplaat van het karretje
+KAR_GREEP = 12.0          # straal van de duimuitsparing bovenin de voorplaat
+KAR_SCHUIN = 12.0         # zijwanden van het karretje lopen zoveel graden schuin (onderaan smaller)
+
+# --- tienveld ----------------------------------------------------------------------------------
+TIEN_STAP = 29.0
+TIEN_GAT = MUNT_D + 1.5
+TIEN_RAND = 6.0
+TIEN_T = (2.0, 2.5)       # bodem onder de kuiltjes, diepte van de kuiltjes

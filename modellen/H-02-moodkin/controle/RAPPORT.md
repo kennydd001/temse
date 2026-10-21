@@ -48,13 +48,13 @@ Overlap in 3D (mm³, moet 0 zijn):
 
 | Onderdeel | Maat | Eén stuk, waterdicht | A1 / A1 mini | Overhang > 48° | Vlakke plafonds (bruggen) | Te smal | Gewicht (schatting) |
 |---|---|---|---|---|---|---|---|
-| schil | 116 × 116 × 73 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 138 mm² | ✅ geen | ~79 g |
-| trommel met de vier gezichten | 100 × 100 × 46 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | ~30 g |
-| deksel | 121 × 121 × 18 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | ~35 g |
+| schil | 116 × 116 × 73 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 138 mm² | ✅ geen | ~85 g |
+| trommel met de vier gezichten | 100 × 100 × 46 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | ~31 g |
+| deksel | 121 × 121 × 18 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | ~48 g |
 | steeltje | 18 × 13 × 31 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | ~2 g |
 
 *Vlakke plafonds*: de bovenkant van de tandkolommen in de schil. Die zijn 8 mm breed; de printer overbrugt ze van de ene tand naar de andere. De platte gaten in de trommel (tandgaten, de ogen van 'bang', hoogstens 12 mm breed) zijn even goed bruggen, maar in een wand van 1,6 mm telt printcheck ze als korte brug. Alle plafonds zijn in 2D gecontroleerd (zie 1). Korte bruggen (< 3 mm) en de plafonds van de pengaatjes en gleufjes onder het deksel tellen niet als overhang.
 
-Het gewicht is geschat uit de doorsneden (de wanden uit het project, 15 % infill), niet met een slicer.
+Het gewicht is geschat uit de doorsneden (de wanden uit het project, boven- en onderlagen, 15 % infill), niet met een slicer.
 
 Niet getest: een echte print, het klikken, en hoe fel het licht door de gaten komt met een echt LED-theelichtje.

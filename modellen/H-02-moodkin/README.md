@@ -23,7 +23,7 @@ op.
 |---|---|
 | Gezichten | blij, boos, bang, knipoog: om de 90°, met een klik |
 | Maat | Ø 121 mm (deksel), 116 mm hoog met het steeltje. Alles past op de A1 mini |
-| Filament | ongeveer 146 g: schil 79 g en deksel 35 g oranje, trommel 30 g geel, steeltje 2 g groen (geschat) |
+| Filament | ongeveer 166 g: schil 85 g en deksel 48 g oranje, trommel 31 g geel, steeltje 2 g groen (geschat) |
 | Nodig | één LED-theelichtje (Ø 38 mm, tot 45 mm hoog). Geen support, schroeven, lijm of AMS |
 
 ## Hoe het werkt
@@ -63,9 +63,9 @@ Open `print/moodkin.3mf` in Bambu Studio. Elk onderdeel heeft zijn eigen plaat, 
 
 | Plaat | Onderdeel | Kleur in het project | Filament (geschat) | Ligt op het bed |
 |---|---|---|---|---|
-| 1 | schil | Pumpkin Orange 10301 | ~79 g | rechtop |
-| 2 | trommel met de vier gezichten | Sunflower Yellow 10402 | ~30 g | rechtop, pennetjes boven |
-| 3 | deksel | Pumpkin Orange 10301 | ~35 g | met de vlakke onderkant op het bed |
+| 1 | schil | Pumpkin Orange 10301 | ~85 g | rechtop |
+| 2 | trommel met de vier gezichten | Sunflower Yellow 10402 | ~31 g | rechtop, pennetjes boven |
+| 3 | deksel | Pumpkin Orange 10301 | ~48 g | met de vlakke onderkant op het bed |
 | 4 | steeltje | Mistletoe Green 10502 | ~2 g | op zijn kop, met een brim |
 
 - **Instellingen**: *0.20mm Standard @BBL A1* op de *Textured PEI Plate*, 0,4 mm nozzle. **Geen support.**

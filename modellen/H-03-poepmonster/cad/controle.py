@@ -120,7 +120,7 @@ def main():
                  f"~{fmt(r['gram_geschat'], 0)} g |")
     L += ["", f"*Vlakke plafonds*: de bovenkant van de spleetjes in de buik, {fmt(P.HECHTING_STAP - P.HECHTING_B)} mm breed "
           "van hechting tot hechting. In een wand van 2 mm telt printcheck ze als korte brug.", "",
-          "Het gewicht is geschat uit de doorsneden (3 wanden, 15 % infill), niet met een slicer.", "",
+          "Het gewicht is geschat uit de doorsneden (3 wanden, boven- en onderlagen, 15 % infill), niet met een slicer.", "",
           "Niet getest: een echte print, en of hij bij jouw A1 goed onder de afvalgoot staat. Meet dat na (zie de README)."]
     (OUT / "RAPPORT.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))

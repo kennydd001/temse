@@ -8,7 +8,8 @@ Wat wordt gecontroleerd
      geprint wordt, en hoeveel het zelfdragend maken afwijkt van het getekende silhouet.
   2. Eén stuk en waterdicht, ook na het wegschrijven als STL (float32).
   3. Printbaarheid (gereedschap/printcheck.py): overhang, te dunne details, maat; plus de A1 mini (180 mm).
-  4. Gewicht: geschat uit de doorsneden (2 wanden van 0,42 mm, de rest 15 % infill, PLA 1,24 g/cm³).
+  4. Gewicht: geschat uit de doorsneden (2 wanden van 0,42 mm, 5 boven- en 3 onderlagen massief, de rest 15 %
+     infill, PLA 1,24 g/cm³).
      Een schatting, geen slicer.
 """
 import json
@@ -113,7 +114,7 @@ def main():
                  f"{'✅ geen' if not dun or dun[0]['grootste_te_smalle_stuk_mm2'] < 1.5 else '⚠️ ' + fmt(dun[0]['grootste_te_smalle_stuk_mm2']) + ' mm²'} | "
                  f"~{fmt(r['gram_geschat'], 0)} g |")
     L += ["", "*Te smal*: kleiner dan 1,5 mm² per laag telt niet (de punt van een boog of steeltje; de slicer laat dat "
-          "weg). Het gewicht is geschat uit de doorsneden (2 wanden, 15 % infill), niet met een slicer.", "",
+          "weg). Het gewicht is geschat uit de doorsneden (wanden, boven- en onderlagen, 15 % infill), niet met een slicer.", "",
           "Niet getest: de schaduw met een echte gsm-zaklamp. De renders gebruiken een puntlamp van 2 mm op 45 cm; "
           "een grotere of dichterbij gehouden lamp geeft een zachtere, iets vertekende schaduw."]
     (OUT / "RAPPORT.md").write_text("\n".join(L) + "\n")

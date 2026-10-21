@@ -1,4 +1,175 @@
 {
+  "print/achterplaat.stl": {
+    "volume_cm3": 167.02,
+    "maat_mm": [
+      218.0,
+      230.0,
+      10.0
+    ],
+    "aantal": 1
+  },
+  "print/voorplaat.stl": {
+    "volume_cm3": 112.12,
+    "maat_mm": [
+      218.0,
+      230.0,
+      16.5
+    ],
+    "aantal": 1
+  },
+  "print/mijnhout.stl": {
+    "volume_cm3": 25.23,
+    "maat_mm": [
+      218.0,
+      230.0,
+      2.4
+    ],
+    "aantal": 1
+  },
+  "print/mijnberg.stl": {
+    "volume_cm3": 343.8,
+    "maat_mm": [
+      232.0,
+      107.5,
+      40.0
+    ],
+    "aantal": 1
+  },
+  "print/tienveld.stl": {
+    "volume_cm3": 35.53,
+    "maat_mm": [
+      157.0,
+      70.0,
+      4.5
+    ],
+    "aantal": 1
+  },
+  "print/portaal.stl": {
+    "volume_cm3": 51.74,
+    "maat_mm": [
+      224.0,
+      30.6,
+      10.6
+    ],
+    "aantal": 1
+  },
+  "print/steel.stl": {
+    "volume_cm3": 7.89,
+    "maat_mm": [
+      20.0,
+      174.0,
+      10.5
+    ],
+    "aantal": 1
+  },
+  "print/beugel.stl": {
+    "volume_cm3": 5.94,
+    "maat_mm": [
+      44.0,
+      16.8,
+      13.2
+    ],
+    "aantal": 1
+  },
+  "print/mesblok.stl": {
+    "volume_cm3": 1.04,
+    "maat_mm": [
+      20.0,
+      16.0,
+      6.5
+    ],
+    "aantal": 1
+  },
+  "print/kokervoet_L.stl": {
+    "volume_cm3": 6.08,
+    "maat_mm": [
+      12.9,
+      17.9,
+      44.5
+    ],
+    "aantal": 1
+  },
+  "print/kokervoet_R.stl": {
+    "volume_cm3": 6.08,
+    "maat_mm": [
+      12.9,
+      17.9,
+      44.5
+    ],
+    "aantal": 1
+  },
+  "print/kokerkap_L.stl": {
+    "volume_cm3": 3.57,
+    "maat_mm": [
+      24.0,
+      20.5,
+      12.9
+    ],
+    "aantal": 1
+  },
+  "print/kokerkap_R.stl": {
+    "volume_cm3": 3.57,
+    "maat_mm": [
+      24.0,
+      20.5,
+      12.9
+    ],
+    "aantal": 1
+  },
+  "print/kop.stl": {
+    "volume_cm3": 24.18,
+    "maat_mm": [
+      88.5,
+      25.0,
+      20.0
+    ],
+    "aantal": 1
+  },
+  "print/plank.stl": {
+    "volume_cm3": 2.46,
+    "maat_mm": [
+      36.0,
+      10.0,
+      16.2
+    ],
+    "aantal": 1
+  },
+  "print/verdelervin.stl": {
+    "volume_cm3": 0.33,
+    "maat_mm": [
+      3.0,
+      25.3,
+      4.8
+    ],
+    "aantal": 1
+  },
+  "print/karretje_L.stl": {
+    "volume_cm3": 31.76,
+    "maat_mm": [
+      92.4,
+      105.0,
+      31.0
+    ],
+    "aantal": 1
+  },
+  "print/karretje_R.stl": {
+    "volume_cm3": 31.76,
+    "maat_mm": [
+      92.4,
+      105.0,
+      31.0
+    ],
+    "aantal": 1
+  },
+  "print/munt.stl": {
+    "volume_cm3": 2.16,
+    "maat_mm": [
+      25.0,
+      25.0,
+      4.5
+    ],
+    "aantal": 10
+  },
   "pasproef/gatenstrip.stl": {
     "volume_cm3": 4.2,
     "maat_mm": [

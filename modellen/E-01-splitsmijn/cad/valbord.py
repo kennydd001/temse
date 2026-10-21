@@ -102,23 +102,29 @@ def tralies():
     return stukken
 
 
-def beugel():
+def _vooraan(dy):
+    """(ARM_Y, MES, BEUGEL_Y) met alles vóór de voorplaat dy naar voren geschoven (eindmodel: over het reliëf)."""
+    return (P.ARM_Y[0] + dy, P.ARM_Y[1] + dy), (P.MES[0] + dy, P.MES[1] + dy), P.BEUGEL_Y + dy
+
+
+def beugel(dy=0.0):
     """Beugel (los onderdeel) vóór de voorplaat: een voorwand met bovenop de V-groef voor het mes, en twee poten
     naar de voorplaat. De arm zwaait achter de voorwand tussen de poten door.
 
     Geprint staand (z omhoog): alles begint op het bed, er hangt niets in de lucht. De groef loopt niet tot de
     voorkant door: dat stukje houdt het mes tegen als het naar voren wil schuiven.
     """
+    _, mes, beugel_y = _vooraan(dy)
     zp = P.Z_PLANK
     z0, zb1 = zp - P.POOT[1], zp + P.GROEF_DIEP                          # bodem van de groef precies op de as
-    y0, y1 = P.BORD_T + 0.2, P.MES[1] + 2.0
-    delen = [box3(-P.BEUGEL_HALF, P.BEUGEL_Y, z0, P.BEUGEL_HALF, y1, zb1)]
+    y0, y1 = P.BORD_T + 0.2, mes[1] + 2.0
+    delen = [box3(-P.BEUGEL_HALF, beugel_y, z0, P.BEUGEL_HALF, y1, zb1)]
     for a, b in ((-P.BEUGEL_HALF, -P.POOT[0]), (P.POOT[0], P.BEUGEL_HALF)):
-        delen.append(box3(a, y0, z0, b, P.BEUGEL_Y + E, zb1))
+        delen.append(box3(a, y0, z0, b, beugel_y + E, zb1))
     m = Manifold.batch_boolean(delen, OpType.Add)
     g = P.GROEF_DIEP / math.tan(math.radians((180 - P.GROEF_HOEK) / 2))
     groef = Polygon([(-g, zb1 + E), (g, zb1 + E), (0, zb1 - P.GROEF_DIEP)])
-    m = m - vlak_xz(groef, P.BEUGEL_Y - 1, P.MES[1] + 0.5)
+    m = m - vlak_xz(groef, beugel_y - 1, mes[1] + 0.5)
     # gaten voor de pennen van de voorplaat: liggend in de print, dus druppelvormig (punt naar +z)
     px, pz, _ = P.BEUGEL_PEN
     for k in (-1, 1):
@@ -126,23 +132,25 @@ def beugel():
     return m
 
 
-def mesblok():
+def mesblok(dy=0.0):
     """Mesblok (los onderdeel): V-mes onderaan op de as, twee gaten voor de pennetjes van de arm.
 
     Geprint met de achterkant op het bed: het mes staat dan rechtop, de gaten zijn verticaal.
     """
+    _, mes, _ = _vooraan(dy)
     zp = P.Z_PLANK
     h, (bh, bt) = P.MES_HALF, P.MES_BLOK
     zf = zp + h / math.tan(math.radians(P.MES_HOEK / 2))
     vorm = Polygon([(0, zp), (h, zf), (bh, zf), (bh, zp + bt), (-bh, zp + bt), (-bh, zf), (-h, zf)])
-    m = vlak_xz(vorm, *P.MES)
+    m = vlak_xz(vorm, *mes)
     px, pz, _ = P.MES_PEN
     gaten = unary_union([Point(s * px, zp + pz).buffer(P.MES_GAT / 2, quad_segs=12) for s in (-1, 1)])
-    return m - vlak_xz(gaten, P.MES[0] - 1, P.MES[1] + 1)
+    return m - vlak_xz(gaten, mes[0] - 1, mes[1] + 1)
 
 
 @lru_cache(maxsize=None)
-def voorplaat(met_tralies=True):
+def voorplaat(met_tralies=True, dy=0.0, pennen=True):
+    _, mes, _ = _vooraan(dy)
     W, R, H = P.BINNEN_HALF, P.RAND, P.BORD_H
     y0, y1 = P.Y_VOOR, P.Y_VOOR + P.VOOR_T
     m = vlak_xz(box(-W - R, 0, W + R, H), y0, y1)
@@ -156,32 +164,48 @@ def voorplaat(met_tralies=True):
         spleten = [Manifold.batch_hull([vlak_xz(t.buffer(0.8), y0 - 1, y0), vlak_xz(t, y0 + 0.8, y0 + 0.81)])
                    + vlak_xz(t, y0, y1 + 1) for t in tralies()]
         m = m - Manifold.batch_boolean(spleten, OpType.Add)
+    return m + beugelpennen(dy) if pennen else m
+
+
+def beugelpennen(dy=0.0):
+    """De twee pennen Ø 4 op de voorplaat waar de beugel op klemt."""
+    _, mes, _ = _vooraan(dy)
     px, pz, pd = P.BEUGEL_PEN
-    pennen = unary_union([Point(s * px, P.Z_PLANK - pz).buffer(pd / 2, quad_segs=12) for s in (-1, 1)])
-    return m + vlak_xz(pennen, y1 - E, P.MES[1] - 1.0)
+    vorm = unary_union([Point(s * px, P.Z_PLANK - pz).buffer(pd / 2, quad_segs=12) for s in (-1, 1)])
+    return vlak_xz(vorm, P.BORD_T - E, mes[1] - 1.0)
 
 
 # --- kantelplank en slinger ---------------------------------------------------------------------
 
-def plank():
+def plank(dy=0.0):
+    arm_y, _, _ = _vooraan(dy)
     zp = P.Z_PLANK
     m = vlak_xz(stadion(-P.PLANK_HALF, P.PLANK_HALF, zp, P.PLANK_H), *P.PLANK_Y)
-    m = m + vlak_xz(Point(0, zp).buffer(P.NAAF_R, quad_segs=24), P.PLANK_Y[0], P.ARM_Y[0] - 0.3)
-    return m + vlak_xz(zeskant((0, zp), P.ZESKANT), P.ARM_Y[0] - 0.3 - E, P.ARM_Y[1] - 0.3)
+    m = m + vlak_xz(Point(0, zp).buffer(P.NAAF_R, quad_segs=24), P.PLANK_Y[0], arm_y[0] - 0.3)
+    return m + vlak_xz(zeskant((0, zp), P.ZESKANT), arm_y[0] - 0.3 - E, arm_y[1] - 0.3)
+
+
+def arm(dy=0.0, onder=None):
+    """Slingerarm: zeskantgat bij de as (door: geen plafond in de print), het blok voor het mesblok met twee
+    pennetjes erop, en de arm zelf tot z = onder (standaard tot het midden van het gewicht)."""
+    arm_y, mes, _ = _vooraan(dy)
+    zp = P.Z_PLANK
+    onder = zp - P.SLINGER_L if onder is None else onder
+    bh_x, bt = P.MES_BLOK
+    vorm = unary_union([box(-P.ARM_B / 2, onder, P.ARM_B / 2, zp), Point(0, zp).buffer(8.0, quad_segs=24),
+                        box(-bh_x, zp, bh_x, zp + bt)])
+    m = vlak_xz(vorm, *arm_y)
+    m = m - vlak_xz(zeskant((0, zp), P.ZESKANT + P.ZESKANT_SPEL), arm_y[0] - 1, arm_y[1] + 1)
+    px, pz, pd = P.MES_PEN
+    pennen = unary_union([Point(s * px, zp + pz).buffer(pd / 2, quad_segs=12) for s in (-1, 1)])
+    return m + vlak_xz(pennen, arm_y[1] - E, mes[1] - 1.0)
 
 
 def slinger():
-    """Arm met zeskantgat (door: geen plafond in de print), twee pennetjes voor het mesblok, massief gewicht."""
+    """Arm met massief gewicht (pasproef)."""
     zp, L = P.Z_PLANK, P.SLINGER_L
     bw, bh, bd = P.GEWICHT
-    bh_x, bt = P.MES_BLOK
-    arm = unary_union([box(-P.ARM_B / 2, zp - L, P.ARM_B / 2, zp), Point(0, zp).buffer(8.0, quad_segs=24),
-                       box(-bh_x, zp, bh_x, zp + bt)])
-    m = vlak_xz(arm, *P.ARM_Y)
-    m = m - vlak_xz(zeskant((0, zp), P.ZESKANT + P.ZESKANT_SPEL), P.ARM_Y[0] - 1, P.ARM_Y[1] + 1)
-    px, pz, pd = P.MES_PEN
-    pennen = unary_union([Point(s * px, zp + pz).buffer(pd / 2, quad_segs=12) for s in (-1, 1)])
-    m = m + vlak_xz(pennen, P.ARM_Y[1] - E, P.MES[1] - 1.0)
+    m = arm()
     gewicht = box(-bw / 2, zp - L - bh / 2, bw / 2, zp - L + bh / 2)
     m = m + vlak_xz(gewicht, P.ARM_Y[0], P.ARM_Y[0] + bd)
     # duwvlak: een ondiepe kuil in de voorkant van het gewicht, hier duwt het kind
@@ -242,7 +266,6 @@ def munt():
 
 # --- montage ------------------------------------------------------------------------------------
 
-@lru_cache(maxsize=None)
 # --- passtrip (printligging, z omhoog) -----------------------------------------------------------
 
 def _label(t, x, y, z_top, h=3.0):

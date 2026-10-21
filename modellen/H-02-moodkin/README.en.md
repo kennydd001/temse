@@ -22,7 +22,7 @@ A pumpkin lantern with four moods. Turn the stem: *click*, and the pumpkin looks
 |---|---|
 | Faces | happy, angry, scared, wink (blij, boos, bang, knipoog): every 90°, with a click |
 | Size | Ø 121 mm (lid), 116 mm tall with the stem. Everything fits on the A1 mini |
-| Filament | about 146 g: shell 79 g and lid 35 g orange, drum 30 g yellow, stem 2 g green (estimated) |
+| Filament | about 166 g: shell 85 g and lid 48 g orange, drum 31 g yellow, stem 2 g green (estimated) |
 | You need | one LED tealight (Ø 38 mm, up to 45 mm tall). No supports, screws, glue or AMS |
 
 ## How it works
@@ -61,9 +61,9 @@ Open `print/moodkin.3mf` in Bambu Studio. Every part has its own plate, in one c
 
 | Plate | Part | Colour in the project | Filament (estimated) | On the bed |
 |---|---|---|---|---|
-| 1 | shell | Pumpkin Orange 10301 | ~79 g | upright |
-| 2 | drum with the four faces | Sunflower Yellow 10402 | ~30 g | upright, pins on top |
-| 3 | lid | Pumpkin Orange 10301 | ~35 g | flat underside on the bed |
+| 1 | shell | Pumpkin Orange 10301 | ~85 g | upright |
+| 2 | drum with the four faces | Sunflower Yellow 10402 | ~31 g | upright, pins on top |
+| 3 | lid | Pumpkin Orange 10301 | ~48 g | flat underside on the bed |
 | 4 | stem | Mistletoe Green 10502 | ~2 g | upside down, with a brim |
 
 - **Settings**: *0.20mm Standard @BBL A1* on the *Textured PEI Plate*, 0.4 mm nozzle. **No supports.**

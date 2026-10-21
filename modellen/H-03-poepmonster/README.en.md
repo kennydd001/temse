@@ -20,7 +20,7 @@ in its belly you see how much rainbow it has eaten already.
 | Variants | **low** (laag): rim at the back 40 mm (tips 48), at the front 75 mm · **high** (hoog): back 65 mm (tips 73), front 100 mm · or a **custom height** |
 | Size | Ø 116 mm, 83 or 108 mm tall. Fits on the A1 mini |
 | Capacity | ~300 cm³ (low) or ~530 cm³ (high), up to the back rim |
-| Filament | about 48 g (low) or 68 g (high), estimated. One colour, no AMS needed |
+| Filament | about 58 g (low) or 78 g (high), estimated. One colour, no AMS needed |
 | You need | nothing: one piece, no supports, screws or glue |
 
 ## How it works
@@ -54,8 +54,8 @@ Open `print/poepmonster.3mf` in Bambu Studio. There is one plate per variant:
 
 | Plate | Variant | Colour in the project | Filament (estimated) |
 |---|---|---|---|
-| 1 | low | Pumpkin Orange 10301 | ~48 g |
-| 2 | high | Pumpkin Orange 10301 | ~68 g |
+| 1 | low | Pumpkin Orange 10301 | ~58 g |
+| 2 | high | Pumpkin Orange 10301 | ~78 g |
 
 - **Settings**: *0.20mm Standard @BBL A1* on the *Textured PEI Plate*, 0.4 mm nozzle. **No supports.** The
   project sets 3 walls and gyroid infill.

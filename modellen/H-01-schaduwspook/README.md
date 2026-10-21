@@ -20,7 +20,7 @@ muur verschijnt een **pompoen**. Draai het een achtste slag: een **spookje**. No
 |---|---|
 | Varianten | **vier schaduwen**: pompoen, spook, schedel en grafsteen, om de 45° · **BOO en schedel** en **TRICK en TREAT**: twee schaduwen, om de 90° |
 | Maat | vier schaduwen 56 × 52 × 60 mm · BOO 120 × 48 × 55 mm · TRICK 112 × 124 × 36 mm. Alles past op de A1 mini |
-| Filament | ongeveer 20 g · 53 g · 82 g (geschat) |
+| Filament | ongeveer 24 g · 63 g · 102 g (geschat) |
 | Nodig | een zaklamp (die van je gsm) en een lichte muur. Geen support, schroeven of lijm |
 
 ## Hoe het werkt
@@ -63,9 +63,9 @@ Open `print/schaduwspook.3mf` in Bambu Studio. Er is één plaat per variant:
 
 | Plaat | Variant | Kleur in het project | Filament (geschat) |
 |---|---|---|---|
-| 1 | vier schaduwen | Pumpkin Orange 10301 | ~20 g |
-| 2 | BOO en schedel | Charcoal 11101 | ~53 g |
-| 3 | TRICK en TREAT | Pumpkin Orange 10301 | ~82 g |
+| 1 | vier schaduwen | Pumpkin Orange 10301 | ~24 g |
+| 2 | BOO en schedel | Charcoal 11101 | ~63 g |
+| 3 | TRICK en TREAT | Pumpkin Orange 10301 | ~102 g |
 
 - **Instellingen**: *0.20mm Standard @BBL A1* op de *Textured PEI Plate*, 0,4 mm nozzle. **Geen support,
   geen brim.** Het project zet per beeldje 3 wanden en gyroid-infill.

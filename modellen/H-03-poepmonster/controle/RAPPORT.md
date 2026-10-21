@@ -26,11 +26,11 @@ De afvalgoot van de printer moet hoger liggen dan de punten van de tanden achter
 
 | Variant | Maat | Eén stuk, waterdicht | A1 / A1 mini | Overhang > 48° | Vlakke plafonds (bruggen) | Te smal | Gewicht (schatting) |
 |---|---|---|---|---|---|---|---|
-| laag | 116 × 116 × 83 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | ~48 g |
-| hoog | 116 × 116 × 108 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | ~68 g |
+| laag | 116 × 116 × 83 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | ~58 g |
+| hoog | 116 × 116 × 108 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | ~78 g |
 
 *Vlakke plafonds*: de bovenkant van de spleetjes in de buik, 6,6 mm breed van hechting tot hechting. In een wand van 2 mm telt printcheck ze als korte brug.
 
-Het gewicht is geschat uit de doorsneden (3 wanden, 15 % infill), niet met een slicer.
+Het gewicht is geschat uit de doorsneden (3 wanden, boven- en onderlagen, 15 % infill), niet met een slicer.
 
 Niet getest: een echte print, en of hij bij jouw A1 goed onder de afvalgoot staat. Meet dat na (zie de README).

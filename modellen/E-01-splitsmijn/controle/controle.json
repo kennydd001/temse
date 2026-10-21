@@ -4,115 +4,1019 @@
     "kleinste_doorgang": 29.0,
     "boven_plank": 4.0
   },
-  "slinger": {
-    "slingertijd_s": 0.77,
-    "massa_g": 42.0,
-    "zwaartepunt_y": 18.4,
-    "mes_draagt_y": [
-      16.9,
-      22.9
+  "mijnberg": {
+    "trechter_buiten_graden": 64.0,
+    "trechter_wig_graden": 65.0,
+    "trechter_onderaan_x": [
+      6.2,
+      93.6
     ],
-    "draaien_voor_de_flanken_raken": 45.0,
-    "uitdemping": {
-      "0.02": [
-        35.0,
-        34.2,
-        33.5,
-        32.8,
-        32.1,
-        31.4
+    "karretje_binnen_x": [
+      5.4,
+      94.6
+    ],
+    "sleuf_y": [
+      1.2,
+      9.6
+    ],
+    "spleet_y": [
+      2.4,
+      8.4
+    ],
+    "karretje_inhoud_cm3": 263.0,
+    "tien_munten_cm3": 22.0,
+    "munten_plat_op_de_bodem": 9,
+    "massa_g": 588.0,
+    "zwaartepunt_y": 8.9,
+    "zwaartepunt_z_boven_tafel": 115.2,
+    "voet_y": [
+      -40.0,
+      66.0
+    ],
+    "voet_x": 116.0,
+    "kantelkracht_achteruit_N": 3.8,
+    "kantelkracht_vooruit_N": 4.5,
+    "kantelkracht_opzij_N": 9.0
+  },
+  "eindmodel": {
+    "simulatie": {
+      "tabel": [
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.531,
+            0.547,
+            0.469
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.516,
+            0.516,
+            0.422
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.484,
+            0.531,
+            0.516
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.531,
+            0.516,
+            0.469
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.438,
+            0.422,
+            0.453
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.516,
+            0.531,
+            0.438
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.547,
+            0.516,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.484,
+            0.453,
+            0.438
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.516,
+            0.516,
+            0.453
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.438,
+            0.609,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.641,
+            0.594,
+            0.422
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.531,
+            0.453,
+            0.438
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.562,
+            0.578,
+            0.531
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.469,
+            0.5,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.453,
+            0.438,
+            0.359
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.609,
+            0.578,
+            0.453
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.469,
+            0.531,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.484,
+            0.422,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.438,
+            0.5,
+            0.531
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.484,
+            0.453,
+            0.469
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.516,
+            0.531,
+            0.578
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.516,
+            0.5,
+            0.453
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.5,
+            0.578,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.469,
+            0.469,
+            0.484
+          ]
+        ]
       ],
-      "0.06": [
-        35.0,
-        33.3,
-        31.6,
-        29.9,
-        28.4,
-        26.8
+      "vast": 0,
+      "totaal": 4608,
+      "muntjes_per_cel": 64,
+      "kleinste_uitslag": 19.409858974587408,
+      "mediaan_uitslag": 28.849177072455596,
+      "per_mik": [
+        0.505859375,
+        0.51171875,
+        0.4720052083333333
+      ],
+      "mikeffect_per_stuit": {
+        "0.3": 0.045,
+        "0.5": 0.07,
+        "0.7": -0.014
+      },
+      "splitsingen": [
+        2,
+        15,
+        37,
+        55,
+        69,
+        62,
+        38,
+        21,
+        1
       ]
-    }
-  },
-  "spelingen": {
-    "paren": [
-      {
-        "paar": "plank - achterplaat",
-        "speling": 0.5,
-        "hoek": -35.0
-      },
-      {
-        "paar": "plank en naaf - voorplaat",
-        "speling": 0.5,
-        "hoek": -35.0
-      },
-      {
-        "paar": "slingerarm - voorplaat",
-        "speling": 0.5,
-        "hoek": -35.0
-      },
-      {
-        "paar": "slingerarm - beugel",
-        "speling": 0.5,
-        "hoek": -35.0
-      },
-      {
-        "paar": "gewicht - voet",
-        "speling": 3.6,
-        "hoek": -5.0
-      },
-      {
-        "paar": "mesblok - voorplaat",
-        "speling": 5.5,
-        "hoek": -35.0
+    },
+    "slinger": {
+      "slingertijd_s": 0.77,
+      "massa_g": 44.0,
+      "zwaartepunt_onder_as": 115.0,
+      "zwaartepunt_y": 21.7,
+      "mes_draagt_y": [
+        19.9,
+        25.9
+      ],
+      "draaien_voor_de_flanken_raken": 45.0,
+      "uitdemping": {
+        "0.02": [
+          35.0,
+          34.2,
+          33.4,
+          32.7,
+          32.0,
+          31.2
+        ],
+        "0.06": [
+          35.0,
+          33.1,
+          31.3,
+          29.5,
+          27.8,
+          26.1
+        ]
       }
-    ],
-    "botsingen": [],
-    "mes_op_groef": 0.0
+    },
+    "spelingen": {
+      "paren": [
+        {
+          "paar": "plank - voorplaat",
+          "speling": 0.5,
+          "hoek": -35.0
+        },
+        {
+          "paar": "plank - achterplaat",
+          "speling": 0.5,
+          "hoek": -35.0
+        },
+        {
+          "paar": "steel - beugel",
+          "speling": 0.5,
+          "hoek": -35.0
+        },
+        {
+          "paar": "plank - beugel",
+          "speling": 0.8,
+          "hoek": -35.0
+        },
+        {
+          "paar": "steel - mijnhout",
+          "speling": 1.9,
+          "hoek": -35.0
+        },
+        {
+          "paar": "kop - mijnhout",
+          "speling": 1.9,
+          "hoek": -35.0
+        },
+        {
+          "paar": "steel - voorplaat",
+          "speling": 3.5,
+          "hoek": -35.0
+        },
+        {
+          "paar": "kop - voorplaat",
+          "speling": 3.5,
+          "hoek": -35.0
+        },
+        {
+          "paar": "steel - achterplaat",
+          "speling": 4.4,
+          "hoek": -35.0
+        },
+        {
+          "paar": "kop - achterplaat",
+          "speling": 4.4,
+          "hoek": -35.0
+        }
+      ],
+      "botsingen": [],
+      "mes_op_groef": 0.0
+    },
+    "passingen": [
+      {
+        "wat": "nokje Ø 3.0 in de voorplaat (26 stuks tegelijk)",
+        "param": "NOK_GAT",
+        "speling": 0.1,
+        "soort": "licht klemmen"
+      },
+      {
+        "wat": "pennetjes Ø 3 van de steel in het mesblok",
+        "param": "MES_GAT",
+        "speling": 0.05,
+        "soort": "klemmen"
+      },
+      {
+        "wat": "pennen Ø 4 van de voorplaat in de beugel (liggend druppelgat)",
+        "param": "BEUGEL_GAT",
+        "speling": 0.05,
+        "soort": "klemmen"
+      },
+      {
+        "wat": "zeskant van de plank in de steel",
+        "param": "ZESKANT_SPEL",
+        "speling": 0.1,
+        "soort": "schuiven zonder wiebelen"
+      },
+      {
+        "wat": "naaf van de plank in het gat van de voorplaat",
+        "param": "NAAF_R",
+        "speling": 0.999,
+        "soort": "vrij"
+      },
+      {
+        "wat": "pennetjes Ø 3 van de steel in de houweelkop",
+        "param": "MES_GAT",
+        "speling": 0.05,
+        "soort": "klemmen"
+      },
+      {
+        "wat": "steel in de gleuf van de houweelkop",
+        "param": "",
+        "speling": 0.15,
+        "soort": "schuiven"
+      },
+      {
+        "wat": "zijranden en mijnhout in de kokers van de mijnberg",
+        "param": "SPEL",
+        "speling": 0.3,
+        "soort": "schuiven"
+      },
+      {
+        "wat": "nokjes van het mijnhout in de voorplaat",
+        "param": "",
+        "speling": 0.199,
+        "soort": "vrij (houden het raamwerk op zijn plaats)"
+      },
+      {
+        "wat": "tong van de verdelervin in de wig",
+        "param": "VIN_SLEUF",
+        "speling": 0.1,
+        "soort": "klemmen"
+      },
+      {
+        "wat": "verdelervin in de spleet",
+        "param": "",
+        "speling": 0.6,
+        "soort": "vrij"
+      },
+      {
+        "wat": "voeten van het portaal over de bovenrand van het bord",
+        "param": "",
+        "speling": 0.2,
+        "soort": "schuiven"
+      },
+      {
+        "wat": "karretjes in de tunnels",
+        "param": "KAR_SPEL",
+        "speling": 0.8,
+        "soort": "schuiven"
+      },
+      {
+        "wat": "bovenrand van de karretjes onder het dek",
+        "param": "KAR_RAND_ONDER_DEK",
+        "speling": 1.0,
+        "soort": "vrij (kleiner dan een muntje)"
+      }
+    ]
   },
-  "passingen": [
-    {
-      "wat": "nokje Ø 3.0 in de voorplaat (26 stuks tegelijk)",
-      "param": "NOK_GAT",
-      "speling": 0.1,
-      "soort": "licht klemmen"
+  "pasproef": {
+    "simulatie": {
+      "tabel": [
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.547,
+            0.531,
+            0.516
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.406,
+            0.328,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.531,
+            0.562,
+            0.516
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.641,
+            0.531,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.5,
+            0.422,
+            0.453
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.547,
+            0.484,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.438,
+            0.422,
+            0.359
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.406,
+            0.453,
+            0.391
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.562,
+            0.562,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.516,
+            0.469,
+            0.453
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.562,
+            0.562,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.438,
+            0.406,
+            0.391
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.469,
+            0.469,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.453,
+            0.484,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.453,
+            0.359,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.547,
+            0.609,
+            0.547
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.562,
+            0.422,
+            0.469
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.469,
+            0.516,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.5,
+            0.484,
+            0.422
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.562,
+            0.453,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.578,
+            0.484,
+            0.531
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.391,
+            0.516,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.516,
+            0.438,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.578,
+            0.422,
+            0.484
+          ]
+        ]
+      ],
+      "vast": 0,
+      "totaal": 4608,
+      "muntjes_per_cel": 64,
+      "kleinste_uitslag": 16.13952685170019,
+      "mediaan_uitslag": 29.15657199764042,
+      "per_mik": [
+        0.5071614583333334,
+        0.474609375,
+        0.4765625
+      ],
+      "mikeffect_per_stuit": {
+        "0.3": 0.041,
+        "0.5": 0.018,
+        "0.7": 0.033
+      },
+      "splitsingen": [
+        1,
+        7,
+        40,
+        73,
+        78,
+        49,
+        40,
+        11,
+        1
+      ]
     },
-    {
-      "wat": "pennetjes Ø 3 van de arm in het mesblok",
-      "param": "MES_GAT",
-      "speling": 0.05,
-      "soort": "klemmen"
+    "slinger": {
+      "slingertijd_s": 0.77,
+      "massa_g": 42.0,
+      "zwaartepunt_onder_as": 128.0,
+      "zwaartepunt_y": 17.9,
+      "mes_draagt_y": [
+        16.9,
+        22.9
+      ],
+      "draaien_voor_de_flanken_raken": 45.0,
+      "uitdemping": {
+        "0.02": [
+          35.0,
+          34.2,
+          33.5,
+          32.8,
+          32.1,
+          31.4
+        ],
+        "0.06": [
+          35.0,
+          33.3,
+          31.6,
+          29.9,
+          28.4,
+          26.8
+        ]
+      }
     },
-    {
-      "wat": "pennen Ø 4 van de voorplaat in de beugel (liggend druppelgat)",
-      "param": "BEUGEL_GAT",
-      "speling": 0.05,
-      "soort": "klemmen"
+    "spelingen": {
+      "paren": [
+        {
+          "paar": "plank - voorplaat",
+          "speling": 0.5,
+          "hoek": -35.0
+        },
+        {
+          "paar": "plank - achterplaat",
+          "speling": 0.5,
+          "hoek": -35.0
+        },
+        {
+          "paar": "slinger - voorplaat",
+          "speling": 0.5,
+          "hoek": -35.0
+        },
+        {
+          "paar": "slinger - beugel",
+          "speling": 0.5,
+          "hoek": -35.0
+        },
+        {
+          "paar": "plank - beugel",
+          "speling": 0.8,
+          "hoek": -35.0
+        },
+        {
+          "paar": "slinger - achterplaat",
+          "speling": 1.4,
+          "hoek": -35.0
+        },
+        {
+          "paar": "slinger - voet",
+          "speling": 3.6,
+          "hoek": -5.0
+        },
+        {
+          "paar": "mesblok - voorplaat",
+          "speling": 5.5,
+          "hoek": -35.0
+        }
+      ],
+      "botsingen": [],
+      "mes_op_groef": 0.0
     },
-    {
-      "wat": "zeskant van de plank in de arm",
-      "param": "ZESKANT_SPEL",
-      "speling": 0.1,
-      "soort": "schuiven zonder wiebelen"
-    },
-    {
-      "wat": "zijranden in de kokers van de voet",
-      "param": "SPEL",
-      "speling": 0.3,
-      "soort": "schuiven"
-    },
-    {
-      "wat": "naaf van de plank in het gat van de voorplaat",
-      "param": "NAAF_R",
-      "speling": 0.999,
-      "soort": "vrij"
-    },
-    {
-      "wat": "vin van de verdeler in de spleet",
-      "param": "",
-      "speling": 0.6,
-      "soort": "vrij"
-    }
-  ],
-  "print": {
+    "passingen": [
+      {
+        "wat": "nokje Ø 3.0 in de voorplaat (26 stuks tegelijk)",
+        "param": "NOK_GAT",
+        "speling": 0.1,
+        "soort": "licht klemmen"
+      },
+      {
+        "wat": "pennetjes Ø 3 van de arm in het mesblok",
+        "param": "MES_GAT",
+        "speling": 0.05,
+        "soort": "klemmen"
+      },
+      {
+        "wat": "pennen Ø 4 van de voorplaat in de beugel (liggend druppelgat)",
+        "param": "BEUGEL_GAT",
+        "speling": 0.05,
+        "soort": "klemmen"
+      },
+      {
+        "wat": "zeskant van de plank in de arm",
+        "param": "ZESKANT_SPEL",
+        "speling": 0.1,
+        "soort": "schuiven zonder wiebelen"
+      },
+      {
+        "wat": "naaf van de plank in het gat van de voorplaat",
+        "param": "NAAF_R",
+        "speling": 0.999,
+        "soort": "vrij"
+      },
+      {
+        "wat": "zijranden in de kokers van de voet",
+        "param": "SPEL",
+        "speling": 0.3,
+        "soort": "schuiven"
+      },
+      {
+        "wat": "vin van de verdeler in de spleet",
+        "param": "",
+        "speling": 0.6,
+        "soort": "vrij"
+      }
+    ]
+  },
+  "print_eind": {
     "1 passtrip": {
       "kleuren": {
         "11101": {
@@ -139,7 +1043,10 @@
       ],
       "lagen_met_kleurwissel": 0,
       "geschatte_wissels": 0,
-      "kleur": "11101"
+      "kleuren_codes": [
+        "11101"
+      ],
+      "gram_geschat": 5.0
     },
     "2 achterplaat": {
       "kleuren": {
@@ -167,7 +1074,368 @@
       ],
       "lagen_met_kleurwissel": 0,
       "geschatte_wissels": 0,
-      "kleur": "11101"
+      "kleuren_codes": [
+        "11101"
+      ],
+      "gram_geschat": 48.0
+    },
+    "3 voorplaat": {
+      "kleuren": {
+        "11101": {
+          "volume_cm3": 112.12,
+          "z_mm": [
+            0.0,
+            16.5
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 1512.0,
+      "korte_bruggen_mm2": 0.0,
+      "maat_mm": [
+        218.0,
+        230.0,
+        16.5
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        38.0,
+        26.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0,
+      "kleuren_codes": [
+        "11101"
+      ],
+      "gram_geschat": 29.0
+    },
+    "4 mijnhout": {
+      "kleuren": {
+        "11800": {
+          "volume_cm3": 25.66,
+          "z_mm": [
+            0.0,
+            2.4
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [
+        {
+          "kleur": "11800",
+          "grootste_te_smalle_stuk_mm2": 0.22,
+          "plek_mm": [
+            40.5,
+            89.3,
+            0.3
+          ]
+        }
+      ],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 1263.0,
+      "maat_mm": [
+        218.0,
+        244.0,
+        2.4
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        38.0,
+        12.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0,
+      "kleuren_codes": [
+        "11800"
+      ],
+      "gram_geschat": 11.0
+    },
+    "5 mijnberg en tienveld": {
+      "kleuren": {
+        "11203": {
+          "volume_cm3": 381.29,
+          "z_mm": [
+            0.0,
+            40.0
+          ]
+        }
+      },
+      "overhang": [
+        {
+          "oppervlak_mm2": 138.9,
+          "hoek_tov_horizontaal_graden": 0.0,
+          "plek_mm": [
+            24.0,
+            77.5,
+            15.0
+          ]
+        },
+        {
+          "oppervlak_mm2": 138.9,
+          "hoek_tov_horizontaal_graden": 0.0,
+          "plek_mm": [
+            232.0,
+            77.5,
+            15.0
+          ]
+        }
+      ],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 2.0,
+      "korte_bruggen_mm2": 1101.0,
+      "kleine_liggende_gaten_mm2": 25.0,
+      "maat_mm": [
+        232.0,
+        208.8,
+        40.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        24.0,
+        47.2
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0,
+      "kleuren_codes": [
+        "11203"
+      ],
+      "gram_geschat": 136.0
+    },
+    "6 portaal, steel, beugel, mesblok": {
+      "kleuren": {
+        "11800": {
+          "volume_cm3": 71.56,
+          "z_mm": [
+            0.0,
+            17.7
+          ]
+        },
+        "11101": {
+          "volume_cm3": 0.34,
+          "z_mm": [
+            9.99,
+            10.6
+          ]
+        }
+      },
+      "overhang": [
+        {
+          "oppervlak_mm2": 134.4,
+          "hoek_tov_horizontaal_graden": 0.0,
+          "plek_mm": [
+            25.0,
+            238.4,
+            15.3
+          ]
+        },
+        {
+          "oppervlak_mm2": 134.4,
+          "hoek_tov_horizontaal_graden": 0.0,
+          "plek_mm": [
+            231.0,
+            238.4,
+            15.3
+          ]
+        }
+      ],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 129.0,
+      "korte_bruggen_mm2": 13.0,
+      "maat_mm": [
+        226.0,
+        226.0,
+        17.7
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        30.0,
+        30.0
+      ],
+      "lagen_met_kleurwissel": 3,
+      "geschatte_wissels": 3,
+      "kleurwissel_tussen_z_mm": [
+        10.1,
+        10.5
+      ],
+      "kleuren_codes": [
+        "11800",
+        "11101"
+      ],
+      "gram_geschat": 34.0
+    },
+    "7 houweelkop, plank, verdelervin": {
+      "kleuren": {
+        "10402": {
+          "volume_cm3": 26.98,
+          "z_mm": [
+            0.0,
+            20.0
+          ]
+        }
+      },
+      "overhang": [
+        {
+          "oppervlak_mm2": 330.2,
+          "hoek_tov_horizontaal_graden": 15.9,
+          "plek_mm": [
+            128.0,
+            147.9,
+            5.1
+          ]
+        }
+      ],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 15.0,
+      "maat_mm": [
+        90.3,
+        80.2,
+        20.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        165.7,
+        175.8
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0,
+      "kleuren_codes": [
+        "10402"
+      ],
+      "gram_geschat": 32.0
+    },
+    "8 karretjes": {
+      "kleuren": {
+        "10205": {
+          "volume_cm3": 63.51,
+          "z_mm": [
+            0.0,
+            31.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 77.0,
+      "korte_bruggen_mm2": 0.0,
+      "maat_mm": [
+        198.4,
+        105.0,
+        31.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        57.6,
+        151.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0,
+      "kleuren_codes": [
+        "10205"
+      ],
+      "gram_geschat": 50.0
+    },
+    "9 munten": {
+      "kleuren": {
+        "10402": {
+          "volume_cm3": 10.93,
+          "z_mm": [
+            0.0,
+            2.25
+          ]
+        },
+        "11600": {
+          "volume_cm3": 10.62,
+          "z_mm": [
+            2.25,
+            4.5
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 277.0,
+      "korte_bruggen_mm2": 0.0,
+      "maat_mm": [
+        145.0,
+        55.0,
+        4.5
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        111.0,
+        201.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0,
+      "kleuren_codes": [
+        "10402",
+        "11600"
+      ],
+      "gram_geschat": 10.0
+    }
+  },
+  "print_proef": {
+    "1 passtrip": {
+      "kleuren": {
+        "11101": {
+          "volume_cm3": 10.94,
+          "z_mm": [
+            0.0,
+            11.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 212.0,
+      "korte_bruggen_mm2": 0.0,
+      "maat_mm": [
+        119.0,
+        40.0,
+        11.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        137.0,
+        216.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0,
+      "kleuren_codes": [
+        "11101"
+      ]
+    },
+    "2 achterplaat": {
+      "kleuren": {
+        "11101": {
+          "volume_cm3": 167.02,
+          "z_mm": [
+            0.0,
+            10.0
+          ]
+        }
+      },
+      "overhang": [],
+      "dunne_details": [],
+      "vlakken_rond_45_graden_mm2": 0.0,
+      "korte_bruggen_mm2": 140.0,
+      "maat_mm": [
+        218.0,
+        230.0,
+        10.0
+      ],
+      "past_op_A1": true,
+      "vrije_strook_mm": [
+        38.0,
+        26.0
+      ],
+      "lagen_met_kleurwissel": 0,
+      "geschatte_wissels": 0,
+      "kleuren_codes": [
+        "11101"
+      ]
     },
     "3 voorplaat": {
       "kleuren": {
@@ -195,7 +1463,9 @@
       ],
       "lagen_met_kleurwissel": 0,
       "geschatte_wissels": 0,
-      "kleur": "11101"
+      "kleuren_codes": [
+        "11101"
+      ]
     },
     "4 voet en beugel": {
       "kleuren": {
@@ -223,7 +1493,9 @@
       ],
       "lagen_met_kleurwissel": 0,
       "geschatte_wissels": 0,
-      "kleur": "11800"
+      "kleuren_codes": [
+        "11800"
+      ]
     },
     "5 slinger, mesblok en plank": {
       "kleuren": {
@@ -251,7 +1523,9 @@
       ],
       "lagen_met_kleurwissel": 0,
       "geschatte_wissels": 0,
-      "kleur": "10205"
+      "kleuren_codes": [
+        "10205"
+      ]
     },
     "6 munten": {
       "kleuren": {
@@ -279,350 +1553,10 @@
       ],
       "lagen_met_kleurwissel": 0,
       "geschatte_wissels": 0,
-      "kleur": "11600"
-    }
-  },
-  "simulatie": {
-    "tabel": [
-      [
-        {
-          "stuit": 0.3,
-          "wrijving": 0.2,
-          "demping": 0.75
-        },
-        0.02,
-        [
-          0.547,
-          0.531,
-          0.516
-        ]
-      ],
-      [
-        {
-          "stuit": 0.3,
-          "wrijving": 0.2,
-          "demping": 0.75
-        },
-        0.06,
-        [
-          0.406,
-          0.328,
-          0.484
-        ]
-      ],
-      [
-        {
-          "stuit": 0.3,
-          "wrijving": 0.2,
-          "demping": 0.95
-        },
-        0.02,
-        [
-          0.531,
-          0.562,
-          0.516
-        ]
-      ],
-      [
-        {
-          "stuit": 0.3,
-          "wrijving": 0.2,
-          "demping": 0.95
-        },
-        0.06,
-        [
-          0.641,
-          0.531,
-          0.484
-        ]
-      ],
-      [
-        {
-          "stuit": 0.3,
-          "wrijving": 0.5,
-          "demping": 0.75
-        },
-        0.02,
-        [
-          0.5,
-          0.422,
-          0.453
-        ]
-      ],
-      [
-        {
-          "stuit": 0.3,
-          "wrijving": 0.5,
-          "demping": 0.75
-        },
-        0.06,
-        [
-          0.547,
-          0.484,
-          0.484
-        ]
-      ],
-      [
-        {
-          "stuit": 0.3,
-          "wrijving": 0.5,
-          "demping": 0.95
-        },
-        0.02,
-        [
-          0.438,
-          0.422,
-          0.359
-        ]
-      ],
-      [
-        {
-          "stuit": 0.3,
-          "wrijving": 0.5,
-          "demping": 0.95
-        },
-        0.06,
-        [
-          0.406,
-          0.453,
-          0.391
-        ]
-      ],
-      [
-        {
-          "stuit": 0.5,
-          "wrijving": 0.2,
-          "demping": 0.75
-        },
-        0.02,
-        [
-          0.562,
-          0.562,
-          0.484
-        ]
-      ],
-      [
-        {
-          "stuit": 0.5,
-          "wrijving": 0.2,
-          "demping": 0.75
-        },
-        0.06,
-        [
-          0.516,
-          0.469,
-          0.453
-        ]
-      ],
-      [
-        {
-          "stuit": 0.5,
-          "wrijving": 0.2,
-          "demping": 0.95
-        },
-        0.02,
-        [
-          0.562,
-          0.562,
-          0.5
-        ]
-      ],
-      [
-        {
-          "stuit": 0.5,
-          "wrijving": 0.2,
-          "demping": 0.95
-        },
-        0.06,
-        [
-          0.438,
-          0.406,
-          0.391
-        ]
-      ],
-      [
-        {
-          "stuit": 0.5,
-          "wrijving": 0.5,
-          "demping": 0.75
-        },
-        0.02,
-        [
-          0.469,
-          0.469,
-          0.5
-        ]
-      ],
-      [
-        {
-          "stuit": 0.5,
-          "wrijving": 0.5,
-          "demping": 0.75
-        },
-        0.06,
-        [
-          0.453,
-          0.484,
-          0.5
-        ]
-      ],
-      [
-        {
-          "stuit": 0.5,
-          "wrijving": 0.5,
-          "demping": 0.95
-        },
-        0.02,
-        [
-          0.453,
-          0.359,
-          0.484
-        ]
-      ],
-      [
-        {
-          "stuit": 0.5,
-          "wrijving": 0.5,
-          "demping": 0.95
-        },
-        0.06,
-        [
-          0.547,
-          0.609,
-          0.547
-        ]
-      ],
-      [
-        {
-          "stuit": 0.7,
-          "wrijving": 0.2,
-          "demping": 0.75
-        },
-        0.02,
-        [
-          0.562,
-          0.422,
-          0.469
-        ]
-      ],
-      [
-        {
-          "stuit": 0.7,
-          "wrijving": 0.2,
-          "demping": 0.75
-        },
-        0.06,
-        [
-          0.469,
-          0.516,
-          0.484
-        ]
-      ],
-      [
-        {
-          "stuit": 0.7,
-          "wrijving": 0.2,
-          "demping": 0.95
-        },
-        0.02,
-        [
-          0.5,
-          0.484,
-          0.422
-        ]
-      ],
-      [
-        {
-          "stuit": 0.7,
-          "wrijving": 0.2,
-          "demping": 0.95
-        },
-        0.06,
-        [
-          0.562,
-          0.453,
-          0.5
-        ]
-      ],
-      [
-        {
-          "stuit": 0.7,
-          "wrijving": 0.5,
-          "demping": 0.75
-        },
-        0.02,
-        [
-          0.578,
-          0.484,
-          0.531
-        ]
-      ],
-      [
-        {
-          "stuit": 0.7,
-          "wrijving": 0.5,
-          "demping": 0.75
-        },
-        0.06,
-        [
-          0.391,
-          0.516,
-          0.5
-        ]
-      ],
-      [
-        {
-          "stuit": 0.7,
-          "wrijving": 0.5,
-          "demping": 0.95
-        },
-        0.02,
-        [
-          0.516,
-          0.438,
-          0.5
-        ]
-      ],
-      [
-        {
-          "stuit": 0.7,
-          "wrijving": 0.5,
-          "demping": 0.95
-        },
-        0.06,
-        [
-          0.578,
-          0.422,
-          0.484
-        ]
+      "kleuren_codes": [
+        "11600"
       ]
-    ],
-    "vast": 0,
-    "totaal": 4608,
-    "muntjes_per_cel": 64,
-    "kleinste_uitslag": 16.13952685170019,
-    "mediaan_uitslag": 29.15657199764042,
-    "per_mik": [
-      0.5071614583333334,
-      0.474609375,
-      0.4765625
-    ],
-    "mikeffect_per_stuit": {
-      "0.3": 0.041,
-      "0.5": 0.018,
-      "0.7": 0.033
-    },
-    "splitsingen": [
-      1,
-      7,
-      40,
-      73,
-      78,
-      49,
-      40,
-      11,
-      1
-    ]
+    }
   },
   "slicer": {
     "1 passtrip": {

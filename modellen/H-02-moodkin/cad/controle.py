@@ -238,7 +238,7 @@ def main():
            f"'bang', hoogstens {fmt(P.BRUG, 0)} mm breed) zijn even goed bruggen, maar in een wand van "
            f"{fmt(P.TROMMEL_WAND)} mm telt printcheck ze als korte brug. Alle plafonds zijn in 2D gecontroleerd (zie 1). "
            "Korte bruggen (< 3 mm) en de plafonds van de pengaatjes en gleufjes onder het deksel tellen niet als overhang.",
-           "", "Het gewicht is geschat uit de doorsneden (de wanden uit het project, 15 % infill), niet met een slicer.", "",
+           "", "Het gewicht is geschat uit de doorsneden (de wanden uit het project, boven- en onderlagen, 15 % infill), niet met een slicer.", "",
            "Niet getest: een echte print, het klikken, en hoe fel het licht door de gaten komt met een echt "
            "LED-theelichtje."]
     (OUT / "RAPPORT.md").write_text("\n".join(L_) + "\n")

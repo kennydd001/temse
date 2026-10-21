@@ -20,7 +20,7 @@ more: a **tombstone**. The figure itself looks like none of the four.
 |---|---|
 | Variants | **four shadows**: pumpkin, ghost, skull and tombstone, every 45° · **BOO and skull** and **TRICK and TREAT**: two shadows, every 90° |
 | Size | four shadows 56 × 52 × 60 mm · BOO 120 × 48 × 55 mm · TRICK 112 × 124 × 36 mm. Everything fits on the A1 mini |
-| Filament | about 20 g · 53 g · 82 g (estimated) |
+| Filament | about 24 g · 63 g · 102 g (estimated) |
 | You need | a flashlight (the one on your phone) and a light wall. No supports, screws or glue |
 
 ## How it works
@@ -63,9 +63,9 @@ Open `print/schaduwspook.3mf` in Bambu Studio. There is one plate per variant:
 
 | Plate | Variant | Colour in the project | Filament (estimated) |
 |---|---|---|---|
-| 1 | four shadows | Pumpkin Orange 10301 | ~20 g |
-| 2 | BOO and skull | Charcoal 11101 | ~53 g |
-| 3 | TRICK and TREAT | Pumpkin Orange 10301 | ~82 g |
+| 1 | four shadows | Pumpkin Orange 10301 | ~24 g |
+| 2 | BOO and skull | Charcoal 11101 | ~63 g |
+| 3 | TRICK and TREAT | Pumpkin Orange 10301 | ~102 g |
 
 - **Settings**: *0.20mm Standard @BBL A1* on the *Textured PEI Plate*, 0.4 mm nozzle. **No supports, no
   brim.** The project sets 3 walls and gyroid infill per figure.

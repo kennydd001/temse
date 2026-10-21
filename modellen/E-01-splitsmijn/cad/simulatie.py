@@ -14,7 +14,10 @@ wrijving (0,2 .. 0,5) en demping. Het antwoord is pas betrouwbaar als het over d
 Een ronde zoals in de klas: het kind geeft de slinger een duw, en gooit dan 8 muntjes, eentje om de
 0,8 .. 2 seconden, en mikt daarbij steeds op dezelfde plek in de trechter (links, midden of rechts).
 
-Gebruik:  python simulatie.py          (drukt de tabellen af)
+Eindmodel: ruimte(..., eind=True, massa=mijn.slingermassa()) zet onder het bord de mijnberg (verdelervin, middenwig
+en trechters naar de karretjes) en de houweel met zijn echte massa; een muntje telt als het in een karretje is.
+
+Gebruik:  python simulatie.py          (drukt de tabellen af, voor de pasproef)
 """
 import itertools
 import math
@@ -45,8 +48,8 @@ def slinger_massa():
     return m, d_z, I
 
 
-def slingertijd():
-    m, d, I = slinger_massa()
+def slingertijd(massa=None):
+    m, d, I = massa or slinger_massa()
     return 2 * math.pi * math.sqrt(I / (m * G * d))
 
 
@@ -57,23 +60,28 @@ def zet_uitslag(sl, graden):
     sl.velocity, sl.angular_velocity = (0, 0), 0.0
 
 
-def ruimte(stuit=0.5, wrijving=0.3, pen=0.3):
+def ruimte(stuit=0.5, wrijving=0.3, pen=0.3, eind=False, massa=None):
+    """eind: onder het bord de mijnberg van het eindmodel (verdelervin, middenwig, trechters naar de
+    karretjes) in plaats van de open bakjes van de pasproef. massa: (m, d, I) van de slinger."""
     sp = pymunk.Space()
     sp.gravity = (0, -G)
     st = sp.static_body
     W, top = P.BINNEN_HALF, P.PLAFOND_Z
-    vorm = [pymunk.Segment(st, (s * W, -80), (s * W, top), 0.5) for s in (-1, 1)]
+    onder = 0.0 if eind else -80.0
+    vorm = [pymunk.Segment(st, (s * W, onder), (s * W, top), 0.5) for s in (-1, 1)]
     vorm += [pymunk.Segment(st, (-W, top), (-P.INWORP_HALF, top), 0.5),
              pymunk.Segment(st, (P.INWORP_HALF, top), (W, top), 0.5)]
     vorm += [pymunk.Circle(st, P.PIN_D / 2, xz) for xz in P.pinnen()]
     vorm += [pymunk.Circle(st, P.BULT_R, xz) for xz in P.bulten()]
     h, t = P.VERDELER_T / 2, P.VERDELER_TOP
-    vorm.append(pymunk.Poly(st, [(-h, -80), (h, -80), (h, t - h), (0, t), (-h, t - h)]))
+    vorm.append(pymunk.Poly(st, [(-h, onder), (h, onder), (h, t - h), (0, t), (-h, t - h)]))
+    if eind:
+        vorm += mijnberg_vormen(st)
     for v in vorm:
         v.elasticity, v.friction = stuit, wrijving
     sp.add(*vorm)
     # slinger met kantelplank: alleen de plank zit in de spleet bij de muntjes
-    m, d, I = slinger_massa()
+    m, d, I = massa or slinger_massa()
     sl = pymunk.Body(m, I - m * d * d)
     sl.position = (0, P.Z_PLANK)
     sl.center_of_gravity = (0, -d)
@@ -87,6 +95,24 @@ def ruimte(stuit=0.5, wrijving=0.3, pen=0.3):
     rem.max_force = pen * m * G * 2.0    # droge wrijving, als een pen van 4 mm
     sp.add(rem)
     return sp, sl
+
+
+def mijnberg_vormen(st):
+    """Het dek van de mijnberg in het x-z-vlak: middenwig onder de vin, trechters, en de wanden van de
+    karretjes tot onder hun bovenrand (een muntje dat daar is, ligt in het karretje)."""
+    wig0, wig1 = P.WIG
+    kar_binnen = P.TUNNEL_X[1] - P.KAR_SPEL - P.KAR_WAND - 1.0
+    rand = -P.DEK - P.KAR_RAND_ONDER_DEK
+    out = [pymunk.Poly(st, [(-wig0, 0), (wig0, 0), (wig1, -P.DEK), (-wig1, -P.DEK)])]
+    for s in (-1, 1):
+        out.append(pymunk.Segment(st, (s * P.BINNEN_HALF, 0), (s * P.TRECHTER_BOVEN, 0), 0.5))     # randje bovenaan
+        out.append(pymunk.Segment(st, (s * P.TRECHTER_BOVEN, 0), (s * kar_binnen, -P.DEK), 0.5))
+        x_in = P.TUNNEL_X[0] + P.KAR_SPEL
+        x_uit = P.TUNNEL_X[1] - P.KAR_SPEL
+        out.append(pymunk.Segment(st, (s * x_in, rand), (s * x_in, rand - 30), 0.8))     # binnenwand karretje
+        out.append(pymunk.Segment(st, (s * x_uit, rand), (s * x_uit, rand - 30), 0.8))
+        out.append(pymunk.Segment(st, (s * P.TUNNEL_X[0], -P.DEK), (s * P.TUNNEL_X[0], rand - 30), 0.5))
+    return out
 
 
 def nieuwe_munt(sp, rnd, mik, stuit, wrijving, demping=0.85):
@@ -105,9 +131,14 @@ def nieuwe_munt(sp, rnd, mik, stuit, wrijving, demping=0.85):
     return b, c
 
 
-def ronde(rnd, mik=0.0, n=8, stuit=0.5, wrijving=0.3, demping=0.85, pen=0.3, duw=(25.0, 40.0)):
-    """Eén duw, dan n muntjes. Geeft (uitkomsten 'L'/'R'/'vast', uitslag van de slinger bij het laatste muntje)."""
-    sp, sl = ruimte(stuit, wrijving, pen)
+def ronde(rnd, mik=0.0, n=8, stuit=0.5, wrijving=0.3, demping=0.85, pen=0.3, duw=(25.0, 40.0), eind=False,
+          massa=None):
+    """Eén duw, dan n muntjes. Geeft (uitkomsten 'L'/'R'/'vast', uitslag van de slinger bij het laatste muntje).
+
+    Pasproef: een muntje is binnen als het onder het bord uit is (z < -40). Eindmodel: als het onder de rand van
+    een karretje is (z < -15): verder rekent een 2D-model het niet, want daar gaat het plat liggen."""
+    sp, sl = ruimte(stuit, wrijving, pen, eind, massa)
+    binnen = -15.0 if eind else -40.0
     zet_uitslag(sl, rnd.uniform(*duw) * rnd.choice((-1, 1)))
     uit, uitslag = [], 0.0
     for _ in range(n):
@@ -118,18 +149,18 @@ def ronde(rnd, mik=0.0, n=8, stuit=0.5, wrijving=0.3, demping=0.85, pen=0.3, duw
         uitslag = math.degrees(hoogste)
         b, c = nieuwe_munt(sp, rnd, mik, stuit, wrijving, demping)
         t, stil = 0.0, 0.0
-        while b.position.y > -40 and t < 8.0:
+        while b.position.y > binnen and t < 8.0:
             sp.step(DT)
             t += DT
             stil = stil + DT if b.velocity.length < 2.0 else 0.0
             if stil > 2.0:
                 break
-        uit.append(("L" if b.position.x > 0 else "R") if b.position.y <= -40 else "vast")   # links voor het kind: +x
+        uit.append(("L" if b.position.x > 0 else "R") if b.position.y <= binnen else "vast")   # links voor het kind: +x
         sp.remove(b, c)
     return uit, uitslag
 
 
-def mikproef(rondes=12, seed=1):
+def mikproef(rondes=12, seed=1, **kw):
     """p(links) per materiaalset en mikpunt; hoeveel muntjes bleven hangen.
 
     De drie mikpunten krijgen dezelfde duwen en dezelfde tijden tussen de muntjes: het verschil tussen links
@@ -143,7 +174,7 @@ def mikproef(rondes=12, seed=1):
                 rnd = random.Random(seed * 10000 + i * 10 + j)
                 ls = 0
                 for _ in range(rondes):
-                    u, a = ronde(rnd, mik, pen=pen, **mat)
+                    u, a = ronde(rnd, mik, pen=pen, **mat, **kw)
                     ls += u.count("L")
                     vast += u.count("vast")
                     uitslagen.append(a)
@@ -152,14 +183,14 @@ def mikproef(rondes=12, seed=1):
     return tabel, vast, uitslagen
 
 
-def splitsingen(rondes=300, n=8, seed=2):
+def splitsingen(rondes=300, n=8, seed=2, **kw):
     """Hoe vaak komt elke splitsing van n voor (gemengde materiaalsets, mikpunt willekeurig)."""
     rnd = random.Random(seed)
     off = P.INWORP_HALF - P.MUNT_D / 2 - 0.05
     telling = [0] * (n + 1)
     for i in range(rondes):
         mat = MATERIAAL[i % len(MATERIAAL)]
-        u, _ = ronde(rnd, rnd.uniform(-off, off), n=n, pen=PEN_WRIJVING[i % 2], **mat)
+        u, _ = ronde(rnd, rnd.uniform(-off, off), n=n, pen=PEN_WRIJVING[i % 2], **mat, **kw)
         if "vast" not in u:
             telling[u.count("L")] += 1
     return telling
@@ -169,9 +200,9 @@ def binomiaal(n, p=0.5):
     return [math.comb(n, k) * p ** k * (1 - p) ** (n - k) for k in range(n + 1)]
 
 
-def uitdemping(pen, duw=35.0, tijd=30.0):
+def uitdemping(pen, duw=35.0, tijd=30.0, massa=None):
     """Uitslag van de slinger (graden) na elke 5 s, zonder muntjes."""
-    sp, sl = ruimte(pen=pen)
+    sp, sl = ruimte(pen=pen, massa=massa)
     zet_uitslag(sl, duw)
     out, t, hoogste = [], 0.0, 0.0
     while t < tijd:

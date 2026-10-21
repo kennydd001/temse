@@ -23,10 +23,10 @@ De projectie van het beeldje in elke kijkrichting, rij per rij (0,2 mm), tegen h
 
 | Variant | Maat | Eén stuk, waterdicht | A1 / A1 mini | Overhang > 48° (mm²) | Te smal (< 0,4 mm) | Gewicht (schatting) |
 |---|---|---|---|---|---|---|
-| vier schaduwen | 56 × 52 × 60 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 | ✅ geen | ~20 g |
-| BOO en schedel | 120 × 48 × 55 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 | ✅ geen | ~53 g |
-| TRICK en TREAT | 112 × 124 × 36 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 | ✅ geen | ~82 g |
+| vier schaduwen | 56 × 52 × 60 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 | ✅ geen | ~24 g |
+| BOO en schedel | 120 × 48 × 55 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 | ✅ geen | ~63 g |
+| TRICK en TREAT | 112 × 124 × 36 | ✅ 1 stuk | ✅ / ✅ | ✅ 0 | ✅ geen | ~102 g |
 
-*Te smal*: kleiner dan 1,5 mm² per laag telt niet (de punt van een boog of steeltje; de slicer laat dat weg). Het gewicht is geschat uit de doorsneden (2 wanden, 15 % infill), niet met een slicer.
+*Te smal*: kleiner dan 1,5 mm² per laag telt niet (de punt van een boog of steeltje; de slicer laat dat weg). Het gewicht is geschat uit de doorsneden (wanden, boven- en onderlagen, 15 % infill), niet met een slicer.
 
 Niet getest: de schaduw met een echte gsm-zaklamp. De renders gebruiken een puntlamp van 2 mm op 45 cm; een grotere of dichterbij gehouden lamp geeft een zachtere, iets vertekende schaduw.

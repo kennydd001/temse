@@ -1,0 +1,198 @@
+{
+  "1 passtrip": {
+    "gram": 11.2,
+    "seconden": 1880,
+    "support": false,
+    "groepen": [
+      {
+        "instellingen": {
+          "perimeters": 2
+        },
+        "gram": 9.0,
+        "tijd": "24m 10s",
+        "support_extrusie_mm": 0.0
+      },
+      {
+        "instellingen": {
+          "perimeters": 3
+        },
+        "gram": 2.2,
+        "tijd": "7m 10s",
+        "support_extrusie_mm": 0.0
+      }
+    ],
+    "tijd": "31m 20s"
+  },
+  "2 achterplaat": {
+    "gram": 138.4,
+    "seconden": 13062,
+    "support": false,
+    "groepen": [
+      {
+        "instellingen": {
+          "perimeters": 3
+        },
+        "gram": 138.4,
+        "tijd": "3h 37m 42s",
+        "support_extrusie_mm": 0.0
+      }
+    ],
+    "tijd": "3h 37m"
+  },
+  "3 voorplaat": {
+    "gram": 106.9,
+    "seconden": 11416,
+    "support": false,
+    "groepen": [
+      {
+        "instellingen": {
+          "perimeters": 2
+        },
+        "gram": 106.9,
+        "tijd": "3h 10m 16s",
+        "support_extrusie_mm": 0.0
+      }
+    ],
+    "tijd": "3h 10m"
+  },
+  "4 mijnhout": {
+    "gram": 33.3,
+    "seconden": 3994,
+    "support": false,
+    "groepen": [
+      {
+        "instellingen": {
+          "perimeters": 2
+        },
+        "gram": 33.3,
+        "tijd": "1h 6m 34s",
+        "support_extrusie_mm": 0.0
+      }
+    ],
+    "tijd": "1h 6m"
+  },
+  "5 mijnberg en tienveld": {
+    "gram": 195.4,
+    "seconden": 20500,
+    "support": false,
+    "groepen": [
+      {
+        "instellingen": {
+          "perimeters": 3
+        },
+        "gram": 165.4,
+        "tijd": "4h 50m 14s",
+        "support_extrusie_mm": 0.0
+      },
+      {
+        "instellingen": {
+          "perimeters": 2
+        },
+        "gram": 30.0,
+        "tijd": "51m 26s",
+        "support_extrusie_mm": 0.0
+      }
+    ],
+    "tijd": "5h 41m"
+  },
+  "6 portaal, steel, beugel, mesblok, kokervoeten en -kappen": {
+    "gram": 60.3,
+    "seconden": 6732,
+    "support": false,
+    "groepen": [
+      {
+        "instellingen": {
+          "perimeters": 3
+        },
+        "gram": 44.8,
+        "tijd": "1h 21m 51s",
+        "support_extrusie_mm": 0.0
+      },
+      {
+        "instellingen": {
+          "perimeters": 3,
+          "fill_density": "100%",
+          "fill_pattern": "rectilinear"
+        },
+        "gram": 11.3,
+        "tijd": "21m 4s",
+        "support_extrusie_mm": 0.0
+      },
+      {
+        "instellingen": {
+          "perimeters": 2
+        },
+        "gram": 4.2,
+        "tijd": "9m 17s",
+        "support_extrusie_mm": 0.0
+      }
+    ],
+    "tijd": "1h 52m"
+  },
+  "7 houweelkop, plank, verdelervin": {
+    "gram": 33.1,
+    "seconden": 2851,
+    "support": true,
+    "groepen": [
+      {
+        "instellingen": {
+          "perimeters": 3,
+          "fill_density": "100%",
+          "fill_pattern": "rectilinear"
+        },
+        "gram": 30.3,
+        "tijd": "37m 11s",
+        "support_extrusie_mm": 143.9
+      },
+      {
+        "instellingen": {
+          "perimeters": 4
+        },
+        "gram": 2.4,
+        "tijd": "8m 7s",
+        "support_extrusie_mm": 0.0
+      },
+      {
+        "instellingen": {
+          "perimeters": 3
+        },
+        "gram": 0.4,
+        "tijd": "2m 13s",
+        "support_extrusie_mm": 0.0
+      }
+    ],
+    "tijd": "47m 31s"
+  },
+  "8 karretjes": {
+    "gram": 77.8,
+    "seconden": 5136,
+    "support": false,
+    "groepen": [
+      {
+        "instellingen": {
+          "perimeters": 2
+        },
+        "gram": 77.8,
+        "tijd": "1h 25m 36s",
+        "support_extrusie_mm": 0.0
+      }
+    ],
+    "tijd": "1h 25m"
+  },
+  "9 munten": {
+    "gram": 16.5,
+    "seconden": 2139,
+    "support": false,
+    "groepen": [
+      {
+        "instellingen": {
+          "perimeters": 3
+        },
+        "gram": 16.5,
+        "tijd": "35m 39s",
+        "support_extrusie_mm": 0.0
+      }
+    ],
+    "tijd": "35m 39s"
+  }
+}
