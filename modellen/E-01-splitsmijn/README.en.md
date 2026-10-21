@@ -80,12 +80,14 @@ The checks rebuild the drop board in a 2D physics model, from the slot at the to
 Everything is in [controle/RAPPORT.md](controle/RAPPORT.md) (in Dutch). In short:
 
 - **Jamming**: 0 of 4608 coins got stuck. On the board, there is no spot where a coin can rest on two points.
-  The funnels are 56° and 65° steep: a coin always slides on.
-- **Aiming**: aiming left gives at most 7 percentage points more left than aiming right. Without the pickaxe
+  The funnels are 64° and 65° steep: a coin always slides on.
+- **Aiming**: aiming left gives at most 6 percentage points more left than aiming right. Without the pickaxe
   that is 30 to 90 percentage points.
 - **Splits** of 8 follow a fair coin: 4 + 4 comes up most often, 0 + 8 hardly ever.
 - **Fit**: over the pickaxe's whole swing nothing touches, with at least 0.5 mm clearance everywhere.
-- **Stability**: pushing the pickaxe backwards takes 3.8 N (about 390 g) before the board tips.
+- **Stability**: pushing the pickaxe backwards takes 4.3 N (about 440 g) before the board tips. In the socket
+  feet, the top of the board can wobble 5 mm at most.
+- **Printing**: everything prints without supports. PrusaSlicer gets 673 g and about 19 hours over the nine plates.
 
 ![Checks](controle/valbord.png)
 
@@ -142,7 +144,7 @@ colour changes on plates 6 and 9 comes on top.
     its back too: the letters are in the top layers.
   - The socket feet stand upright, plug down on the bed. The socket caps lie on their outer side.
 - Everything prints without supports. Even PrusaSlicer with automatic supports finds nothing, apart from a few
-  (0.5 g) under the bridge in the slot of the pickaxe head. Without supports it prints that as a bridge.
+  (0.4 g) under the bridge in the slot of the pickaxe head. Without supports it prints that as a bridge.
   - The carts stand upright, open at the top.
 
 | Part | Qty | Size (mm) | File |

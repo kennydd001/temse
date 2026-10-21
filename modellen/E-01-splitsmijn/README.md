@@ -81,12 +81,14 @@ De controle bouwt het valbord na in een 2D-fysicamodel, van de inworp tot in de 
 Alles staat in [controle/RAPPORT.md](controle/RAPPORT.md). Kort:
 
 - **Vastlopen**: 0 van 4608 muntjes bleven hangen. Op het bord is er nergens een plek waar een muntje op twee
-  steunpunten kan blijven liggen. De trechters staan 56° en 65° steil: daar glijdt een muntje altijd verder.
-- **Mikken**: links mikken geeft hooguit 7 procentpunten meer links dan rechts mikken. Zonder houweel is dat
+  steunpunten kan blijven liggen. De trechters staan 64° en 65° steil: daar glijdt een muntje altijd verder.
+- **Mikken**: links mikken geeft hooguit 6 procentpunten meer links dan rechts mikken. Zonder houweel is dat
   30 tot 90 procentpunten.
 - **Splitsingen** van 8 volgen een eerlijk muntstuk: 4 + 4 komt het vaakst voor, 0 + 8 haast nooit.
 - **Passen**: in de hele uitslag van de houweel raakt niets, en overal is minstens 0,5 mm speling.
-- **Stabiliteit**: duw je de houweel naar achteren, dan moet je 3,8 N (zo'n 390 g) duwen voor het bord kantelt.
+- **Stabiliteit**: duw je de houweel naar achteren, dan moet je 4,3 N (zo'n 440 g) duwen voor het bord kantelt.
+  In de kokervoeten kan het bord bovenaan hooguit 5 mm wiebelen.
+- **Printen**: alles print zonder support. PrusaSlicer komt op 673 g en ongeveer 19 uur over de negen platen.
 
 ![Controle](controle/valbord.png)
 
@@ -142,7 +144,7 @@ kleurwissels op plaat 6 en 9 komt er nog bij.
     achterkant: de letters zitten in de bovenste lagen.
   - De kokervoeten staan rechtop, met de prop op het bed. De kokerkappen liggen op hun buitenkant.
 - Alles print zonder support. Ook PrusaSlicer met automatische support vindt niets, behalve een paar steuntjes
-  (0,5 g) onder de brug in de gleuf van de houweelkop. Zonder support print het die als brug.
+  (0,4 g) onder de brug in de gleuf van de houweelkop. Zonder support print het die als brug.
   - De karretjes staan rechtop, open boven.
 
 | Onderdeel | Aantal | Maat (mm) | Bestand |

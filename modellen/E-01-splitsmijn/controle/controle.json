@@ -26,17 +26,19 @@
     "karretje_inhoud_cm3": 263.0,
     "tien_munten_cm3": 22.0,
     "munten_plat_op_de_bodem": 9,
-    "massa_g": 588.0,
-    "zwaartepunt_y": 8.9,
-    "zwaartepunt_z_boven_tafel": 115.2,
+    "massa_g": 656.0,
+    "zwaartepunt_y": 9.3,
+    "zwaartepunt_z_boven_tafel": 106.5,
     "voet_y": [
       -40.0,
       66.0
     ],
     "voet_x": 116.0,
-    "kantelkracht_achteruit_N": 3.8,
-    "kantelkracht_vooruit_N": 4.5,
-    "kantelkracht_opzij_N": 9.0
+    "kantelkracht_achteruit_N": 4.3,
+    "kantelkracht_vooruit_N": 4.9,
+    "kantelkracht_opzij_N": 10.1,
+    "kantelspel_graden": 1.1,
+    "kantelspel_boven_mm": 5.3
   },
   "eindmodel": {
     "simulatie": {
@@ -50,241 +52,202 @@
           0.02,
           [
             0.531,
-            0.547,
-            0.469
-          ]
-        ],
-        [
-          {
-            "stuit": 0.3,
-            "wrijving": 0.2,
-            "demping": 0.75
-          },
-          0.06,
-          [
-            0.516,
-            0.516,
-            0.422
-          ]
-        ],
-        [
-          {
-            "stuit": 0.3,
-            "wrijving": 0.2,
-            "demping": 0.95
-          },
-          0.02,
-          [
-            0.484,
-            0.531,
-            0.516
-          ]
-        ],
-        [
-          {
-            "stuit": 0.3,
-            "wrijving": 0.2,
-            "demping": 0.95
-          },
-          0.06,
-          [
-            0.531,
-            0.516,
-            0.469
-          ]
-        ],
-        [
-          {
-            "stuit": 0.3,
-            "wrijving": 0.5,
-            "demping": 0.75
-          },
-          0.02,
-          [
-            0.438,
-            0.422,
-            0.453
-          ]
-        ],
-        [
-          {
-            "stuit": 0.3,
-            "wrijving": 0.5,
-            "demping": 0.75
-          },
-          0.06,
-          [
-            0.516,
-            0.531,
-            0.438
-          ]
-        ],
-        [
-          {
-            "stuit": 0.3,
-            "wrijving": 0.5,
-            "demping": 0.95
-          },
-          0.02,
-          [
-            0.547,
-            0.516,
-            0.484
-          ]
-        ],
-        [
-          {
-            "stuit": 0.3,
-            "wrijving": 0.5,
-            "demping": 0.95
-          },
-          0.06,
-          [
-            0.484,
-            0.453,
-            0.438
-          ]
-        ],
-        [
-          {
-            "stuit": 0.5,
-            "wrijving": 0.2,
-            "demping": 0.75
-          },
-          0.02,
-          [
-            0.516,
-            0.516,
-            0.453
-          ]
-        ],
-        [
-          {
-            "stuit": 0.5,
-            "wrijving": 0.2,
-            "demping": 0.75
-          },
-          0.06,
-          [
-            0.438,
             0.609,
-            0.5
+            0.469
           ]
         ],
         [
           {
-            "stuit": 0.5,
+            "stuit": 0.3,
             "wrijving": 0.2,
-            "demping": 0.95
-          },
-          0.02,
-          [
-            0.641,
-            0.594,
-            0.422
-          ]
-        ],
-        [
-          {
-            "stuit": 0.5,
-            "wrijving": 0.2,
-            "demping": 0.95
-          },
-          0.06,
-          [
-            0.531,
-            0.453,
-            0.438
-          ]
-        ],
-        [
-          {
-            "stuit": 0.5,
-            "wrijving": 0.5,
-            "demping": 0.75
-          },
-          0.02,
-          [
-            0.562,
-            0.578,
-            0.531
-          ]
-        ],
-        [
-          {
-            "stuit": 0.5,
-            "wrijving": 0.5,
             "demping": 0.75
           },
           0.06,
           [
-            0.469,
-            0.5,
-            0.5
-          ]
-        ],
-        [
-          {
-            "stuit": 0.5,
-            "wrijving": 0.5,
-            "demping": 0.95
-          },
-          0.02,
-          [
-            0.453,
-            0.438,
+            0.484,
+            0.422,
             0.359
           ]
         ],
         [
           {
-            "stuit": 0.5,
-            "wrijving": 0.5,
+            "stuit": 0.3,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.531,
+            0.516,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.2,
             "demping": 0.95
           },
           0.06,
           [
-            0.609,
+            0.531,
+            0.469,
+            0.406
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.406,
+            0.391,
+            0.469
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.547,
             0.578,
             0.453
           ]
         ],
         [
           {
-            "stuit": 0.7,
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.547,
+            0.516,
+            0.547
+          ]
+        ],
+        [
+          {
+            "stuit": 0.3,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.5,
+            0.484,
+            0.391
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
             "wrijving": 0.2,
             "demping": 0.75
           },
           0.02,
           [
-            0.469,
-            0.531,
-            0.484
+            0.5,
+            0.5,
+            0.438
           ]
         ],
         [
           {
-            "stuit": 0.7,
+            "stuit": 0.5,
             "wrijving": 0.2,
             "demping": 0.75
           },
           0.06,
           [
-            0.484,
-            0.422,
-            0.484
+            0.438,
+            0.453,
+            0.422
           ]
         ],
         [
           {
-            "stuit": 0.7,
+            "stuit": 0.5,
             "wrijving": 0.2,
             "demping": 0.95
           },
           0.02,
           [
+            0.547,
+            0.469,
+            0.469
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.453,
             0.438,
+            0.469
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.453,
             0.5,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.547,
+            0.422,
+            0.516
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.484,
+            0.406,
+            0.469
+          ]
+        ],
+        [
+          {
+            "stuit": 0.5,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.516,
+            0.469,
             0.531
           ]
         ],
@@ -292,51 +255,77 @@
           {
             "stuit": 0.7,
             "wrijving": 0.2,
-            "demping": 0.95
-          },
-          0.06,
-          [
-            0.484,
-            0.453,
-            0.469
-          ]
-        ],
-        [
-          {
-            "stuit": 0.7,
-            "wrijving": 0.5,
             "demping": 0.75
           },
           0.02,
           [
-            0.516,
-            0.531,
-            0.578
-          ]
-        ],
-        [
-          {
-            "stuit": 0.7,
-            "wrijving": 0.5,
-            "demping": 0.75
-          },
-          0.06,
-          [
-            0.516,
-            0.5,
-            0.453
-          ]
-        ],
-        [
-          {
-            "stuit": 0.7,
-            "wrijving": 0.5,
-            "demping": 0.95
-          },
-          0.02,
-          [
-            0.5,
+            0.375,
             0.578,
+            0.516
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.469,
+            0.391,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.02,
+          [
+            0.562,
+            0.484,
+            0.641
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.2,
+            "demping": 0.95
+          },
+          0.06,
+          [
+            0.5,
+            0.469,
+            0.547
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.02,
+          [
+            0.5,
+            0.5,
+            0.5
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.75
+          },
+          0.06,
+          [
+            0.516,
+            0.484,
             0.5
           ]
         ],
@@ -346,39 +335,52 @@
             "wrijving": 0.5,
             "demping": 0.95
           },
+          0.02,
+          [
+            0.391,
+            0.531,
+            0.484
+          ]
+        ],
+        [
+          {
+            "stuit": 0.7,
+            "wrijving": 0.5,
+            "demping": 0.95
+          },
           0.06,
           [
-            0.469,
-            0.469,
-            0.484
+            0.5,
+            0.391,
+            0.469
           ]
         ]
       ],
       "vast": 0,
       "totaal": 4608,
       "muntjes_per_cel": 64,
-      "kleinste_uitslag": 19.409858974587408,
-      "mediaan_uitslag": 28.849177072455596,
+      "kleinste_uitslag": 16.69591685997361,
+      "mediaan_uitslag": 28.852793218309415,
       "per_mik": [
-        0.505859375,
-        0.51171875,
-        0.4720052083333333
+        0.4928385416666667,
+        0.4778645833333333,
+        0.48046875
       ],
       "mikeffect_per_stuit": {
-        "0.3": 0.045,
-        "0.5": 0.07,
-        "0.7": -0.014
+        "0.3": 0.062,
+        "0.5": 0.018,
+        "0.7": -0.043
       },
       "splitsingen": [
-        2,
-        15,
-        37,
-        55,
-        69,
-        62,
-        38,
-        21,
-        1
+        7,
+        12,
+        78,
+        121,
+        151,
+        133,
+        74,
+        20,
+        4
       ]
     },
     "slinger": {
@@ -510,10 +512,16 @@
         "soort": "schuiven"
       },
       {
-        "wat": "zijranden en mijnhout in de kokers van de mijnberg",
+        "wat": "zijranden en mijnhout in de kokervoeten",
         "param": "SPEL",
         "speling": 0.3,
         "soort": "schuiven"
+      },
+      {
+        "wat": "prop van de kokervoet in het dek",
+        "param": "KOKER_SPEL",
+        "speling": 0.1,
+        "soort": "licht klemmen"
       },
       {
         "wat": "nokjes van het mijnhout in de voorplaat",
@@ -534,9 +542,15 @@
         "soort": "vrij"
       },
       {
-        "wat": "voeten van het portaal over de bovenrand van het bord",
-        "param": "",
-        "speling": 0.2,
+        "wat": "bovenrand van het bord en het mijnhout in de kokerkappen",
+        "param": "SPEL",
+        "speling": 0.3,
+        "soort": "schuiven"
+      },
+      {
+        "wat": "tong van het portaal in de kokerkappen",
+        "param": "SPEL",
+        "speling": 0.3,
         "soort": "schuiven"
       },
       {
@@ -886,14 +900,14 @@
       },
       "splitsingen": [
         1,
-        7,
-        40,
-        73,
-        78,
-        49,
-        40,
-        11,
-        1
+        17,
+        81,
+        141,
+        150,
+        116,
+        62,
+        27,
+        5
       ]
     },
     "slinger": {
@@ -1046,7 +1060,8 @@
       "kleuren_codes": [
         "11101"
       ],
-      "gram_geschat": 5.0
+      "wissels": 0,
+      "gram_geschat": 9.0
     },
     "2 achterplaat": {
       "kleuren": {
@@ -1077,7 +1092,8 @@
       "kleuren_codes": [
         "11101"
       ],
-      "gram_geschat": 48.0
+      "wissels": 0,
+      "gram_geschat": 128.0
     },
     "3 voorplaat": {
       "kleuren": {
@@ -1108,12 +1124,13 @@
       "kleuren_codes": [
         "11101"
       ],
-      "gram_geschat": 29.0
+      "wissels": 0,
+      "gram_geschat": 98.0
     },
     "4 mijnhout": {
       "kleuren": {
         "11800": {
-          "volume_cm3": 25.66,
+          "volume_cm3": 25.23,
           "z_mm": [
             0.0,
             2.4
@@ -1127,7 +1144,7 @@
           "grootste_te_smalle_stuk_mm2": 0.22,
           "plek_mm": [
             40.5,
-            89.3,
+            82.3,
             0.3
           ]
         }
@@ -1136,25 +1153,26 @@
       "korte_bruggen_mm2": 1263.0,
       "maat_mm": [
         218.0,
-        244.0,
+        230.0,
         2.4
       ],
       "past_op_A1": true,
       "vrije_strook_mm": [
         38.0,
-        12.0
+        26.0
       ],
       "lagen_met_kleurwissel": 0,
       "geschatte_wissels": 0,
       "kleuren_codes": [
         "11800"
       ],
-      "gram_geschat": 11.0
+      "wissels": 0,
+      "gram_geschat": 32.0
     },
     "5 mijnberg en tienveld": {
       "kleuren": {
         "11203": {
-          "volume_cm3": 381.29,
+          "volume_cm3": 379.34,
           "z_mm": [
             0.0,
             40.0
@@ -1163,28 +1181,27 @@
       },
       "overhang": [
         {
-          "oppervlak_mm2": 138.9,
+          "oppervlak_mm2": 237.1,
           "hoek_tov_horizontaal_graden": 0.0,
           "plek_mm": [
-            24.0,
+            22.8,
             77.5,
             15.0
           ]
         },
         {
-          "oppervlak_mm2": 138.9,
+          "oppervlak_mm2": 237.1,
           "hoek_tov_horizontaal_graden": 0.0,
           "plek_mm": [
-            232.0,
+            233.2,
             77.5,
             15.0
           ]
         }
       ],
       "dunne_details": [],
-      "vlakken_rond_45_graden_mm2": 2.0,
-      "korte_bruggen_mm2": 1101.0,
-      "kleine_liggende_gaten_mm2": 25.0,
+      "vlakken_rond_45_graden_mm2": 750.0,
+      "korte_bruggen_mm2": 11.0,
       "maat_mm": [
         232.0,
         208.8,
@@ -1200,15 +1217,16 @@
       "kleuren_codes": [
         "11203"
       ],
-      "gram_geschat": 136.0
+      "wissels": 0,
+      "gram_geschat": 187.0
     },
-    "6 portaal, steel, beugel, mesblok": {
+    "6 portaal, steel, beugel, mesblok, kokervoeten en -kappen": {
       "kleuren": {
         "11800": {
-          "volume_cm3": 71.56,
+          "volume_cm3": 85.56,
           "z_mm": [
             0.0,
-            17.7
+            44.5
           ]
         },
         "11101": {
@@ -1219,38 +1237,19 @@
           ]
         }
       },
-      "overhang": [
-        {
-          "oppervlak_mm2": 134.4,
-          "hoek_tov_horizontaal_graden": 0.0,
-          "plek_mm": [
-            25.0,
-            238.4,
-            15.3
-          ]
-        },
-        {
-          "oppervlak_mm2": 134.4,
-          "hoek_tov_horizontaal_graden": 0.0,
-          "plek_mm": [
-            231.0,
-            238.4,
-            15.3
-          ]
-        }
-      ],
+      "overhang": [],
       "dunne_details": [],
-      "vlakken_rond_45_graden_mm2": 129.0,
-      "korte_bruggen_mm2": 13.0,
+      "vlakken_rond_45_graden_mm2": 176.0,
+      "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         226.0,
-        226.0,
-        17.7
+        219.3,
+        44.5
       ],
       "past_op_A1": true,
       "vrije_strook_mm": [
         30.0,
-        30.0
+        36.7
       ],
       "lagen_met_kleurwissel": 3,
       "geschatte_wissels": 3,
@@ -1262,12 +1261,13 @@
         "11800",
         "11101"
       ],
-      "gram_geschat": 34.0
+      "wissels": 4,
+      "gram_geschat": 56.0
     },
     "7 houweelkop, plank, verdelervin": {
       "kleuren": {
         "10402": {
-          "volume_cm3": 26.98,
+          "volume_cm3": 26.97,
           "z_mm": [
             0.0,
             20.0
@@ -1276,18 +1276,18 @@
       },
       "overhang": [
         {
-          "oppervlak_mm2": 330.2,
-          "hoek_tov_horizontaal_graden": 15.9,
+          "oppervlak_mm2": 74.3,
+          "hoek_tov_horizontaal_graden": 0.0,
           "plek_mm": [
             128.0,
-            147.9,
+            142.0,
             5.1
           ]
         }
       ],
       "dunne_details": [],
       "vlakken_rond_45_graden_mm2": 0.0,
-      "korte_bruggen_mm2": 15.0,
+      "korte_bruggen_mm2": 94.0,
       "maat_mm": [
         90.3,
         80.2,
@@ -1303,6 +1303,7 @@
       "kleuren_codes": [
         "10402"
       ],
+      "wissels": 0,
       "gram_geschat": 32.0
     },
     "8 karretjes": {
@@ -1334,7 +1335,8 @@
       "kleuren_codes": [
         "10205"
       ],
-      "gram_geschat": 50.0
+      "wissels": 0,
+      "gram_geschat": 76.0
     },
     "9 munten": {
       "kleuren": {
@@ -1373,7 +1375,8 @@
         "10402",
         "11600"
       ],
-      "gram_geschat": 10.0
+      "wissels": 1,
+      "gram_geschat": 15.0
     }
   },
   "print_proef": {
@@ -1642,6 +1645,204 @@
       "volume_cm3": 21.56,
       "support_extrusie_mm": 0.0,
       "support": false
+    }
+  },
+  "slicer_eind": {
+    "1 passtrip": {
+      "gram": 11.2,
+      "seconden": 1880,
+      "support": false,
+      "groepen": [
+        {
+          "instellingen": {
+            "perimeters": 2
+          },
+          "gram": 9.0,
+          "tijd": "24m 10s",
+          "support_extrusie_mm": 0.0
+        },
+        {
+          "instellingen": {
+            "perimeters": 3
+          },
+          "gram": 2.2,
+          "tijd": "7m 10s",
+          "support_extrusie_mm": 0.0
+        }
+      ],
+      "tijd": "31m 20s"
+    },
+    "2 achterplaat": {
+      "gram": 138.4,
+      "seconden": 13062,
+      "support": false,
+      "groepen": [
+        {
+          "instellingen": {
+            "perimeters": 3
+          },
+          "gram": 138.4,
+          "tijd": "3h 37m 42s",
+          "support_extrusie_mm": 0.0
+        }
+      ],
+      "tijd": "3h 37m"
+    },
+    "3 voorplaat": {
+      "gram": 106.9,
+      "seconden": 11416,
+      "support": false,
+      "groepen": [
+        {
+          "instellingen": {
+            "perimeters": 2
+          },
+          "gram": 106.9,
+          "tijd": "3h 10m 16s",
+          "support_extrusie_mm": 0.0
+        }
+      ],
+      "tijd": "3h 10m"
+    },
+    "4 mijnhout": {
+      "gram": 33.3,
+      "seconden": 3994,
+      "support": false,
+      "groepen": [
+        {
+          "instellingen": {
+            "perimeters": 2
+          },
+          "gram": 33.3,
+          "tijd": "1h 6m 34s",
+          "support_extrusie_mm": 0.0
+        }
+      ],
+      "tijd": "1h 6m"
+    },
+    "5 mijnberg en tienveld": {
+      "gram": 195.4,
+      "seconden": 20500,
+      "support": false,
+      "groepen": [
+        {
+          "instellingen": {
+            "perimeters": 3
+          },
+          "gram": 165.4,
+          "tijd": "4h 50m 14s",
+          "support_extrusie_mm": 0.0
+        },
+        {
+          "instellingen": {
+            "perimeters": 2
+          },
+          "gram": 30.0,
+          "tijd": "51m 26s",
+          "support_extrusie_mm": 0.0
+        }
+      ],
+      "tijd": "5h 41m"
+    },
+    "6 portaal, steel, beugel, mesblok, kokervoeten en -kappen": {
+      "gram": 60.3,
+      "seconden": 6732,
+      "support": false,
+      "groepen": [
+        {
+          "instellingen": {
+            "perimeters": 3
+          },
+          "gram": 44.8,
+          "tijd": "1h 21m 51s",
+          "support_extrusie_mm": 0.0
+        },
+        {
+          "instellingen": {
+            "perimeters": 3,
+            "fill_density": "100%",
+            "fill_pattern": "rectilinear"
+          },
+          "gram": 11.3,
+          "tijd": "21m 4s",
+          "support_extrusie_mm": 0.0
+        },
+        {
+          "instellingen": {
+            "perimeters": 2
+          },
+          "gram": 4.2,
+          "tijd": "9m 17s",
+          "support_extrusie_mm": 0.0
+        }
+      ],
+      "tijd": "1h 52m"
+    },
+    "7 houweelkop, plank, verdelervin": {
+      "gram": 33.1,
+      "seconden": 2851,
+      "support": true,
+      "groepen": [
+        {
+          "instellingen": {
+            "perimeters": 3,
+            "fill_density": "100%",
+            "fill_pattern": "rectilinear"
+          },
+          "gram": 30.3,
+          "tijd": "37m 11s",
+          "support_extrusie_mm": 143.9
+        },
+        {
+          "instellingen": {
+            "perimeters": 4
+          },
+          "gram": 2.4,
+          "tijd": "8m 7s",
+          "support_extrusie_mm": 0.0
+        },
+        {
+          "instellingen": {
+            "perimeters": 3
+          },
+          "gram": 0.4,
+          "tijd": "2m 13s",
+          "support_extrusie_mm": 0.0
+        }
+      ],
+      "tijd": "47m 31s"
+    },
+    "8 karretjes": {
+      "gram": 77.8,
+      "seconden": 5136,
+      "support": false,
+      "groepen": [
+        {
+          "instellingen": {
+            "perimeters": 2
+          },
+          "gram": 77.8,
+          "tijd": "1h 25m 36s",
+          "support_extrusie_mm": 0.0
+        }
+      ],
+      "tijd": "1h 25m"
+    },
+    "9 munten": {
+      "gram": 16.5,
+      "seconden": 2139,
+      "support": false,
+      "groepen": [
+        {
+          "instellingen": {
+            "perimeters": 3
+          },
+          "gram": 16.5,
+          "tijd": "35m 39s",
+          "support_extrusie_mm": 0.0
+        }
+      ],
+      "tijd": "35m 39s"
     }
   }
 }

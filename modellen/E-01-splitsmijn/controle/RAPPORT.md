@@ -29,10 +29,10 @@ Het valbord nagebouwd in een 2D-fysicamodel (pymunk, zie `cad/simulatie.py`). Ee
 | | Eindmodel | Pasproef |
 |---|---|---|
 | Kans op links, elke combinatie en elk mikpunt | ✅ 0,36 tot 0,64 | ✅ 0,33 tot 0,64 |
-| Gemiddeld, mikken links / midden / rechts | ✅ 0,51 / 0,51 / 0,47 | ✅ 0,51 / 0,47 / 0,48 |
-| Mikeffect (links min rechts mikken) per stuit | ✅ 0,3: +0,04, 0,5: +0,07, 0,7: -0,01 | ✅ 0,3: +0,04, 0,5: +0,02, 0,7: +0,03 |
+| Gemiddeld, mikken links / midden / rechts | ✅ 0,49 / 0,48 / 0,48 | ✅ 0,51 / 0,47 / 0,48 |
+| Mikeffect (links min rechts mikken) per stuit | ✅ 0,3: +0,06, 0,5: +0,02, 0,7: -0,04 | ✅ 0,3: +0,04, 0,5: +0,02, 0,7: +0,03 |
 | Muntjes die bleven hangen | ✅ 0 van 4608 | ✅ 0 van 4608 |
-| Uitslag van de slinger bij het laatste muntje (mediaan) | 29° (minstens 19°) | 29° (minstens 16°) |
+| Uitslag van de slinger bij het laatste muntje (mediaan) | 29° (minstens 17°) | 29° (minstens 16°) |
 
 Met 64 muntjes per vakje is ±0,15 op de kans gewoon toeval. Zonder slinger is het mikeffect 0,3 tot 0,9: het muntje rolt groot naast de pinnen in een vaste baan, en dan beslist het mikpunt. De kantelplank op de slinger maakt het eerlijk.
 
@@ -40,12 +40,12 @@ Hoe vaak elke splitsing van 8 voorkomt (links + rechts), naast een eerlijk munts
 
 | Splitsing | 0+8 | 1+7 | 2+6 | 3+5 | 4+4 | 5+3 | 6+2 | 7+1 | 8+0 |
 |---|---|---|---|---|---|---|---|---|---|
-| Eindmodel | 1 % | 5 % | 12 % | 18 % | 23 % | 21 % | 13 % | 7 % | 0 % |
-| Pasproef | 0 % | 2 % | 13 % | 24 % | 26 % | 16 % | 13 % | 4 % | 0 % |
+| Eindmodel | 1 % | 2 % | 13 % | 20 % | 25 % | 22 % | 12 % | 3 % | 1 % |
+| Pasproef | 0 % | 3 % | 14 % | 24 % | 25 % | 19 % | 10 % | 4 % | 1 % |
 | Binomiaal | 0 % | 3 % | 11 % | 22 % | 27 % | 22 % | 11 % | 3 % | 0 % |
 
-- ⚠️ Eindmodel: gemiddeld 4,08 muntjes links, spreiding (variantie) 2,62; een eerlijk muntstuk geeft 4 en 2. Eén vakje wijkt bij 300 rondes gemakkelijk een paar procent af; de spreiding zegt of de splitsingen echt willekeurig zijn (te klein: de muntjes wisselen elkaar af, te groot: ze volgen elkaar).
-- ✅ Pasproef: gemiddeld 3,96 muntjes links, spreiding (variantie) 2,12; een eerlijk muntstuk geeft 4 en 2. Eén vakje wijkt bij 300 rondes gemakkelijk een paar procent af; de spreiding zegt of de splitsingen echt willekeurig zijn (te klein: de muntjes wisselen elkaar af, te groot: ze volgen elkaar).
+- ✅ Eindmodel: gemiddeld 4,03 muntjes links, spreiding (variantie) 2,21; een eerlijk muntstuk geeft 4 en 2. Eén vakje wijkt bij 600 rondes gemakkelijk een paar procent af; de spreiding zegt of de splitsingen echt willekeurig zijn (te klein: de muntjes wisselen elkaar af, te groot: ze volgen elkaar).
+- ✅ Pasproef: gemiddeld 3,97 muntjes links, spreiding (variantie) 2,20; een eerlijk muntstuk geeft 4 en 2. Eén vakje wijkt bij 600 rondes gemakkelijk een paar procent af; de spreiding zegt of de splitsingen echt willekeurig zijn (te klein: de muntjes wisselen elkaar af, te groot: ze volgen elkaar).
 
 ## 3. Slinger
 
@@ -105,11 +105,13 @@ Er zijn geen klikhaakjes: alles klemt of schuift. Speling per kant in het CAD, g
 | naaf van de plank in het gat van de voorplaat | 1,00 mm | vrij | `NAAF_R` |
 | pennetjes Ø 3 van de steel in de houweelkop | 0,05 mm | klemmen | `MES_GAT` |
 | steel in de gleuf van de houweelkop | 0,15 mm | schuiven |  |
-| zijranden en mijnhout in de kokers van de mijnberg | 0,30 mm | schuiven | `SPEL` |
+| zijranden en mijnhout in de kokervoeten | 0,30 mm | schuiven | `SPEL` |
+| prop van de kokervoet in het dek | 0,10 mm | licht klemmen | `KOKER_SPEL` |
 | nokjes van het mijnhout in de voorplaat | 0,20 mm | vrij (houden het raamwerk op zijn plaats) |  |
 | tong van de verdelervin in de wig | 0,10 mm | klemmen | `VIN_SLEUF` |
 | verdelervin in de spleet | 0,60 mm | vrij |  |
-| voeten van het portaal over de bovenrand van het bord | 0,20 mm | schuiven |  |
+| bovenrand van het bord en het mijnhout in de kokerkappen | 0,30 mm | schuiven | `SPEL` |
+| tong van het portaal in de kokerkappen | 0,30 mm | schuiven | `SPEL` |
 | karretjes in de tunnels | 0,80 mm | schuiven | `KAR_SPEL` |
 | bovenrand van de karretjes onder het dek | 1,00 mm | vrij (kleiner dan een muntje) | `KAR_RAND_ONDER_DEK` |
 
@@ -127,29 +129,33 @@ Er zijn geen klikhaakjes: alles klemt of schuift. Speling per kant in het CAD, g
 
 ## 6. Stabiliteit (eindmodel)
 
-- Alles samen ongeveer 588 g (geschat, met 10 muntjes). Het zwaartepunt ligt 115 mm boven de tafel, op y = 8,9; de voet loopt van y = -40 tot 66.
-- ✅ Wie de houweelkop naar achteren duwt, moet 3,8 N (~388 g) duwen voor het bord kantelt; naar voren 4,5 N, opzij 9,0 N. Een duw om te slingeren gaat opzij, en de slinger zwaait dan weg.
+- Alles samen ongeveer 656 g (geschat, met 10 muntjes). Het zwaartepunt ligt 106 mm boven de tafel, op y = 9,3; de voet loopt van y = -40 tot 66.
+- ✅ Wie de houweelkop naar achteren duwt, moet 4,3 N (~439 g) duwen voor het bord kantelt; naar voren 4,9 N, opzij 10,1 N. Een duw om te slingeren gaat opzij, en de slinger zwaait dan weg.
+- ✅ Het bord staat met 0,30 mm speling per kant 30 mm diep in de kokervoeten: het kan 1,1° naar voren of achteren wiebelen, bovenaan 5,3 mm. Recht laten staan hoeft niet: het valt vanzelf terug.
 
 ## 7. Printbaarheid (Bambu Lab A1, 0,4 mm nozzle, 0,2 mm laag)
 
 **Eindmodel** (`print/splitsmijn.3mf`)
 
-| Plaat | Kleuren | Maat | Past | Overhang > 48° | Platte plafonds (bruggen) | Te smal | Kleurwissels | Gewicht (schatting) |
-|---|---|---|---|---|---|---|---|---|
-| 1 passtrip | Charcoal | 119 × 40 × 11 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~5 g |
-| 2 achterplaat | Charcoal | 218 × 230 × 10 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~48 g |
-| 3 voorplaat | Charcoal | 218 × 230 × 16 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~29 g |
-| 4 mijnhout | Latte Brown | 218 × 244 × 2 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~11 g |
-| 5 mijnberg en tienveld | Terracotta | 232 × 209 × 40 | ✅ | ✅ 0 mm² | 278 mm² | ✅ geen | 0 | ~136 g |
-| 6 portaal, steel, beugel, mesblok | Latte Brown + Charcoal | 226 × 226 × 18 | ✅ | ✅ 0 mm² | 269 mm² | ✅ geen | 3 | ~34 g |
-| 7 houweelkop, plank, verdelervin | Sunflower Yellow | 90 × 80 × 20 | ✅ | ✅ 0 mm² | 330 mm² | ✅ geen | 0 | ~32 g |
-| 8 karretjes | Maroon Red | 198 × 105 × 31 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~50 g |
-| 9 munten | Sunflower Yellow + Marine Blue | 145 × 55 × 4 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~10 g |
+| Plaat | Kleuren | Maat | Past | Overhang > 48° | Platte plafonds (bruggen) | Te smal | Kleurwissels | Gewicht (schatting) | Slicer: gewicht | Slicer: tijd | Slicer: support |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 passtrip | Charcoal | 119 × 40 × 11 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~9 g | 11,2 g | 31m 20s | ✅ 0,0 g |
+| 2 achterplaat | Charcoal | 218 × 230 × 10 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~128 g | 138,4 g | 3h 37m | ✅ 0,0 g |
+| 3 voorplaat | Charcoal | 218 × 230 × 16 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~98 g | 106,9 g | 3h 10m | ✅ 0,0 g |
+| 4 mijnhout | Latte Brown | 218 × 230 × 2 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~32 g | 33,3 g | 1h 6m | ✅ 0,0 g |
+| 5 mijnberg en tienveld | Terracotta | 232 × 209 × 40 | ✅ | ✅ 0 mm² | 474 mm² | ✅ geen | 0 | ~187 g | 195,4 g | 5h 41m | ✅ 0,0 g |
+| 6 portaal, steel, beugel, mesblok, kokervoeten en -kappen | Latte Brown + Charcoal | 226 × 219 × 44 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 4 | ~56 g | 60,3 g | 1h 52m | ✅ 0,0 g |
+| 7 houweelkop, plank, verdelervin | Sunflower Yellow | 90 × 80 × 20 | ✅ | ✅ 0 mm² | 74 mm² | ✅ geen | 0 | ~32 g | 33,1 g | 47m 31s | ✅ 0,4 g |
+| 8 karretjes | Maroon Red | 198 × 105 × 31 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 0 | ~76 g | 77,8 g | 1h 25m | ✅ 0,0 g |
+| 9 munten | Sunflower Yellow + Marine Blue | 145 × 55 × 4 | ✅ | ✅ 0 mm² | 0 mm² | ✅ geen | 1 | ~15 g | 16,5 g | 35m 39s | ✅ 0,0 g |
 
-Samen ~355 g (geschat uit de doorsneden, met de wanden en de infill uit het project; geen slicer).
+Samen ~633 g geschat uit de doorsneden (met de wanden en de infill uit het project). De slicer komt op 673 g en 18 u 48 printtijd.
 
-- *Platte plafonds*: de bodem van de kokers en de sleuf voor de vin in de mijnberg (die ondersteboven ligt), de gleuf voor de steel in de houweelkop. Ze zijn hoogstens 12 mm breed: de printer overbrugt ze. Korte bruggen (< 3 mm) tellen niet mee.
+- *Slicer*: PrusaSlicer met een profiel dat de A1 benadert (`cad/slice.py`), elk object met zijn eigen wanden en infill uit het project, in één kleur: de spoeling van de AMS bij een kleurwissel (plaat 6 en 9) komt erbij. Het gewicht is betrouwbaar, de tijd een indicatie. *Support* is wat PrusaSlicer met automatische support (drempel 30°) zou bijzetten; het project zelf print zonder support.
+- Plaat 7: PrusaSlicer zet een paar steuntjes onder het plafond van de gleuf in de houweelkop, rond de twee gaatjes. Zonder support print het dat als brug (5,6 mm breed), en de gaatjes worden in twee stappen overbrugd: eerst een strook, dan een vierkant.
+- *Platte plafonds*: de bodem van de uitsparingen voor de kokervoeten en de sleuf voor de vin in de mijnberg (die ondersteboven ligt), de gleuf voor de steel in de houweelkop. Ze zijn hoogstens 13 mm breed en aan twee kanten vast: de printer overbrugt ze. Korte bruggen (< 3 mm) tellen niet mee.
 - *Te smal*: kleiner dan 1,5 mm² per laag telt niet (de onderste laag van een schuine rand); de slicer laat dat weg.
+- *Kleurwissels*: geteld laag per laag. Op plaat 6 liggen de letters in de bovenste lagen van het portaal, en de andere delen op die plaat zijn hoger: een paar lagen met twee kleuren. De munten wisselen één keer, halverwege.
 
 **Pasproef** (`pasproef/pasproef.3mf`)
 
