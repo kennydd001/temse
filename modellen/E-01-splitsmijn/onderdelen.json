@@ -45,10 +45,10 @@
     "aantal": 1
   },
   "print/portaal.stl": {
-    "volume_cm3": 51.74,
+    "volume_cm3": 58.66,
     "maat_mm": [
       224.0,
-      30.6,
+      63.6,
       10.6
     ],
     "aantal": 1
@@ -99,18 +99,18 @@
     "aantal": 1
   },
   "print/kokerkap_L.stl": {
-    "volume_cm3": 3.57,
+    "volume_cm3": 8.41,
     "maat_mm": [
-      24.0,
+      57.0,
       20.5,
       12.9
     ],
     "aantal": 1
   },
   "print/kokerkap_R.stl": {
-    "volume_cm3": 3.57,
+    "volume_cm3": 8.41,
     "maat_mm": [
-      24.0,
+      57.0,
       20.5,
       12.9
     ],

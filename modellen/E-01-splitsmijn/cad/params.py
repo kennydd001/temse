@@ -156,7 +156,7 @@ STIJL = (91.0, BINNEN_HALF + RAND)   # staanders links en rechts, over de zijran
 
 # --- mijningang: een portaal met de naam, op twee kokerkappen bovenop het bord ---------------------
 PORTAAL_X = 112.0         # halve breedte van de dwarsbalk
-PORTAAL_Z = (BORD_H + 12.0, BORD_H + 33.0)   # dwarsbalk: ruim boven de trechter, de hand kan eronder
+PORTAAL_Z = (BORD_H + 45.0, BORD_H + 66.0)   # dwarsbalk: een muntje met twee vingers erom past eronder door (montage.py)
 PORTAAL_Y = (-2.6, 8.0)   # het hele portaal is een plaat van die dikte (achterkant op het bed)
 KAP_ONDER = 12.0          # zo diep zakt een kokerkap over de bovenhoek van het bord (met het mijnhout)
 KAP_LAT = 2.4             # tussenschot in de kokerkap: daarop rust de tong van het portaal

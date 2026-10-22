@@ -96,16 +96,16 @@
     "tijd": "5h 41m"
   },
   "6 portaal, steel, beugel, mesblok, kokervoeten en -kappen": {
-    "gram": 60.3,
-    "seconden": 6732,
+    "gram": 71.9,
+    "seconden": 7616,
     "support": false,
     "groepen": [
       {
         "instellingen": {
           "perimeters": 3
         },
-        "gram": 44.8,
-        "tijd": "1h 21m 51s",
+        "gram": 56.4,
+        "tijd": "1h 36m 35s",
         "support_extrusie_mm": 0.0
       },
       {
@@ -127,7 +127,7 @@
         "support_extrusie_mm": 0.0
       }
     ],
-    "tijd": "1h 52m"
+    "tijd": "2h 6m"
   },
   "7 houweelkop, plank, verdelervin": {
     "gram": 33.1,
@@ -181,7 +181,7 @@
   },
   "9 munten": {
     "gram": 16.5,
-    "seconden": 2139,
+    "seconden": 2141,
     "support": false,
     "groepen": [
       {
@@ -189,10 +189,10 @@
           "perimeters": 3
         },
         "gram": 16.5,
-        "tijd": "35m 39s",
+        "tijd": "35m 41s",
         "support_extrusie_mm": 0.0
       }
     ],
-    "tijd": "35m 39s"
+    "tijd": "35m 41s"
   }
 }

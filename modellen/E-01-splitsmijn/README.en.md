@@ -21,9 +21,9 @@ yellow side up.
 
 | | |
 |---|---|
-| Size (w × d × h) | 232 × 108 × 303 mm |
+| Size (w × d × h) | 232 × 108 × 336 mm |
 | Coins | 10 coins Ø 25 × 4.5 mm (the size of a 2-euro coin), half blue with a diamond, half yellow |
-| Filament | about 670 g in 6 colours (slicer), some 19 hours of printing over 9 plates |
+| Filament | about 685 g in 6 colours (slicer), some 19 hours of printing over 9 plates |
 | Hardware | none: no screws, glue or metal parts. An AMS is only needed for the name and the coins |
 
 Colours (Bambu PLA):
@@ -63,8 +63,10 @@ Colours (Bambu PLA):
 - **Mine timber and portal**: the timber frame and the mine entrance with the name hold without glue.
   - Left and right, a **socket foot** clamps into the deck with its plug. The side rails of the board and the
     uprights of the frame stand together in its U-channel, 30 mm tall.
-  - At the top, each corner gets a **socket cap**. Its lower slot clamps over the board and the frame, its upper
-    slot holds a tongue of the portal.
+  - At the top, each corner gets a **socket cap**, like a post. Its lower slot clamps over the board and the
+    frame, its upper slot holds a tongue of the portal.
+  - The portal hangs 45 mm above the board. Underneath it, a child puts the coin into the funnel from the front,
+    held between two fingers.
   - Pegs on the back keep the frame in place.
 
 ![Exploded view](renders/splitsmijn_explosie.png)
@@ -87,7 +89,10 @@ Everything is in [controle/RAPPORT.md](controle/RAPPORT.md) (in Dutch). In short
 - **Fit**: over the pickaxe's whole swing nothing touches, with at least 0.5 mm clearance everywhere.
 - **Stability**: pushing the pickaxe backwards takes 4.3 N (about 440 g) before the board tips. In the socket
   feet, the top of the board can wobble 5 mm at most.
-- **Printing**: everything prints without supports. PrusaSlicer gets 673 g and about 19 hours over the nine plates.
+- **Printing**: everything prints without supports. PrusaSlicer gets 685 g and about 19 hours over the nine plates.
+- **Assembly**: in the order of the instructions, every part slides into place without touching anything. The
+  carts come all the way out and back in, the board lifts out again, and a coin between two fingers fits under
+  the portal into the funnel.
 
 ![Checks](controle/valbord.png)
 
@@ -117,12 +122,12 @@ Open `print/splitsmijn.3mf` in Bambu Studio. The project has nine plates:
 | 3 | front plate with viewing slots | Charcoal | 107 g | 3 h 10 |
 | 4 | mine timber | Latte Brown | 33 g | 1 h 06 |
 | 5 | mine mountain, ten-frame | Terracotta | 195 g | 5 h 41 |
-| 6 | portal with the name, handle, bracket, knife block, two socket feet, two socket caps | Latte Brown + Charcoal (letters) | 60 g | 1 h 52 |
+| 6 | portal with the name, handle, bracket, knife block, two socket feet, two socket caps | Latte Brown + Charcoal (letters) | 72 g | 2 h 06 |
 | 7 | pickaxe head, tilting plank, divider fin | Sunflower Yellow | 33 g | 0 h 48 |
 | 8 | two carts | Maroon Red | 78 g | 1 h 25 |
 | 9 | 10 coins | Sunflower Yellow + Marine Blue | 17 g | 0 h 36 |
 
-That is about **670 g of filament** and 19 hours of printing.
+That is about **685 g of filament** and 19 hours of printing.
 
 \* From PrusaSlicer with a profile that approximates the A1, each object with the walls and infill from the
 project (`cad/slice.py`). The weight is reliable; Bambu Studio calculates its own print time. The purge for the
@@ -154,11 +159,11 @@ colour changes on plates 6 and 9 comes on top.
 | mine timber (frame of beams) | 1 | 218 × 230 × 2.4 | `print/mijnhout.stl` |
 | mine mountain | 1 | 232 × 108 × 40 | `print/mijnberg.stl` |
 | ten-frame | 1 | 157 × 70 × 4.5 | `print/tienveld.stl` |
-| portal with the name | 1 | 224 × 31 × 10.6 | `print/portaal.stl` |
+| portal with the name | 1 | 224 × 64 × 10.6 | `print/portaal.stl` |
 | pickaxe handle | 1 | 20 × 174 × 10.5 | `print/steel.stl` |
 | pickaxe head | 1 | 89 × 25 × 20 | `print/kop.stl` |
 | socket foot | 2 | 13 × 18 × 44.5 | `print/kokervoet_L.stl`, `print/kokervoet_R.stl` |
-| socket cap | 2 | 24 × 20.5 × 13 | `print/kokerkap_L.stl`, `print/kokerkap_R.stl` |
+| socket cap | 2 | 57 × 20.5 × 13 | `print/kokerkap_L.stl`, `print/kokerkap_R.stl` |
 | bracket with V-groove, knife block | 1 + 1 | 44 × 17 × 13; 20 × 16 × 6.5 | `print/beugel.stl`, `print/mesblok.stl` |
 | tilting plank, divider fin | 1 + 1 | 36 × 10 × 16; 3 × 25 × 5 | `print/plank.stl`, `print/verdelervin.stl` |
 | mine cart | 2 | 92 × 105 × 31 | `print/karretje_L.stl`, `print/karretje_R.stl` |
@@ -196,6 +201,8 @@ under *Verbindingen*.
 
 ## Assembly
 
+![Assembly in nine steps](renders/montage.png)
+
 1. **Back plate**: lay it flat on the table, pins up.
 2. **Tilting plank**: lay the plank in the middle under the slot, hub up.
 3. **Front plate**: lay it on top, viewing slots towards you. Push the hub through the round hole. Press the
@@ -207,7 +214,8 @@ under *Verbindingen*.
    - press the pickaxe head onto the two pins at the bottom;
    - then slide the handle with its hex hole onto the hexagon of the plank.
 6. **Bracket**: slide the bracket with its two holes onto the pins under the hub, legs towards the front
-   plate. Lift the pickaxe slightly while sliding: that way the knife edge slides into the groove from behind.
+   plate. Lift the pickaxe as far as it goes while sliding (the hub has 1 mm of play): that way the knife edge
+   slides into the groove from behind. If it hangs lower, the knife catches behind the groove.
 7. **Mine mountain**:
    - press the tongue of the divider fin into the slot in the middle of the deck;
    - press the plugs of the two socket feet into the recesses left and right in the deck, open side towards the
@@ -222,7 +230,12 @@ under *Verbindingen*.
 The ten-frame lies loose on the table, in front of the mine: there is no room for it on the deck, and the pickaxe
 swings there.
 
+You put a coin in from the front, under the portal: hold it upright above the funnel and let go.
+
 Moving it? Lift the Splitsmijn by the mine mountain, not by the portal: the board stands loose in the socket feet.
+
+The assembly is checked in `cad/montage.py`: every part slides along its path into place without touching
+anything. See [controle/RAPPORT.md](controle/RAPPORT.md) (in Dutch), under *Montage*.
 
 ## Testing
 
@@ -236,7 +249,7 @@ Always give the pickaxe a push first. If it hangs still, the plank is level and 
       between a cart and the deck.
   - Does one get stuck? If it is pinched between the plates, make `SPLEET` in `cad/params.py` 0.5 mm larger.
 - [ ] **Slot**: does every coin pass easily through the slot at the top? If not, make `INWORP_HALF` 0.5 mm
-      larger.
+      larger. Can your child get the coin under the portal easily? If not, raise the portal with `PORTAAL_Z`.
 - [ ] **Carts**: do they slide out and in easily, also when full? If not, make `KAR_SPEL` larger.
 - [ ] **Socket feet**: do they clamp in the deck without a hammer? Too tight: make `KOKER_SPEL` 0.1 larger. Too
       loose: one step smaller, or a strip of tape round the plug.
@@ -290,10 +303,12 @@ print/        the final model: splitsmijn.3mf (9 plates, plate 1 is the fit stri
 pasproef/     the test print: pasproef.3mf (6 plates) and every part as an STL
 cad/          the source: Python scripts that make everything above
               params.py (all sizes), valbord.py (the board and the test print), mijn.py (the final model),
-              simulatie.py, platen.py, bouw.py, controle.py, render.py
-controle/     RAPPORT.md: coin passage, drop simulation, pendulum, clearances, joints, stability, printability;
+              simulatie.py, platen.py, bouw.py, slice.py, montage.py, controle.py, render.py
+controle/     RAPPORT.md: coin passage, drop simulation, pendulum, clearances, joints, stability, printability,
+              assembly;
               slicer.json and slicer_eind.json (PrusaSlicer)
-renders/      Blender renders: splitsmijn*.png (final model), voor, binnen, mes, explosie, passtrip (test print)
+renders/      Blender renders: splitsmijn*.png and montage.png (final model, with the single panels in montage/),
+              voor, binnen, mes, explosie, passtrip (test print)
 onderdelen.json   volume and size per STL
 ```
 
@@ -303,7 +318,9 @@ python bouw.py            # print/ and pasproef/
 python slice.py           # controle/slicer*.json: weight, time and supports per plate (needs prusa-slicer)
 python controle.py        # controle/ (--snel for a shorter simulation)
 python simulatie.py       # just the drop simulation (test print)
+python montage.py         # just the assembly check (it is also in controle/RAPPORT.md)
 python render.py eind     # renders/ of the final model (proef: the test print; needs the pip module bpy)
+python render.py montage  # renders/montage.png: the assembly steps
 ```
 
 ## MakerWorld

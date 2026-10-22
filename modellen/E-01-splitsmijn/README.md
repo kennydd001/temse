@@ -21,9 +21,9 @@ met de gele kant.
 
 | | |
 |---|---|
-| Maat (b × d × h) | 232 × 108 × 303 mm |
+| Maat (b × d × h) | 232 × 108 × 336 mm |
 | Muntjes | 10 stuks Ø 25 × 4,5 mm (zo groot als 2 euro), half blauw met een diamant, half geel |
-| Filament | ongeveer 670 g in 6 kleuren (slicer), zo'n 19 uur printen over 9 platen |
+| Filament | ongeveer 685 g in 6 kleuren (slicer), zo'n 19 uur printen over 9 platen |
 | Nodig | niets: geen schroeven, lijm of metalen onderdelen. Een AMS is alleen nodig voor de naam en de munten |
 
 Kleuren (Bambu PLA):
@@ -63,8 +63,10 @@ Kleuren (Bambu PLA):
 - **Mijnhout en portaal**: het houten raamwerk en de mijningang met de naam klemmen zonder lijm.
   - Links en rechts klemt een **kokervoet** met zijn prop in het dek. In die U-koker van 30 mm hoog staan de
     zijranden van het bord en de staanders van het raamwerk samen.
-  - Bovenaan zit op elke hoek een **kokerkap**. Onderin klemt hij over het bord en het raamwerk, bovenin staat
-    een tong van het portaal.
+  - Bovenaan staat op elke hoek een **kokerkap**, als een paal. Onderin klemt hij over het bord en het raamwerk,
+    bovenin staat een tong van het portaal.
+  - Het portaal hangt 45 mm boven het bord. Daaronder steekt een kind het muntje met twee vingers van voren in
+    de trechter.
   - Nokjes achterop houden het raamwerk op zijn plaats.
 
 ![Uit elkaar](renders/splitsmijn_explosie.png)
@@ -88,7 +90,10 @@ Alles staat in [controle/RAPPORT.md](controle/RAPPORT.md). Kort:
 - **Passen**: in de hele uitslag van de houweel raakt niets, en overal is minstens 0,5 mm speling.
 - **Stabiliteit**: duw je de houweel naar achteren, dan moet je 4,3 N (zo'n 440 g) duwen voor het bord kantelt.
   In de kokervoeten kan het bord bovenaan hooguit 5 mm wiebelen.
-- **Printen**: alles print zonder support. PrusaSlicer komt op 673 g en ongeveer 19 uur over de negen platen.
+- **Printen**: alles print zonder support. PrusaSlicer komt op 685 g en ongeveer 19 uur over de negen platen.
+- **Montage**: in de volgorde van de handleiding schuift elk onderdeel op zijn plaats zonder iets te raken. De
+  karretjes gaan helemaal uit en weer in, het bord gaat er weer uit, en een muntje met twee vingers past onder
+  het portaal door in de trechter.
 
 ![Controle](controle/valbord.png)
 
@@ -118,12 +123,12 @@ Open `print/splitsmijn.3mf` in Bambu Studio. Het project heeft negen platen:
 | 3 | voorplaat met kijkspleten | Charcoal | 107 g | 3 u 10 |
 | 4 | mijnhout | Latte Brown | 33 g | 1 u 06 |
 | 5 | mijnberg, tienveld | Terracotta | 195 g | 5 u 41 |
-| 6 | portaal met de naam, steel, beugel, mesblok, twee kokervoeten, twee kokerkappen | Latte Brown + Charcoal (letters) | 60 g | 1 u 52 |
+| 6 | portaal met de naam, steel, beugel, mesblok, twee kokervoeten, twee kokerkappen | Latte Brown + Charcoal (letters) | 72 g | 2 u 06 |
 | 7 | houweelkop, kantelplank, verdelervin | Sunflower Yellow | 33 g | 0 u 48 |
 | 8 | twee karretjes | Maroon Red | 78 g | 1 u 25 |
 | 9 | 10 munten | Sunflower Yellow + Marine Blue | 17 g | 0 u 36 |
 
-Samen is dat ongeveer **670 g filament** en 19 uur printen.
+Samen is dat ongeveer **685 g filament** en 19 uur printen.
 
 \* Uit PrusaSlicer met een profiel dat de A1 benadert, elk object met de wanden en de infill uit het project
 (`cad/slice.py`). Het gewicht is betrouwbaar; de tijd rekent Bambu Studio zelf uit. De spoeling bij de
@@ -154,11 +159,11 @@ kleurwissels op plaat 6 en 9 komt er nog bij.
 | mijnhout (raamwerk van balken) | 1 | 218 × 230 × 2,4 | `print/mijnhout.stl` |
 | mijnberg | 1 | 232 × 108 × 40 | `print/mijnberg.stl` |
 | tienveld | 1 | 157 × 70 × 4,5 | `print/tienveld.stl` |
-| portaal met de naam | 1 | 224 × 31 × 10,6 | `print/portaal.stl` |
+| portaal met de naam | 1 | 224 × 64 × 10,6 | `print/portaal.stl` |
 | steel van de houweel | 1 | 20 × 174 × 10,5 | `print/steel.stl` |
 | houweelkop | 1 | 89 × 25 × 20 | `print/kop.stl` |
 | kokervoet | 2 | 13 × 18 × 44,5 | `print/kokervoet_L.stl`, `print/kokervoet_R.stl` |
-| kokerkap | 2 | 24 × 20,5 × 13 | `print/kokerkap_L.stl`, `print/kokerkap_R.stl` |
+| kokerkap | 2 | 57 × 20,5 × 13 | `print/kokerkap_L.stl`, `print/kokerkap_R.stl` |
 | beugel met V-groef, mesblok | 1 + 1 | 44 × 17 × 13; 20 × 16 × 6,5 | `print/beugel.stl`, `print/mesblok.stl` |
 | kantelplank, verdelervin | 1 + 1 | 36 × 10 × 16; 3 × 25 × 5 | `print/plank.stl`, `print/verdelervin.stl` |
 | mijnkarretje | 2 | 92 × 105 × 31 | `print/karretje_L.stl`, `print/karretje_R.stl` |
@@ -196,6 +201,8 @@ Wat waar klemt en hoeveel speling elke verbinding heeft, staat in
 
 ## In elkaar zetten
 
+![De montage in negen stappen](renders/montage.png)
+
 1. **Achterplaat**: leg ze plat op tafel, met de pinnen omhoog.
 2. **Kantelplank**: leg de plank in het midden onder de inworp, met de naaf omhoog.
 3. **Voorplaat**: leg ze erop, met de kijkspleten naar je toe. Steek de naaf door het ronde gat. Druk de
@@ -206,7 +213,8 @@ Wat waar klemt en hoeveel speling elke verbinding heeft, staat in
    - druk de houweelkop op de twee pennetjes onderaan;
    - schuif dan de steel met zijn zeskantgat op de zeskant van de plank.
 6. **Beugel**: schuif de beugel met zijn twee gaten op de pennen onder de naaf, met de poten naar de voorplaat.
-   Til de houweel een beetje op terwijl je schuift: zo glijdt het mes van achteren in de groef.
+   Til de houweel zo ver op als hij gaat terwijl je schuift (de naaf heeft 1 mm speling): zo glijdt het mes van
+   achteren in de groef. Hangt hij lager, dan haakt het mes achter de groef.
 7. **Mijnberg**:
    - druk de verdelervin met haar tong in de sleuf midden in het dek;
    - druk de twee kokervoeten met hun prop in de uitsparingen links en rechts in het dek, de open kant naar het
@@ -218,6 +226,11 @@ Wat waar klemt en hoeveel speling elke verbinding heeft, staat in
    Ze gaan over het bord en het mijnhout samen. Steek dan de twee tongen van het portaal in de kappen.
 
 Het tienveld ligt los op tafel, vóór de mijn: op het dek is er geen plaats voor, en daar zwaait de houweel.
+
+Een muntje gooi je erin van voren, onder het portaal door: houd het rechtop boven de trechter en laat los.
+
+De montage is nagerekend in `cad/montage.py`: elk onderdeel schuift langs zijn weg op zijn plaats zonder iets te
+raken. Zie [controle/RAPPORT.md](controle/RAPPORT.md), onder *Montage*.
 
 Verplaatsen? Til de Splitsmijn op aan de mijnberg, niet aan het portaal: het bord staat los in de kokervoeten.
 
@@ -231,7 +244,8 @@ Geef de houweel altijd eerst een duw. Staat hij stil, dan ligt de plank vlak en 
 - [ ] **Vastlopen**: gooi 10 rondes van 10 muntjes. Er mag er geen enkel blijven hangen, ook niet in de
       trechters of tussen een karretje en het dek.
   - Hangt er toch een? Klemt het muntje tussen de platen, maak dan `SPLEET` in `cad/params.py` 0,5 mm groter.
-- [ ] **Inworp**: past elk muntje vlot door de inworp? Zo niet, zet `INWORP_HALF` 0,5 mm groter.
+- [ ] **Inworp**: past elk muntje vlot door de inworp? Zo niet, zet `INWORP_HALF` 0,5 mm groter. Krijgt je kind
+      het muntje makkelijk onder het portaal door? Zo niet, zet het portaal hoger met `PORTAAL_Z`.
 - [ ] **Karretjes**: schuiven ze vlot uit en in, ook vol? Zo niet, zet `KAR_SPEL` groter.
 - [ ] **Kokervoeten**: klemmen ze in het dek, zonder hamer? Te strak: zet `KOKER_SPEL` 0,1 groter. Te los: een
       maat kleiner, of een strookje plakband rond de prop.
@@ -285,10 +299,12 @@ print/        het eindmodel: splitsmijn.3mf (9 platen, plaat 1 is de passtrip) e
 pasproef/     de pasproef: pasproef.3mf (6 platen) en elk onderdeel als STL
 cad/          de bron: Python-scripts die alles hierboven maken
               params.py (alle maten), valbord.py (het bord en de pasproef), mijn.py (het eindmodel),
-              simulatie.py, platen.py, bouw.py, controle.py, render.py
-controle/     RAPPORT.md: muntdoorgang, valsimulatie, slinger, spelingen, verbindingen, stabiliteit, printbaarheid;
+              simulatie.py, platen.py, bouw.py, slice.py, montage.py, controle.py, render.py
+controle/     RAPPORT.md: muntdoorgang, valsimulatie, slinger, spelingen, verbindingen, stabiliteit, printbaarheid,
+              montage;
               slicer.json en slicer_eind.json (PrusaSlicer)
-renders/      Blender-renders: splitsmijn*.png (eindmodel), voor, binnen, mes, explosie, passtrip (pasproef)
+renders/      Blender-renders: splitsmijn*.png en montage.png (eindmodel, met de losse panelen in montage/),
+              voor, binnen, mes, explosie, passtrip (pasproef)
 onderdelen.json   volume en maat per STL
 ```
 
@@ -298,7 +314,9 @@ python bouw.py            # print/ en pasproef/
 python slice.py           # controle/slicer*.json: gewicht, tijd en support per plaat (vereist prusa-slicer)
 python controle.py        # controle/ (--snel voor een kortere simulatie)
 python simulatie.py       # alleen de valsimulatie (pasproef)
+python montage.py         # alleen de montagecheck (staat ook in controle/RAPPORT.md)
 python render.py eind     # renders/ van het eindmodel (proef: de pasproef; vereist de pip-module bpy)
+python render.py montage  # renders/montage.png: de stappenplaat
 ```
 
 ## MakerWorld

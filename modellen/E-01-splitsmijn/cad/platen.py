@@ -125,7 +125,7 @@ def platen_eind():
             ("portaal", stuk_eind("portaal", 128, 222)), ("steel", stuk_eind("steel", 232, 105)),
             ("beugel", stuk_eind("beugel", 150, 60)), ("mesblok", stuk_eind("mesblok", 150, 110)),
             ("kokervoet L", stuk_eind("kokervoet L", 95, 150)), ("kokervoet R", stuk_eind("kokervoet R", 125, 150)),
-            ("kokerkap L", stuk_eind("kokerkap L", 95, 180)), ("kokerkap R", stuk_eind("kokerkap R", 125, 180))]),
+            ("kokerkap L", stuk_eind("kokerkap L", 60, 172)), ("kokerkap R", stuk_eind("kokerkap R", 165, 172))]),
         ("7 houweelkop, plank, verdelervin", [("kop", stuk_eind("kop", 128, 150)), ("plank", stuk_eind("plank", 100, 95)),
                                               ("verdelervin", stuk_eind("verdelervin", 160, 95))]),
         ("8 karretjes", [("karretje L", stuk_eind("karretje L", 75, 128)), ("karretje R", stuk_eind("karretje R", 181, 128))]),

@@ -15,6 +15,8 @@ Schrijft  controle/RAPPORT.md, controle/controle.json, controle/valbord.png en c
   6. Mijnberg en karretjes: trechters, inhoud, stabiliteit van het geheel.
   7. Printbaarheid per plaat (gereedschap/printcheck.py), gewicht. Met de slicercijfers uit controle/slicer.json en
      controle/slicer_eind.json als die er zijn (python slice.py, na bouw.py).
+  8. Montage (montage.py): elk onderdeel in de volgorde van de README langs zijn weg op zijn plaats geschoven; uit
+     elkaar halen; een muntje met twee vingers in de inworp.
 """
 import itertools
 import json
@@ -38,6 +40,7 @@ import platen  # noqa: E402
 import simulatie as S  # noqa: E402
 import bouw  # noqa: E402
 import mijn as M  # noqa: E402
+import montage  # noqa: E402
 import valbord as V  # noqa: E402
 from gereedschap import printcheck  # noqa: E402
 from gereedschap.geom import cs_to_shapely  # noqa: E402
@@ -705,6 +708,11 @@ def rapport(r):
         for naam, s_ in r["slicer"].items():
             L.append(f"| {naam} | {s_['gram']:.1f} g | {s_['tijd']} | {ok(not s_['support'])} "
                      f"{'ja' if s_['support'] else 'nee'} |")
+    L += ["", "## 8. Montage (eindmodel)", "",
+          "Elk onderdeel schuift in de volgorde van de README van ver weg langs zijn richting tot op zijn plaats, in "
+          f"stapjes van {f(montage.STAP)} mm, en mag onderweg niets raken van wat er al staat (overlap > "
+          f"{f(montage.OVERLAP)} mm³; klemmen en aanraken mag). Elk pad begint met het onderdeel helemaal los. "
+          "Zie `cad/montage.py`.", ""] + montage.regels(r["montage"])
     return "\n".join(L) + "\n"
 
 
@@ -718,6 +726,7 @@ def main(argv):
         r[naam] = {"simulatie": simulatie(md, rondes, splits), "slinger": slinger(md), "spelingen": spelingen(md),
                    "passingen": passingen(md)}
     r["print_eind"], r["print_proef"] = printbaar_eind(), printbaar_proef()
+    r["montage"] = montage.montage()
     for sleutel, bestand in (("slicer", "slicer.json"), ("slicer_eind", "slicer_eind.json")):
         if (UIT / bestand).exists():
             r[sleutel] = json.loads((UIT / bestand).read_text())

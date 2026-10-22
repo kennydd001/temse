@@ -11,6 +11,8 @@ import random
 import sys
 from pathlib import Path
 
+import numpy as np
+
 import _pad  # noqa: F401
 import mijn as M
 import params as P
@@ -89,7 +91,7 @@ def scene(view, snel):
 TAFEL = P.BERG_H                 # de mijnberg staat op de tafel
 VIEWS_EIND = {
     # naam: (slingerhoek, karretjes uit (L, R), camera, doel, lens, resolutie)
-    "splitsmijn": (18.0, (62.0, 40.0), (0.36, -0.86, 0.40), (0.005, -0.04, 0.125), 61, (1100, 1300)),
+    "splitsmijn": (18.0, (62.0, 40.0), (0.36, -0.86, 0.40), (0.005, -0.04, 0.135), 60, (1100, 1300)),
     "splitsmijn_binnen": (18.0, (0.0, 0.0), (0.26, -0.84, 0.36), (0.0, 0.0, 0.16), 55, (1100, 1300)),
     "splitsmijn_explosie": (0.0, (0.0, 0.0), (0.98, -0.78, 0.58), (0.0, -0.09, 0.205), 56, (1400, 1150)),
     "splitsmijn_kar": (-15.0, (70.0, 0.0), (0.03, -0.34, 0.21), (-0.05, -0.085, 0.012), 58, (1200, 900)),
@@ -181,6 +183,112 @@ def scene_eind(view, snel):
     return pad
 
 
+# --- stappenplaat: de montage van de README in negen beelden ------------------------------------------
+
+PLAT = ("achterplaat", "plank", "voorplaat", "mijnhout", "steel", "mesblok", "kop", "beugel")
+BERG_DELEN = ("mijnberg", "verdelervin", "kokervoet L", "kokervoet R", "karretje L", "karretje R")
+STAPPENPLAAT = [
+    # (titel, plat op tafel?, onderdelen al op hun plaats, {onderdeel: verschuiving in mm})
+    ("Achterplaat", True, ("achterplaat",), {}),
+    ("Kantelplank", True, PLAT[:1], {"plank": (0, 40, 0)}),
+    ("Voorplaat", True, PLAT[:2], {"voorplaat": (0, 45, 0)}),
+    ("Mijnhout", True, PLAT[:3], {"mijnhout": (0, 45, 0)}),
+    ("Houweel", True, PLAT[:4], {"steel": (0, 50, 0), "mesblok": (0, 50, 0), "kop": (0, 50, 0)}),
+    ("Beugel", True, PLAT[:7], {"beugel": (0, 40, 0)}),
+    ("Mijnberg", False, ("mijnberg",),
+     {"verdelervin": (0, 0, 30), "kokervoet L": (0, 0, 40), "kokervoet R": (0, 0, 40), "karretje L": (0, 90, 0),
+      "karretje R": (0, 90, 0)}),
+    ("Bord in de mijnberg", False, BERG_DELEN, {n: (0, 0, 60) for n in PLAT}),
+    ("Kappen en portaal", False, PLAT + BERG_DELEN,
+     {"kokerkap L": (0, 0, 30), "kokerkap R": (0, 0, 30), "portaal": (0, 0, 60), "letters": (0, 0, 60)}),
+]
+
+
+def pijl(van, naar, r=3.0):
+    """Pijl van punt `van` naar `naar` (langs een as), als Manifold."""
+    from manifold3d import Manifold
+    d = np.subtract(naar, van)
+    lang = float(np.linalg.norm(d))
+    kop = min(12.0, lang / 2)
+    m = Manifold.cylinder(lang - kop, r, r, 24) + Manifold.cylinder(kop, 2.6 * r, 0.0, 24).translate([0, 0, lang - kop])
+    draai = {(0, -1, 0): [90, 0, 0], (0, 1, 0): [-90, 0, 0], (0, 0, -1): [180, 0, 0], (0, 0, 1): [0, 0, 0]}
+    as_ = tuple(int(round(v)) for v in d / lang)
+    return m.rotate(draai[as_]).translate(list(van))
+
+
+def paneel(i, snel):
+    titel, plat, vast, los = STAPPENPLAAT[i]
+    BL.leeg()
+    mats = BL.materialen(P.FILAMENTEN_EIND)
+    oranje = BL.pla("pijl", "#F26A1B", 0.35)
+    st = M.stand(0.0)
+    delen = [(n, st[n][0], st[n][1]) for n in vast]
+    pijlen, gezien = [], set()
+    for n, d in los.items():
+        kleur, m = st[n]
+        delen.append((n, kleur, m.translate(list(d))))
+        if d in gezien:                     # één pijl per beweging: wat samen beweegt, krijgt er geen tweede
+            continue
+        gezien.add(d)
+        a, b = np.array(m.bounding_box()).reshape(2, 3)
+        c = (a + b) / 2
+        d = np.array(d, dtype=float)
+        u = d / np.linalg.norm(d)
+        # naast het onderdeel (aan de kant van de camera); wat vooruit of achteruit schuift: erboven, anders wijst de
+        # pijl recht van de camera weg
+        if n == "portaal":
+            opzij = np.array([0, 18, 0])
+        elif abs(u[1]) > 0.5 and not plat:
+            opzij = np.array([0, 0, b[2] - c[2] + 14])
+        else:
+            opzij = np.array([b[0] - c[0] + 14, 0, 0])
+        start, eind = c + opzij + d + u * 6, c + opzij + d * 0.3
+        pijlen.append(pijl(start, eind))
+    if plat:
+        delen = [(n, k, m.rotate([90, 0, 180])) for n, k, m in delen]
+        pijlen = [p.rotate([90, 0, 180]) for p in pijlen]
+        z0 = min(m.bounding_box()[2] for *_, m in delen)
+        delen = [(n, k, m.translate([0, 0, -z0])) for n, k, m in delen]
+        pijlen = [p.translate([0, 0, -z0]) for p in pijlen]
+    else:
+        delen = [(n, k, m.rotate([0, 0, 180]).translate([0, 0, TAFEL])) for n, k, m in delen]
+        pijlen = [p.rotate([0, 0, 180]).translate([0, 0, TAFEL]) for p in pijlen]
+    for n, k, m in delen:
+        BL.voeg_toe(n, m, mats[k])
+    for j, p in enumerate(pijlen):
+        BL.voeg_toe(f"pijl {j}", p, oranje)
+    bb = np.array([m.bounding_box() for *_, m in delen] + [p.bounding_box() for p in pijlen])
+    lo, hi = bb[:, :3].min(0), bb[:, 3:].max(0)
+    c, maat = (lo + hi) / 2 * 0.001, float(np.max(hi - lo)) * 0.001
+    richting = np.array([0.42, -0.80, 0.95]) if plat else np.array([0.42, -0.88, 0.42])
+    BL.studio(muur_y=0.85)
+    BL.camera(tuple(c + richting / np.linalg.norm(richting) * maat * (2.2 if plat else 2.9)), tuple(c), lens=50,
+              diafragma=11)
+    pad = UIT / "montage" / f"stap{i + 1}.png"
+    pad.parent.mkdir(exist_ok=True)
+    BL.render(pad, (760, 600), samples=48, snel=snel)
+    return pad, titel
+
+
+def stappenplaat(snel):
+    from PIL import Image, ImageDraw, ImageFont
+    panelen = [paneel(i, snel) for i in range(len(STAPPENPLAAT))]
+    w, h = Image.open(panelen[0][0]).size
+    rand = 12
+    plaat = Image.new("RGB", (3 * w + 4 * rand, 3 * h + 4 * rand), (246, 240, 232))
+    font = ImageFont.truetype(str(Path(BL.__file__).parent / "fonts" / "Fredoka-SemiBold.ttf"), max(18, h // 14))
+    for i, (pad, titel) in enumerate(panelen):
+        x, y = rand + (i % 3) * (w + rand), rand + (i // 3) * (h + rand)
+        plaat.paste(Image.open(pad).convert("RGB"), (x, y))
+        tekst = f"{i + 1}  {titel}"
+        d = ImageDraw.Draw(plaat)
+        bx = d.textbbox((0, 0), tekst, font=font)
+        d.rounded_rectangle((x + 10, y + 10, x + 30 + bx[2], y + 22 + bx[3]), 10, fill=(255, 255, 255))
+        d.text((x + 20, y + 14), tekst, font=font, fill=(60, 45, 35))
+    plaat.save(UIT / "montage.png")
+    return UIT / "montage.png"
+
+
 if __name__ == "__main__":
     argv = sys.argv[1:]
     snel = "--snel" in argv
@@ -192,5 +300,8 @@ if __name__ == "__main__":
     elif namen == ["proef"]:
         namen = list(VIEWS)
     UIT.mkdir(exist_ok=True)
+    if "montage" in namen:
+        namen.remove("montage")
+        print("stappenplaat:", stappenplaat(snel))
     for v in namen:
         scene_eind(v, snel) if v in VIEWS_EIND else scene(v, snel)
