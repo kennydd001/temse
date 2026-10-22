@@ -26,19 +26,19 @@
     "karretje_inhoud_cm3": 263.0,
     "tien_munten_cm3": 22.0,
     "munten_plat_op_de_bodem": 9,
-    "massa_g": 656.0,
-    "zwaartepunt_y": 9.3,
-    "zwaartepunt_z_boven_tafel": 106.5,
+    "massa_g": 670.0,
+    "zwaartepunt_y": 9.2,
+    "zwaartepunt_z_boven_tafel": 111.6,
     "voet_y": [
       -40.0,
       66.0
     ],
     "voet_x": 116.0,
-    "kantelkracht_achteruit_N": 4.3,
-    "kantelkracht_vooruit_N": 4.9,
-    "kantelkracht_opzij_N": 10.1,
+    "kantelkracht_achteruit_N": 4.4,
+    "kantelkracht_vooruit_N": 5.0,
+    "kantelkracht_opzij_N": 10.3,
     "kantelspel_graden": 1.1,
-    "kantelspel_boven_mm": 5.3
+    "kantelspel_boven_mm": 5.9
   },
   "eindmodel": {
     "simulatie": {
@@ -1223,7 +1223,7 @@
     "6 portaal, steel, beugel, mesblok, kokervoeten en -kappen": {
       "kleuren": {
         "11800": {
-          "volume_cm3": 85.56,
+          "volume_cm3": 102.11,
           "z_mm": [
             0.0,
             44.5
@@ -1243,13 +1243,13 @@
       "korte_bruggen_mm2": 0.0,
       "maat_mm": [
         226.0,
-        219.3,
+        235.8,
         44.5
       ],
       "past_op_A1": true,
       "vrije_strook_mm": [
         30.0,
-        36.7
+        20.2
       ],
       "lagen_met_kleurwissel": 3,
       "geschatte_wissels": 3,
@@ -1262,7 +1262,7 @@
         "11101"
       ],
       "wissels": 4,
-      "gram_geschat": 56.0
+      "gram_geschat": 67.0
     },
     "7 houweelkop, plank, verdelervin": {
       "kleuren": {
@@ -1561,6 +1561,388 @@
       ]
     }
   },
+  "montage": {
+    "stappen": [
+      {
+        "stap": "2",
+        "wat": "kantelplank op de achterplaat",
+        "richting": [
+          0,
+          -1,
+          0
+        ],
+        "afstand": 15,
+        "vast": [
+          "achterplaat"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "3",
+        "wat": "voorplaat erop: 26 nokjes in hun gaatjes, de naaf door het ronde gat",
+        "richting": [
+          0,
+          -1,
+          0
+        ],
+        "afstand": 25,
+        "vast": [
+          "achterplaat",
+          "plank"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "4",
+        "wat": "mijnhout op de voorplaat, nokjes in de gaatjes",
+        "richting": [
+          0,
+          -1,
+          0
+        ],
+        "afstand": 25,
+        "vast": [
+          "achterplaat",
+          "plank",
+          "voorplaat"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "5a",
+        "wat": "mesblok op de pennetjes van de steel",
+        "richting": [
+          0,
+          -1,
+          0
+        ],
+        "afstand": 15,
+        "vast": [
+          "steel"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "5b",
+        "wat": "houweelkop op de steel (de gleuf zit achteraan)",
+        "richting": [
+          0,
+          -1,
+          0
+        ],
+        "afstand": 25,
+        "vast": [
+          "steel",
+          "mesblok"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "5c",
+        "wat": "houweel met het zeskantgat op de zeskant van de plank",
+        "richting": [
+          0,
+          -1,
+          0
+        ],
+        "afstand": 25,
+        "vast": [
+          "achterplaat",
+          "plank",
+          "voorplaat",
+          "mijnhout"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "6",
+        "wat": "beugel op de pennen onder de naaf, het mes glijdt in de groef",
+        "richting": [
+          0,
+          -1,
+          0
+        ],
+        "afstand": 25,
+        "vast": [
+          "achterplaat",
+          "plank",
+          "voorplaat",
+          "mijnhout",
+          "steel",
+          "mesblok",
+          "kop"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "7a",
+        "wat": "verdelervin met haar tong in de sleuf van het dek",
+        "richting": [
+          0,
+          0,
+          -1
+        ],
+        "afstand": 15,
+        "vast": [
+          "mijnberg"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "7b",
+        "wat": "kokervoet L in zijn uitsparing",
+        "richting": [
+          0,
+          0,
+          -1
+        ],
+        "afstand": 20,
+        "vast": [
+          "mijnberg",
+          "verdelervin"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "7c",
+        "wat": "kokervoet R in zijn uitsparing",
+        "richting": [
+          0,
+          0,
+          -1
+        ],
+        "afstand": 20,
+        "vast": [
+          "mijnberg",
+          "verdelervin",
+          "kokervoet L"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "7d",
+        "wat": "karretje L van voren in zijn tunnel",
+        "richting": [
+          0,
+          -1,
+          0
+        ],
+        "afstand": 120,
+        "vast": [
+          "mijnberg",
+          "verdelervin",
+          "kokervoet L",
+          "kokervoet R"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "7e",
+        "wat": "karretje R van voren in zijn tunnel",
+        "richting": [
+          0,
+          -1,
+          0
+        ],
+        "afstand": 120,
+        "vast": [
+          "mijnberg",
+          "verdelervin",
+          "kokervoet L",
+          "kokervoet R",
+          "karretje L"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "8",
+        "wat": "bord rechtop in de mijnberg: zijranden en mijnhout in de kokervoeten, vin in de spleet",
+        "richting": [
+          0,
+          0,
+          -1
+        ],
+        "afstand": 45,
+        "vast": [
+          "mijnberg",
+          "verdelervin",
+          "kokervoet L",
+          "kokervoet R",
+          "karretje L",
+          "karretje R"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "9a",
+        "wat": "kokerkap L over de bovenhoek",
+        "richting": [
+          0,
+          0,
+          -1
+        ],
+        "afstand": 25,
+        "vast": [
+          "achterplaat",
+          "plank",
+          "voorplaat",
+          "mijnhout",
+          "steel",
+          "mesblok",
+          "kop",
+          "beugel",
+          "mijnberg",
+          "verdelervin",
+          "kokervoet L",
+          "kokervoet R",
+          "karretje L",
+          "karretje R"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "9b",
+        "wat": "kokerkap R over de bovenhoek",
+        "richting": [
+          0,
+          0,
+          -1
+        ],
+        "afstand": 25,
+        "vast": [
+          "achterplaat",
+          "plank",
+          "voorplaat",
+          "mijnhout",
+          "steel",
+          "mesblok",
+          "kop",
+          "beugel",
+          "mijnberg",
+          "verdelervin",
+          "kokervoet L",
+          "kokervoet R",
+          "karretje L",
+          "karretje R",
+          "kokerkap L"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      },
+      {
+        "stap": "9c",
+        "wat": "portaal met zijn tongen in de kokerkappen",
+        "richting": [
+          0,
+          0,
+          -1
+        ],
+        "afstand": 50,
+        "vast": [
+          "achterplaat",
+          "plank",
+          "voorplaat",
+          "mijnhout",
+          "steel",
+          "mesblok",
+          "kop",
+          "beugel",
+          "mijnberg",
+          "verdelervin",
+          "kokervoet L",
+          "kokervoet R",
+          "karretje L",
+          "karretje R",
+          "kokerkap L",
+          "kokerkap R"
+        ],
+        "botsing": null,
+        "los_bij_begin": true
+      }
+    ],
+    "los": [
+      {
+        "wat": "karretje L helemaal uittrekken",
+        "richting": [
+          0,
+          1,
+          0
+        ],
+        "afstand": 120,
+        "botsing": null,
+        "los_op_het_eind": true
+      },
+      {
+        "wat": "karretje R helemaal uittrekken",
+        "richting": [
+          0,
+          1,
+          0
+        ],
+        "afstand": 120,
+        "botsing": null,
+        "los_op_het_eind": true
+      },
+      {
+        "wat": "portaal eraf tillen",
+        "richting": [
+          0,
+          0,
+          1
+        ],
+        "afstand": 60,
+        "botsing": null,
+        "los_op_het_eind": true
+      },
+      {
+        "wat": "bord uit de mijnberg tillen (portaal en kokerkappen eraf)",
+        "richting": [
+          0,
+          0,
+          1
+        ],
+        "afstand": 45,
+        "botsing": null,
+        "los_op_het_eind": true
+      }
+    ],
+    "inworp": {
+      "van_voren": null,
+      "zakken": null,
+      "munt_valt": null,
+      "vingers_tot_portaal_mm": 4.0
+    },
+    "optillen": {
+      "-0.5": [
+        -5.75,
+        "mesblok",
+        0.043
+      ],
+      "-0.25": [
+        -5.75,
+        "mesblok",
+        0.011
+      ],
+      "0.0": null,
+      "0.25": null,
+      "0.5": null,
+      "1.0": null
+    }
+  },
   "slicer": {
     "1 passtrip": {
       "tijd": "31m 42s",
@@ -1745,16 +2127,16 @@
       "tijd": "5h 41m"
     },
     "6 portaal, steel, beugel, mesblok, kokervoeten en -kappen": {
-      "gram": 60.3,
-      "seconden": 6732,
+      "gram": 71.9,
+      "seconden": 7616,
       "support": false,
       "groepen": [
         {
           "instellingen": {
             "perimeters": 3
           },
-          "gram": 44.8,
-          "tijd": "1h 21m 51s",
+          "gram": 56.4,
+          "tijd": "1h 36m 35s",
           "support_extrusie_mm": 0.0
         },
         {
@@ -1776,7 +2158,7 @@
           "support_extrusie_mm": 0.0
         }
       ],
-      "tijd": "1h 52m"
+      "tijd": "2h 6m"
     },
     "7 houweelkop, plank, verdelervin": {
       "gram": 33.1,
@@ -1830,7 +2212,7 @@
     },
     "9 munten": {
       "gram": 16.5,
-      "seconden": 2139,
+      "seconden": 2141,
       "support": false,
       "groepen": [
         {
@@ -1838,11 +2220,11 @@
             "perimeters": 3
           },
           "gram": 16.5,
-          "tijd": "35m 39s",
+          "tijd": "35m 41s",
           "support_extrusie_mm": 0.0
         }
       ],
-      "tijd": "35m 39s"
+      "tijd": "35m 41s"
     }
   }
 }

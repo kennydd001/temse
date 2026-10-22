@@ -166,7 +166,7 @@ def regels(r):
           "| Houweel | " + " | ".join(f"{dz:+.2f} mm".replace(".", ",") for dz in r["optillen"]) + " |",
           "|---|" + "---|" * len(r["optillen"]),
           "| Beugel erop schuiven | "
-          + " | ".join("✅ vrij" if b is None else f"⚠️ raakt {b[1]}" for b in r["optillen"].values()) + " |", "",
+          + " | ".join("✅ vrij" if b is None else f"✋ raakt {b[1]}" for b in r["optillen"].values()) + " |", "",
           f"- {ok(len(vrij) >= 3)} Het mes glijdt in de groef als de houweel tussen "
           f"{str(min(vrij)).replace('.', ',')} en {str(max(vrij)).replace('.', ',')} mm van zijn plaats hangt. "
           "Hangt hij lager, dan haakt het mes achter de groef: til de houweel dus een beetje op."]

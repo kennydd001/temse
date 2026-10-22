@@ -88,8 +88,8 @@ Alles staat in [controle/RAPPORT.md](controle/RAPPORT.md). Kort:
   30 tot 90 procentpunten.
 - **Splitsingen** van 8 volgen een eerlijk muntstuk: 4 + 4 komt het vaakst voor, 0 + 8 haast nooit.
 - **Passen**: in de hele uitslag van de houweel raakt niets, en overal is minstens 0,5 mm speling.
-- **Stabiliteit**: duw je de houweel naar achteren, dan moet je 4,3 N (zo'n 440 g) duwen voor het bord kantelt.
-  In de kokervoeten kan het bord bovenaan hooguit 5 mm wiebelen.
+- **Stabiliteit**: duw je de houweel naar achteren, dan moet je 4,4 N (zo'n 450 g) duwen voor het bord kantelt.
+  In de kokervoeten kan het bord bovenaan (bij het portaal) hooguit 6 mm wiebelen.
 - **Printen**: alles print zonder support. PrusaSlicer komt op 685 g en ongeveer 19 uur over de negen platen.
 - **Montage**: in de volgorde van de handleiding schuift elk onderdeel op zijn plaats zonder iets te raken. De
   karretjes gaan helemaal uit en weer in, het bord gaat er weer uit, en een muntje met twee vingers past onder

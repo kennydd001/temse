@@ -1,6 +1,6 @@
 """Productfoto's van E-01 Splitsmijn (Blender/Cycles, zonder scherm): het eindmodel en de pasproef.
 
-Gebruik:  python render.py [naam ...|eind|proef|alle] [--snel]
+Gebruik:  python render.py [naam ...|eind|montage|proef|alle] [--snel]
 Schrijft naar renders/.
   eindmodel: splitsmijn (8 = 3 + 5: beide karretjes uit, de muntjes op het tienveld), splitsmijn_binnen (zonder
              voorplaat en mijnhout), splitsmijn_explosie, splitsmijn_kar (een karretje van dichtbij)
@@ -292,13 +292,8 @@ def stappenplaat(snel):
 if __name__ == "__main__":
     argv = sys.argv[1:]
     snel = "--snel" in argv
-    namen = [a for a in argv if not a.startswith("--")] or ["splitsmijn"]
-    if namen == ["alle"]:
-        namen = list(VIEWS_EIND) + list(VIEWS)
-    elif namen == ["eind"]:
-        namen = list(VIEWS_EIND)
-    elif namen == ["proef"]:
-        namen = list(VIEWS)
+    groepen = {"alle": list(VIEWS_EIND) + ["montage"] + list(VIEWS), "eind": list(VIEWS_EIND), "proef": list(VIEWS)}
+    namen = [n for a in argv if not a.startswith("--") for n in groepen.get(a, [a])] or ["splitsmijn"]
     UIT.mkdir(exist_ok=True)
     if "montage" in namen:
         namen.remove("montage")

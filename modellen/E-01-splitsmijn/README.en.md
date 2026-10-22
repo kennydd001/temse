@@ -87,8 +87,8 @@ Everything is in [controle/RAPPORT.md](controle/RAPPORT.md) (in Dutch). In short
   that is 30 to 90 percentage points.
 - **Splits** of 8 follow a fair coin: 4 + 4 comes up most often, 0 + 8 hardly ever.
 - **Fit**: over the pickaxe's whole swing nothing touches, with at least 0.5 mm clearance everywhere.
-- **Stability**: pushing the pickaxe backwards takes 4.3 N (about 440 g) before the board tips. In the socket
-  feet, the top of the board can wobble 5 mm at most.
+- **Stability**: pushing the pickaxe backwards takes 4.4 N (about 450 g) before the board tips. In the socket
+  feet, the top (at the portal) can wobble 6 mm at most.
 - **Printing**: everything prints without supports. PrusaSlicer gets 685 g and about 19 hours over the nine plates.
 - **Assembly**: in the order of the instructions, every part slides into place without touching anything. The
   carts come all the way out and back in, the board lifts out again, and a coin between two fingers fits under
